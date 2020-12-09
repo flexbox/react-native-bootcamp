@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import { TouchableWithoutFeedback } from 'react-native';
 import { Input } from '@ui-kitten/components';
 import { Feather } from '@expo/vector-icons';
+import AppShell from '../components/AppShell';
 
 interface ProductProps {
   title: string;
@@ -33,10 +34,15 @@ const AddProductScreen = (props: Props) => {
     </TouchableWithoutFeedback>
   );
 
+  const handleSubmit = () => {
+    console.log('werwer');
+  };
+
   return (
-    <Layout style={{ flex: 1 }}>
+    <AppShell>
       <View style={{ height: 50 }} />
       <Text category="h1">Ajouter un site</Text>
+      <View style={{ height: 24 }} />
       <Input
         value={productId}
         label="Identifiant du produit"
@@ -56,12 +62,14 @@ const AddProductScreen = (props: Props) => {
         onChangeText={(nextValue) => setPassword(nextValue)}
       />
       <View style={{ height: 24 }} />
+      <Button size="large" onPress={handleSubmit}>
+        Ajouter un site
+      </Button>
+      <View style={{ height: 24 }} />
       <Button size="large" appearance="outline">
         Prendre le QR code en photo
       </Button>
-      <View style={{ height: 24 }} />
-      <Button size="large">Ajouter un site</Button>
-    </Layout>
+    </AppShell>
   );
 };
 

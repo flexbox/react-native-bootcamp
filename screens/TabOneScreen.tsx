@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { Button, Card, Divider, Layout, Text } from '@ui-kitten/components';
+
+import AppShell from '../components/AppShell';
 
 const allProducts = [
   {
@@ -23,13 +25,15 @@ interface ProductCardProps {
   };
 }
 
-const ProductCard = ({ data }: ProductCardProps) => {
+const ProductCard = (props: ProductCardProps) => {
+  const data = props.data;
+
   return (
     <Card style={styles.card} status={data.status}>
-      <Text category="h6">{data.title}</Text>
-      <Text appearance="hint" style={{ marginBottom: 12 }}>
-        {data.id}
-      </Text>
+      <View style={styles.cardTitle}>
+        <Text category="h6">{data.title}</Text>
+        <Text appearance="hint">{data.id}</Text>
+      </View>
       <Button appearance="outline">Voir les informations</Button>
     </Card>
   );
@@ -37,22 +41,24 @@ const ProductCard = ({ data }: ProductCardProps) => {
 
 export default function TabOneScreen() {
   return (
-    <Layout style={styles.container}>
+    <AppShell>
       <ScrollView>
         {allProducts.map((product) => {
           return <ProductCard data={product} key={product.id} />;
         })}
       </ScrollView>
-    </Layout>
+    </AppShell>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 24,
-  },
   card: {
     marginBottom: 24,
+  },
+  cardTitle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 24,
   },
 });
