@@ -5,6 +5,7 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+import AddProductScreen from '../screens/AddProductScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
@@ -24,6 +25,15 @@ export default function BottomTabNavigator() {
         component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="AddProduct"
+        component={AddProductScreen}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="plussquareo" color={color} />
+          ),
         }}
       />
       <BottomTab.Screen

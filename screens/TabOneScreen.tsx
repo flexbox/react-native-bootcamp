@@ -1,42 +1,58 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
-import { Card, Text } from '@ui-kitten/components';
-
-import EditScreenInfo from '../components/EditScreenInfo';
-import { View } from '../components/Themed';
+import { ScrollView, StyleSheet } from 'react-native';
+import { Button, Card, Divider, Layout, Text } from '@ui-kitten/components';
 
 const allProducts = [
   {
     title: 'Maison',
-    id: 1,
+    status: 'success',
+    id: 'paru-ilor-deva-tenet',
   },
   {
     title: 'Garage',
-    id: 2,
+    status: 'danger',
+    id: 'davu-jora-balo-juli',
   },
 ];
 
+interface ProductCardProps {
+  data: {
+    id: string;
+    title: string;
+    status: string;
+  };
+}
+
+const ProductCard = ({ data }: ProductCardProps) => {
+  return (
+    <Card style={styles.card} status={data.status}>
+      <Text category="h6">{data.title}</Text>
+      <Text appearance="hint" style={{ marginBottom: 12 }}>
+        {data.id}
+      </Text>
+      <Button appearance="outline">Voir les informations</Button>
+    </Card>
+  );
+};
+
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <Text category="h1">Products</Text>
-      {allProducts.map((product) => {
-        return (
-          <Card style={styles.card} status="primary">
-            <Text>{product.title}</Text>
-          </Card>
-        );
-      })}
-    </View>
+    <Layout style={styles.container}>
+      <ScrollView>
+        {allProducts.map((product) => {
+          return <ProductCard data={product} key={product.id} />;
+        })}
+      </ScrollView>
+    </Layout>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    paddingHorizontal: 24,
   },
   card: {
-    margin: 12,
+    marginBottom: 24,
   },
 });
