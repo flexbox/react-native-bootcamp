@@ -2,7 +2,13 @@ import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 
-import { StreamApp, FlatFeed, Activity, LikeButton } from 'expo-activity-feed';
+import {
+  StreamApp,
+  FlatFeed,
+  Activity,
+  LikeButton,
+  StatusUpdateForm,
+} from 'expo-activity-feed';
 
 const CustomActivity = (props) => {
   return <Activity {...props} Footer={<LikeButton {...props} />} />;
@@ -22,6 +28,7 @@ const App = () => {
             userId="user-one"
             Activity={CustomActivity}
           />
+          <StatusUpdateForm feedGroup="timeline" />
         </StreamApp>
       </SafeAreaView>
     </SafeAreaProvider>
