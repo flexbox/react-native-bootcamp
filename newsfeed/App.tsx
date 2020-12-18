@@ -1,19 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import SafeAreaView from 'react-native-safe-area-view';
+import { StreamApp, FlatFeed } from 'expo-activity-feed';
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1 }} forceInset={{ top: 'always' }}>
+        <StreamApp
+          apiKey="5bq9jc7ug7u6"
+          appId="104177"
+          token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlci1vbmUifQ.qKThhr6Qao2ehI92srNvrBQRlnl-gs_AB-fSA4FauXk"
+        >
+          <FlatFeed feedGroup="timeline" userId="user-one" />
+        </StreamApp>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
