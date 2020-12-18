@@ -10,11 +10,11 @@ import {
   StatusUpdateForm,
 } from 'expo-activity-feed';
 
-const CustomActivity = (props) => {
+function CustomActivity(props) {
   return <Activity {...props} Footer={<LikeButton {...props} />} />;
-};
+}
 
-const App = () => {
+function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }} forceInset={{ top: 'always' }}>
@@ -27,12 +27,13 @@ const App = () => {
             feedGroup="timeline"
             userId="user-one"
             Activity={CustomActivity}
+            notify
           />
           <StatusUpdateForm feedGroup="timeline" />
         </StreamApp>
       </SafeAreaView>
     </SafeAreaProvider>
   );
-};
+}
 
 export default App;
