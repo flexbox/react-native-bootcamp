@@ -2,11 +2,9 @@
 
 > Onboarding with Magic link
 
-![Onboarding preview](./assets/onboarding.gif)
-
 ## Tooling
 
-- [React Native Elements](https://akveo.github.io/react-native-ui-kitten/)
+- [React Native Elements](https://reactnativeelements.com/)
 - [Magic SDK](https://docs.magic.link/client-sdk/react-native/get-started)
 
 ## Getting Started
@@ -16,3 +14,5 @@ cp .env.sample .env
 yarn
 yarn ios|android
 ```
+
+![Onboarding preview](./assets/onboarding.gif)
