@@ -18,7 +18,6 @@ export default function App() {
     const result = await magic.auth.loginWithMagicLink({
       email,
     });
-    console.log('file: App.tsx ~ line 46 ~ handleLogin ~ result', result);
 
     Keyboard.dismiss();
   }
