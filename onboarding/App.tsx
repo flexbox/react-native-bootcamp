@@ -1,9 +1,16 @@
 import React from 'react';
 import { StyleSheet, Keyboard, View } from 'react-native';
-import { Input, Button } from 'react-native-elements';
 
 import { Magic } from '@magic-sdk/react-native';
 import { OAuthExtension } from '@magic-ext/react-native-oauth';
+import * as eva from '@eva-design/eva';
+import {
+  ApplicationProvider,
+  Layout,
+  Text,
+  Input,
+  Button,
+} from '@ui-kitten/components';
 
 import config from './config';
 
@@ -23,34 +30,34 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <magic.Relayer />
+    <ApplicationProvider {...eva} theme={eva.dark}>
+      <Layout style={styles.container}>
+        <magic.Relayer />
 
-      <View style={styles.formContainer}>
-        <Input
-          label="Enter your email"
-          placeholder="bruce@wayne.co"
-          value={email}
-          autoCompleteType="email"
-          keyboardType="email-address"
-          autoCapitalize="none"
-          onChangeText={setEmail}
-          leftIcon={{ type: 'font-awesome', name: 'envelope' }}
-        />
-        <Button title="Sign In" onPress={handleLogin} />
-      </View>
-    </View>
+        <View style={styles.formContainer}>
+          <Text category="h3">Magic link on React Native</Text>
+          <Input
+            label="Enter your email"
+            placeholder="bruce@wayne.co"
+            value={email}
+            autoCompleteType="email"
+            keyboardType="email-address"
+            autoCapitalize="none"
+            onChangeText={setEmail}
+          />
+          <Button onPress={handleLogin}>Sign In</Button>
+        </View>
+      </Layout>
+    </ApplicationProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     justifyContent: 'center',
   },
   formContainer: {
-    alignItems: 'center',
     padding: 40,
   },
 });
