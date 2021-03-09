@@ -4,7 +4,7 @@
 
 ## Tooling
 
-- [React Native Elements](https://reactnativeelements.com/)
+- [Kitten UI](https://akveo.github.io/react-native-ui-kitten/)
 - [Magic SDK](https://docs.magic.link/client-sdk/react-native/get-started)
 
 ## Getting Started

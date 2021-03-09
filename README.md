@@ -23,10 +23,12 @@ npx ignite-cli new AwesomeApp
 expo init
 npx create-react-native-app
 npx ignite-cli new AwesomeApp --expo
+
+# React Native module
+npx create-react-native-library react-native-awesome-module
 ```
 
 ## Ressources
 
+- [React Native Community](https://github.com/react-native-community)
 - [Expo Community](https://github.com/expo-community)
-- [Kitten UI](https://akveo.github.io/react-native-ui-kitten/)
-- [Magic SDK](https://docs.magic.link/client-sdk/react-native/get-started)
