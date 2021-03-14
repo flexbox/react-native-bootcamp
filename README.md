@@ -4,6 +4,11 @@
 
 Explore [the complete mindmap](https://davidl.fr/mindmaps)
 
+Design your ideas with:
+
+- [excalidraw.com](https://excalidraw.com/)
+- [flowchart.fun](https://flowchart.fun/)
+
 ## Projects
 
 1. [atls](./atls/)
