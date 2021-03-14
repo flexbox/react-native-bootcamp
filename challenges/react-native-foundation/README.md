@@ -15,7 +15,7 @@
 
 We are going to start by creating a Login screen.
 
-![Login Preview](./login.png)
+![Login Preview](https://github.com/flexbox/react-native-workshop/blob/main/challenges/react-native-foundation/login.png)
 
 - [ ] Go to [Expo Snack](https://snack.expo.io) and create the Screen from Scratch
 - [ ] Use the `TextInput` component [from `react-native-paper`](https://callstack.github.io/react-native-paper/text-input.html)
@@ -47,7 +47,7 @@ You can use the following icons [https://docs.expo.io/guides/icons/](https://doc
 
 <div>
 <span>After the exercice, if you want to remember what you've just learned, then </span>
-<a rel="noopener noreferrer" target="_blank" href="https://airtable.com/shrBuZqOJL5UeLLF1?prefill_Name=React+Native+Founddations&prefill_Exercice=1">
+<a rel="noopener noreferrer" target="_blank" href="https://airtable.com/shrBuZqOJL5UeLLF1?prefill_Name=React+Native+Foundation&prefill_Exercice=1">
   fill out the elaboration and feedback form.
 </a>
 </div>
