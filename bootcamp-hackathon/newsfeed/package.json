@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dotenv": "^8.2.0",
     "expo": "~39.0.0",
     "expo-activity-feed": "^0.9.1",
     "react": "~16.13.0",

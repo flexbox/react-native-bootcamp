@@ -11,9 +11,9 @@ Design your ideas with:
 
 ## Projects
 
-1. [atls](./atls/)
-1. [newsfeed](./newsfeed/)
-1. [onboarding with magic link](./onboarding/)
+1. [atls](./bootcamp-hackathon/atls/)
+1. [newsfeed](./bootcamp-hackathon/newsfeed/)
+1. [onboarding with magic link](./bootcamp-hackathon/onboarding/)
 
 ## Getting Started
 

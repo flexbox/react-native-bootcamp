@@ -9,6 +9,7 @@ import {
   LikeButton,
   StatusUpdateForm,
 } from 'expo-activity-feed';
+import config from './config';
 
 function CustomActivity(props) {
   return <Activity {...props} Footer={<LikeButton {...props} />} />;
@@ -19,9 +20,9 @@ function App() {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }} forceInset={{ top: 'always' }}>
         <StreamApp
-          apiKey="5bq9jc7ug7u6"
-          appId="104177"
-          token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlci1vbmUifQ.qKThhr6Qao2ehI92srNvrBQRlnl-gs_AB-fSA4FauXk"
+          apiKey={config.GETSTREAM_API_KEY}
+          appId={config.GETSTREAM_APP_ID}
+          token={config.GETSTREAM_API_TOKEN}
         >
           <FlatFeed
             feedGroup="timeline"
