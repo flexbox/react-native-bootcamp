@@ -14,6 +14,7 @@ Design your ideas with:
 1. [atls](./bootcamp-hackathon/atls/)
 1. [newsfeed](./bootcamp-hackathon/newsfeed/)
 1. [onboarding with magic link](./bootcamp-hackathon/onboarding/)
+1. and more
 
 ## Getting Started
 
@@ -37,3 +38,4 @@ npx create-react-native-library react-native-awesome-module
 
 - [React Native Community](https://github.com/react-native-community)
 - [Expo Community](https://github.com/expo-community)
+- [React Native Directory](https://reactnative.directory/)
