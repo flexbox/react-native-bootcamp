@@ -39,3 +39,7 @@ npx create-react-native-library react-native-awesome-module
 - [React Native Community](https://github.com/react-native-community)
 - [Expo Community](https://github.com/expo-community)
 - [React Native Directory](https://reactnative.directory/)
+
+## Was this helpful?
+
+☕️ [Leaving a small tip helps me a lot!](https://www.buymeacoffee.com/flexbox)
