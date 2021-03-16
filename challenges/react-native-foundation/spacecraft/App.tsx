@@ -39,12 +39,12 @@ const App = () => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
-        <FlatList
+        {/* <FlatList
           data={data.results}
           renderItem={renderItem}
           keyExtractor={(item) => item.name}
-        />
-        {/* <Text>{JSON.stringify(data.results)}</Text> */}
+        /> */}
+        <Text>{JSON.stringify(data.results)}</Text>
       </View>
     </SafeAreaView>
   );
