@@ -3,7 +3,6 @@ import { useQuery } from 'react-query';
 import fetchAsync from '../lib/fetchAsync';
 import AppLayout from '../components/AppLayout';
 import StarshipCard from '../components/StarshipCard';
-import { ScrollView } from 'react-native';
 
 interface shipProps {
   name: string;
@@ -22,19 +21,17 @@ const StarshipScreen = () => {
 
   return (
     <AppLayout title="Starships">
-      <ScrollView>
-        {data.results.map((ship: shipProps) => {
-          return (
-            <StarshipCard
-              key={ship.name}
-              title={ship.name}
-              subtitle={ship.model}
-              manufacturer={ship.manufacturer}
-              price={ship.cost_in_credits}
-            />
-          );
-        })}
-      </ScrollView>
+      {data.results.map((ship: shipProps) => {
+        return (
+          <StarshipCard
+            key={ship.name}
+            title={ship.name}
+            subtitle={ship.model}
+            manufacturer={ship.manufacturer}
+            price={ship.cost_in_credits}
+          />
+        );
+      })}
     </AppLayout>
   );
 };

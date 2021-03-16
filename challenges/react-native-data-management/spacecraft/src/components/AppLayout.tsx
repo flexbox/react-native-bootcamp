@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Headline } from 'react-native-paper';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Colors, Headline } from 'react-native-paper';
 
 // 🥑 Add a `NetworkProvider
 // import { NetworkProvider } from 'react-native-offline';
@@ -10,12 +10,12 @@ interface Props {
   children?: ReactElement;
 }
 
-const AppLayout = (props: Props) => {
+const AppLayout = ({ title, children }: Props) => {
   return (
-    <View style={styles.container}>
-      <Headline>{props.title}</Headline>
-      {props.children}
-    </View>
+    <ScrollView style={styles.container}>
+      <Headline style={styles.headerText}>{title}</Headline>
+      {children}
+    </ScrollView>
   );
 };
 
@@ -25,5 +25,10 @@ const styles = StyleSheet.create({
   container: {
     padding: 24,
     marginTop: 36,
+    backgroundColor: Colors.grey200,
+  },
+  headerText: {
+    fontWeight: 'bold',
+    marginBottom: 20,
   },
 });
