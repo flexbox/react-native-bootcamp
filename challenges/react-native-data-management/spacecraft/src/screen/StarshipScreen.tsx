@@ -18,6 +18,7 @@ const StarshipScreen = () => {
 
   if (isLoading) return <AppLayout title="Loading..." />;
   if (isError) return <AppLayout title="Error 😕" />;
+  if (data.results === undefined) return <AppLayout title="Not Found" />;
 
   return (
     <AppLayout title="Starships">
