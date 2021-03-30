@@ -8,9 +8,12 @@
 ## System Requirements
 
 - [ ]  [git](https://git-scm.com/) v2.13 or greater
-- [ ]  [NodeJS](https://nodejs.org/) v10.13 or greater
+- [ ]  [NodeJS](https://nodejs.org/) v12 or greater
 - [ ]  [npm](https://www.npmjs.com/) v6 or greater
-- [ ]  Yarn v1 [https://classic.yarnpkg.com/en/docs/install#mac-stable](https://classic.yarnpkg.com/en/docs/install#mac-stable)
+- [ ]  [yarn v1](https://classic.yarnpkg.com/en/docs/install](https://classic.yarnpkg.com/en/docs/install)
+
+- [ ] [Xcode 12](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
+- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+ for Linux / Windows
 
 Open a Terminal and run
 
@@ -30,10 +33,8 @@ npm i -g expo-cli
 
 You are going to follow a **Native Mobile Application Workshop**.
 iOS phones are the easiest way, Android are nice too BUT there is more issues.
-You need a decent smartphone to enjoy a fast experience
+You need a decent smartphone to enjoy a fast experience.
 
-## Dev Text Editor
+## Text Editor
 
-Download and install VSCode
-
-[Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
+- [ ] Download and install [Visual Studio Code](https://code.visualstudio.com/)
