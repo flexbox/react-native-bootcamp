@@ -6,7 +6,7 @@
 - Age of Empire 2 [companion app](https://age-of-empires-2-api.herokuapp.com/docs/#/)
 - Product Hunt clone with Hasura
 - Machine Learning application by [@flexbox](https://github.com/flexbox/machine-learning-with-javascript/tree/master/vision)
-- Onboarding with magic.link by [@flexbox](https://github.com/flexbox/react-native-workshop/tree/main/bootcamp-hackathon/onboarding)
+- Onboarding with magic.link by [@flexbox](https://github.com/flexbox/react-native-workshop/tree/main/hackathon/onboarding)
 
 ## Getting Started
 
@@ -35,4 +35,4 @@ npx create-react-native-app
 
 ## 🚀 Spread The World
 
-Feel free to open a [pull request with your example](https://github.com/flexbox/react-native-workshop/tree/main/bootcamp-hackathon)
+Feel free to open a [pull request with your example](https://github.com/flexbox/react-native-workshop/tree/main/hackathon)

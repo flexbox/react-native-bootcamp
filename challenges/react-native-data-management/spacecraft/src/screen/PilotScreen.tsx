@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 import { Button } from 'react-native-paper';
 import AppLayout from '../components/AppLayout';
 
@@ -12,7 +12,6 @@ const PilotScreen = (props: Props) => {
     setDisplay(!display);
   };
 
-  console.log('file: PilotScreen.tsx ~ line 8 ~ PilotScreen ~ props', props);
   return (
     <AppLayout title="Pilot">
       {display ? <Text>MODAL</Text> : <Text>RIEN</Text>}

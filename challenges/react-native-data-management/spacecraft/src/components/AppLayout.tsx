@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactNode } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Colors, Headline } from 'react-native-paper';
 
@@ -7,7 +7,7 @@ import { Colors, Headline } from 'react-native-paper';
 
 interface Props {
   title: string;
-  children?: ReactElement;
+  children?: ReactNode;
 }
 
 const AppLayout = ({ title, children }: Props) => {
