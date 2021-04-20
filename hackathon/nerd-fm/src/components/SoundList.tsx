@@ -27,8 +27,8 @@ const SoundItem = ({ sound }) => {
 const SoundList = (props: Props) => {
   return (
     <>
-      {allSounds.map((sound) => {
-        return <SoundItem sound={sound} />;
+      {allSounds.map((sound, index) => {
+        return <SoundItem sound={sound} key={index} />;
       })}
     </>
   );
