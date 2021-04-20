@@ -1,8 +1,8 @@
 # React Native Workshop
 
-[![Mindmap](./react-native-mindmap-project.png)](https://davidl.fr/mindmaps)
+![Mindmap](./react-native-mindmap-project.png)
 
-Explore [the complete mindmap](https://davidl.fr/mindmaps)
+All the exercices are [on the workshop website](https://davidl.fr/workshop)
 
 Design your ideas with:
 
