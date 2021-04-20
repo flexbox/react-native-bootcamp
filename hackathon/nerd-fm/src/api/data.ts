@@ -1,4 +1,4 @@
-const allSounds = [
+export const allSounds = [
   {
     artist: "Harry Gregson Williams",
     music: {

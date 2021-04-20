@@ -1,24 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-paper';
+import { Headline } from 'react-native-paper';
+import { allSounds } from './api/data';
 
 interface Props {}
 
 const RootScreen = (props: Props) => {
   return (
-    <View>
-      <Text>Hello</Text>
-      <Text>Hello</Text>
-      <Text>Hello</Text>
-      <Button
-        icon="camera"
-        mode="contained"
-        onPress={() => console.log('Pressed')}
-      >
-        Press me
-      </Button>
-      <Text>Hello</Text>
-      <Text>Hello</Text>
+    <View style={{ padding: 20 }}>
+      <Headline>Liste des musiques</Headline>
+      {allSounds.map((sound) => {
+        return <Text>{sound.artist}</Text>;
+      })}
     </View>
   );
 };
