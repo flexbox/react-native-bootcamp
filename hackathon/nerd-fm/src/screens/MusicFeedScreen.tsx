@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import { Headline } from 'react-native-paper';
+import { View } from 'react-native';
 import SoundList from '../components/SoundList';
 
 interface Props {}
@@ -8,8 +7,6 @@ interface Props {}
 const MusicFeedScreen = (props: Props) => {
   return (
     <View>
-      <Text>Music Feed</Text>
-      <Headline>Liste des musiques</Headline>
       <SoundList />
     </View>
   );
