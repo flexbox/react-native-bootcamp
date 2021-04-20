@@ -13,6 +13,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
+    "react-native-paper": "^4.7.2",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
