@@ -1,10 +1,15 @@
 import React from 'react';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider } from '@ui-kitten/components';
-import MusicFeedScreen from './src/screens/MusicFeedScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { MusicStack } from './src/navigation/Navigator';
 
-export default () => (
-  <ApplicationProvider {...eva} theme={eva.light}>
-    <MusicFeedScreen />
-  </ApplicationProvider>
-);
+export default () => {
+  return (
+    <ApplicationProvider {...eva} theme={eva.light}>
+      <NavigationContainer>
+        <MusicStack />
+      </NavigationContainer>
+    </ApplicationProvider>
+  );
+};

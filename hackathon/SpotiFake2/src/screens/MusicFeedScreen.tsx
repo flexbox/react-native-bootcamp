@@ -8,9 +8,6 @@ interface Props {}
 const MusicFeedScreen = (props: Props) => {
   return (
     <Layout>
-      <View style={styles.container}>
-        <Text category="h1">MUSIC</Text>
-      </View>
       <SoundList />
     </Layout>
   );
