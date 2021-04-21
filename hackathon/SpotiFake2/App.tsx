@@ -1,15 +1,10 @@
 import React from 'react';
 import * as eva from '@eva-design/eva';
-import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
-
-const HomeScreen = () => (
-  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text category="h1">HOME</Text>
-  </Layout>
-);
+import { ApplicationProvider } from '@ui-kitten/components';
+import MusicFeedScreen from './src/screens/MusicFeedScreen';
 
 export default () => (
   <ApplicationProvider {...eva} theme={eva.light}>
-    <HomeScreen />
+    <MusicFeedScreen />
   </ApplicationProvider>
 );
