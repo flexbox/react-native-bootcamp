@@ -3,10 +3,12 @@ import { View, Text } from 'react-native';
 
 interface Props {}
 
-const MusicDetailsScreen = (props: Props) => {
+const MusicDetailsScreen = ({ route, navigation }: Props) => {
+  const { musicId } = route.params;
+
   return (
     <View>
-      <Text>Details</Text>
+      <Text>Details {musicId}</Text>
     </View>
   );
 };
