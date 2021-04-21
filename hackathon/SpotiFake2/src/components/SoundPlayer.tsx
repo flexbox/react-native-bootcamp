@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Audio } from 'expo-av';
 import { Button } from '@ui-kitten/components';
+import { Feather } from '@expo/vector-icons';
 
 interface Props {}
 
@@ -31,12 +32,23 @@ const SoundPlayer = (props: Props) => {
       : undefined;
   }, [sound]);
 
+  const PlayIcon = (props) => (
+    <Feather {...props} name="play" size={18} color="white" />
+  );
+  const StopIcon = (props) => (
+    <Feather {...props} name="square" size={18} color="white" />
+  );
+
   return (
     <>
       {sound ? (
-        <Button onPress={stopSound}>Stop Sound</Button>
+        <Button onPress={stopSound} accessoryLeft={StopIcon}>
+          Stop Sound
+        </Button>
       ) : (
-        <Button onPress={playSound}>Play Sound</Button>
+        <Button onPress={playSound} accessoryLeft={PlayIcon}>
+          Play Sound
+        </Button>
       )}
     </>
   );

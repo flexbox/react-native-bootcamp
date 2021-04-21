@@ -4,6 +4,7 @@ import { Text } from '@ui-kitten/components';
 import find from 'lodash/find';
 import { allSounds } from '../api/data';
 import SoundPlayer from '../components/SoundPlayer';
+import SoundShare from '../components/SoundShare';
 
 interface Props {}
 
@@ -20,6 +21,9 @@ const MusicDetailsScreen = ({ route, navigation }: Props) => {
       </Text>
       <View style={{ padding: 20 }}>
         <SoundPlayer />
+      </View>
+      <View style={{ padding: 20 }}>
+        <SoundShare />
       </View>
     </View>
   );
