@@ -1,19 +1,17 @@
 # React Native Workshop
 
+> A series of __React Native coding challenges__ with a variety of difficulties.
+
+Deep dive into [the workshop here](https://davidl.fr/workshop).
+
 ![Mindmap](./react-native-mindmap-project.png)
-
-All the exercices are [on the workshop website](https://davidl.fr/workshop)
-
-Design your ideas with:
-
-- [excalidraw.com](https://excalidraw.com/)
-- [flowchart.fun](https://flowchart.fun/)
 
 ## Projects
 
 1. [atls](./hackathon/atls/)
-1. [newsfeed](./hackathon/newsfeed/)
-1. [onboarding with magic link](./hackathon/onboarding/)
+1. [newsfeed](./hackathon/newsfeed/) _with getstream API_
+1. [onboarding](./hackathon/onboarding/) _with magic.link SDK_
+1. [nerd-fm](./hackathon/nerd-fm/)
 1. and more
 
 ## Getting Started
