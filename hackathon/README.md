@@ -4,14 +4,13 @@
 
 - Rick and Morty episode tracker with [rickandmortyapi](https://rickandmortyapi.com/)
 - Age of Empire 2 [companion app](https://age-of-empires-2-api.herokuapp.com/docs/#/)
-- Product Hunt clone with Hasura
+- Product Hunt clone
 - Machine Learning application by [@flexbox](https://github.com/flexbox/machine-learning-with-javascript/tree/master/vision)
 - Onboarding with magic.link by [@flexbox](https://github.com/flexbox/react-native-workshop/tree/main/hackathon/onboarding)
 
 ## Getting Started
 
 - [ ] Open [excalidraw](https://excalidraw.com/) to assemble a plan of your screens
-
 - [ ] Run the CLI
 
 ```console
@@ -32,6 +31,12 @@ npx create-react-native-app
 
 - From GitHub: [public-apis](https://github.com/public-apis/public-apis)
 - Free public APIs (maybe some of them does not work): [public-apis](https://public-apis.io/)
+
+### Community
+
+- [React Native Community](https://github.com/react-native-community)
+- [Expo Community](https://github.com/expo-community)
+- [React Native Directory](https://reactnative.directory/)
 
 ## 🚀 Spread The World
 

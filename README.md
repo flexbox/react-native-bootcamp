@@ -29,14 +29,8 @@ npx create-react-native-app
 npx ignite-cli new AwesomeApp --expo
 
 # React Native module
-npx create-react-native-library react-native-awesome-module
+npx create-react-native-library AwesomeModule
 ```
-
-## Ressources
-
-- [React Native Community](https://github.com/react-native-community)
-- [Expo Community](https://github.com/expo-community)
-- [React Native Directory](https://reactnative.directory/)
 
 ## Was this helpful?
 
