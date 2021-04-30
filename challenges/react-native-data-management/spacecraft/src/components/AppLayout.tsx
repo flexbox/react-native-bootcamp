@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Colors, Headline } from 'react-native-paper';
 
-// 🥑 Add a `NetworkProvider
+// Add a `NetworkProvider
 // import { NetworkProvider } from 'react-native-offline';
 
 interface Props {

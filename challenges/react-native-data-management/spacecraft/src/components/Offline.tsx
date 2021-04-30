@@ -5,7 +5,7 @@ import { ActivityIndicator, Colors, Text } from 'react-native-paper';
 const Offline = () => {
   return (
     <View>
-      <Text>{/* 🥑 Add a `NetworkConsumer` and `ActivityIndicator`  */}</Text>
+      <Text>{/* Add a `NetworkConsumer` and `ActivityIndicator`  */}</Text>
     </View>
   );
 };
