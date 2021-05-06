@@ -12,6 +12,7 @@ import {
   Headline,
   TextInput,
 } from 'react-native-paper';
+import { sleep } from '../utils/sleep';
 
 interface LoginScreenProps {
   setIsAuthorized: Function;
@@ -21,8 +22,9 @@ const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
   const [text, setText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const handlePress = () => {
+  const handlePress = async () => {
     setIsLoading(true);
+    await sleep(1500);
     setIsAuthorized(true);
   };
 
