@@ -21,7 +21,11 @@ function Navigator() {
 
   return (
     <NavigationContainer>
-      {isAuthorized ? <RootStack /> : <LoginScreen />}
+      {isAuthorized ? (
+        <RootStack />
+      ) : (
+        <LoginScreen setIsAuthorized={setIsAuthorized} />
+      )}
     </NavigationContainer>
   );
 }

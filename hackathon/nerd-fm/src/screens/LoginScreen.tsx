@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   SafeAreaView,
@@ -13,14 +13,17 @@ import {
   TextInput,
 } from 'react-native-paper';
 
-interface Props {}
+interface LoginScreenProps {
+  setIsAuthorized: Function;
+}
 
-const LoginScreen = (props: Props) => {
-  const [text, setText] = React.useState('');
-  const [isLoading, setIsLoading] = React.useState(false);
+const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
+  const [text, setText] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handlePress = () => {
     setIsLoading(true);
+    setIsAuthorized(true);
   };
 
   return (
