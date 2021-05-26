@@ -8,7 +8,7 @@ import {
   FlatList,
   Pressable,
 } from 'react-native';
-import { data } from './data';
+import { data } from '../../../api/data';
 
 const App = () => {
   const Button = ({ item }) => (

@@ -3,11 +3,13 @@ import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import Constants from 'expo-constants';
 import { Button, Colors, Headline } from 'react-native-paper';
 import { FormInput } from './FromInput';
+// import { useNavigation } from '@react-navigation/native';
 
-export default function LoginScreen({ navigation }) {
+export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // const navigation = useNavigation();
   function handleLogin() {
     // navigation.navigate(AppRoute.TIMELINE_SCREEN);
   }
@@ -19,7 +21,7 @@ export default function LoginScreen({ navigation }) {
   return (
     <View>
       <View style={styles.header}>
-        <Headline>SpaceCraft</Headline>
+        <Headline style={styles.headerText}>SpaceCraft</Headline>
       </View>
       <View style={styles.content}>
         <FormInput
@@ -57,12 +59,17 @@ const styles = StyleSheet.create({
   header: {
     paddingTop: Constants.statusBarHeight,
     alignItems: 'center',
+    justifyContent: 'center',
     height: 140,
     backgroundColor: Colors.purple500,
   },
+  headerText: {
+    color: Colors.white,
+    fontWeight: 'bold',
+  },
   submitButton: {
     marginVertical: 32,
-    marginHorizontal: 8,
+    marginHorizontal: 16,
     backgroundColor: Colors.purple500,
   },
   tocText: {
