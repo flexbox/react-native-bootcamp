@@ -7,10 +7,10 @@
 
 ## System Requirements
 
-- [ ]  [git](https://git-scm.com/) v2.13 or greater
-- [ ]  [NodeJS](https://nodejs.org/) v12 or greater
-- [ ]  [npm](https://www.npmjs.com/) v6 or greater
-- [ ]  [yarn v1](https://classic.yarnpkg.com/en/docs/install](https://classic.yarnpkg.com/en/docs/install)
+- [ ] [git](https://git-scm.com/) v2.13 or greater
+- [ ] [NodeJS](https://nodejs.org/) v12 or greater
+- [ ] [npm](https://www.npmjs.com/) v6 or greater
+- [ ] [yarn v1](https://classic.yarnpkg.com/en/docs/install](https://classic.yarnpkg.com/en/docs/install)
 
 - [ ] [Xcode 12](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
 - [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+ for Linux / Windows
@@ -38,3 +38,18 @@ You need a decent smartphone to enjoy a fast experience.
 ## Text Editor
 
 - [ ] Download and install [Visual Studio Code](https://code.visualstudio.com/)
+
+```console
+# macOS users
+
+brew install --cask visual-studio-code
+```
+
+```console
+# Linux users
+
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install code
+```
