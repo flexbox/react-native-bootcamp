@@ -2,8 +2,7 @@
 
 💡 I do provide advices for Linux and macOS.
 
-💡 I am **not responsable** if you encounter issues on windows machines.
-(But you can follow theses instructions [https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/](https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/) to make it work).
+💡 I am **not responsable** if you encounter issues on windows machines. (But you can follow this [setup tutorial from InfiniteRed](https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/) to make it work).
 
 ## System Requirements
 
