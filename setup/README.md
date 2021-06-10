@@ -12,9 +12,6 @@
 - [ ] [npm](https://www.npmjs.com/) v6 or greater
 - [ ] [yarn v1](https://classic.yarnpkg.com/en/docs/install](https://classic.yarnpkg.com/en/docs/install)
 
-- [ ] [Xcode 12](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
-- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+ for Linux / Windows
-
 Use the following command at your terminal to check your Node version.
 
 ```
@@ -28,6 +25,11 @@ For creating our React Native project we are going to use [Expo](https://expo.io
 ```console
 npm install --global expo-cli
 ```
+
+## Virtual Simulators
+
+- [ ] [Xcode 12](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
+- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+ for Linux / Windows
 
 ## Smartphone Requirements
 
