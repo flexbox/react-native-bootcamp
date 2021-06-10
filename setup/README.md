@@ -15,12 +15,18 @@
 - [ ] [Xcode 12](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
 - [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+ for Linux / Windows
 
-Open a Terminal and run
+Use the following command at your terminal to check your Node version.
+
+```
+node --version
+```
+
+If you have a recent version installed, it should do.
+
+For creating our React Native project we are going to use [Expo](https://expo.io/), which is an open-source platform for making native apps for Android and iOS using JavaScript.
 
 ```console
-yarn add global expo-cli
-or
-npm i -g expo-cli
+npm install --global expo-cli
 ```
 
 ## Smartphone Requirements
@@ -32,7 +38,7 @@ npm i -g expo-cli
 - [ ]  Sign-in with your Expo account on your phone
 
 You are going to follow a **Native Mobile Application Workshop**.
-iOS phones are the easiest way, Android are nice too BUT there is more issues.
+`iOS` phones are the easiest way, Android are nice too BUT there is more issues.
 You need a decent smartphone to enjoy a fast experience.
 
 ## Text Editor
