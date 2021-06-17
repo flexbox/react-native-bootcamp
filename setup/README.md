@@ -9,7 +9,7 @@
 - [ ] [git](https://git-scm.com/) v2.13 or greater
 - [ ] [NodeJS](https://nodejs.org/) v12 or greater
 - [ ] [npm](https://www.npmjs.com/) v6 or greater
-- [ ] [yarn v1](https://classic.yarnpkg.com/en/docs/install](https://classic.yarnpkg.com/en/docs/install)
+- [ ] [yarn v1](https://classic.yarnpkg.com/en/docs/install)
 
 Use the following command at your terminal to check your Node version.
 
