@@ -3,9 +3,7 @@ import { Text } from 'react-native';
 import { Button } from 'react-native-paper';
 import AppLayout from '../components/AppLayout';
 
-interface Props {}
-
-const PilotScreen = (props: Props) => {
+const PilotScreen = () => {
   const [display, setDisplay] = useState(false);
 
   const handlePress = () => {
