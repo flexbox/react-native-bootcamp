@@ -12,5 +12,5 @@
     "resolveJsonModule": true,
     "strict": true
   },
-  "extends": "expo/tsconfig.base"
+  "extends": "eslint-config-react-native-wcandillon/tsconfig.base"
 }

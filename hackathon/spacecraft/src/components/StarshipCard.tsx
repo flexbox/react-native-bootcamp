@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button, Card, Paragraph, Title } from 'react-native-paper';
+import React from "react";
+import { Button, Card, Paragraph, Title } from "react-native-paper";
 
 export interface StarshipCardProps {
   title: string;

@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Colors, Headline } from 'react-native-paper';
+import React, { ReactNode } from "react";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Colors, Headline } from "react-native-paper";
 
 // Add a `NetworkProvider
 // import { NetworkProvider } from 'react-native-offline';
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.grey200,
   },
   headerText: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
   },
 });

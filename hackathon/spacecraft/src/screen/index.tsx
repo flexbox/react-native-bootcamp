@@ -1,4 +1,4 @@
-import StarshipFeedScreen from './StarshipFeedScreen';
-import PilotScreen from './PilotScreen';
+import StarshipFeedScreen from "./StarshipFeedScreen";
+import PilotScreen from "./PilotScreen";
 
 export { StarshipFeedScreen, PilotScreen };

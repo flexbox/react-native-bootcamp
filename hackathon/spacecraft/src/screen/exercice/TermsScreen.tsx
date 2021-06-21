@@ -1,11 +1,11 @@
-import React from 'react';
-import { View, Text, Image } from 'react-native';
-import { Appbar } from 'react-native-paper';
+import React from "react";
+import { View, Text, Image } from "react-native";
+import { Appbar } from "react-native-paper";
 
 const TermsScreen = () => {
   function goBack() {
     // We need to use this props screen `{navigation}`
-    alert('goBack pressed!');
+    alert("goBack pressed!");
   }
 
   return (
@@ -335,7 +335,7 @@ const TermsScreen = () => {
         <Image
           style={{ width: 250, height: 250, marginVertical: 32 }}
           source={{
-            uri: 'https://media.giphy.com/media/111ebonMs90YLu/giphy-downsized.gif',
+            uri: "https://media.giphy.com/media/111ebonMs90YLu/giphy-downsized.gif",
           }}
         />
 

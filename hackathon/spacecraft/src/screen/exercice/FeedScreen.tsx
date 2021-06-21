@@ -1,6 +1,7 @@
-import React from 'react';
-import { SafeAreaView, StyleSheet, Text, StatusBar, View } from 'react-native';
-import { data } from '../../../api/data';
+import React from "react";
+import { SafeAreaView, StyleSheet, Text, StatusBar, View } from "react-native";
+
+import { data } from "../../../api/data";
 
 const App = () => {
   return (

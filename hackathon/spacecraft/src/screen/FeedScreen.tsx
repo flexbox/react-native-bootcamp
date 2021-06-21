@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   SafeAreaView,
   StyleSheet,
@@ -7,18 +7,19 @@ import {
   View,
   FlatList,
   Pressable,
-} from 'react-native';
-import { data } from '../../api/data';
+} from "react-native";
+
+import { data } from "../../api/data";
 
 const FeedScreen = () => {
   const Button = ({ item }) => (
     <Pressable
       onPress={() => {
-        console.log('onPress');
+        console.log("onPress");
       }}
       style={({ pressed }) => [
         {
-          backgroundColor: pressed ? '#C4B5FD' : '#EDE9FE',
+          backgroundColor: pressed ? "#C4B5FD" : "#EDE9FE",
         },
         styles.button,
       ]}
@@ -62,17 +63,17 @@ const styles = StyleSheet.create({
   item: {
     marginVertical: 8,
     marginHorizontal: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   button: {
     padding: 10,
     borderRadius: 8,
     marginBottom: 10,
-    borderColor: '#8B5CF6',
+    borderColor: "#8B5CF6",
     borderWidth: 2,
   },
   buttonText: {
-    color: '#8B5CF6',
+    color: "#8B5CF6",
   },
 });
 

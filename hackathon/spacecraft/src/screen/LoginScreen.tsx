@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
-import Constants from 'expo-constants';
-import { Button, Colors, Headline } from 'react-native-paper';
-import { FormInput } from '../components/FromInput';
-import { useNavigation } from '@react-navigation/native';
-import { AppRoute } from '../navigation/AppRoutes';
+import React, { useState } from "react";
+import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import Constants from "expo-constants";
+import { Button, Colors, Headline } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
+
+import { FormInput } from "../components/FromInput";
+import { AppRoute } from "../navigation/AppRoutes";
 
 const LoginScreen = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const navigation = useNavigation();
   function handleLogin() {
@@ -59,14 +60,14 @@ const styles = StyleSheet.create({
   },
   header: {
     paddingTop: Constants.statusBarHeight,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     height: 140,
     backgroundColor: Colors.purple500,
   },
   headerText: {
     color: Colors.white,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   submitButton: {
     marginVertical: 32,
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.purple500,
   },
   tocText: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 14,
     color: Colors.grey500,
   },

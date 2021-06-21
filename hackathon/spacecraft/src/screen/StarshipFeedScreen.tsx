@@ -1,9 +1,10 @@
-import React from 'react';
-import { useQuery } from 'react-query';
-import fetchAsync from '../lib/fetchAsync';
-import AppLayout from '../components/AppLayout';
-import StarshipCard from '../components/StarshipCard';
-import { FlatList } from 'react-native';
+import React from "react";
+import { useQuery } from "react-query";
+import { FlatList } from "react-native";
+
+import fetchAsync from "../lib/fetchAsync";
+import AppLayout from "../components/AppLayout";
+import StarshipCard from "../components/StarshipCard";
 
 interface shipProps {
   name: string;
@@ -26,8 +27,8 @@ interface shipProps {
 // };
 
 const StarshipFeedScreen = () => {
-  const { isLoading, isError, data } = useQuery('starships', () =>
-    fetchAsync(`https://swapi.dev/api/starships/`)
+  const { isLoading, isError, data } = useQuery("starships", () =>
+    fetchAsync("https://swapi.dev/api/starships/")
   );
 
   if (isLoading) return <AppLayout title="Loading…" />;

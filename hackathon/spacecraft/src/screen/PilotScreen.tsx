@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Text } from 'react-native';
-import { Button } from 'react-native-paper';
-import AppLayout from '../components/AppLayout';
+import React, { useState } from "react";
+import { Text } from "react-native";
+import { Button } from "react-native-paper";
+
+import AppLayout from "../components/AppLayout";
 
 const PilotScreen = () => {
   const [display, setDisplay] = useState(false);
