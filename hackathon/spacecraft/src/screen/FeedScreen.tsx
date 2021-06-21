@@ -8,9 +8,9 @@ import {
   FlatList,
   Pressable,
 } from 'react-native';
-import { data } from '../../../api/data';
+import { data } from '../../api/data';
 
-const App = () => {
+const FeedScreen = () => {
   const Button = ({ item }) => (
     <Pressable
       onPress={() => {
@@ -76,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default FeedScreen;

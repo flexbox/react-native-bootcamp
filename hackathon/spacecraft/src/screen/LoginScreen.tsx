@@ -2,20 +2,21 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import Constants from 'expo-constants';
 import { Button, Colors, Headline } from 'react-native-paper';
-import { FormInput } from './FromInput';
-// import { useNavigation } from '@react-navigation/native';
+import { FormInput } from '../components/FromInput';
+import { useNavigation } from '@react-navigation/native';
+import { AppRoute } from '../navigation/AppRoutes';
 
-export default function LoginScreen() {
+const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   function handleLogin() {
-    // navigation.navigate(AppRoute.TIMELINE_SCREEN);
+    navigation.navigate(AppRoute.STARSHIP_FEED_SCREEN);
   }
 
   function handleTerms() {
-    // navigation.navigate(AppRoute.TERMS_SCREEN);
+    navigation.navigate(AppRoute.TERMS_SCREEN);
   }
 
   return (
@@ -50,7 +51,7 @@ export default function LoginScreen() {
       </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   content: {
@@ -78,3 +79,5 @@ const styles = StyleSheet.create({
     color: Colors.grey500,
   },
 });
+
+export default LoginScreen;

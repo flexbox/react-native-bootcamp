@@ -25,7 +25,7 @@ interface shipProps {
 //   );
 // };
 
-const StarshipScreen = () => {
+const StarshipFeedScreen = () => {
   const { isLoading, isError, data } = useQuery('starships', () =>
     fetchAsync(`https://swapi.dev/api/starships/`)
   );
@@ -59,4 +59,4 @@ const StarshipScreen = () => {
   );
 };
 
-export default StarshipScreen;
+export default StarshipFeedScreen;
