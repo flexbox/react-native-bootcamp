@@ -30,12 +30,12 @@ npx create-react-native-app
 ### Data
 
 - From GitHub: [public-apis](https://github.com/public-apis/public-apis)
-- Free public APIs (maybe some of them does not work): [public-apis](https://public-apis.io/)
+- Free public APIs: [public-apis](https://public-apis.io/)
 
 ### Community
 
-- [React Native Community](https://github.com/react-native-community)
 - [Expo Community](https://github.com/expo-community)
+- [React Native Community](https://github.com/react-native-community)
 - [React Native Directory](https://reactnative.directory/)
 
 ## 🚀 Spread The World
