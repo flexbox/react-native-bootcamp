@@ -13,7 +13,7 @@
 
 Use the following command at your terminal to check your Node version.
 
-```
+```console
 node --version
 ```
 
