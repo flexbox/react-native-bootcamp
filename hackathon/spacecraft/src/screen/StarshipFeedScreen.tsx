@@ -36,7 +36,7 @@ const StarshipFeedScreen = () => {
   if (data.results === undefined) return <AppLayout title="Not Found" />;
 
   return (
-    <AppLayout title="Starships">
+    <AppLayout title="Starships" withFooter>
       {/* SOLUTION 1: with a map */}
       {data.results.map((ship: shipProps) => {
         return (
