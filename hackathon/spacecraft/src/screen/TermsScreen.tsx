@@ -3,7 +3,7 @@ import { View, Text, Image } from "react-native";
 import { Appbar } from "react-native-paper";
 
 // We need to use this props screen `{navigation}`
-export default function App() {
+export default function TermsScreen() {
   function goBack() {
     // We need to use this props screen `{navigation}`
     alert("goBack pressed!");
