@@ -1,4 +1,5 @@
 import React from "react";
+import { StyleSheet } from "react-native";
 import { Button, Card, Title } from "react-native-paper";
 
 export interface StarshipCardProps {
@@ -49,7 +50,7 @@ const StarshipCard = ({ title, manufacturer, price }: StarshipCardProps) => {
   };
 
   return (
-    <Card style={{ marginBottom: 32 }}>
+    <Card style={styles.containerCard}>
       <Card.Cover source={source} />
       <Card.Title title={title} subtitle={manufacturer} />
       <Card.Content>
@@ -65,5 +66,11 @@ const StarshipCard = ({ title, manufacturer, price }: StarshipCardProps) => {
     </Card>
   );
 };
+
+const styles = StyleSheet.create({
+  containerCard: {
+    marginBottom: 32,
+  },
+});
 
 export default StarshipCard;
