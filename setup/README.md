@@ -28,6 +28,13 @@ npm install --global expo-cli
 ## Virtual Simulators
 
 - [ ] [Xcode 12](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
+
+Check if everything is working with
+
+```console
+xcode-select --install
+```
+
 - [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+ for Linux / Windows
 
 ## Smartphone Requirements
