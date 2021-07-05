@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import Constants from "expo-constants";
-import { Button, Colors, Headline } from "react-native-paper";
+import { Button, Colors, Headline, TextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
@@ -10,6 +10,7 @@ import { AppRoute } from "../navigation/AppRoutes";
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isVisble, setIsVisible] = useState(true);
 
   const navigation = useNavigation();
   function handleLogin() {
@@ -18,6 +19,10 @@ const LoginScreen = () => {
 
   function handleTerms() {
     navigation.navigate(AppRoute.TERMS_SCREEN);
+  }
+
+  function toggleSecureIcon() {
+    setIsVisible(!isVisble);
   }
 
   return (
@@ -34,8 +39,14 @@ const LoginScreen = () => {
         <FormInput
           label="Password"
           value={password}
-          secureTextEntry
+          secureTextEntry={isVisble}
           onChangeText={(value) => setPassword(value)}
+          right={
+            <TextInput.Icon
+              onPress={toggleSecureIcon}
+              name={isVisble ? "eye-off" : "eye"}
+            />
+          }
         />
         <Button
           onPress={handleLogin}
