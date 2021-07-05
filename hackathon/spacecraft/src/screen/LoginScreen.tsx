@@ -73,12 +73,13 @@ const styles = StyleSheet.create({
     paddingTop: Constants.statusBarHeight,
     alignItems: "center",
     justifyContent: "center",
-    height: 140,
+    height: 256,
     backgroundColor: Colors.purple500,
   },
   headerText: {
     color: Colors.white,
     fontWeight: "bold",
+    textTransform: "uppercase",
   },
   submitButton: {
     marginVertical: 32,
