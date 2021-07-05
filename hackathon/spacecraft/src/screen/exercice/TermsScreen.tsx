@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import { Appbar } from "react-native-paper";
 
+// We need to use this props screen `{navigation}`
 const TermsScreen = () => {
   function goBack() {
     // We need to use this props screen `{navigation}`
@@ -335,7 +336,7 @@ const TermsScreen = () => {
         <Image
           style={{ width: 250, height: 250, marginVertical: 32 }}
           source={{
-            uri: "https://media.giphy.com/media/111ebonMs90YLu/giphy-downsized.gif",
+            uri: "https://media.giphy.com/media/krkrHAEodHgzP72rTI/giphy.gif",
           }}
         />
 

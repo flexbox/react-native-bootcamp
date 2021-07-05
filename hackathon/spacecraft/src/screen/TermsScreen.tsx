@@ -336,7 +336,7 @@ export default function TermsScreen() {
         <Image
           style={{ width: 250, height: 250, marginVertical: 32 }}
           source={{
-            uri: "https://media.giphy.com/media/111ebonMs90YLu/giphy-downsized.gif",
+            uri: "https://media.giphy.com/media/krkrHAEodHgzP72rTI/giphy.gif",
           }}
         />
 
