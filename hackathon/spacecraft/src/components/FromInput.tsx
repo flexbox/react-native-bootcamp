@@ -7,6 +7,7 @@ interface FormInputProp {
   value: string;
   onChangeText: (value: any) => void;
   secureTextEntry?: boolean;
+  right?: React.ReactNode;
 }
 
 export const FormInput = ({
