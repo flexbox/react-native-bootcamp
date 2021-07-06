@@ -1,6 +1,6 @@
 # React Native Workshop
 
-> A series of __React Native coding challenges__ with a variety of difficulties.
+> A series of **React Native coding challenges** with a variety of difficulties.
 
 Deep dive into [the workshop here](https://davidl.fr/workshop).
 
@@ -32,6 +32,16 @@ npx ignite-cli new AwesomeApp --expo
 npx create-react-native-library AwesomeModule
 ```
 
+## Meet the team
+
+I am a freelance react-native developer, and I share a lot fo [content about the react ecosystem](https://twitter.com/flexbox_).
+
+## Pedagogy
+
+I have chosen two pedagogical tenets while building this curriculum: ensuring that it is hands-on **project-based** and that it **includes frequent quizzes**. In addition, this curriculum has a common theme —create a mobile app with real API— to give it cohesion.
+
+> If you encounter an issue, [feel free to contribute](https://github.com/flexbox/react-native-workshop/issues/new), I welcome your constructive feedback!
+
 ## Was this helpful?
 
-☕️ [Leaving a small tip helps me a lot!](https://www.buymeacoffee.com/flexbox)
+☕️ [Leaving a tip helps me a lot!](https://www.buymeacoffee.com/flexbox)
