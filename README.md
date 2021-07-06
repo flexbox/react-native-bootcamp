@@ -1,4 +1,4 @@
-# React Native Workshop
+# React Native Bootcamp for Beginners - A Curriculum
 
 > A series of **React Native coding challenges** with a variety of difficulties.
 
