@@ -12,20 +12,16 @@ import {
   Headline,
   TextInput,
 } from 'react-native-paper';
-import { useAuth } from '../hooks/useAuth';
 import { AppRoutes } from '../navigation/AppRoutes';
 import { sleep } from '../utils/sleep';
 
 interface LoginScreenProps {
-  navigation: any;
+  setIsAuthorized: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const LoginScreen = ({ navigation }: LoginScreenProps) => {
+const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
   const [text, setText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const { setIsAuthorized } = useAuth()
-
-  console.log(setIsAuthorized);
 
 
   const handleLogin = async () => {
