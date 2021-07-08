@@ -2,11 +2,9 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import { Appbar } from "react-native-paper";
 
-// We need to use this props screen `{navigation}`
-export default function TermsScreen() {
+export default function TermsScreen({ navigation }) {
   function goBack() {
-    // We need to use this props screen `{navigation}`
-    alert("goBack pressed!");
+    navigation.goBack();
   }
 
   return (

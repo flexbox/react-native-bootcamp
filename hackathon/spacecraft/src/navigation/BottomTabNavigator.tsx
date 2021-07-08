@@ -15,7 +15,12 @@ const Stack = createStackNavigator();
 
 const StarshipNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      mode="modal"
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen
         name={AppRoutes.STARSHIP_FEED_SCREEN}
         component={StarshipFeedScreen}
@@ -31,9 +36,9 @@ const StarshipNavigator = () => {
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
-      activeColor={Colors.purple100}
-      inactiveColor={Colors.purple600}
-      barStyle={{ backgroundColor: Colors.purple900 }}
+      activeColor={Colors.purple500}
+      inactiveColor={Colors.grey300}
+      barStyle={{ backgroundColor: Colors.white }}
     >
       <Tab.Screen
         name={AppRoutes.STARSHIP_FEED_SCREEN}

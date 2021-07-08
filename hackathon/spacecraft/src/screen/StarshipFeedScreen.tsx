@@ -1,7 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { FlatList } from "react-native";
-
 import fetchAsync from "../lib/fetchAsync";
 import AppLayout from "../components/AppLayout";
 import StarshipCard from "../components/StarshipCard";
@@ -14,14 +13,11 @@ interface shipProps {
 }
 
 // SOLUTION 2: with a FlatList - more performant
-// const renderItem = ({ item }: shipProps) => {
+// const renderItem = ({ ship }: shipProps) => {
 //   return (
 //     <StarshipCard
-//       key={item.name}
-//       title={item.name}
-//       subtitle={item.model}
-//       manufacturer={item.manufacturer}
-//       price={item.cost_in_credits}
+//       key={ship.name}
+//       ship={ship}
 //     />
 //   );
 // };
@@ -39,15 +35,7 @@ const StarshipFeedScreen = () => {
     <AppLayout title="Starships" withFooter>
       {/* SOLUTION 1: with a map */}
       {data.results.map((ship: shipProps) => {
-        return (
-          <StarshipCard
-            key={ship.name}
-            title={ship.name}
-            subtitle={ship.model}
-            manufacturer={ship.manufacturer}
-            price={ship.cost_in_credits}
-          />
-        );
+        return <StarshipCard key={ship.name} ship={ship} />;
       })}
 
       {/* SOLUTION 2: with a FlatList - more performant */}

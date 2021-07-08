@@ -22,10 +22,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     marginTop: 20,
   },
-  item: {
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
 });
 
 export default App;

@@ -3,50 +3,20 @@ import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { Button, Card, Title } from "react-native-paper";
 
+import { StarshipProps } from "../../api/types";
+import { useImage } from "../hooks/useImage";
 import { AppRoutes } from "../navigation/AppRoutes";
 
 export interface StarshipCardProps {
-  title: string;
-  manufacturer: string;
-  price: string;
+  ship: StarshipProps;
 }
 
-const StarshipCard = ({ title, manufacturer, price }: StarshipCardProps) => {
-  const imageName = `${title.toLowerCase().replace(" ", "")}`;
+const StarshipCard = ({ ship }: StarshipCardProps) => {
+  const title = ship.name;
+  const price = ship.cost_in_credits;
+  const { manufacturer } = ship;
 
-  let source;
-  switch (imageName) {
-    case "cr90corvette":
-      source = require("../../assets/starships/CR90corvette.jpg");
-      break;
-    case "stardestroyer":
-      source = require("../../assets/starships/stardestroyer.jpg");
-      break;
-    case "sentinel-classlanding craft":
-      source = require("../../assets/starships/sentinel-classlandingcraft.jpg");
-      break;
-    case "deathstar":
-      source = require("../../assets/starships/deathstar.jpg");
-      break;
-    case "millenniumfalcon":
-      source = require("../../assets/starships/millenniumfalcon.jpg");
-      break;
-    case "y-wing":
-      source = require("../../assets/starships/y-wing.jpg");
-      break;
-    case "x-wing":
-      source = require("../../assets/starships/x-wing.jpg");
-      break;
-    case "tieadvanced x1":
-      source = require("../../assets/starships/tieadvancedx1.jpg");
-      break;
-    case "executor":
-      source = require("../../assets/starships/executor.jpg");
-      break;
-    case "rebeltransport":
-      source = require("../../assets/starships/rebeltransport.jpg");
-      break;
-  }
+  const source = useImage(title);
 
   const handlePress = () => {
     alert("Buy!");
@@ -55,7 +25,7 @@ const StarshipCard = ({ title, manufacturer, price }: StarshipCardProps) => {
   const navigation = useNavigation();
 
   const handleGoToDetails = () => {
-    navigation.navigate(AppRoutes.STARSHIP_DETAIL_SCREEN);
+    navigation.navigate(AppRoutes.STARSHIP_DETAIL_SCREEN, ship);
   };
 
   return (
