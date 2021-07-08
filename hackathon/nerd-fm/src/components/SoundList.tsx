@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import { allSounds } from '../api/data';
 import { List } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';

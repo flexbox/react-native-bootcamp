@@ -4,14 +4,18 @@ import MusicDetailsScreen from '../screens/MusicDetailsScreen';
 import MusicFeedScreen from '../screens/MusicFeedScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import LoginScreen from '../screens/LoginScreen';
+import { AppRoute } from './AppRoutes';
 
 const Stack = createStackNavigator();
 
 function RootStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Music Feed" component={MusicFeedScreen} />
-      <Stack.Screen name="Music" component={MusicDetailsScreen} />
+      <Stack.Screen name={AppRoute.MUSIC_FEED} component={MusicFeedScreen} />
+      <Stack.Screen
+        name={AppRoute.MUSIC_DETAIL}
+        component={MusicDetailsScreen}
+      />
     </Stack.Navigator>
   );
 }

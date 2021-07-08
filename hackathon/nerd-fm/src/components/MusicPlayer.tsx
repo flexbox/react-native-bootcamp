@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { Audio } from 'expo-av';
 import { Button } from 'react-native-paper';
 
-interface Props {}
-
-const MusicPlayer = (props: Props) => {
-  const [sound, setSound] = useState();
+const MusicPlayer = () => {
+  const [sound, setSound] = useState<Audio.Sound>();
 
   async function playSound() {
     console.log('Loading Sound');
