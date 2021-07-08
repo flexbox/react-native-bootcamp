@@ -5,21 +5,21 @@ import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "../screen/LoginScreen";
 import StarshipFeedScreen from "../screen/StarshipFeedScreen";
 
-import { AppRoute } from "./AppRoutes";
+import { AppRoutes } from "./AppRoutes";
 
 const Stack = createStackNavigator();
 
 const StarShipStack = () => {
   return (
     <Stack.Navigator
-      initialRouteName={AppRoute.LOGIN_SCREEN}
+      initialRouteName={AppRoutes.LOGIN_SCREEN}
       screenOptions={{
         headerShown: false,
       }}
     >
-      <Stack.Screen name={AppRoute.LOGIN_SCREEN} component={LoginScreen} />
+      <Stack.Screen name={AppRoutes.LOGIN_SCREEN} component={LoginScreen} />
       <Stack.Screen
-        name={AppRoute.STARSHIP_FEED_SCREEN}
+        name={AppRoutes.STARSHIP_FEED_SCREEN}
         component={StarshipFeedScreen}
       />
     </Stack.Navigator>

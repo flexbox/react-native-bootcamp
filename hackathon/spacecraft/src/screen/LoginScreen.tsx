@@ -5,7 +5,7 @@ import { Button, Colors, Headline, TextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
-import { AppRoute } from "../navigation/AppRoutes";
+import { AppRoutes } from "../navigation/AppRoutes";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -14,11 +14,11 @@ const LoginScreen = () => {
 
   const navigation = useNavigation();
   function handleLogin() {
-    navigation.navigate(AppRoute.STARSHIP_FEED_SCREEN);
+    navigation.navigate(AppRoutes.STARSHIP_FEED_SCREEN);
   }
 
   function handleTerms() {
-    navigation.navigate(AppRoute.TERMS_SCREEN);
+    navigation.navigate(AppRoutes.TERMS_SCREEN);
   }
 
   function toggleSecureIcon() {

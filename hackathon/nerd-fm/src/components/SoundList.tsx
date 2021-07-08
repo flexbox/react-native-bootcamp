@@ -3,7 +3,7 @@ import { allSounds } from '../api/data';
 import { List } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/core';
-import { AppRoute } from '../navigation/AppRoutes';
+import { AppRoutes } from '../navigation/AppRoutes';
 
 interface Props {}
 
@@ -12,7 +12,7 @@ const SoundItem = ({ sound }) => {
 
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate(AppRoute.MUSIC_DETAIL)}
+      onPress={() => navigation.navigate(AppRoutes.MUSIC_DETAIL)}
     >
       <List.Item
         title={sound.artist}
