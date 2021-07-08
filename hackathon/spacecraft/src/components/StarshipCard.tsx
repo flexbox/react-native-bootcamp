@@ -1,6 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import { Button, Card, Title } from "react-native-paper";
+
+import { AppRoutes } from "../navigation/AppRoutes";
 
 export interface StarshipCardProps {
   title: string;
@@ -49,21 +52,29 @@ const StarshipCard = ({ title, manufacturer, price }: StarshipCardProps) => {
     alert("Buy!");
   };
 
+  const navigation = useNavigation();
+
+  const handleGoToDetails = () => {
+    navigation.navigate(AppRoutes.STARSHIP_DETAIL_SCREEN);
+  };
+
   return (
-    <Card style={styles.containerCard}>
-      <Card.Cover source={source} />
-      <Card.Title title={title} subtitle={manufacturer} />
-      <Card.Content>
-        <Title>{price} credits</Title>
-      </Card.Content>
-      <Card.Actions>
-        {price === "unknown" ? (
-          <Button disabled>Not for sale</Button>
-        ) : (
-          <Button onPress={handlePress}>Buy this spaceship</Button>
-        )}
-      </Card.Actions>
-    </Card>
+    <TouchableOpacity onPress={handleGoToDetails}>
+      <Card style={styles.containerCard}>
+        <Card.Cover source={source} />
+        <Card.Title title={title} subtitle={manufacturer} />
+        <Card.Content>
+          <Title>{price} credits</Title>
+        </Card.Content>
+        <Card.Actions>
+          {price === "unknown" ? (
+            <Button disabled>Not for sale</Button>
+          ) : (
+            <Button onPress={handlePress}>Buy this spaceship</Button>
+          )}
+        </Card.Actions>
+      </Card>
+    </TouchableOpacity>
   );
 };
 
