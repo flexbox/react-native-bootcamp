@@ -12,21 +12,31 @@ import {
   Headline,
   TextInput,
 } from 'react-native-paper';
+import { useAuth } from '../hooks/useAuth';
+import { AppRoutes } from '../navigation/AppRoutes';
 import { sleep } from '../utils/sleep';
 
 interface LoginScreenProps {
-  setIsAuthorized: Function;
+  navigation: any;
 }
 
-const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
+const LoginScreen = ({ navigation }: LoginScreenProps) => {
   const [text, setText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const { setIsAuthorized } = useAuth()
 
-  const handlePress = async () => {
+  console.log(setIsAuthorized);
+
+
+  const handleLogin = async () => {
     setIsLoading(true);
     await sleep(1500);
     setIsAuthorized(true);
   };
+
+  const handleRegister = ()=> {
+    navigation.navigate(AppRoutes.REGISTER)
+  }
 
   return (
     <SafeAreaView
@@ -50,8 +60,12 @@ const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
           onChangeText={(text) => setText(text)}
         />
         <View style={{ height: 24 }} />
-        <Button mode="contained" loading={isLoading} onPress={handlePress}>
+        <Button mode="contained" loading={isLoading} onPress={handleLogin}>
           Enter to nerd-fm
+        </Button>
+        <View style={{ height: 12 }} />
+        <Button mode="outlined" onPress={handleRegister}>
+          Create an account
         </Button>
         <View style={{ height: 64 }} />
       </KeyboardAvoidingView>
