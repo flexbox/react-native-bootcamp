@@ -3318,6 +3318,13 @@ expo-modules-core@~0.2.0:
   resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-0.2.0.tgz#68e5b6e53d0afbf8d131578831aed657589a2d42"
   integrity sha512-inpfZ5X/BaTtbj2wG9PA9AC0MN8VyId6KSRlVuEg7+ziurHBy/kKDFxpOddUokhwiln2uhoYPSStJjR/tKypdw==
 
+expo-sharing@~9.2.1:
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/expo-sharing/-/expo-sharing-9.2.1.tgz#50267cd66f54d29f0ab3f185a05d92b197e5b60c"
+  integrity sha512-L0OR7qq8GJRKEFDMPrStc9UxVdOr3XRGMuK3vO2qgQgU3CCSb5QE5lHRdp4DFyJd22ILZqwL+3ghiUtFQD0eig==
+  dependencies:
+    expo-modules-core "~0.2.0"
+
 expo-status-bar@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.0.4.tgz#d8a4c4418b5868c1606969b12bdee85b6fa7d8a4"

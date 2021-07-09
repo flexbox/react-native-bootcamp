@@ -11,6 +11,7 @@
     "@eva-design/eva": "^2.1.0",
     "@ui-kitten/components": "^5.1.0",
     "expo": "~42.0.1",
+    "expo-sharing": "~9.2.1",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
