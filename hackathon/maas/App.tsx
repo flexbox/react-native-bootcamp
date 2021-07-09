@@ -7,10 +7,12 @@ import HomeScreen from "./src/screens/HomeScreen";
 
 const queryClient = new QueryClient();
 
-export const App = () => (
+const App = () => (
   <QueryClientProvider client={queryClient}>
     <ApplicationProvider {...eva} theme={eva.light}>
       <HomeScreen />
     </ApplicationProvider>
   </QueryClientProvider>
 );
+
+export default App;
