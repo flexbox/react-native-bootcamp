@@ -1,8 +1,8 @@
 # React Native Bootcamp for Beginners - A Curriculum
 
-> A series of **React Native coding challenges** with a variety of difficulties.
+> A series of **React Native coding challenges** with a variety of difficulties for busy developers.
 
-I do `react-native` as a freelance since 2017
+I do `react-native` as a freelance since 2017 and I have 15+ years of experience on shiping products with `JavaScript`. This bootcamp encapsulate all the problems I encounter in my daily job and all the the things I wish I knew **before** starting my career as a React Native Developer.
 
 My project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
 
