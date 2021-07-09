@@ -2,35 +2,29 @@
 
 > A series of **React Native coding challenges** with a variety of difficulties.
 
-Deep dive into [the workshop here](https://davidl.fr/workshop).
+I do `react-native` as a freelance since 2017
 
-![Mindmap](./react-native-mindmap-project.png)
+My project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
 
-## Projects
+🎨 Thanks as well to all the `react-native-paper` contributors for their easy to use UI library
 
-1. [atls](./hackathon/atls/)
-1. [newsfeed](./hackathon/newsfeed/) _with getstream API_
-1. [onboarding](./hackathon/onboarding/) _with magic.link SDK_
-1. [nerd-fm](./hackathon/nerd-fm/)
-1. and more
+🙏 Special thanks 🙏 to [William Candillon](https://github.com/wcandillon), [Satyajit Sahoo](https://github.com/satya164), [Tanner Linsley](https://github.com/tannerlinsley)
+
+---
 
 ## Getting Started
 
-Run the CLI:
+**Students**, to follow this workshop, you need to [complete the onboarding form](https://davidl.fr/onboarding-workshop)
 
-```console
-# Vanilla React Native
-npx react-native init AwesomeProject
-npx ignite-cli new AwesomeApp
+> For further study, I recommend following downloading my [React Native Book about the ecosystem](https://davidl.fr/road-to-react-native).
 
-# Expo-powered
-expo init
-npx create-react-native-app
-npx ignite-cli new AwesomeApp --expo
+## Projects
 
-# React Native module
-npx create-react-native-library AwesomeModule
-```
+1. [newsfeed](./hackathon/newsfeed/) _with getstream API_
+1. [onboarding](./hackathon/onboarding/) _with magic.link SDK_
+1. [nerd-fm](./hackathon/nerd-fm/) _with `expo-av` to play music_
+1. [nerd-fm](./hackathon/nerd-fm/)
+1. [and more](./hackathon/)
 
 ## Meet the team
 
@@ -41,6 +35,14 @@ I am a freelance react-native developer, and I share a lot fo [content about the
 I have chosen two pedagogical tenets while building this curriculum: ensuring that it is hands-on **project-based** and that it **includes frequent quizzes**. In addition, this curriculum has a common theme —create a mobile app with real API— to give it cohesion.
 
 > If you encounter an issue, [feel free to contribute](https://github.com/flexbox/react-native-workshop/issues/new), I welcome your constructive feedback!
+
+## Each lesson includes:
+
+- pre-lecture warmup quiz
+- written lesson
+- step-by-step guides on how to build the project
+- a challenge
+- supplemental reading
 
 ## Was this helpful?
 

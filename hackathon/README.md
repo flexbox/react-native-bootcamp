@@ -14,9 +14,17 @@
 - [ ] Run the CLI
 
 ```console
+# Vanilla React Native
+npx react-native init AwesomeProject
+npx ignite-cli new AwesomeApp
+
 # Expo-powered
 expo init
 npx create-react-native-app
+npx ignite-cli new AwesomeApp --expo
+
+# React Native module
+npx create-react-native-library AwesomeModule
 ```
 
 ## Ressources
@@ -37,6 +45,7 @@ npx create-react-native-app
 - [Expo Community](https://github.com/expo-community)
 - [React Native Community](https://github.com/react-native-community)
 - [React Native Directory](https://reactnative.directory/)
+- [Mobbin Design](https://mobbin.design/)
 
 ## 🚀 Spread The World
 
