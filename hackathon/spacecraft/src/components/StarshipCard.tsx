@@ -18,7 +18,7 @@ const StarshipCard = ({ ship }: StarshipCardProps) => {
 
   const source = useImage(title);
 
-  const handlePress = () => {
+  const handleBuy = () => {
     alert("Buy!");
   };
 
@@ -40,7 +40,7 @@ const StarshipCard = ({ ship }: StarshipCardProps) => {
           {price === "unknown" ? (
             <Button disabled>Not for sale</Button>
           ) : (
-            <Button onPress={handlePress}>Buy this spaceship</Button>
+            <Button onPress={handleBuy}>Buy this spaceship</Button>
           )}
         </Card.Actions>
       </Card>
