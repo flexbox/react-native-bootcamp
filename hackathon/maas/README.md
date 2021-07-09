@@ -7,5 +7,3 @@
 - react-query
 - KittenUI
 -
-
-https://api.imgflip.com/get_memes
