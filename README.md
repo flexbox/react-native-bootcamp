@@ -2,13 +2,15 @@
 
 > A series of **React Native coding challenges** with a variety of difficulties for busy developers.
 
-I do `react-native` as a freelance since 2017 and I have 15+ years of experience on shiping products with `JavaScript`. This bootcamp encapsulate all the problems I encounter in my daily job and all the the things I wish I knew **before** starting my career as a React Native Developer.
+I do `react-native` as a freelance since 2017 and I have 15+ years of experience shipping products with `JavaScript`. This bootcamp encapsulates all the problems I encounter in my daily job and all the things I wish I knew **before** starting my career as a React Native Developer.
 
 My project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
 
+📱 Hearty thanks to the [team behind expo](https://github.com/expo/), the open-source platform for making universal native apps with React that run on Android, iOS, and the web.
+
 🎨 Thanks as well to all the `react-native-paper` contributors for their easy to use UI library
 
-🙏 Special thanks 🙏 to [William Candillon](https://github.com/wcandillon), [Satyajit Sahoo](https://github.com/satya164), [Tanner Linsley](https://github.com/tannerlinsley), [Alex Lobera](https://github.com/alexlbr), [Horacio Herrera](https://twitter.com/hhg2288)
+🙏 Special thanks to [William Candillon](https://github.com/wcandillon), [Satyajit Sahoo](https://github.com/satya164), [Tanner Linsley](https://github.com/tannerlinsley), [Alex Lobera](https://github.com/alexlbr), [Horacio Herrera](https://twitter.com/hhg2288)
 
 ---
 
