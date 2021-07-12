@@ -8,7 +8,7 @@ My project-based pedagogy allows you to learn while building, a proven way for n
 
 🎨 Thanks as well to all the `react-native-paper` contributors for their easy to use UI library
 
-🙏 Special thanks 🙏 to [William Candillon](https://github.com/wcandillon), [Satyajit Sahoo](https://github.com/satya164), [Tanner Linsley](https://github.com/tannerlinsley)
+🙏 Special thanks 🙏 to [William Candillon](https://github.com/wcandillon), [Satyajit Sahoo](https://github.com/satya164), [Tanner Linsley](https://github.com/tannerlinsley), [Alex Lobera](https://github.com/alexlbr), [Horacio Herrera](https://twitter.com/hhg2288)
 
 ---
 
