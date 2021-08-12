@@ -18,7 +18,7 @@ My project-based pedagogy allows you to learn while building, a proven way for n
 
 **Students**, to follow this workshop, you need to [complete the onboarding form](https://davidl.fr/onboarding-workshop)
 
-> For further study, I recommend following downloading my [React Native Book about the ecosystem](https://davidl.fr/road-to-react-native).
+> For further study, I recommend downloading my [React Native Book about the ecosystem](https://davidl.fr/road-to-react-native).
 
 ## Projects
 
@@ -38,7 +38,7 @@ I have chosen two pedagogical tenets while building this curriculum: ensuring th
 
 > If you encounter an issue, [feel free to contribute](https://github.com/flexbox/react-native-workshop/issues/new), I welcome your constructive feedback!
 
-## Each lesson includes:
+## Each lesson includes
 
 - pre-lecture warmup quiz
 - written lesson
