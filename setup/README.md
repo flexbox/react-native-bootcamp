@@ -36,7 +36,7 @@ xcode-select --install
 ```
 To accept terms and conditions
 
-```
+```console
 xcode-select -p
 ```
 Should output something like `/Applications/Xcode.app/Contents/Developer` if it's mot the case run `sudo xcode-select --reset`
