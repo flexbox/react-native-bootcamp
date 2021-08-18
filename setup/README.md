@@ -29,11 +29,17 @@ npm install --global expo-cli
 
 - [ ] [Xcode 12](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
 
-Check if everything is working with
+Check if everything is working.
 
 ```console
 xcode-select --install
 ```
+To accept terms and conditions
+
+```
+xcode-select -p
+```
+Should output something like `/Applications/Xcode.app/Contents/Developer` if it's mot the case run `sudo xcode-select --reset`
 
 - [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+ for Linux / Windows
 
