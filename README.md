@@ -1,4 +1,4 @@
-# React Native Bootcamp for Beginners - A Curriculum
+# React Native Bootcamp — A Curriculum for Beginners
 
 > A series of **React Native coding challenges** with a variety of difficulties for busy developers.
 
@@ -10,7 +10,7 @@ My project-based pedagogy allows you to learn while building, a proven way for n
 
 🎨 Thanks as well to all the `react-native-paper` contributors for their easy to use UI library
 
-🙏 Special thanks to [William Candillon](https://github.com/wcandillon), [Satyajit Sahoo](https://github.com/satya164), [Tanner Linsley](https://github.com/tannerlinsley), [Alex Lobera](https://github.com/alexlbr), [Horacio Herrera](https://twitter.com/hhg2288)
+🙏 Special thanks to [Alex Lobera](https://github.com/alexlbr), [Horacio Herrera](https://twitter.com/hhg2288), [William Candillon](https://github.com/wcandillon), [Satyajit Sahoo](https://github.com/satya164), [Tanner Linsley](https://github.com/tannerlinsley), [Brent Vatne](https://github.com/brentvatne).
 
 ---
 
@@ -22,10 +22,10 @@ My project-based pedagogy allows you to learn while building, a proven way for n
 
 ## Projects
 
+1. [spacecraft](./hackathon/spacecraft/) _with `react-query`_
 1. [newsfeed](./hackathon/newsfeed/) _with getstream API_
 1. [onboarding](./hackathon/onboarding/) _with magic.link SDK_
 1. [nerd-fm](./hackathon/nerd-fm/) _with `expo-av` to play music_
-1. [nerd-fm](./hackathon/nerd-fm/)
 1. [and more](./hackathon/)
 
 ## Meet the team
