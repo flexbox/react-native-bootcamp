@@ -18,6 +18,10 @@ My project-based pedagogy allows you to learn while building, a proven way for n
 
 **Students**, to follow this workshop, you need to [complete the onboarding form](https://davidl.fr/onboarding-workshop)
 
+During the bootcamp you are going to build this mobile appliction with `Expo`, `react-native`, `TypeScript` and `react-query`
+
+![React Native Application with Expo and react-query](hackathon/spacecraft/spacecraft-preview.gif)
+
 > For further study, I recommend downloading my [React Native Book about the ecosystem](https://davidl.fr/road-to-react-native).
 
 ## Projects
