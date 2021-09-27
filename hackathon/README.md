@@ -15,16 +15,16 @@
 
 ```console
 # Vanilla React Native
-npx react-native init AwesomeProject
-npx ignite-cli new AwesomeApp
+npx react-native init awesome-app
+npx ignite-cli new awesome-app
 
 # Expo-powered
 expo init
 npx create-react-native-app
-npx ignite-cli new AwesomeApp --expo
+npx ignite-cli new awesome-app --expo
 
-# React Native module
-npx create-react-native-library AwesomeModule
+# Scaffold React Native libraries
+npx create-react-native-library react-native-awesome-lib
 ```
 
 ## Ressources
