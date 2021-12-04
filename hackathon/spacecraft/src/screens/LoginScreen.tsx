@@ -6,6 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
 import { AppRoutes } from "../navigation/AppRoutes";
+import { useAuthentication } from "../context/Authentication";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -13,8 +14,9 @@ const LoginScreen = () => {
   const [isVisble, setIsVisible] = useState(true);
 
   const navigation = useNavigation();
+  const { setUser } = useAuthentication();
   function handleLogin() {
-    navigation.navigate(AppRoutes.STARSHIP_FEED_SCREEN);
+    setUser(true);
   }
 
   function handleTerms() {

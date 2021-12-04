@@ -4,9 +4,9 @@ import { Colors } from "react-native-paper";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import StarshipFeedScreen from "../screen/StarshipFeedScreen";
-import { PilotScreen } from "../screen";
-import StarshipDetailsScreen from "../screen/StarshipDetailsScreen";
+import StarshipFeedScreen from "../screens/StarshipFeedScreen";
+import { PilotScreen } from "../screens";
+import StarshipDetailsScreen from "../screens/StarshipDetailsScreen";
 
 import { AppRoutes } from "./AppRoutes";
 
@@ -50,7 +50,7 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name={AppRoutes.PILOT_PROFILE}
+        name={AppRoutes.PILOT_SCREEN}
         component={PilotScreen}
         options={{
           tabBarIcon: ({ color }) => (
