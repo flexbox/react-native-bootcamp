@@ -19,7 +19,7 @@ const LoginScreen = () => {
     setUser(true);
   }
 
-  function handleTerms() {
+  function navigateToTerms() {
     navigation.navigate(AppRoutes.TERMS_SCREEN);
   }
 
@@ -57,7 +57,7 @@ const LoginScreen = () => {
         >
           Login
         </Button>
-        <TouchableOpacity onPress={handleTerms}>
+        <TouchableOpacity onPress={navigateToTerms}>
           <Text style={styles.tocText}>
             by login you accept the Terms and Conditions.
           </Text>
