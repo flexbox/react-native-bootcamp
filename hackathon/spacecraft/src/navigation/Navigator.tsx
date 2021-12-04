@@ -25,7 +25,7 @@ const AuthNavigator = () => {
 };
 
 export const Navigator = () => {
-  const [user, setUser] = useState<boolean>(true);
+  const [user, setUser] = useState<boolean>(false);
 
   return (
     <NavigationContainer>
