@@ -5,7 +5,7 @@ import fetchAsync from "../lib/fetchAsync";
 import AppLayout from "../components/AppLayout";
 import StarshipCard from "../components/StarshipCard";
 
-interface shipProps {
+interface ShipProps {
   name: string;
   model: string;
   manufacturer: string;
@@ -13,7 +13,7 @@ interface shipProps {
 }
 
 // SOLUTION 2: with a FlatList - more performant
-// const renderItem = ({ ship }: shipProps) => {
+// const renderItem = ({ ship }: ShipProps) => {
 //   return (
 //     <StarshipCard
 //       key={ship.name}
@@ -34,7 +34,7 @@ const StarshipFeedScreen = () => {
   return (
     <AppLayout title="Starships" withFooter>
       {/* SOLUTION 1: with a map */}
-      {data.results.map((ship: shipProps) => {
+      {data.results.map((ship: ShipProps) => {
         return <StarshipCard key={ship.name} ship={ship} />;
       })}
 
