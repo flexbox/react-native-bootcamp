@@ -5,6 +5,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import StarshipFeedScreen from "../screens/StarshipFeedScreen";
+import StarshipFeedExampleScreen from "../screens/exercice/FeedScreen";
 import { PilotScreen } from "../screens";
 import StarshipDetailsScreen from "../screens/StarshipDetailsScreen";
 
@@ -24,6 +25,7 @@ const StarshipNavigator = () => {
       <Stack.Screen
         name={AppRoutes.STARSHIP_FEED_SCREEN}
         component={StarshipFeedScreen}
+        // component={StarshipFeedExampleScreen}
       />
       <Stack.Screen
         name={AppRoutes.STARSHIP_DETAIL_SCREEN}
