@@ -15,6 +15,7 @@ const AppLayout = ({ title, children, withFooter = false }: Props) => {
   return (
     <ScrollView style={styles.container} nestedScrollEnabled={true}>
       <Headline style={styles.headerText}>{title}</Headline>
+
       {children}
       {withFooter && <View style={styles.footer} />}
     </ScrollView>
