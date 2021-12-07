@@ -2,7 +2,7 @@
 
 💡 I do provide advices for Linux and macOS.
 
-💡 I am **not responsable** if you encounter issues on windows machines. (But you can follow this [setup tutorial from InfiniteRed](https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/) to make it work).
+💡 Being **administrator on windows is mandatory**, I am **not responsible** if you encounter issues. (You can follow this [setup tutorial from InfiniteRed](https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/) to make everything work).
 
 ## System Requirements
 
@@ -11,7 +11,7 @@
 - [ ] [npm](https://www.npmjs.com/) v6 or greater
 - [ ] [yarn v1](https://classic.yarnpkg.com/en/docs/install)
 
-Use the following command at your terminal to check your Node version.
+Use the following command from your terminal to check your Node version.
 
 ```console
 node --version
@@ -34,25 +34,28 @@ Check if everything is working.
 ```console
 xcode-select --install
 ```
+
 To accept terms and conditions
 
 ```console
 xcode-select -p
 ```
+
 Should output something like `/Applications/Xcode.app/Contents/Developer` if it's mot the case run `sudo xcode-select --reset`
 
 - [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+ for Linux / Windows
 
 ## Smartphone Requirements
 
-- [ ]  Create an account [https://expo.io/signup](https://expo.io/signup)
-- [ ]  Download **Expo GO**
+- [ ] Create an account [https://expo.io/signup](https://expo.io/signup)
+- [ ] Download **Expo GO**
   - iPhone : [http://bit.ly/expo-ios-client](http://bit.ly/expo-ios-client)
   - Android : [http://bit.ly/expo-android-client](http://bit.ly/expo-android-client)
-- [ ]  Sign-in with your Expo account on your phone
+- [ ] Sign-in with your Expo account on your phone
 
-You are going to follow a **Native Mobile Application Workshop**.
+You are going to follow a **Native Mobile Application Bootcampt**.
 `iOS` phones are the easiest way, Android are nice too BUT there is more issues.
+
 You need a decent smartphone to enjoy a fast experience.
 
 ## Text Editor
