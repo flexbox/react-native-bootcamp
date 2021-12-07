@@ -3,5 +3,5 @@ export enum AppRoutes {
   TERMS_SCREEN = "Terms",
   STARSHIP_FEED_SCREEN = "Starships",
   STARSHIP_DETAIL_SCREEN = "Starship",
-  PILOT_SCREEN = "Pilot",
+  PILOT_SCREEN = "Pilots",
 }

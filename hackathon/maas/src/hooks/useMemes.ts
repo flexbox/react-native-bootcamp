@@ -1,8 +1,8 @@
 import { useQuery } from "react-query";
 
 const fetchData = async () => {
-  const res = await fetch("https://api.imgflip.com/get_memes/");
-  const json = await res.json();
+  const result = await fetch("https://api.imgflip.com/get_memes/");
+  const json = await result.json();
   return json;
 };
 

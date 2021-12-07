@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { Alert, StyleSheet, TouchableOpacity } from "react-native";
 import { Button, Card, Title } from "react-native-paper";
 
 import type { StarshipProps } from "../../api/types";
@@ -19,7 +19,7 @@ const StarshipCard = ({ ship }: StarshipCardProps) => {
   const source = useImage(title);
 
   const handleBuy = () => {
-    alert("Buy!");
+    Alert.alert("Buy!");
   };
 
   const navigation = useNavigation();
