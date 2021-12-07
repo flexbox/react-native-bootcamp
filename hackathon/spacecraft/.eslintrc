@@ -1,5 +1,14 @@
-{ "extends": "react-native-wcandillon",
+{
+  "extends": "react-native-wcandillon",
   "rules": {
     "camelcase": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "src"
+      }
+    }
   }
 }
