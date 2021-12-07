@@ -3,7 +3,7 @@ import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { Button, Card, Title } from "react-native-paper";
 
-import { StarshipProps } from "../../api/types";
+import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
 import { AppRoutes } from "../navigation/AppRoutes";
 
