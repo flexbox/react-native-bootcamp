@@ -11,6 +11,7 @@ import StarshipDetailsScreen from "../screens/StarshipDetailsScreen";
 import { AppRoutes } from "./AppRoutes";
 
 import { PilotScreen } from "~/screens/PilotScreen";
+import { PilotDetailsScreen } from "~/screens/PilotDetailsScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -29,8 +30,24 @@ const StarshipNavigator = () => {
         // component={StarshipFeedExampleScreen}
       />
       <Stack.Screen
-        name={AppRoutes.STARSHIP_DETAIL_SCREEN}
+        name={AppRoutes.STARSHIP_DETAILS_SCREEN}
         component={StarshipDetailsScreen}
+      />
+    </Stack.Navigator>
+  );
+};
+
+const PilotNavigator = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name={AppRoutes.PILOT_SCREEN} component={PilotScreen} />
+      <Stack.Screen
+        name={AppRoutes.PILOT_DETAILS_SCREEN}
+        component={PilotDetailsScreen}
       />
     </Stack.Navigator>
   );
@@ -54,7 +71,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name={AppRoutes.PILOT_SCREEN}
-        component={PilotScreen}
+        component={PilotNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="user-astronaut" size={22} color={color} />

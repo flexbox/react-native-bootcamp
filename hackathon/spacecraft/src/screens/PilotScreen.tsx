@@ -4,7 +4,7 @@ import { FlatList, View } from "react-native";
 import { Button, Headline } from "react-native-paper";
 
 import AppLayout from "~/components/AppLayout";
-import { PeopleCard } from "~/components/PeopleCard";
+import { PeopleItem } from "~/components/PeopleItem";
 import { usePilot } from "~/hooks/usePilot";
 
 interface RenderItemProps {
@@ -14,7 +14,7 @@ interface RenderItemProps {
 const renderItem = (props: RenderItemProps) => {
   const people = props.item;
 
-  return <PeopleCard people={people} />;
+  return <PeopleItem people={people} />;
 };
 
 export const PilotScreen = () => {
@@ -29,7 +29,7 @@ export const PilotScreen = () => {
   };
 
   return (
-    <AppLayout title="Pilots" withFooter={true}>
+    <AppLayout title="Pilots">
       <Button onPress={handleLoadMore}>Load More</Button>
       <FlatList
         data={query.data.results}

@@ -27,8 +27,7 @@ export default AppLayout;
 const styles = StyleSheet.create({
   container: {
     paddingTop: 24,
-    paddingLeft: 24,
-    paddingRight: 24,
+    paddingHorizontal: 24,
     backgroundColor: Colors.grey200,
     marginTop: 36,
   },

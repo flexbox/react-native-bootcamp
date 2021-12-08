@@ -23,9 +23,8 @@ const StarshipCard = ({ ship }: StarshipCardProps) => {
   };
 
   const navigation = useNavigation();
-
   const handleGoToDetails = () => {
-    navigation.navigate(AppRoutes.STARSHIP_DETAIL_SCREEN, ship);
+    navigation.navigate(AppRoutes.STARSHIP_DETAILS_SCREEN, ship);
   };
 
   return (

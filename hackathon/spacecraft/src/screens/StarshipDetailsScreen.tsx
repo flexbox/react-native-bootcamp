@@ -28,11 +28,6 @@ interface StarshipDetailsScreenProps {
 }
 
 const StarshipDetailsScreen = ({ route }: StarshipDetailsScreenProps) => {
-  console.log(
-    "file: StarshipDetailsScreen.tsx ~ line 26 ~ StarshipDetailsScreen ~ ship",
-    route
-  );
-
   const {
     name,
     manufacturer,
