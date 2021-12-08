@@ -6,10 +6,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import StarshipFeedScreen from "../screens/StarshipFeedScreen";
 import StarshipFeedExampleScreen from "../screens/exercice/FeedScreen";
-import { PilotScreen } from "../screens";
 import StarshipDetailsScreen from "../screens/StarshipDetailsScreen";
 
 import { AppRoutes } from "./AppRoutes";
+
+import { PilotScreen } from "~/screens/PilotScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
