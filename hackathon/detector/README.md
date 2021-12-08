@@ -23,3 +23,4 @@ Then scan the QR Code and use your `iOS|android` device
 - [TFJS Expo API reference](https://js.tensorflow.org/api_react_native/latest/#Media-Camera)
 - [`@tensorflow/tfjs-react-native` package](https://www.npmjs.com/package/@tensorflow/tfjs-react-native)
 - [Expo Camera docs](https://docs.expo.dev/versions/latest/sdk/camera/)
+- [Icon](https://thenounproject.com/icon/radar-2808903/)
