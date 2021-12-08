@@ -31,14 +31,16 @@ npx create-react-native-library react-native-awesome-lib
 
 ### UI
 
+- [KittenUI](https://akveo.github.io/react-native-ui-kitten/docs/guides/getting-started#manual-installation)
 - [React Native Elements](https://reactnativeelements.com/docs/)
 - [React Native Paper](https://callstack.github.io/react-native-paper/)
-- [KittenUI](https://akveo.github.io/react-native-ui-kitten/docs/guides/getting-started#manual-installation)
+- [RNUI](https://wix.github.io/react-native-ui-lib/)
 
 ### Data
 
 - From GitHub: [public-apis](https://github.com/public-apis/public-apis)
 - Free public APIs: [public-apis](https://public-apis.io/)
+- Free public APIs: [rapidapi](https://rapidapi.com/hub)
 
 ### Community
 
