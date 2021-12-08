@@ -3,11 +3,12 @@
     "name": "Detector",
     "slug": "detector",
     "version": "1.0.0",
+    "privacy": "public",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#FD97DC"
     },
     "updates": {
