@@ -4,6 +4,7 @@ import { View, StyleSheet } from "react-native";
 import { DataTable, Headline, Subheading } from "react-native-paper";
 
 import AppLayout from "~/components/AppLayout";
+import { StarshipLoadableList } from "~/components/StarshipLoadableList";
 
 interface PilotDetailsScreenProps {
   route: {
@@ -56,7 +57,7 @@ export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
       {starships.length > 0 && (
         <View style={styles.body}>
           <Headline>Starships</Headline>
-          <Subheading>{JSON.stringify(starships)}</Subheading>
+          <StarshipLoadableList starships={starships} />
         </View>
       )}
     </AppLayout>

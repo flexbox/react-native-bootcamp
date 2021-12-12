@@ -49,11 +49,18 @@ const PilotNavigator = () => {
         name={AppRoutes.PILOT_DETAILS_SCREEN}
         component={PilotDetailsScreen}
       />
+      {/* TODO: Need to bump react-navigation to v6.0.0
+      <Stack.Group screenOptions={{ presentation: "modal" }}>
+        <Stack.Screen
+          name={AppRoutes.STARSHIP_DETAILS_SCREEN}
+          component={StarshipDetailsScreen}
+        />
+      </Stack.Group> */}
     </Stack.Navigator>
   );
 };
 
-const BottomTabNavigator = () => {
+export const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
       activeColor={Colors.purple500}
@@ -81,5 +88,3 @@ const BottomTabNavigator = () => {
     </Tab.Navigator>
   );
 };
-
-export default BottomTabNavigator;
