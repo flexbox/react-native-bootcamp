@@ -4,8 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import { useAuthentication } from "../context/Authentication";
 
-import BottomTabNavigator from "./BottomTabNavigator";
-import AuthNavigator from "./AuthNavigator";
+import { BottomTabNavigator } from "./BottomTabNavigator";
+import { AuthNavigator } from "./AuthNavigator";
 
 const Stack = createStackNavigator();
 

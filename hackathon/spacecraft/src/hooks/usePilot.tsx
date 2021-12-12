@@ -5,7 +5,7 @@ export const usePilot = () => {
   const [page, setPage] = useState(1);
 
   const fetchData = (page = 0) =>
-    fetch("https://swapi.dev/api/people/?page=" + page).then((res) =>
+    fetch("https://swapi.py4e.com/api/people/?page=" + page).then((res) =>
       res.json()
     );
 

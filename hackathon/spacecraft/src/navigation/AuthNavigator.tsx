@@ -8,7 +8,7 @@ import { AppRoutes } from "./AppRoutes";
 
 const Stack = createStackNavigator();
 
-const AuthNavigator = () => {
+export const AuthNavigator = () => {
   return (
     <Stack.Navigator
       initialRouteName={AppRoutes.LOGIN_SCREEN}
@@ -21,5 +21,3 @@ const AuthNavigator = () => {
     </Stack.Navigator>
   );
 };
-
-export default AuthNavigator;
