@@ -1,5 +1,15 @@
 # React Native Hackathon
 
+To ship your first app you should have completed all the previous exercices: **foundations**, **data management**, **ecosystem**, **navigation** and **releases**.
+
+The tasks of the day are:
+
+1. Use the cli to generate an app
+1. Choose a UI framework
+1. Select an external API (try to find an open one, of with a simple auth token)
+1. Connect everything together
+1. Before the end of the day, ship it to expo like [`@flexbox/detector`](https://expo.dev/@flexbox/detector)
+
 ## Ideas
 
 - Rick and Morty episode tracker with [rickandmortyapi](https://rickandmortyapi.com/)
@@ -34,7 +44,6 @@ npx create-react-native-library react-native-awesome-lib
 - [KittenUI](https://akveo.github.io/react-native-ui-kitten/docs/guides/getting-started#manual-installation)
 - [React Native Elements](https://reactnativeelements.com/docs/)
 - [React Native Paper](https://callstack.github.io/react-native-paper/)
-- [RNUI](https://wix.github.io/react-native-ui-lib/)
 
 ### Data
 
