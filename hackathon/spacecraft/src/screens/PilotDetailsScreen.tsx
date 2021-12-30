@@ -3,7 +3,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { DataTable, Headline, Subheading } from "react-native-paper";
 
-import AppLayout from "~/components/AppLayout";
+import ScreenContainer from "~/components/ScreenContainer";
 import { StarshipLoadableList } from "~/components/StarshipLoadableList";
 
 interface PilotDetailsScreenProps {
@@ -27,7 +27,7 @@ export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
   } = route.params.people;
 
   return (
-    <AppLayout title={name}>
+    <ScreenContainer title={name}>
       <DataTable>
         <DataTable.Row>
           <DataTable.Cell>Mass</DataTable.Cell>
@@ -60,7 +60,7 @@ export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
           <StarshipLoadableList starships={starships} />
         </View>
       )}
-    </AppLayout>
+    </ScreenContainer>
   );
 };
 

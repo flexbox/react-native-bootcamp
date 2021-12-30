@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import { FlatList } from "react-native";
 
 import fetchAsync from "../lib/fetchAsync";
-import AppLayout from "../components/AppLayout";
+import ScreenContainer from "../components/ScreenContainer";
 import StarshipCard from "../components/StarshipCard";
 
 interface ShipProps {
@@ -29,12 +29,12 @@ const StarshipFeedScreen = () => {
     fetchAsync("https://swapi.dev/api/starships/")
   );
 
-  if (isLoading) return <AppLayout title="Loading…" />;
-  if (isError) return <AppLayout title="Error 😕" />;
-  if (data.results === undefined) return <AppLayout title="Not Found" />;
+  if (isLoading) return <ScreenContainer title="Loading…" />;
+  if (isError) return <ScreenContainer title="Error 😕" />;
+  if (data.results === undefined) return <ScreenContainer title="Not Found" />;
 
   return (
-    <AppLayout title="Starships" withFooter>
+    <ScreenContainer title="Starships" withFooter>
       {/* SOLUTION 1: with a map */}
       {/* {data.results.map((ship: ShipProps) => {
         return <StarshipCard key={ship.name} ship={ship} />;
@@ -46,7 +46,7 @@ const StarshipFeedScreen = () => {
         renderItem={renderItem}
         keyExtractor={(ship) => ship.model}
       />
-    </AppLayout>
+    </ScreenContainer>
   );
 };
 

@@ -2,18 +2,22 @@ import React, { ReactNode } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { Colors, Headline } from "react-native-paper";
 
-// Add a `NetworkProvider
-// import { NetworkProvider } from 'react-native-offline';
+// Import <Offline /> component
 
-interface Props {
+interface ScreenContainerProps {
   title: string;
   children?: ReactNode;
   withFooter?: boolean;
 }
 
-const AppLayout = ({ title, children, withFooter = false }: Props) => {
+const ScreenContainer = ({
+  title,
+  children,
+  withFooter = false,
+}: ScreenContainerProps) => {
   return (
     <ScrollView style={styles.container} nestedScrollEnabled={true}>
+      {/* <Offline /> */}
       <Headline style={styles.headerText}>{title}</Headline>
 
       {children}
@@ -22,7 +26,7 @@ const AppLayout = ({ title, children, withFooter = false }: Props) => {
   );
 };
 
-export default AppLayout;
+export default ScreenContainer;
 
 const styles = StyleSheet.create({
   container: {
