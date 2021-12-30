@@ -1,8 +1,15 @@
 import React from "react";
-import { SafeAreaView, ScrollView, StyleSheet, TextInput } from "react-native";
+import { TextInput } from "react-native-paper";
+import { SafeAreaView, ScrollView, StyleSheet } from "react-native";
 
 const UselessTextInput = () => {
   const [data, onChange] = React.useState(null);
+  const [password, setPassword] = React.useState("");
+  const [isVisble, setIsVisible] = React.useState(true);
+
+  function toggleSecureIcon() {
+    setIsVisible(!isVisble);
+  }
 
   return (
     <SafeAreaView style={styles.global}>
@@ -19,6 +26,20 @@ const UselessTextInput = () => {
           value={data}
           placeholder="numeric"
           keyboardType="numeric"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Password"
+          value={password}
+          secureTextEntry={isVisble}
+          onChangeText={(value) => setPassword(value)}
+          right={
+            <TextInput.Icon
+              style={{ marginTop: 25 }}
+              onPress={toggleSecureIcon}
+              name={isVisble ? "eye-off" : "eye"}
+            />
+          }
         />
         <TextInput
           style={styles.input}
