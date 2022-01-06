@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.pickNotNil=pickNotNil;exports.idPattern=void 0;function pickNotNil(object){var result={};for(var key in object){if(object.hasOwnProperty(key)){var value=object[key];if(value!==undefined&&value!==null){result[key]=value;}}}return result;}var idPattern=/#([^)]+)\)?$/;exports.idPattern=idPattern;
+//# sourceMappingURL=util.js.map

@@ -1,0 +1,6 @@
+framework module EXFileSystem {
+  umbrella header "EXFileSystem.h"
+
+  export *
+  module * { export * }
+}

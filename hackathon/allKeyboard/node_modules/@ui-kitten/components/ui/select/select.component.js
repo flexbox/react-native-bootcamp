@@ -1,0 +1,373 @@
+"use strict";
+/**
+ * @license
+ * Copyright Akveo. All Rights Reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(require("react"));
+const react_native_1 = require("react-native");
+const devsupport_1 = require("../../devsupport");
+const theme_1 = require("../../theme");
+const list_component_1 = require("../list/list.component");
+const popover_component_1 = require("../popover/popover.component");
+const chevronDown_component_1 = require("../shared/chevronDown.component");
+const select_service_1 = require("./select.service");
+const CHEVRON_DEG_COLLAPSED = -180;
+const CHEVRON_DEG_EXPANDED = 0;
+const CHEVRON_ANIM_DURATION = 200;
+/**
+ * A dropdown menu for displaying selectable options.
+ * Select should contain SelectItem or SelectGroup components to provide a useful component.
+ *
+ * @extends React.Component
+ *
+ * @method {() => void} show - Sets options list visible.
+ *
+ * @method {() => void} hide - Sets options list invisible.
+ *
+ * @method {() => void} focus - Focuses input field and sets options list visible.
+ *
+ * @method {() => void} blur - Removes focus from input field and sets options list invisible.
+ *
+ * @method {() => boolean} isFocused - Whether input field is currently focused and options list is visible.
+ *
+ * @method {() => void} clear - Removes all text from the Select.
+ *
+ * @property {ReactElement<SelectItemProps> | ReactElement<SelectItemProps>[]} children -
+ * Items to be rendered within options list.
+ *
+ * @property {IndexPath | IndexPath[]} selectedIndex - Index or array of indices of selected options.
+ * IndexPath `row: number, section?: number` - position of element in sectioned list.
+ * Select becomes sectioned when SelectGroup is rendered within children.
+ *
+ * @property {(IndexPath | IndexPath[]) => void} onSelect - Called when option is pressed.
+ * Called with `row: number` for non-grouped items.
+ * Called with `row: number, section: number` for items rendered within group,
+ * where row - index of item in group, section - index of group in list.
+ * Called with array if *multiSelect* was set to true.
+ *
+ * @property {ReactText | ReactElement | (TextProps) => ReactElement} value - String, number or a function component
+ * to render for the selected options.
+ * By default, calls *toString()* for each index in selectedIndex property.
+ * If it is a function, expected to return a Text.
+ *
+ * @property {boolean} multiSelect - Whether multiple options can be selected.
+ * If true, calls onSelect with IndexPath[] in arguments.
+ * Otherwise, with IndexPath in arguments.
+ *
+ * @property {ReactText | ReactElement | (TextProps) => ReactElement} placeholder - String, number or a function component
+ * to render when there is no selected option.
+ * If it is a function, expected to return a Text.
+ *
+ * @property {ReactText | ReactElement | (TextProps) => ReactElement} label - String, number or a function component
+ * to render above input field.
+ * If it is a function, expected to return a Text.
+ *
+ * @property {ReactText | ReactElement | (TextProps) => ReactElement} caption - String, number or a function component
+ * to render below the input field.
+ * If it is a function, expected to return a Text.
+ *
+ * @property {ReactElement | (ImageProps) => ReactElement} accessoryLeft - Function component
+ * to render to start of the text.
+ * Expected to return an Image.
+ *
+ * @property {ReactElement | (ImageProps) => ReactElement} accessoryRight - Function component
+ * to render to end of the text.
+ * Expected to return an Image.
+ *
+ * @property {string} status - Status of the component.
+ * Can be `basic`, `primary`, `success`, `info`, `warning`, `danger` or `control`.
+ * Defaults to *basic*.
+ * Use *control* status when needed to display within a contrast container.
+ *
+ * @property {string} size - Size of the component.
+ * Can be `small`, `medium` or `large`.
+ * Defaults to *medium*.
+ *
+ * @property {() => void} onFocus - Called when options list becomes visible.
+ *
+ * @property {() => void} onBlur - Called when options list becomes invisible.
+ *
+ * @property {TouchableOpacityProps} ...TouchableOpacityProps - Any props applied to TouchableOpacity component.
+ *
+ * @overview-example SelectSimpleUsage
+ *
+ * @overview-example SelectIndexType
+ * Select works with special index object - IndexPath.
+ * For non-grouped items in select, there is only a `row` property.
+ * Otherwise, `row` is an index of option within the group, section - index of group in options list.
+ * ```
+ * interface IndexPath {
+ *   row: number;
+ *   section?: number;
+ * }
+ * ```
+ *
+ * @overview-example SelectMultiSelect
+ * Multiple options can be selected if `multiSelect` property is configured.
+ * For multiple options, `onSelect` function is called with array if indices.
+ *
+ * @overview-example SelectWithGroups
+ * Options may be grouped within `SelectGroup` component.
+ *
+ * @overview-example SelectDisplayValue
+ * By default, Select displays a value by building strings for selected indices.
+ * For a real-word examples, a `value` property should be configured.
+ *
+ * @overview-example SelectStates
+ * Select can be disabled with `disabled` property.
+ *
+ * @overview-example SelectDisabledOptions
+ * Same for options.
+ *
+ * @overview-example SelectStatus
+ * It also may be marked with `status` property, which is useful within forms validation.
+ * An extra status is `control`, which is designed to be used on high-contrast backgrounds.
+ *
+ * @overview-example SelectAccessories
+ * Select may contain labels, captions and inner views by configuring `accessoryLeft` or `accessoryRight` properties.
+ * Within Eva, Select accessories are expected to be images or [svg icons](guides/icon-packages).
+ *
+ * @overview-example SelectSize
+ * To resize Select, a `size` property may be used.
+ *
+ * @overview-example SelectStyling
+ * Select and it's inner views can be styled by passing them as function components.
+ * ```
+ * import { Select, SelectItem, Text } from '@ui-kitten/components';
+ *
+ * <Select
+ *   label={evaProps => <Text {...evaProps}>Label</Text>}
+ *   caption={evaProps => <Text {...evaProps}>Caption</Text>}>
+ *   <SelectItem title={evaProps => <Text {...evaProps}>Option 1</Text>} />
+ * </Select>
+ * ```
+ *
+ * @overview-example SelectTheming
+ * In most cases this is redundant, if [custom theme is configured](guides/branding).
+ */
+let Select = class Select extends react_1.default.Component {
+    constructor() {
+        super(...arguments);
+        this.state = {
+            listVisible: false,
+        };
+        this.service = new select_service_1.SelectService();
+        this.popoverRef = react_1.default.createRef();
+        this.expandAnimation = new react_native_1.Animated.Value(0);
+        this.show = () => {
+            this.popoverRef.current?.show();
+        };
+        this.hide = () => {
+            this.popoverRef.current?.hide();
+        };
+        this.focus = () => {
+            this.setOptionsListVisible();
+        };
+        this.blur = () => {
+            this.setOptionsListInvisible();
+        };
+        this.isFocused = () => {
+            return this.state.listVisible;
+        };
+        this.clear = () => {
+            this.props.onSelect && this.props.onSelect(null);
+        };
+        this.onMouseEnter = (event) => {
+            this.props.eva.dispatch([theme_1.Interaction.HOVER]);
+            this.props.onMouseEnter && this.props.onMouseEnter(event);
+        };
+        this.onMouseLeave = (event) => {
+            this.props.eva.dispatch([]);
+            this.props.onMouseLeave && this.props.onMouseLeave(event);
+        };
+        this.onPress = () => {
+            this.setOptionsListVisible();
+        };
+        this.onPressIn = (event) => {
+            this.props.eva.dispatch([theme_1.Interaction.ACTIVE]);
+            this.props.onPressIn && this.props.onPressIn(event);
+        };
+        this.onPressOut = (event) => {
+            this.props.eva.dispatch([]);
+            this.props.onPressOut && this.props.onPressOut(event);
+        };
+        this.onItemPress = (descriptor) => {
+            if (this.props.onSelect) {
+                const selectedIndices = this.service.selectItem(this.isMultiSelect, descriptor, this.selectedIndices);
+                !this.isMultiSelect && this.setOptionsListInvisible();
+                this.props.onSelect(selectedIndices);
+            }
+        };
+        this.onBackdropPress = () => {
+            this.setOptionsListInvisible();
+        };
+        this.onListVisible = () => {
+            this.props.eva.dispatch([theme_1.Interaction.ACTIVE]);
+            this.createExpandAnimation(-CHEVRON_DEG_COLLAPSED).start(() => {
+                this.props.onFocus && this.props.onFocus(null);
+            });
+        };
+        this.onListInvisible = () => {
+            this.props.eva.dispatch([]);
+            this.createExpandAnimation(CHEVRON_DEG_EXPANDED).start(() => {
+                this.props.onBlur && this.props.onBlur(null);
+            });
+        };
+        this.getComponentStyle = (style) => {
+            const { textMarginHorizontal, textFontFamily, textFontSize, textFontWeight, textColor, placeholderColor, placeholderFontSize, placeholderFontWeight, placeholderFontFamily, iconWidth, iconHeight, iconMarginHorizontal, iconTintColor, labelColor, labelFontSize, labelMarginBottom, labelFontWeight, labelFontFamily, captionColor, captionFontSize, captionFontWeight, captionFontFamily, captionIconWidth, captionIconHeight, captionIconMarginRight, captionIconTintColor, popoverMaxHeight, popoverBorderRadius, popoverBorderColor, popoverBorderWidth, ...inputParameters } = style;
+            return {
+                input: inputParameters,
+                text: {
+                    marginHorizontal: textMarginHorizontal,
+                    fontFamily: textFontFamily,
+                    fontSize: textFontSize,
+                    fontWeight: textFontWeight,
+                    color: textColor,
+                },
+                placeholder: {
+                    marginHorizontal: textMarginHorizontal,
+                    fontSize: placeholderFontSize,
+                    fontWeight: placeholderFontWeight,
+                    fontFamily: placeholderFontFamily,
+                    color: placeholderColor,
+                },
+                icon: {
+                    width: iconWidth,
+                    height: iconHeight,
+                    marginHorizontal: iconMarginHorizontal,
+                    tintColor: iconTintColor,
+                },
+                label: {
+                    marginBottom: labelMarginBottom,
+                    fontSize: labelFontSize,
+                    fontWeight: labelFontWeight,
+                    fontFamily: labelFontFamily,
+                    color: labelColor,
+                },
+                caption: {
+                    fontSize: captionFontSize,
+                    fontWeight: captionFontWeight,
+                    fontFamily: captionFontFamily,
+                    color: captionColor,
+                },
+                popover: {
+                    maxHeight: popoverMaxHeight,
+                    borderRadius: popoverBorderRadius,
+                    borderWidth: popoverBorderWidth,
+                    borderColor: popoverBorderColor,
+                },
+            };
+        };
+        this.setOptionsListVisible = () => {
+            const hasData = this.data.length > 0;
+            hasData && this.setState({ listVisible: true }, this.onListVisible);
+        };
+        this.setOptionsListInvisible = () => {
+            this.setState({ listVisible: false }, this.onListInvisible);
+        };
+        this.createExpandAnimation = (toValue) => {
+            return react_native_1.Animated.timing(this.expandAnimation, {
+                toValue,
+                duration: CHEVRON_ANIM_DURATION,
+                useNativeDriver: react_native_1.Platform.OS !== 'web',
+            });
+        };
+        this.cloneItemWithProps = (el, props) => {
+            const nestedElements = react_1.default.Children.map(el.props.children, (nestedEl, index) => {
+                const descriptor = this.service.createDescriptorForNestedElement(nestedEl, props.descriptor, index);
+                const selected = this.service.isSelected(descriptor, this.selectedIndices);
+                return this.cloneItemWithProps(nestedEl, { ...props, descriptor, selected, disabled: false });
+            });
+            return react_1.default.cloneElement(el, { ...props, ...el.props }, nestedElements);
+        };
+        this.renderItem = (info) => {
+            const descriptor = this.service.createDescriptorForElement(info.item, this.isMultiSelect, info.index);
+            const selected = this.service.isSelected(descriptor, this.selectedIndices);
+            const disabled = this.service.isDisabled(descriptor);
+            return this.cloneItemWithProps(info.item, { descriptor, selected, disabled, onPress: this.onItemPress });
+        };
+        this.renderDefaultIconElement = (evaStyle) => {
+            const { tintColor, ...svgStyle } = evaStyle;
+            return (react_1.default.createElement(react_native_1.Animated.View, { style: { transform: [{ rotate: this.expandToRotateInterpolation }] } },
+                react_1.default.createElement(chevronDown_component_1.ChevronDown, { style: svgStyle, fill: tintColor })));
+        };
+        this.renderInputElement = (props, evaStyle) => {
+            const value = props.value || this.service.toStringSelected(this.selectedIndices);
+            const textStyle = value && evaStyle.text;
+            return (react_1.default.createElement(devsupport_1.TouchableWeb, { testID: props.testID, style: [styles.input, evaStyle.input], onPress: this.onPress, onMouseEnter: this.onMouseEnter, onMouseLeave: this.onMouseLeave, onPressIn: this.onPressIn, onPressOut: this.onPressOut, disabled: props.disabled },
+                react_1.default.createElement(devsupport_1.FalsyFC, { style: evaStyle.icon, component: props.accessoryLeft }),
+                react_1.default.createElement(devsupport_1.FalsyText, { style: [styles.text, evaStyle.placeholder, textStyle], numberOfLines: 1, ellipsizeMode: 'tail', component: value || props.placeholder }),
+                react_1.default.createElement(devsupport_1.FalsyFC, { style: evaStyle.icon, component: props.accessoryRight, fallback: this.renderDefaultIconElement(evaStyle.icon) })));
+        };
+    }
+    get isMultiSelect() {
+        return this.props.multiSelect;
+    }
+    get data() {
+        return react_1.default.Children.toArray(this.props.children || []);
+    }
+    get selectedIndices() {
+        if (!this.props.selectedIndex) {
+            return [];
+        }
+        return Array.isArray(this.props.selectedIndex) ? this.props.selectedIndex : [this.props.selectedIndex];
+    }
+    get expandToRotateInterpolation() {
+        return this.expandAnimation.interpolate({
+            inputRange: [CHEVRON_DEG_COLLAPSED, CHEVRON_DEG_EXPANDED],
+            outputRange: [`${CHEVRON_DEG_COLLAPSED}deg`, `${CHEVRON_DEG_EXPANDED}deg`],
+        });
+    }
+    render() {
+        const { eva, style, label, caption, children, ...touchableProps } = this.props;
+        const evaStyle = this.getComponentStyle(eva.style);
+        return (react_1.default.createElement(react_native_1.View, { style: style },
+            react_1.default.createElement(devsupport_1.FalsyText, { style: [styles.label, evaStyle.label], component: label }),
+            react_1.default.createElement(popover_component_1.Popover, { ref: this.popoverRef, style: [styles.popover, evaStyle.popover], visible: this.state.listVisible, fullWidth: true, anchor: () => this.renderInputElement(touchableProps, evaStyle), onBackdropPress: this.onBackdropPress },
+                react_1.default.createElement(list_component_1.List, { style: styles.list, data: this.data, bounces: false, renderItem: this.renderItem })),
+            react_1.default.createElement(devsupport_1.FalsyText, { style: [styles.caption, evaStyle.caption], component: caption })));
+    }
+};
+Select.defaultProps = {
+    placeholder: 'Select Option',
+    selectedIndex: [],
+};
+Select = __decorate([
+    theme_1.styled('Select')
+], Select);
+exports.Select = Select;
+const styles = react_native_1.StyleSheet.create({
+    input: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    popover: {
+        overflow: 'hidden',
+    },
+    list: {
+        flexGrow: 0,
+    },
+    text: {
+        flex: 1,
+        textAlign: 'left',
+    },
+    label: {
+        textAlign: 'left',
+    },
+    caption: {
+        textAlign: 'left',
+    },
+});
+//# sourceMappingURL=select.component.js.map

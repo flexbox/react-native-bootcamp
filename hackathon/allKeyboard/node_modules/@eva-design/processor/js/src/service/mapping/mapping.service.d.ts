@@ -1,0 +1,12 @@
+import { ThemeMappingType, ControlMappingType, MappingType, StatelessMappingType } from '@eva-design/dss';
+export declare function getComponentDefaultAppearance(mapping: ThemeMappingType, component: string): string | undefined;
+export declare function getComponentDefaultVariants(mapping: ThemeMappingType, component: string): string[] | undefined;
+export declare function getComponentDefaultState(mapping: ThemeMappingType, component: string): string | undefined;
+export declare function getComponentVariantGroups(mapping: ThemeMappingType, component: string): string[] | undefined;
+export declare function getComponentVariants(mapping: ThemeMappingType, component: string): string[][] | undefined;
+export declare function getComponentStates(mapping: ThemeMappingType, component: string): string[] | undefined;
+export declare function getStateAppearanceMapping(mapping: ThemeMappingType, component: string, appearance: string, state: string): StatelessMappingType | undefined;
+export declare function getStatelessAppearanceMapping(mapping: ThemeMappingType, component: string, appearance: string): StatelessMappingType | undefined;
+export declare function getStateVariantMapping(mapping: ThemeMappingType, component: string, appearance: string, variant: string, state: string): MappingType | undefined;
+export declare function getStatelessVariantMapping(mapping: ThemeMappingType, component: string, appearance: string, variant: string): StatelessMappingType | undefined;
+export declare function getComponentMapping(mapping: ThemeMappingType, component: string): ControlMappingType | undefined;

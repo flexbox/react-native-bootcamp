@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.ts"],"names":[],"mappings":"iRAAA","sourcesContent":["export * from './ReactNativeSVG';\n\nexport { default } from './ReactNativeSVG';\n"]}
