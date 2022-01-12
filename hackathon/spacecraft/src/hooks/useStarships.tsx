@@ -1,7 +1,7 @@
 import { useQueries } from "react-query";
 
 export const fetchStarships = async () => {
-  const response = await fetch("https://swapi.dev/api/starships/");
+  const response = await fetch("https://swapi.py4e.com/api/starships/");
   const data = await response.json();
   return data;
 };
