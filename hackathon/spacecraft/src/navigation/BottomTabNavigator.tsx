@@ -5,7 +5,6 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import StarshipFeedScreen from "../screens/StarshipFeedScreen";
-import StarshipFeedExampleScreen from "../screens/exercice/FeedScreen";
 import StarshipDetailsScreen from "../screens/StarshipDetailsScreen";
 
 import { AppRoutes } from "./AppRoutes";
