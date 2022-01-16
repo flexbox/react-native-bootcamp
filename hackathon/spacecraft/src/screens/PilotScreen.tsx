@@ -1,4 +1,4 @@
-import { PeopleProps } from "api/types";
+import type { PeopleProps } from "api/types";
 import React from "react";
 import { FlatList, View } from "react-native";
 import { Button, Headline } from "react-native-paper";
@@ -20,10 +20,15 @@ const renderItem = (props: RenderItemProps) => {
 export const PilotScreen = () => {
   const { query, setPage } = usePilot();
 
-  if (query.isLoading) return <ScreenContainer title="Loading…" />;
-  if (query.isError) return <ScreenContainer title="Error 😕" />;
-  if (query.data.results === undefined)
+  if (query.isLoading) {
+    return <ScreenContainer title="Loading…" />;
+  }
+  if (query.isError) {
+    return <ScreenContainer title="Error 😕" />;
+  }
+  if (query.data.results === undefined) {
     return <ScreenContainer title="Not Found" />;
+  }
 
   const handleLoadMore = () => {
     setPage((old) => old + 1);
