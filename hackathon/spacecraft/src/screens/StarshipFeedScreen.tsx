@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { FlatList } from "react-native";
+import { Button } from "react-native-paper";
 
 import ScreenContainer from "../components/ScreenContainer";
 import StarshipCard from "../components/StarshipCard";
@@ -26,11 +27,26 @@ const renderItem = (props: RenderItemProps) => {
 };
 
 const StarshipFeedScreen = () => {
-  const { isLoading, isError, data } = useQuery("starships", fetchStarships);
+  const { isLoading, isError, data, refetch } = useQuery(
+    "starships",
+    fetchStarships
+  );
 
-  if (isLoading) return <ScreenContainer title="Loading…" />;
-  if (isError) return <ScreenContainer title="Error 😕" />;
-  if (data.results === undefined) return <ScreenContainer title="Not Found" />;
+  if (isLoading) {
+    return <ScreenContainer title="Loading…" />;
+  }
+  if (isError) {
+    return (
+      <ScreenContainer title="Error 😕">
+        <Button onPress={refetch} mode="filled">
+          Refetch
+        </Button>
+      </ScreenContainer>
+    );
+  }
+  if (data.results === undefined) {
+    return <ScreenContainer title="Not Found" />;
+  }
 
   return (
     <ScreenContainer title="Starships" withFooter>
