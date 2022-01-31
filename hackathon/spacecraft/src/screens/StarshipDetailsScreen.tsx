@@ -18,7 +18,7 @@ import {
   FAB,
 } from "react-native-paper";
 
-import { StarshipProps } from "../../api/types";
+import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
 
 interface StarshipDetailsScreenProps {
@@ -27,7 +27,9 @@ interface StarshipDetailsScreenProps {
   };
 }
 
-const StarshipDetailsScreen = ({ route }: StarshipDetailsScreenProps) => {
+export const StarshipDetailsScreen = ({
+  route,
+}: StarshipDetailsScreenProps) => {
   const {
     name,
     manufacturer,
@@ -116,8 +118,6 @@ const StarshipDetailsScreen = ({ route }: StarshipDetailsScreenProps) => {
     </View>
   );
 };
-
-export default StarshipDetailsScreen;
 
 const styles = StyleSheet.create({
   scrollContainer: {

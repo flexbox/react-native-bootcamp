@@ -4,8 +4,8 @@ import { Colors } from "react-native-paper";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import StarshipFeedScreen from "../screens/StarshipFeedScreen";
-import StarshipDetailsScreen from "../screens/StarshipDetailsScreen";
+import { StarshipFeedScreen } from "../screens/StarshipFeedScreen";
+import { StarshipDetailsScreen } from "../screens/StarshipDetailsScreen";
 
 import { AppRoutes } from "./AppRoutes";
 

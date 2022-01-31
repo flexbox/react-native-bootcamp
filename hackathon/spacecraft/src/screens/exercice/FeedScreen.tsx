@@ -1,9 +1,9 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, StatusBar, View } from "react-native";
 
-import { data } from "../../../api/data";
+import { default as data } from "../../api/data.json";
 
-const App = () => {
+export const FeedScreen = () => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
@@ -23,5 +23,3 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 });
-
-export default App;

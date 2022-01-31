@@ -26,7 +26,7 @@ const renderItem = (props: RenderItemProps) => {
   return <StarshipCard ship={ship} />;
 };
 
-const StarshipFeedScreen = () => {
+export const StarshipFeedScreen = () => {
   const { isLoading, isError, data, refetch } = useQuery(
     "starships",
     fetchStarships
@@ -35,15 +35,17 @@ const StarshipFeedScreen = () => {
   if (isLoading) {
     return <ScreenContainer title="Loading…" />;
   }
+
   if (isError) {
     return (
       <ScreenContainer title="Error 😕">
-        <Button onPress={refetch} mode="filled">
+        <Button onPress={refetch} mode="outlined">
           Refetch
         </Button>
       </ScreenContainer>
     );
   }
+
   if (data.results === undefined) {
     return <ScreenContainer title="Not Found" />;
   }
@@ -64,5 +66,3 @@ const StarshipFeedScreen = () => {
     </ScreenContainer>
   );
 };
-
-export default StarshipFeedScreen;
