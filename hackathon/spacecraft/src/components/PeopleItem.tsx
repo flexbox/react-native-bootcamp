@@ -3,7 +3,7 @@ import { PeopleProps } from "api/types";
 import React from "react";
 import { List, Colors } from "react-native-paper";
 
-import { AppRoutes } from "~/navigation/AppRoutes";
+import { Routes } from "~/navigation/Routes";
 
 interface PeopleItemProps {
   people: PeopleProps;
@@ -25,7 +25,7 @@ export const PeopleItem = ({ people }: PeopleItemProps) => {
 
   const navigation = useNavigation();
   const navigateToDetails = () => {
-    navigation.navigate(AppRoutes.PILOT_DETAILS_SCREEN, { people });
+    navigation.navigate(Routes.PILOT_DETAILS_SCREEN, { people });
   };
 
   return (

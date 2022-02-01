@@ -12,17 +12,16 @@ import {
   Headline,
   TextInput,
 } from 'react-native-paper';
-import { AppRoutes } from '../navigation/AppRoutes';
+import { Routes } from '../navigation/Routes';
 import { sleep } from '../utils/sleep';
 
 interface LoginScreenProps {
-  setIsAuthorized: React.Dispatch<React.SetStateAction<boolean>>
+  setIsAuthorized: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
   const [text, setText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-
 
   const handleLogin = async () => {
     setIsLoading(true);
@@ -30,9 +29,9 @@ const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
     setIsAuthorized(true);
   };
 
-  const handleRegister = ()=> {
-    navigation.navigate(AppRoutes.REGISTER)
-  }
+  const handleRegister = () => {
+    navigation.navigate(Routes.REGISTER);
+  };
 
   return (
     <SafeAreaView

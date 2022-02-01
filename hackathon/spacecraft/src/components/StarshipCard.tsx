@@ -5,7 +5,7 @@ import { Button, Card, Title } from "react-native-paper";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
-import { AppRoutes } from "../navigation/AppRoutes";
+import { Routes } from "../navigation/Routes";
 
 export interface StarshipCardProps {
   ship: StarshipProps;
@@ -24,7 +24,7 @@ const StarshipCard = ({ ship }: StarshipCardProps) => {
 
   const navigation = useNavigation();
   const handleGoToDetails = () => {
-    navigation.navigate(AppRoutes.STARSHIP_DETAILS_SCREEN, ship);
+    navigation.navigate(Routes.STARSHIP_DETAILS_SCREEN, ship);
   };
 
   return (

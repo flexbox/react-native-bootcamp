@@ -3,14 +3,14 @@ import { Divider, List, ListItem } from '@ui-kitten/components';
 import React from 'react';
 
 import { allSounds } from '../api/data';
-import { AppRoutes } from '../navigation/AppRoutes';
+import { Routes } from '../navigation/Routes';
 
 interface Props {}
 
 const SoundList = (props: Props) => {
   const navigation = useNavigation();
   const handlePress = (id: string) => {
-    navigation.navigate(AppRoutes.MUSIC_DETAILS_SCREEN, { musicId: id });
+    navigation.navigate(Routes.MUSIC_DETAILS_SCREEN, { musicId: id });
   };
 
   const renderItem = ({ item }) => (

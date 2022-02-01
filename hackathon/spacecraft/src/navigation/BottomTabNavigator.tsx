@@ -7,7 +7,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { StarshipFeedScreen } from "../screens/StarshipFeedScreen";
 import { StarshipDetailsScreen } from "../screens/StarshipDetailsScreen";
 
-import { AppRoutes } from "./AppRoutes";
+import { Routes } from "./Routes";
 
 import { PilotScreen } from "~/screens/PilotScreen";
 import { PilotDetailsScreen } from "~/screens/PilotDetailsScreen";
@@ -24,12 +24,12 @@ const StarshipNavigator = () => {
       }}
     >
       <Stack.Screen
-        name={AppRoutes.STARSHIP_FEED_SCREEN}
+        name={Routes.STARSHIP_FEED_SCREEN}
         component={StarshipFeedScreen}
         // component={StarshipFeedExampleScreen}
       />
       <Stack.Screen
-        name={AppRoutes.STARSHIP_DETAILS_SCREEN}
+        name={Routes.STARSHIP_DETAILS_SCREEN}
         component={StarshipDetailsScreen}
       />
     </Stack.Navigator>
@@ -43,15 +43,15 @@ const PilotNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name={AppRoutes.PILOT_SCREEN} component={PilotScreen} />
+      <Stack.Screen name={Routes.PILOT_SCREEN} component={PilotScreen} />
       <Stack.Screen
-        name={AppRoutes.PILOT_DETAILS_SCREEN}
+        name={Routes.PILOT_DETAILS_SCREEN}
         component={PilotDetailsScreen}
       />
       {/* TODO: Need to bump react-navigation to v6.0.0
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen
-          name={AppRoutes.STARSHIP_DETAILS_SCREEN}
+          name={Routes.STARSHIP_DETAILS_SCREEN}
           component={StarshipDetailsScreen}
         />
       </Stack.Group> */}
@@ -67,7 +67,7 @@ export const BottomTabNavigator = () => {
       barStyle={{ backgroundColor: Colors.white }}
     >
       <Tab.Screen
-        name={AppRoutes.STARSHIP_STACK}
+        name={Routes.STARSHIP_STACK}
         component={StarshipNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -76,7 +76,7 @@ export const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name={AppRoutes.PILOT_STACK}
+        name={Routes.PILOT_STACK}
         component={PilotNavigator}
         options={{
           tabBarIcon: ({ color }) => (

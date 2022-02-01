@@ -33,6 +33,7 @@ const MemeCard = ({ meme }: Props) => {
           uri: url,
         }}
       />
+
       <View style={{ padding: 16 }}>
         <Text category="h6">{name}</Text>
       </View>

@@ -5,7 +5,7 @@ import { Button, Colors, Headline, TextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
-import { AppRoutes } from "../navigation/AppRoutes";
+import { Routes } from "../navigation/Routes";
 import { useAuthentication } from "../context/Authentication";
 
 const LoginScreen = () => {
@@ -20,7 +20,7 @@ const LoginScreen = () => {
   }
 
   function navigateToTerms() {
-    navigation.navigate(AppRoutes.TERMS_SCREEN);
+    navigation.navigate(Routes.TERMS_SCREEN);
   }
 
   function toggleSecureIcon() {
