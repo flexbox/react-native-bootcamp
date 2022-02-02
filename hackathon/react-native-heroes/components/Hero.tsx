@@ -67,7 +67,7 @@ export const Hero = (hero: HeroProps) => {
       </TouchableOpacity>
       <View style={styles.middle}>
         <Text style={styles.text}>{hero.item.full_name}</Text>
-        <View style={styles.social}>
+        <Box flexDirection="row" justifyContent="space-between" p="m">
           <TouchableOpacity
             style={styles.button}
             onPress={() =>
@@ -86,7 +86,7 @@ export const Hero = (hero: HeroProps) => {
           >
             <Text>Twitter</Text>
           </TouchableOpacity>
-        </View>
+        </Box>
       </View>
       <Box ml="m">
         <Upvote />
@@ -123,10 +123,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     padding: 8,
     alignItems: 'center',
-  },
-  social: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
   },
   middle: {
     flex: 1,
