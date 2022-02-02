@@ -1,55 +1,49 @@
 import React from 'react';
-import { FlatList } from 'react-native';
-import { HeroesListItem } from './HeroesListItem';
+import { Hero } from './Hero';
+import { SafeAreaView, FlatList, ActivityIndicator } from 'react-native';
+import { gql, useQuery } from '@apollo/client';
+import theme from '../theme/theme';
+import Box from './Box';
+import { Paragraph } from 'react-native-paper';
 
-const DATA = [
-  {
-    avatar: 'https://picsum.photos/200/300',
-    name: 'Random Name',
-    urlTwitter: 'https://twitter.com',
-    urlGithub: 'https://github.com/',
-  },
-  {
-    avatar: 'https://picsum.photos/200/300',
-    name: 'Zone de test',
-    urlTwitter: 'https://twitter.com',
-    urlGithub: 'https://github.com/',
-  },
-  {
-    avatar: 'https://picsum.photos/200/300',
-    name: 'Test de Zone',
-    urlTwitter: 'https://twitter.com',
-    urlGithub: 'https://github.com/',
-  },
-  {
-    avatar: 'https://picsum.photos/200/300',
-    name: 'Pas de Back-End',
-    urlTwitter: 'https://twitter.com',
-    urlGithub: 'https://github.com/',
-  },
-  {
-    avatar: 'https://picsum.photos/200/300',
-    name: 'Youpi',
-    urlTwitter: 'https://twitter.com',
-    urlGithub: 'https://github.com/',
-  },
-];
+const HEROES_QUERY = gql`
+  query MyQuery {
+    heroes(order_by: { id: asc }) {
+      avatar_url
+      counter
+      full_name
+      github_username
+      twitter_username
+      id
+    }
+  }
+`;
 
 export const HeroesList = () => {
-  const renderItem = ({ item }) => (
-    <HeroesListItem
-      avatar={item.avatar}
-      name={item.name}
-      urlGithub={item.urlGithub}
-      urlTwitter={item.urlTwitter}
-    />
-  );
+  const { error, data } = useQuery(HEROES_QUERY);
+
+  if (error) {
+    <Box>
+      <Paragraph>Sorry we encounter an error</Paragraph>
+    </Box>;
+  }
+
+  const renderItem = ({ item }) => <Hero item={item} />;
 
   return (
-    <FlatList
-      data={DATA}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.name}
-    />
+    <SafeAreaView>
+      {data ? (
+        <FlatList
+          data={data.heroes}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      ) : (
+        <ActivityIndicator
+          size="large"
+          color={theme.colors.activityIndicator}
+        />
+      )}
+    </SafeAreaView>
   );
 };
