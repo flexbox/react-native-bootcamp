@@ -10,61 +10,27 @@ import {
 import { Colors } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';
 import React, { useState } from 'react';
-import { Upvote } from './Upvote';
 import Box from './Box';
+import { Upvote } from './Upvote';
 
 type HeroProps = {
-  avatar: string;
-  name: string;
-  urlGithub: string;
-  urlTwitter: string;
+  item: {
+    avatar_url: string;
+    full_name: string;
+    github_username: string;
+    twitter_username: string;
+  };
 };
 
-export const HeroesListItem = (hero: HeroProps) => {
+export const Hero = (hero: HeroProps) => {
   const [modalVisible, setModalVisible] = useState(false);
-  const avatar = hero.avatar;
 
-  function toggleModal() {
+  const toggleModal = () => {
     setModalVisible(!modalVisible);
-  }
+  };
 
   return (
-    <>
-      <View style={styles.container}>
-        <TouchableOpacity onPress={toggleModal}>
-          <Image
-            source={{ uri: avatar }}
-            style={{
-              width: 100,
-              height: 100,
-              borderRadius: 10,
-              borderWidth: 1,
-            }}
-          />
-        </TouchableOpacity>
-
-        <Box mx="s">
-          <Text style={styles.text}>{hero.name}</Text>
-          <Box flexDirection="row" justifyContent="space-between">
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => Linking.openURL(hero.urlGithub)}
-            >
-              <Text>Github</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => Linking.openURL(hero.urlTwitter)}
-            >
-              <Text>Twitter</Text>
-            </TouchableOpacity>
-          </Box>
-        </Box>
-        <Box ml="m">
-          <Upvote />
-        </Box>
-      </View>
-
+    <View style={styles.container}>
       <Modal
         animationType="slide"
         transparent={true}
@@ -73,37 +39,74 @@ export const HeroesListItem = (hero: HeroProps) => {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Name of the dev</Text>
+            <Text style={styles.modalText}>{hero.item.full_name}</Text>
             <Image
-              source={{ uri: avatar }}
+              source={{ uri: hero.item.avatar_url }}
               style={{
                 width: 200,
                 height: 200,
                 borderRadius: 10,
-                borderWidth: 4,
+                borderWidth: 1,
+                alignContent: 'center',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
             />
             <Text>Description </Text>
-            <TouchableOpacity onPress={toggleModal}>
+            <TouchableOpacity onPress={() => toggleModal()}>
               <AntDesign name="closecircleo" size={24} color="black" />
             </TouchableOpacity>
           </View>
         </View>
       </Modal>
-    </>
+      <TouchableOpacity onPress={() => toggleModal()}>
+        <Image
+          source={{ uri: hero.item.avatar_url }}
+          style={{ width: 100, height: 100, borderRadius: 10, borderWidth: 1 }}
+        />
+      </TouchableOpacity>
+      <View style={styles.middle}>
+        <Text style={styles.text}>{hero.item.full_name}</Text>
+        <View style={styles.social}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() =>
+              Linking.openURL('https://github.com/' + hero.item.github_username)
+            }
+          >
+            <Text>Github</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() =>
+              Linking.openURL(
+                'https://twitter.com/' + hero.item.twitter_username
+              )
+            }
+          >
+            <Text>Twitter</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <Box ml="m">
+        <Upvote />
+      </Box>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    color: 'white',
+    width: '100%',
     flexDirection: 'row',
-    backgroundColor: Colors.yellow400,
+    backgroundColor: Colors.yellow900,
     alignItems: 'center',
-    borderColor: Colors.yellow800,
-    borderWidth: 4,
+    borderColor: 'black',
+    borderWidth: 1,
     borderRadius: 10,
     padding: 10,
-    margin: 16,
+    marginVertical: 10,
   },
   button: {
     backgroundColor: Colors.grey100,
@@ -112,12 +115,26 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
     paddingHorizontal: 10,
   },
+  vote: {
+    backgroundColor: Colors.grey100,
+    borderWidth: 1,
+    borderRadius: 4,
+    justifyContent: 'center',
+    marginHorizontal: 10,
+    padding: 8,
+    alignItems: 'center',
+  },
   social: {
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
+  middle: {
+    flex: 1,
+    width: '55%',
+  },
   text: {
     fontWeight: 'bold',
+    paddingHorizontal: 15,
     paddingVertical: 20,
   },
   modalView: {

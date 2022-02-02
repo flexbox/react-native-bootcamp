@@ -4,10 +4,15 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { ThemeProvider } from '@shopify/restyle';
 import theme from './theme/theme';
 import { ScreenContainer } from './components/ScreenContainer';
+import config from './config/config';
 
 const client = new ApolloClient({
-  uri: 'https://react-native-heroes.hasura.app/v1/graphql',
+  uri: config.HASURA_API_URL,
   cache: new InMemoryCache(),
+  headers: {
+    'content-type': 'application/json',
+    'x-hasura-admin-secret': config.HASURA_ADMIN_SECRET,
+  },
 });
 
 export default function App() {

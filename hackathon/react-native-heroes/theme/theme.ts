@@ -5,6 +5,7 @@ const theme = createTheme({
   colors: {
     mainBackground: Colors.white,
     cardPrimaryBackground: Colors.purple500,
+    activityIndicator: Colors.green500,
   },
   spacing: {
     s: 8,
