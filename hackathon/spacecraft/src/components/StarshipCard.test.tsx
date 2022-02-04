@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
-import StarshipCard from "../components/StarshipCard";
+import StarshipCard from "~/components/StarshipCard";
 
 const shipFixture = {
   name: "Millennium Falcon",

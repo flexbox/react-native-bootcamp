@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
 import { Appbar, Colors, Title } from "react-native-paper";
 
-export default function TermsScreen({ navigation }) {
+export function TermsScreen({ navigation }) {
   function goBack() {
     navigation.goBack();
   }

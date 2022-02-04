@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
-import Constants from "expo-constants";
-import { Button, Colors, Headline, TextInput } from "react-native-paper";
+import { Button, Colors, TextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
 import { Routes } from "../navigation/Routes";
 import { useAuthentication } from "../context/Authentication";
 
-const LoginScreen = () => {
+import { Header } from "~/components/Header";
+
+export const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isVisble, setIsVisible] = useState(true);
@@ -29,9 +30,7 @@ const LoginScreen = () => {
 
   return (
     <View>
-      <View style={styles.header}>
-        <Headline style={styles.headerText}>SpaceCraft</Headline>
-      </View>
+      <Header title="SpaceCraft" />
       <View style={styles.content}>
         <FormInput
           label="Email"
@@ -71,18 +70,6 @@ const styles = StyleSheet.create({
   content: {
     padding: 16,
   },
-  header: {
-    paddingTop: Constants.statusBarHeight,
-    alignItems: "center",
-    justifyContent: "center",
-    height: 256,
-    backgroundColor: Colors.purple500,
-  },
-  headerText: {
-    color: Colors.white,
-    fontWeight: "bold",
-    textTransform: "uppercase",
-  },
   submitButton: {
     marginVertical: 32,
     marginHorizontal: 16,
@@ -94,5 +81,3 @@ const styles = StyleSheet.create({
     color: Colors.grey500,
   },
 });
-
-export default LoginScreen;

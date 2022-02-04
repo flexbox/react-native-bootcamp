@@ -3,7 +3,7 @@ import { fireEvent, render } from "@testing-library/react-native";
 
 import { FormInput } from "~/components/FromInput";
 
-describe("StarshipCard", () => {
+describe("FormInput", () => {
   const mock = jest.fn();
   it("renders correctly", () => {
     const { getAllByText } = render(
