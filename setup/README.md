@@ -1,15 +1,18 @@
-# Workshop Setup
+# Setup instructions
+
+You will find the instructions to set up you computer for yout next React Native Bootcamp.
 
 💡 I do provide advices for Linux and macOS.
 
-💡 Being **administrator on windows is mandatory**, I am **not responsible** if you encounter issues. (You can follow this [setup tutorial from InfiniteRed](https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/) to make everything work).
+💡 Being **administrator on windows is mandatory**, I am **not responsible** if you encounter issues.
+(_You can follow this [setup tutorial from InfiniteRed](https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/) to make everything work_).
 
 ## System Requirements
 
 - [ ] [git](https://git-scm.com/) v2.13 or greater
 - [ ] [NodeJS](https://nodejs.org/) v12 or greater
 - [ ] [npm](https://www.npmjs.com/) v6 or greater
-- [ ] [yarn v1](https://classic.yarnpkg.com/en/docs/install)
+- [ ] [yarn](https://classic.yarnpkg.com/en/docs/install)
 
 Use the following command from your terminal to check your Node version.
 
@@ -27,6 +30,9 @@ npm install --global expo-cli
 
 ## Virtual Simulators
 
+<details>
+<summary>macOS</summary>
+
 - [ ] [Xcode 12](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
 
 Check if everything is working.
@@ -43,7 +49,23 @@ xcode-select -p
 
 Should output something like `/Applications/Xcode.app/Contents/Developer` if it's mot the case run `sudo xcode-select --reset`
 
-- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+ for Linux / Windows
+- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+
+
+</details>
+
+<details>
+<summary>Linux</summary>
+
+- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+
+
+</details>
+
+<details>
+<summary>Windows</summary>
+
+- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+
+
+</details>
 
 ## Smartphone Requirements
 
