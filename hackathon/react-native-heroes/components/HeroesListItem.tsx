@@ -69,7 +69,7 @@ export const HeroesListItem = (hero: HeroProps) => {
       </TouchableOpacity>
       <View style={styles.middle}>
         <Text style={styles.text}>{hero.item.full_name}</Text>
-        <Box flexDirection="row" justifyContent="space-around" p="m">
+        <Box flexDirection="row" justifyContent="space-between" p="m">
           <TouchableOpacity
             style={styles.button}
             onPress={() =>
@@ -90,14 +90,18 @@ export const HeroesListItem = (hero: HeroProps) => {
           </TouchableOpacity>
         </Box>
       </View>
-      <Box ml="m">
-        <Upvote idHero={hero.item.id} heroCounter={hero.item.counter} />
+      <Box flexDirection="column" ml="m">
+        <Upvote
+          idHero={hero.item.id}
+          heroCounter={hero.item.counter}
+          twitterUsername={hero.item.twitter_username}
+        />
       </Box>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     color: "white",
     width: "95%",
@@ -130,7 +134,7 @@ const styles = StyleSheet.create({
   },
   middle: {
     flex: 1,
-    width: "55%",
+    width: "60%",
   },
   text: {
     fontWeight: "bold",
@@ -155,6 +159,38 @@ const styles = StyleSheet.create({
     elevation: 5,
     justifyContent: "space-around",
   },
+<<<<<<< HEAD:hackathon/react-native-heroes/components/HeroesListItem.tsx
+=======
+  modalShareView: {
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    borderWidth: 2,
+    width: "70%",
+    height: "20%",
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+    justifyContent: "space-around",
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22,
+  },
+  modalText: {
+    marginBottom: 15,
+    paddingTop: 10,
+    textAlign: "center",
+  },
+>>>>>>> e1e10fff (add twitter share):hackathon/react-native-heroes/components/Hero.tsx
   buttonModal: {
     backgroundColor: Colors.grey100,
     borderWidth: 1,
