@@ -7,13 +7,13 @@ import {
   Linking,
   Modal,
 } from "react-native";
-import { Colors } from "react-native-paper";
+import { Colors, Headline } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
 import React, { useState } from "react";
 import Box from "./Box";
 import { Upvote } from "./Upvote";
 
-type HeroProps = {
+export type HeroProps = {
   item: {
     id: string;
     avatar_url: string;
@@ -24,7 +24,7 @@ type HeroProps = {
   };
 };
 
-export const Hero = (hero: HeroProps) => {
+export const HeroesListItem = (hero: HeroProps) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const toggleModal = () => {
@@ -39,9 +39,9 @@ export const Hero = (hero: HeroProps) => {
         visible={modalVisible}
         onRequestClose={() => toggleModal()}
       >
-        <View style={styles.centeredView}>
+        <Box flex={1} alignItems="center" justifyContent="center">
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>{hero.item.full_name}</Text>
+            <Headline>{hero.item.full_name}</Headline>
             <Image
               source={{ uri: hero.item.avatar_url }}
               style={{
@@ -54,14 +54,13 @@ export const Hero = (hero: HeroProps) => {
                 alignItems: "center",
               }}
             />
-            <Text>Description </Text>
-            <TouchableOpacity onPress={() => toggleModal()}>
+            <TouchableOpacity onPress={toggleModal}>
               <AntDesign name="closecircleo" size={24} color="black" />
             </TouchableOpacity>
           </View>
-        </View>
+        </Box>
       </Modal>
-      <TouchableOpacity onPress={() => toggleModal()}>
+      <TouchableOpacity onPress={toggleModal}>
         <Image
           source={{ uri: hero.item.avatar_url }}
           style={{ width: 100, height: 100, borderRadius: 10, borderWidth: 1 }}
@@ -154,17 +153,6 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
     justifyContent: "space-around",
-  },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
-  },
-  modalText: {
-    marginBottom: 15,
-    paddingTop: 10,
-    textAlign: "center",
   },
   buttonModal: {
     backgroundColor: Colors.grey100,

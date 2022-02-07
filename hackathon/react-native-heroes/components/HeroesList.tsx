@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero } from "./Hero";
+import { HeroesListItem, HeroProps } from "./HeroesListItem";
 import { SafeAreaView, FlatList, ActivityIndicator } from "react-native";
 import { useQuery } from "@apollo/client";
 import theme from "../theme/theme";
@@ -16,7 +16,7 @@ export const HeroesList = () => {
     </Box>;
   }
 
-  const renderItem = ({ item }) => <Hero item={item} />;
+  const renderItem = ({ item }: HeroProps) => <HeroesListItem item={item} />;
 
   return (
     <SafeAreaView>

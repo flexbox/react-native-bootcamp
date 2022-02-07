@@ -3,6 +3,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { Button, Colors, Paragraph } from "react-native-paper";
 import { gql, useMutation } from "@apollo/client";
 
+// TODO: Add interface
 export const Upvote = ({ idHero, heroCounter }) => {
   const [counter, setCounter] = useState<number>(10);
   const [hasUpvoted, setHasUpvoted] = useState<boolean>(false);
