@@ -1,11 +1,12 @@
 import { PeopleProps } from "api/types";
 import React from "react";
-import { FlatList, View } from "react-native";
-import { Button, Headline } from "react-native-paper";
+import { FlatList } from "react-native";
+import { Button } from "react-native-paper";
 
 import ScreenContainer from "~/components/ScreenContainer";
 import { PeopleItem } from "~/components/PeopleItem";
 import { usePilot } from "~/hooks/usePilot";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 interface RenderItemProps {
   item: PeopleProps;

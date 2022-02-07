@@ -1,20 +1,22 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import { ActivityIndicator, Colors, Text } from "react-native-paper";
+import { StyleSheet, View, Text } from "react-native";
+import { ActivityIndicator, Colors } from "react-native-paper";
+import { useIsConnected } from 'react-native-offline';
 
-const Offline = () => {
-  // Add `useIsConnected()` hook
+export const Offline = () => {
+  const isConnected = useIsConnected();
 
   return (
-    <View>
-      <Text>
-        {/* Check `isConnected` status and render a message with `ActivityIndicator` */}
-      </Text>
-    </View>
+    <>
+      {!isConnected && (
+        <View style={styles.container}>
+          <Text style={styles.message}>Offline, reconnection in progress…</Text>
+          <ActivityIndicator color={Colors.red800} />
+        </View>
+      )}
+    </>
   );
 };
-
-export default Offline;
 
 const styles = StyleSheet.create({
   container: {

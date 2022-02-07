@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { ActivityIndicator, Colors, Text } from "react-native-paper";
 
-const Offline = () => {
+export const Offline = () => {
   // Add `useIsConnected()` hook
 
   return (
@@ -13,8 +13,6 @@ const Offline = () => {
     </View>
   );
 };
-
-export default Offline;
 
 const styles = StyleSheet.create({
   container: {
