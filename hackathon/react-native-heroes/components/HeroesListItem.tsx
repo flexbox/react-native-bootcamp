@@ -186,9 +186,11 @@ export const styles = StyleSheet.create({
     marginTop: 22,
   },
   modalText: {
-    marginBottom: 15,
-    paddingTop: 10,
+    marginBottom: 5,
+    paddingTop: 5,
     textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 20,
   },
 >>>>>>> e1e10fff (add twitter share):hackathon/react-native-heroes/components/Hero.tsx
   buttonModal: {
