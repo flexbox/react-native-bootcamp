@@ -1,8 +1,8 @@
-import { StyleSheet, SafeAreaView } from 'react-native';
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { Colors, Headline } from 'react-native-paper';
-import Box from './Box';
+import { StyleSheet, SafeAreaView } from "react-native";
+import React from "react";
+import { StatusBar } from "expo-status-bar";
+import { Colors, Headline } from "react-native-paper";
+import Box from "./Box";
 
 type Props = {
   children: React.ReactNode;
@@ -23,12 +23,13 @@ export const ScreenContainer = ({ children }: Props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.indigo900,
+    backgroundColor: Colors.black,
   },
   text: {
-    color: 'white',
+    color: "white",
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginVertical: 20,
+    textAlign: "center",
   },
 });

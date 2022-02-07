@@ -1,17 +1,17 @@
-import { HeroesList } from './components/HeroesList';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { HeroesList } from "./components/HeroesList";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
-import { ThemeProvider } from '@shopify/restyle';
-import theme from './theme/theme';
-import { ScreenContainer } from './components/ScreenContainer';
-import config from './config/config';
+import { ThemeProvider } from "@shopify/restyle";
+import theme from "./theme/theme";
+import { ScreenContainer } from "./components/ScreenContainer";
+import config from "./config/config";
 
 const client = new ApolloClient({
   uri: config.HASURA_API_URL,
   cache: new InMemoryCache(),
   headers: {
-    'content-type': 'application/json',
-    'x-hasura-admin-secret': config.HASURA_ADMIN_SECRET,
+    "content-type": "application/json",
+    "x-hasura-admin-secret": config.HASURA_ADMIN_SECRET,
   },
 });
 

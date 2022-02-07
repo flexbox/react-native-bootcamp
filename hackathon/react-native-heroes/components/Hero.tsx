@@ -6,19 +6,21 @@ import {
   TouchableOpacity,
   Linking,
   Modal,
-} from 'react-native';
-import { Colors } from 'react-native-paper';
-import { AntDesign } from '@expo/vector-icons';
-import React, { useState } from 'react';
-import Box from './Box';
-import { Upvote } from './Upvote';
+} from "react-native";
+import { Colors } from "react-native-paper";
+import { AntDesign } from "@expo/vector-icons";
+import React, { useState } from "react";
+import Box from "./Box";
+import { Upvote } from "./Upvote";
 
 type HeroProps = {
   item: {
+    id: string;
     avatar_url: string;
     full_name: string;
     github_username: string;
     twitter_username: string;
+    counter: string;
   };
 };
 
@@ -47,9 +49,9 @@ export const Hero = (hero: HeroProps) => {
                 height: 200,
                 borderRadius: 10,
                 borderWidth: 1,
-                alignContent: 'center',
-                justifyContent: 'center',
-                alignItems: 'center',
+                alignContent: "center",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             />
             <Text>Description </Text>
@@ -67,11 +69,11 @@ export const Hero = (hero: HeroProps) => {
       </TouchableOpacity>
       <View style={styles.middle}>
         <Text style={styles.text}>{hero.item.full_name}</Text>
-        <Box flexDirection="row" justifyContent="space-between" p="m">
+        <Box flexDirection="row" justifyContent="space-around" p="m">
           <TouchableOpacity
             style={styles.button}
             onPress={() =>
-              Linking.openURL('https://github.com/' + hero.item.github_username)
+              Linking.openURL("https://github.com/" + hero.item.github_username)
             }
           >
             <Text>Github</Text>
@@ -80,7 +82,7 @@ export const Hero = (hero: HeroProps) => {
             style={styles.button}
             onPress={() =>
               Linking.openURL(
-                'https://twitter.com/' + hero.item.twitter_username
+                "https://twitter.com/" + hero.item.twitter_username
               )
             }
           >
@@ -97,16 +99,18 @@ export const Hero = (hero: HeroProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    color: 'white',
-    width: '100%',
-    flexDirection: 'row',
+    color: "white",
+    width: "95%",
+    flexDirection: "row",
     backgroundColor: Colors.yellow900,
-    alignItems: 'center',
-    borderColor: 'black',
+    alignItems: "center",
+    borderColor: "black",
     borderWidth: 1,
     borderRadius: 10,
-    padding: 10,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
     marginVertical: 10,
+    marginHorizontal: "2,5%",
   },
   button: {
     backgroundColor: Colors.grey100,
@@ -119,29 +123,29 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.grey100,
     borderWidth: 1,
     borderRadius: 4,
-    justifyContent: 'center',
+    justifyContent: "center",
     marginHorizontal: 10,
     padding: 8,
-    alignItems: 'center',
+    alignItems: "center",
   },
   middle: {
     flex: 1,
-    width: '55%',
+    width: "55%",
   },
   text: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     paddingHorizontal: 15,
     paddingVertical: 20,
   },
   modalView: {
     margin: 20,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 20,
     borderWidth: 2,
-    width: '80%',
-    height: '45%',
-    alignItems: 'center',
-    shadowColor: '#000',
+    width: "80%",
+    height: "45%",
+    alignItems: "center",
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2,
@@ -149,18 +153,18 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
-    justifyContent: 'space-around',
+    justifyContent: "space-around",
   },
   centeredView: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 22,
   },
   modalText: {
     marginBottom: 15,
     paddingTop: 10,
-    textAlign: 'center',
+    textAlign: "center",
   },
   buttonModal: {
     backgroundColor: Colors.grey100,

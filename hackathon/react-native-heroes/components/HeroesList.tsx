@@ -1,11 +1,11 @@
-import React from 'react';
-import { Hero } from './Hero';
-import { SafeAreaView, FlatList, ActivityIndicator } from 'react-native';
-import { useQuery } from '@apollo/client';
-import theme from '../theme/theme';
-import Box from './Box';
-import { Paragraph } from 'react-native-paper';
-import { HEROES_QUERY } from '../graphql/queries';
+import React from "react";
+import { Hero } from "./Hero";
+import { SafeAreaView, FlatList, ActivityIndicator } from "react-native";
+import { useQuery } from "@apollo/client";
+import theme from "../theme/theme";
+import Box from "./Box";
+import { Paragraph } from "react-native-paper";
+import { HEROES_QUERY } from "../graphql/queries";
 
 export const HeroesList = () => {
   const { error, data } = useQuery(HEROES_QUERY);
@@ -22,6 +22,7 @@ export const HeroesList = () => {
     <SafeAreaView>
       {data ? (
         <FlatList
+          style={{ marginBottom: 50 }}
           data={data.heroes}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
@@ -30,6 +31,7 @@ export const HeroesList = () => {
         <ActivityIndicator
           size="large"
           color={theme.colors.activityIndicator}
+          style={{ marginTop: "50%" }}
         />
       )}
     </SafeAreaView>

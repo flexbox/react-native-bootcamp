@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const HEROES_QUERY = gql`
   query HeroesQuery {

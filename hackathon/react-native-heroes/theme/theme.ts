@@ -1,11 +1,11 @@
-import { createTheme } from '@shopify/restyle'
-import { Colors } from 'react-native-paper';
+import { createTheme } from "@shopify/restyle";
+import { Colors } from "react-native-paper";
 
 const theme = createTheme({
   colors: {
     mainBackground: Colors.white,
     cardPrimaryBackground: Colors.purple500,
-    activityIndicator: Colors.green500,
+    activityIndicator: Colors.orange500,
   },
   spacing: {
     s: 8,
