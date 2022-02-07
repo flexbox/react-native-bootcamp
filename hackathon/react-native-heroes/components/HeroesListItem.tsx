@@ -70,24 +70,30 @@ export const HeroesListItem = (hero: HeroProps) => {
       <View style={styles.middle}>
         <Text style={styles.text}>{hero.item.full_name}</Text>
         <Box flexDirection="row" justifyContent="space-between" p="m">
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() =>
-              Linking.openURL("https://github.com/" + hero.item.github_username)
-            }
-          >
-            <Text>Github</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() =>
-              Linking.openURL(
-                "https://twitter.com/" + hero.item.twitter_username
-              )
-            }
-          >
-            <Text>Twitter</Text>
-          </TouchableOpacity>
+          {hero.item.github_username ? (
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() =>
+                Linking.openURL(
+                  "https://github.com/" + hero.item.github_username
+                )
+              }
+            >
+              <Text>Github</Text>
+            </TouchableOpacity>
+          ) : null}
+          {hero.item.twitter_username ? (
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() =>
+                Linking.openURL(
+                  "https://twitter.com/" + hero.item.twitter_username
+                )
+              }
+            >
+              <Text>Twitter</Text>
+            </TouchableOpacity>
+          ) : null}
         </Box>
       </View>
       <Box flexDirection="column" ml="m">
