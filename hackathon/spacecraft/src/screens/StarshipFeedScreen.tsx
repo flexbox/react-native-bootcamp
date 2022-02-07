@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
 
-import ScreenContainer from "../components/ScreenContainer";
+import { ScreenContainer } from "../components/ScreenContainer";
 import StarshipCard from "../components/StarshipCard";
 
 import { fetchStarships } from "~/hooks/useStarships";

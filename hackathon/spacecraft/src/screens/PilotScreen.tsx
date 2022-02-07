@@ -1,12 +1,11 @@
-import { PeopleProps } from "api/types";
+import type { PeopleProps } from "api/types";
 import React from "react";
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
 
-import ScreenContainer from "~/components/ScreenContainer";
+import { ScreenContainer } from "~/components/ScreenContainer";
 import { PeopleItem } from "~/components/PeopleItem";
 import { usePilot } from "~/hooks/usePilot";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 interface RenderItemProps {
   item: PeopleProps;
@@ -21,10 +20,15 @@ const renderItem = (props: RenderItemProps) => {
 export const PilotScreen = () => {
   const { query, setPage } = usePilot();
 
-  if (query.isLoading) return <ScreenContainer title="Loading…" />;
-  if (query.isError) return <ScreenContainer title="Error 😕" />;
-  if (query.data.results === undefined)
+  if (query.isLoading) {
+    return <ScreenContainer title="Loading…" />;
+  }
+  if (query.isError) {
+    return <ScreenContainer title="Error 😕" />;
+  }
+  if (query.data.results === undefined) {
     return <ScreenContainer title="Not Found" />;
+  }
 
   const handleLoadMore = () => {
     setPage((old) => old + 1);

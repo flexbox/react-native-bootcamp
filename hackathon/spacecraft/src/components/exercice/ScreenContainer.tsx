@@ -1,4 +1,5 @@
-import React, { ReactNode } from "react";
+import type { ReactNode } from "react";
+import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { Colors, Headline } from "react-native-paper";
 
@@ -10,7 +11,7 @@ interface ScreenContainerProps {
   withFooter?: boolean;
 }
 
-const ScreenContainer = ({
+export const ScreenContainer = ({
   title,
   children,
   withFooter = false,
@@ -25,8 +26,6 @@ const ScreenContainer = ({
     </ScrollView>
   );
 };
-
-export default ScreenContainer;
 
 const styles = StyleSheet.create({
   container: {
