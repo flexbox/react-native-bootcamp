@@ -91,7 +91,7 @@ export const Hero = (hero: HeroProps) => {
         </Box>
       </View>
       <Box ml="m">
-        <Upvote />
+        <Upvote idHero={hero.item.id} heroCounter={hero.item.counter} />
       </Box>
     </View>
   );
