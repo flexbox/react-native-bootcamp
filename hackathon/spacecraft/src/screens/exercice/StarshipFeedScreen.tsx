@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text, StatusBar, View } from "react-native";
 
 import { default as data } from "../../api/data.json";
 
-export const FeedScreen = () => {
+export const StarshipFeedScreen = () => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
