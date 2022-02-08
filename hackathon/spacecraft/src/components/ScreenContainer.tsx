@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { Colors, Headline } from "react-native-paper";
 
