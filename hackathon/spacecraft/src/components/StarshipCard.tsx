@@ -11,6 +11,11 @@ export interface StarshipCardProps {
   ship: StarshipProps;
 }
 
+interface StarshipDetailsScreenParams {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  navigate: any;
+}
+
 const StarshipCard = ({ ship }: StarshipCardProps) => {
   const title = ship.name;
   const price = ship.cost_in_credits;
@@ -22,7 +27,7 @@ const StarshipCard = ({ ship }: StarshipCardProps) => {
     Alert.alert("Buy!");
   };
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<StarshipDetailsScreenParams>();
   const handleGoToDetails = () => {
     navigation.navigate(Routes.STARSHIP_DETAILS_SCREEN, ship);
   };
