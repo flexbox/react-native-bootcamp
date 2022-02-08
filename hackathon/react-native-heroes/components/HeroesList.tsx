@@ -1,11 +1,14 @@
 import React from "react";
-import { HeroesListItem, HeroProps } from "./HeroesListItem";
 import { SafeAreaView, FlatList, ActivityIndicator } from "react-native";
 import { useQuery } from "@apollo/client";
-import theme from "../theme/theme";
-import Box from "./Box";
 import { Paragraph } from "react-native-paper";
+
+import theme from "../theme/theme";
 import { HEROES_QUERY } from "../graphql/queries";
+
+import { Box } from "./Box";
+import { HeroesListItem } from "./HeroesListItem";
+import type { HeroProps } from "./HeroesListItem";
 
 export const HeroesList = () => {
   const { error, data } = useQuery(HEROES_QUERY);

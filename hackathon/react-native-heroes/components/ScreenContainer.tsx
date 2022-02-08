@@ -2,7 +2,8 @@ import { StyleSheet, SafeAreaView } from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { Colors, Headline } from "react-native-paper";
-import Box from "./Box";
+
+import { Box } from "./Box";
 
 type Props = {
   children: React.ReactNode;

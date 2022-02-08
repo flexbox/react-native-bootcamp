@@ -10,6 +10,7 @@ import {
 import { Colors, Headline } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
 import React, { useState } from "react";
+
 import Box from "./Box";
 import { Upvote } from "./Upvote";
 
