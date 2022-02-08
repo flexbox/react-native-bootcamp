@@ -7,6 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
+  Alert,
 } from "react-native";
 import {
   Colors,
@@ -50,7 +51,7 @@ export const StarshipDetailsScreen = ({
   };
 
   const handleBuy = () => {
-    alert("Buy!");
+    Alert.alert("Give me the money!");
   };
 
   return (
