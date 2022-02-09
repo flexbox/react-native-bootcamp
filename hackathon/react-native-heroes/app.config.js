@@ -1,5 +1,5 @@
 /* eslint-disable import/no-default-export */
-import 'dotenv/config';
+import "dotenv/config";
 
 export default ({ config }) => {
   return {

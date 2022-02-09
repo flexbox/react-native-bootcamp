@@ -123,15 +123,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 2,
     paddingHorizontal: 10,
   },
-  vote: {
-    backgroundColor: Colors.grey100,
-    borderWidth: 1,
-    borderRadius: 4,
-    justifyContent: "center",
-    marginHorizontal: 10,
-    padding: 8,
-    alignItems: "center",
-  },
+
   middle: {
     flex: 1,
     width: "60%",
@@ -158,41 +150,5 @@ export const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
     justifyContent: "space-around",
-  },
-  modalShareView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    borderWidth: 2,
-    width: "70%",
-    height: "20%",
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-    justifyContent: "space-around",
-  },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
-  },
-  modalText: {
-    marginBottom: 15,
-    paddingTop: 10,
-    textAlign: "center",
-  },
-  buttonModal: {
-    backgroundColor: Colors.grey100,
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingVertical: 2,
-    paddingHorizontal: 10,
   },
 });

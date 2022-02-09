@@ -53,7 +53,7 @@ export const Upvote = ({ idHero, heroCounter, twitterUsername }) => {
             <TouchableOpacity
               onPress={() =>
                 Linking.openURL(
-                  `https://twitter.com/intent/tweet?text=I just upvoted @${twitterUsername} as a React Native Hero because`
+                  `https://twitter.com/intent/tweet?text=I just upvoted @${twitterUsername} as a React Native Hero`
                 )
               }
               style={{ backgroundColor: "black", borderRadius: 10 }}
