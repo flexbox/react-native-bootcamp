@@ -1,9 +1,5 @@
-import React, {
-  createContext,
-  FunctionComponent,
-  useContext,
-  useState,
-} from "react";
+import type { FunctionComponent } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 interface AuthenticationContextProps {
   user: boolean;

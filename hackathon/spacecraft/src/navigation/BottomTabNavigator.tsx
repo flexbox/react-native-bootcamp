@@ -70,6 +70,7 @@ export const BottomTabNavigator = () => {
         name={Routes.STARSHIP_STACK}
         component={StarshipNavigator}
         options={{
+          tabBarLabel: "Starships",
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="space-shuttle" size={22} color={color} />
           ),
@@ -79,6 +80,7 @@ export const BottomTabNavigator = () => {
         name={Routes.PILOT_STACK}
         component={PilotNavigator}
         options={{
+          tabBarLabel: "Pilots",
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="user-astronaut" size={22} color={color} />
           ),
