@@ -1,5 +1,6 @@
 import { Text } from "@ui-kitten/components";
 import React from "react";
+import { Lyrics } from "../components/Lyrics";
 import { ScreenContainer } from "../components/ScreenContainer";
 
 type Props = {};
@@ -12,6 +13,7 @@ export const LyricsScreen = ({ route }: Props) => {
         {artist}
       </Text>
       <Text category="h3">{song}</Text>
+      <Lyrics params={route.params} />
     </ScreenContainer>
   );
 };

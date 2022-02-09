@@ -22,7 +22,8 @@
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
     "react-native-svg": "^12.1.1",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.1",
+    "react-query": "^3.34.14"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
