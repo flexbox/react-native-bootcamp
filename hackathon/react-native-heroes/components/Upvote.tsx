@@ -3,16 +3,10 @@ import { AntDesign } from "@expo/vector-icons";
 import { Button, Colors, Paragraph } from "react-native-paper";
 import { gql, useMutation } from "@apollo/client";
 import { Linking, Modal, TouchableOpacity, View } from "react-native";
-import { StyleSheet } from "react-native";
+import { styles } from "./HeroesListItem";
 
-<<<<<<< HEAD
-// TODO: Add interface
-export const Upvote = ({ idHero, heroCounter }) => {
-  const [counter, setCounter] = useState<number>(10);
-=======
 export const Upvote = ({ idHero, heroCounter, twitterUsername }) => {
   const [counter, setCounter] = useState<number>(heroCounter);
->>>>>>> e1e10fff (add twitter share)
   const [hasUpvoted, setHasUpvoted] = useState<boolean>(false);
   const [addTodo] = useMutation(MUTATION_COUNTER);
   const [modalVisible, setModalVisible] = useState(false);
@@ -91,30 +85,3 @@ const MUTATION_COUNTER = gql`
     }
   }
 `;
-
-export const styles = StyleSheet.create({
-  modalShareView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    borderWidth: 2,
-    width: "70%",
-    height: "20%",
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-    justifyContent: "space-around",
-  },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
-  },
-});
