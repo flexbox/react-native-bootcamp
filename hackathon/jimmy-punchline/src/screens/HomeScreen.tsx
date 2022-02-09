@@ -1,22 +1,23 @@
-import { Button, Input, Layout, Text } from "@ui-kitten/components";
+import { Button, Input, Text } from "@ui-kitten/components";
 import React, { useState } from "react";
 import { View } from "react-native";
+import { ScreenContainer } from "../components/ScreenContainer";
+import { ROUTES } from "../navigation/Routes";
 
-export const HomeScreen = () => {
+interface HomeScreenProps {
+  navigation: any;
+}
+
+export const HomeScreen = ({ navigation }: HomeScreenProps) => {
   const [artist, setArtist] = useState("Orelsan");
   const [song, setSong] = useState("Jimmy Punchline");
 
   const handlePress = () => {
-    console.log(`${artist} - ${song}`);
+    navigation.navigate(ROUTES.LYRICS_SCREEN, { artist, song });
   };
 
   return (
-    <Layout
-      style={{
-        flex: 1,
-        padding: 32,
-      }}
-    >
+    <ScreenContainer>
       <View
         style={{
           flex: 1,
@@ -30,16 +31,24 @@ export const HomeScreen = () => {
           marginVertical: 64,
         }}
       >
-        <Input label="Artist" value={artist} />
+        <Input
+          label="Artist"
+          value={artist}
+          onChangeText={setArtist}
+          size="large"
+        />
         <Input
           label="Song"
           value={song}
+          onChangeText={setSong}
+          size="large"
           style={{
             marginTop: 8,
           }}
         />
         <Button
           onPress={handlePress}
+          size="giant"
           style={{
             marginTop: 32,
           }}
@@ -47,6 +56,6 @@ export const HomeScreen = () => {
           Go
         </Button>
       </View>
-    </Layout>
+    </ScreenContainer>
   );
 };
