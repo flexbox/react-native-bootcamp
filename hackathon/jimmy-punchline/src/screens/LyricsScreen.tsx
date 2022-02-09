@@ -1,6 +1,6 @@
 import { Text } from "@ui-kitten/components";
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { Lyrics } from "../components/Lyrics";
 import { ScreenContainer } from "../components/ScreenContainer";
 
@@ -19,10 +19,12 @@ export const LyricsScreen = ({ route }: LyricsScreenProps) => {
   return (
     <ScreenContainer>
       <ScrollView>
-        <Text category="h3" appearance="hint">
-          {artist}
-        </Text>
-        <Text category="h3">{song}</Text>
+        <View style={{ marginBottom: 32 }}>
+          <Text category="h3" appearance="hint">
+            {artist}
+          </Text>
+          <Text category="h3">{song}</Text>
+        </View>
         <Lyrics params={route.params} />
       </ScrollView>
     </ScreenContainer>
