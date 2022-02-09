@@ -70,30 +70,24 @@ export const HeroesListItem = (hero: HeroProps) => {
       <View style={styles.middle}>
         <Text style={styles.text}>{hero.item.full_name}</Text>
         <Box flexDirection="row" justifyContent="space-between" p="m">
-          {hero.item.github_username ? (
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() =>
-                Linking.openURL(
-                  "https://github.com/" + hero.item.github_username
-                )
-              }
-            >
-              <Text>Github</Text>
-            </TouchableOpacity>
-          ) : null}
-          {hero.item.twitter_username ? (
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() =>
-                Linking.openURL(
-                  "https://twitter.com/" + hero.item.twitter_username
-                )
-              }
-            >
-              <Text>Twitter</Text>
-            </TouchableOpacity>
-          ) : null}
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() =>
+              Linking.openURL("https://github.com/" + hero.item.github_username)
+            }
+          >
+            <Text>Github</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() =>
+              Linking.openURL(
+                "https://twitter.com/" + hero.item.twitter_username
+              )
+            }
+          >
+            <Text>Twitter</Text>
+          </TouchableOpacity>
         </Box>
       </View>
       <Box flexDirection="column" ml="m">
@@ -165,8 +159,6 @@ export const styles = StyleSheet.create({
     elevation: 5,
     justifyContent: "space-around",
   },
-<<<<<<< HEAD:hackathon/react-native-heroes/components/HeroesListItem.tsx
-=======
   modalShareView: {
     margin: 20,
     backgroundColor: "white",
@@ -192,17 +184,14 @@ export const styles = StyleSheet.create({
     marginTop: 22,
   },
   modalText: {
-    marginBottom: 5,
-    paddingTop: 5,
+    marginBottom: 15,
+    paddingTop: 10,
     textAlign: "center",
-    fontWeight: "bold",
-    fontSize: 20,
   },
->>>>>>> e1e10fff (add twitter share):hackathon/react-native-heroes/components/Hero.tsx
   buttonModal: {
     backgroundColor: Colors.grey100,
     borderWidth: 1,
-    borderRadius: 6,
+    borderRadius: 5,
     paddingVertical: 2,
     paddingHorizontal: 10,
   },
