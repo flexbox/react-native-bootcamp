@@ -1,0 +1,38 @@
+{
+  "name": "jimmy-punchline",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@eva-design/eva": "^2.1.1",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/native-stack": "^6.5.0",
+    "@ui-kitten/components": "^5.1.1",
+    "expo": "~44.0.0",
+    "expo-status-bar": "~1.2.0",
+    "lodash": "^4.17.21",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-formatted-text": "^0.1.5",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "~3.10.1",
+    "react-native-svg": "^12.1.1",
+    "react-native-web": "0.17.1",
+    "react-query": "^3.34.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@types/lodash": "^4.14.178",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.64.12",
+    "typescript": "~4.3.5"
+  },
+  "private": true
+}
