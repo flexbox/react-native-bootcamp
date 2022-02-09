@@ -4655,6 +4655,11 @@ react-native-codegen@^0.0.6:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
+react-native-formatted-text@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/react-native-formatted-text/-/react-native-formatted-text-0.1.5.tgz#a56267517e1a4eaaec82c669731af2a3de8832ed"
+  integrity sha512-r4yqtptYvanEgMWa/FxvXLR8a11qfee2u28otCMCZIZ2Pz+5i1J/Qz0+Yud/2gd9OiOrp+HM6EBGmbte+aD1bg==
+
 react-native-safe-area-context@3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.3.2.tgz#9549a2ce580f2374edb05e49d661258d1b8bcaed"
