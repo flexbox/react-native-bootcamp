@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { View } from "react-native";
 import { ScreenContainer } from "../components/ScreenContainer";
 import { ROUTES } from "../navigation/Routes";
+import { theme } from "../theme/theme";
 
 interface HomeScreenProps {
   navigation: any;
@@ -43,14 +44,14 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
           onChangeText={setSong}
           size="large"
           style={{
-            marginTop: 8,
+            marginTop: theme.spacing.m,
           }}
         />
         <Button
           onPress={handlePress}
           size="giant"
           style={{
-            marginTop: 32,
+            marginTop: theme.spacing.xl,
           }}
         >
           Go
