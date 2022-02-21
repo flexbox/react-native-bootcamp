@@ -34,7 +34,7 @@ export const HeroesList = () => {
         <ActivityIndicator
           size="large"
           color={theme.colors.activityIndicator}
-          style={{ marginTop: "50%" }}
+          style={{ marginTop: 50 }}
         />
       )}
     </SafeAreaView>

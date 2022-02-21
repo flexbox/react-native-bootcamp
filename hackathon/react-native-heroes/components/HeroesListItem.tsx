@@ -69,7 +69,7 @@ export const HeroesListItem = (hero: HeroProps) => {
       </TouchableOpacity>
       <View style={styles.middle}>
         <Text style={styles.text}>{hero.item.full_name}</Text>
-        <Box flexDirection="row" justifyContent="space-around" p="m">
+        <Box flexDirection="row" justifyContent="space-between" p="m">
           <TouchableOpacity
             style={styles.button}
             onPress={() =>
@@ -90,14 +90,18 @@ export const HeroesListItem = (hero: HeroProps) => {
           </TouchableOpacity>
         </Box>
       </View>
-      <Box ml="m">
-        <Upvote idHero={hero.item.id} heroCounter={hero.item.counter} />
+      <Box flexDirection="column" ml="m">
+        <Upvote
+          idHero={hero.item.id}
+          heroCounter={hero.item.counter}
+          twitterUsername={hero.item.twitter_username}
+        />
       </Box>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     color: "white",
     width: "95%",
@@ -119,18 +123,10 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
     paddingHorizontal: 10,
   },
-  vote: {
-    backgroundColor: Colors.grey100,
-    borderWidth: 1,
-    borderRadius: 4,
-    justifyContent: "center",
-    marginHorizontal: 10,
-    padding: 8,
-    alignItems: "center",
-  },
+
   middle: {
     flex: 1,
-    width: "55%",
+    width: "60%",
   },
   text: {
     fontWeight: "bold",
@@ -154,12 +150,5 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
     justifyContent: "space-around",
-  },
-  buttonModal: {
-    backgroundColor: Colors.grey100,
-    borderWidth: 1,
-    borderRadius: 6,
-    paddingVertical: 2,
-    paddingHorizontal: 10,
   },
 });
