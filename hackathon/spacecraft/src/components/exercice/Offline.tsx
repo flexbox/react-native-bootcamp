@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import { ActivityIndicator, Colors, Text } from "react-native-paper";
+import { StyleSheet, View, Text } from "react-native";
+import { ActivityIndicator, Colors } from "react-native-paper";
 
 export const Offline = () => {
   // Add `useIsConnected()` hook
