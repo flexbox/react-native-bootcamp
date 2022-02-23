@@ -25,7 +25,9 @@ export const HeroesList = () => {
     <SafeAreaView>
       {data ? (
         <FlatList
-          style={{ marginBottom: 50 }}
+          style={{
+            marginBottom: 50,
+          }}
           data={data.heroes}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}

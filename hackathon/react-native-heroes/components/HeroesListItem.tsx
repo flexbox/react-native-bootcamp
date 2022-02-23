@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Linking,
   Modal,
+  Dimensions,
 } from "react-native";
 import { Colors, Headline } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
@@ -24,7 +25,7 @@ export type HeroProps = {
     counter: string;
   };
 };
-
+const screenWidth = Dimensions.get("window").width;
 export const HeroesListItem = (hero: HeroProps) => {
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -114,7 +115,8 @@ export const styles = StyleSheet.create({
     paddingVertical: 5,
     paddingHorizontal: 10,
     marginVertical: 10,
-    marginHorizontal: "2,5%",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   button: {
     backgroundColor: Colors.grey100,
