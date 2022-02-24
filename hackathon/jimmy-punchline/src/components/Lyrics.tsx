@@ -61,7 +61,6 @@ export const Lyrics = ({ params }: Props) => {
   const lyricsAnswer = [allLyrics[7], allLyrics[8], allLyrics[9]];
 
   const color = useTheme();
-  console.log("file: Lyrics.tsx ~ line 66 ~ Lyrics ~ result", color);
 
   return (
     <View>
