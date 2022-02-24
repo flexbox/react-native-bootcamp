@@ -13,8 +13,15 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
   const [artist, setArtist] = useState("Orelsan");
   const [song, setSong] = useState("Jimmy Punchline");
 
-  const handlePress = () => {
+  const navigateToLyrics = () => {
     navigation.navigate(ROUTES.LYRICS_SCREEN, { artist, song });
+  };
+
+  const handlePressChoice = (choosenArtist: string, choosenSong: string) => {
+    navigation.navigate(ROUTES.LYRICS_SCREEN, {
+      artist: choosenArtist,
+      song: choosenSong,
+    });
   };
 
   return (
@@ -29,7 +36,8 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
       </View>
       <View
         style={{
-          marginVertical: 64,
+          marginTop: theme.spacing.xl,
+          marginBottom: theme.spacing.l,
         }}
       >
         <Input
@@ -48,13 +56,33 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
           }}
         />
         <Button
-          onPress={handlePress}
+          onPress={navigateToLyrics}
           size="giant"
           style={{
             marginTop: theme.spacing.xl,
           }}
         >
           Go
+        </Button>
+      </View>
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <Button
+          status="basic"
+          onPress={() => handlePressChoice("Gringe", "Paradis noirs")}
+        >
+          Gringe
+        </Button>
+        <Button
+          status="basic"
+          onPress={() => handlePressChoice("Vald", "Anunnaki")}
+        >
+          Vald
+        </Button>
+        <Button
+          status="basic"
+          onPress={() => handlePressChoice("Stromae", "Papaoutai")}
+        >
+          Stromae
         </Button>
       </View>
     </ScreenContainer>

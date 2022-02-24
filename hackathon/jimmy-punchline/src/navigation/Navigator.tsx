@@ -1,4 +1,3 @@
-import { View, Text } from "react-native";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -14,11 +13,23 @@ export const Navigator = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
+          headerLargeTitle: true,
           presentation: "modal",
         }}
       >
         <Stack.Screen name={ROUTES.HOME_SCREEN} component={HomeScreen} />
-        <Stack.Screen name={ROUTES.LYRICS_SCREEN} component={LyricsScreen} />
+        <Stack.Group
+          screenOptions={{
+            presentation: "modal",
+            headerShown: true,
+            headerLargeTitle: true,
+            headerLargeTitleStyle: {
+              fontWeight: "bold",
+            },
+          }}
+        >
+          <Stack.Screen name={ROUTES.LYRICS_SCREEN} component={LyricsScreen} />
+        </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
   );
