@@ -2,7 +2,7 @@ import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { Colors } from "react-native-paper";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { StarshipFeedScreen } from "../screens/StarshipFeedScreen";
 import { StarshipDetailsScreen } from "../screens/StarshipDetailsScreen";
@@ -13,7 +13,7 @@ import { PilotScreen } from "~/screens/PilotScreen";
 import { PilotDetailsScreen } from "~/screens/PilotDetailsScreen";
 
 const Tab = createMaterialBottomTabNavigator();
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const StarshipNavigator = () => {
   return (
