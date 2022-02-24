@@ -1,5 +1,5 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { useAuthentication } from "../context/Authentication";
@@ -7,7 +7,7 @@ import { useAuthentication } from "../context/Authentication";
 import { BottomTabNavigator } from "./BottomTabNavigator";
 import { AuthNavigator } from "./AuthNavigator";
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export const Navigator = () => {
   const { user } = useAuthentication();
