@@ -8,7 +8,7 @@ My project-based pedagogy allows you to learn while building, a proven way for n
 
 📱 Hearty thanks to the [team behind expo](https://expo.io/), the open-source platform for making universal native apps with React that run on Android, iOS, and the web.
 
-🎨 Thanks as well to all the `react-native-paper` contributors for their easy to use UI library
+🎨 Thanks as well to all the `react-native-paper` contributors for their easy to use UI library.
 
 🙏 Special thanks to [Alex Lobera](https://github.com/alexlbr), [Horacio Herrera](https://twitter.com/hhg2288), [William Candillon](https://github.com/wcandillon), [Satyajit Sahoo](https://github.com/satya164), [Tanner Linsley](https://github.com/tannerlinsley), [Brent Vatne](https://github.com/brentvatne).
 
@@ -16,13 +16,13 @@ My project-based pedagogy allows you to learn while building, a proven way for n
 
 ## Getting Started
 
-**Students**, to follow this workshop, you need to [complete the onboarding form](https://davidl.fr/onboarding-workshop)
+**Students**, to follow this bootcamp, you need to **[complete the onboarding form](https://davidl.fr/onboarding-bootcamp)**.
 
-During the bootcamp you are going to build this mobile appliction with `Expo`, `react-native`, `TypeScript` and `react-query`
+Challenge after challenge, you are going to build this mobile appliction to buy Star Wars space ships using `TypeScript`, `expo`, `react-native` and `react-query`.
 
 ![React Native Application with Expo and react-query](hackathon/spacecraft/spacecraft-preview.gif)
 
-> For further study, I recommend downloading my [React Native Book about the ecosystem](https://davidl.fr/road-to-react-native).
+> To support my work, I recommend downloading my [React Native Book about the ecosystem](https://davidl.fr/road-to-react-native).
 
 ## Projects
 
@@ -34,21 +34,21 @@ During the bootcamp you are going to build this mobile appliction with `Expo`, `
 
 ## Meet the team
 
-I am a freelance react-native developer, and I share a lot fo [content about the react ecosystem](https://twitter.com/flexbox_).
+I am a freelance react-native developer, and I share a lot fo [content about the react ecosystem](https://twitter.com/intent/follow?screen_name=flexbox_).
 
 ## Pedagogy
 
-I have chosen two pedagogical tenets while building this curriculum: ensuring that it is hands-on **project-based** and that it **includes frequent quizzes**. In addition, this curriculum has a common theme —create a mobile app with real API— to give it cohesion.
+I have chosen two pedagogical tenets while building this curriculum: ensuring that it is hands-on **project-based**, with **up-to-date dependencies** and that it **includes frequent quizzes**. In addition, this curriculum has a common theme —create a mobile app with real API— to give it cohesion.
 
 > If you encounter an issue, [feel free to contribute](https://github.com/flexbox/react-native-workshop/issues/new), I welcome your constructive feedback!
 
 ## Each lesson includes
 
-- pre-lecture warmup quiz
+- pre-lecture 
 - written lesson
 - step-by-step guides on how to build the project
 - a challenge
-- supplemental reading
+- bonus challenges
 
 ## Was this helpful?
 
