@@ -11,6 +11,7 @@
 ## Getting Started
 
 ```console
+cp .env.sample .env
 yarn
 yarn ios
 ```
