@@ -10,6 +10,8 @@ The tasks of the day are:
 1. Connect everything together
 1. Before the end of the day, ship it to expo like [`@flexbox/detector`](https://expo.dev/@flexbox/detector)
 
+**Hint:** If you want to know of to add and API with an auth token, have a look at this PR to [add `.env` and Authorization token with `react-query`](https://github.com/flexbox/react-native-bootcamp/pull/76).
+
 ## Ideas
 
 - Rick and Morty episode tracker with [rickandmortyapi](https://rickandmortyapi.com/)
