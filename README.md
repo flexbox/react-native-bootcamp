@@ -20,21 +20,9 @@ My project-based pedagogy allows you to learn while building, a proven way for n
 
 Challenge after challenge, you are going to build this mobile appliction to buy Star Wars space ships using `TypeScript`, `expo`, `react-native` and `react-query`.
 
-![React Native Application with Expo and react-query](hackathon/spacecraft/spacecraft-preview.gif)
-
 > To support my work, I recommend downloading my [React Native Book about the ecosystem](https://davidl.fr/road-to-react-native).
 
-## Projects
-
-1. [spacecraft](./hackathon/spacecraft/) _with `react-query`_
-1. [newsfeed](./hackathon/newsfeed/) _with getstream API_
-1. [onboarding](./hackathon/onboarding/) _with magic.link SDK_
-1. [nerd-fm](./hackathon/nerd-fm/) _with `expo-av` to play music_
-1. [and more](./hackathon/)
-
-## Meet the team
-
-I am a freelance react-native developer, and I share a lot fo [content about the react ecosystem](https://twitter.com/intent/follow?screen_name=flexbox_).
+<img src="https://github.com/flexbox/react-native-bootcamp/raw/main/hackathon/spacecraft/spacecraft-preview.gif" width="50%" height="50%">
 
 ## Pedagogy
 
@@ -49,6 +37,20 @@ I have chosen two pedagogical tenets while building this curriculum: ensuring th
 - step-by-step guides on how to build the project
 - a challenge
 - bonus challenges
+
+## Projects
+
+A list of projects done during the hackathon day:
+
+1. [spacecraft](./hackathon/spacecraft/) _with `react-query`_
+1. [newsfeed](./hackathon/newsfeed/) _with getstream API_
+1. [onboarding](./hackathon/onboarding/) _with magic.link SDK_
+1. [nerd-fm](./hackathon/nerd-fm/) _with `expo-av` to play music_
+1. [and more](./hackathon/)
+
+## Meet the team
+
+I am a freelance react-native developer, and I share a lot fo [content about the react ecosystem](https://twitter.com/intent/follow?screen_name=flexbox_).
 
 ## Was this helpful?
 
