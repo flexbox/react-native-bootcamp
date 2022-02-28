@@ -1,0 +1,1007 @@
+{
+  "meta": { "status": 200 },
+  "response": {
+    "song": {
+      "annotation_count": 86,
+      "api_path": "/songs/55645",
+      "apple_music_id": "458621690",
+      "apple_music_player_url": "https://genius.com/songs/55645/apple_music_player",
+      "artist_names": "Orelsan",
+      "description": {
+        "dom": {
+          "tag": "root",
+          "children": [
+            {
+              "tag": "p",
+              "children": [
+                "Dans ce morceau, Orelsan se met dans la peau d'un personnage en pleine dépression, au bord de la tentative de suicide.",
+                { "tag": "br" },
+                "C'est l'",
+                {
+                  "tag": "strong",
+                  "children": [
+                    "occasion de livrer un regard désabusé et acerbe sur la société dans son ensemble"
+                  ]
+                },
+                "."
+              ]
+            },
+            "",
+            {
+              "tag": "p",
+              "children": [
+                "De plus, ce morceau marque une rupture avec le morceau précédent qu'était ",
+                {
+                  "tag": "em",
+                  "children": [
+                    "“",
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "href": "https://genius.com/Orelsan-ils-sont-cools-lyrics",
+                        "rel": "noopener"
+                      },
+                      "data": { "api_path": "/songs/56517" },
+                      "children": ["Ils sont Cools\""]
+                    }
+                  ]
+                },
+                "."
+              ]
+            },
+            "",
+            {
+              "tag": "p",
+              "children": [
+                "Ce morceau est directement inspiré de la fameuse scène du monologue d'",
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "http://fr.wikipedia.org/wiki/Edward_Norton",
+                    "rel": "noopener nofollow"
+                  },
+                  "children": ["Edward Norton"]
+                },
+                " dans le film de ",
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "http://fr.wikipedia.org/wiki/Spike_Lee",
+                    "rel": "noopener nofollow"
+                  },
+                  "children": ["Spike Lee"]
+                },
+                " : ",
+                {
+                  "tag": "strong",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "href": "http://www.allocine.fr/film/fichefilm_gen_cfilm=42731.html",
+                        "rel": "noopener nofollow"
+                      },
+                      "children": ["La 25ème heure"]
+                    }
+                  ]
+                },
+                " , film auquel il fait référence également référence dans ",
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://genius.com/Orelsan-si-seul-lyrics",
+                    "rel": "noopener"
+                  },
+                  "data": { "api_path": "/songs/56281" },
+                  "children": ["Si Seul"]
+                },
+                ",",
+                { "tag": "br" },
+                "",
+                {
+                  "tag": "em",
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "href": "https://genius.com/1321988",
+                        "rel": "noopener"
+                      },
+                      "data": { "api_path": "/referents/1321988" },
+                      "children": [
+                        "Tous les soirs j’m’égare dans la 25ème heure"
+                      ]
+                    }
+                  ]
+                },
+                ":"
+              ]
+            },
+            "",
+            {
+              "tag": "p",
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "https://images.rapgenius.com/f8f506211593d423e2fefc3aa2fefc8a.600x800x1.jpg",
+                    "alt": "",
+                    "width": 600,
+                    "height": 800
+                  },
+                  "data": {
+                    "animated": "false",
+                    "thumbnail": {
+                      "src": "https://images.rapgenius.com/f8f506211593d423e2fefc3aa2fefc8a.300x400x1.jpg",
+                      "height": 400,
+                      "width": 300
+                    }
+                  }
+                }
+              ]
+            },
+            "",
+            {
+              "tag": "p",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "http://www.dailymotion.com/video/x75yke_la-25eme-heures-scene-j-emmerde_shortfilms",
+                    "rel": "noopener nofollow"
+                  },
+                  "children": [
+                    "http://www.dailymotion.com/video/x75yke_la-25eme-heures-scene-j-emmerde_shortfilms"
+                  ]
+                }
+              ]
+            },
+            "",
+            { "tag": "hr" },
+            "",
+            {
+              "tag": "p",
+              "children": ["Interview d'Orelsan à propos de ce morceau:"]
+            },
+            "",
+            {
+              "tag": "p",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "http://www.youtube.com/watch?v=RBPMAtHnqCo",
+                    "rel": "noopener nofollow"
+                  },
+                  "children": ["http://www.youtube.com/watch?v=RBPMAtHnqCo"]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "embed_content": "<div id='rg_embed_link_55645' class='rg_embed_link' data-song-id='55645'>Read <a href='https://genius.com/Orelsan-suicide-social-lyrics'>“Suicide social” by Orelsan</a> on Genius</div> <script crossorigin src='//genius.com/songs/55645/embed.js'></script>",
+      "featured_video": false,
+      "full_title": "Suicide social by Orelsan",
+      "header_image_thumbnail_url": "https://images.genius.com/11414495c81dfc3651cf405af9247297.300x141x1.jpg",
+      "header_image_url": "https://images.genius.com/11414495c81dfc3651cf405af9247297.650x306x1.jpg",
+      "id": 55645,
+      "lyrics_owner_id": 3639,
+      "lyrics_placeholder_reason": null,
+      "lyrics_state": "complete",
+      "path": "/Orelsan-suicide-social-lyrics",
+      "pyongs_count": 38,
+      "recording_location": null,
+      "release_date": "2011-09-15",
+      "release_date_for_display": "September 15, 2011",
+      "song_art_image_thumbnail_url": "https://images.genius.com/6232f524a90a9619464b1ccfc3242976.300x300x1.jpg",
+      "song_art_image_url": "https://images.genius.com/6232f524a90a9619464b1ccfc3242976.600x600x1.jpg",
+      "stats": {
+        "accepted_annotations": 77,
+        "contributors": 108,
+        "iq_earners": 108,
+        "transcribers": 3,
+        "unreviewed_annotations": 8,
+        "verified_annotations": 0,
+        "hot": false,
+        "pageviews": 246289
+      },
+      "title": "Suicide social",
+      "title_with_featured": "Suicide social",
+      "url": "https://genius.com/Orelsan-suicide-social-lyrics",
+      "current_user_metadata": {
+        "permissions": [
+          "see_pageviews",
+          "view_apple_music_player",
+          "create_comment",
+          "view_song_story_gallery"
+        ],
+        "excluded_permissions": [
+          "follow",
+          "award_transcription_iq",
+          "remove_transcription_iq",
+          "pyong",
+          "edit_lyrics",
+          "view_annotation_engagement_data",
+          "publish",
+          "unpublish",
+          "edit_spotify_details",
+          "hide",
+          "unhide",
+          "toggle_featured_video",
+          "add_pinned_annotation_to",
+          "add_community_annotation_to",
+          "destroy",
+          "mark_as_not_spam",
+          "edit_spotify_annotations_for",
+          "verify_lyrics",
+          "unverify_lyrics",
+          "edit_anything",
+          "edit_any_media",
+          "edit",
+          "rename",
+          "edit_tags",
+          "reindex",
+          "view_lyrics_synchronization",
+          "enable_media",
+          "disable_media",
+          "edit_lyrics_or_annotation_brackets",
+          "see_editorial_indicators",
+          "view_attribution_visualization",
+          "edit_annotation_brackets",
+          "preview_lyrics_for_export",
+          "hide_apple_player",
+          "unhide_apple_player",
+          "trigger_apple_match",
+          "mark_lyrics_evaluation_as_approved",
+          "mark_lyrics_evaluation_as_staff_approved",
+          "mark_lyrics_evaluation_as_unapproved",
+          "mark_lyrics_evaluation_as_un_staff_approved",
+          "view_transcriber_media_player",
+          "override_apple_match",
+          "set_song_color_gradient",
+          "mark_as_hot",
+          "unmark_as_hot",
+          "edit_youtube_url",
+          "edit_soundcloud_url",
+          "edit_spotify_uuid",
+          "edit_vevo_url",
+          "moderate_annotations",
+          "create_annotation",
+          "see_short_id",
+          "manage_chart_item",
+          "create_tag",
+          "propose_lyrics_edit",
+          "view_lyrics_edit_proposals_on_song",
+          "preview_react_song_page"
+        ],
+        "interactions": { "pyong": false, "following": false },
+        "relationships": {},
+        "iq_by_action": {}
+      },
+      "album": {
+        "api_path": "/albums/10818",
+        "cover_art_url": "https://images.genius.com/37117b8569e8b8117fe644c751617d10.1000x1000x1.jpg",
+        "full_title": "Le Chant des sirènes by Orelsan",
+        "id": 10818,
+        "name": "Le Chant des sirènes",
+        "url": "https://genius.com/albums/Orelsan/Le-chant-des-sirenes",
+        "artist": {
+          "api_path": "/artists/1286",
+          "header_image_url": "https://images.genius.com/0c3b81bcd5c8e89a557c0b84fd3ac3fe.1000x666x1.jpg",
+          "id": 1286,
+          "image_url": "https://images.genius.com/d0dfe539e553a7d7a32afd60fd7e4b2f.786x786x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Orelsan",
+          "url": "https://genius.com/artists/Orelsan"
+        }
+      },
+      "custom_performances": [
+        {
+          "label": "Produit par",
+          "artists": [
+            {
+              "api_path": "/artists/1213074",
+              "header_image_url": "https://images.genius.com/40a204793bed04a53fd5210f04f9bd79.1000x1000x1.png",
+              "id": 1213074,
+              "image_url": "https://images.genius.com/40a204793bed04a53fd5210f04f9bd79.1000x1000x1.png",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Wagram Music",
+              "url": "https://genius.com/artists/Wagram-music"
+            },
+            {
+              "api_path": "/artists/666934",
+              "header_image_url": "https://images.genius.com/4d38d858507a5f3731788254397da5e0.412x98x1.jpg",
+              "id": 666934,
+              "image_url": "https://images.genius.com/1436f5f3e8c659fa0af915cf7c68af62.95x95x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "7th Magnitude",
+              "url": "https://genius.com/artists/7th-magnitude"
+            }
+          ]
+        },
+        {
+          "label": "Direction artistique",
+          "artists": [
+            {
+              "api_path": "/artists/1286",
+              "header_image_url": "https://images.genius.com/0c3b81bcd5c8e89a557c0b84fd3ac3fe.1000x666x1.jpg",
+              "id": 1286,
+              "image_url": "https://images.genius.com/d0dfe539e553a7d7a32afd60fd7e4b2f.786x786x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Orelsan",
+              "url": "https://genius.com/artists/Orelsan"
+            },
+            {
+              "api_path": "/artists/36718",
+              "header_image_url": "https://images.genius.com/aa302397227cdb202c6458fef94bac95.1000x667x1.jpg",
+              "id": 36718,
+              "image_url": "https://images.genius.com/aff1594ed4307af0bfb56adf0cf0ec5e.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Skread",
+              "url": "https://genius.com/artists/Skread"
+            },
+            {
+              "api_path": "/artists/1585625",
+              "header_image_url": "https://images.genius.com/77918b47f7b363e2f1ccf5c17f4029c2.532x532x1.jpg",
+              "id": 1585625,
+              "image_url": "https://images.genius.com/77918b47f7b363e2f1ccf5c17f4029c2.532x532x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Ablaye",
+              "url": "https://genius.com/artists/Ablaye"
+            }
+          ]
+        },
+        {
+          "label": "Mixé au",
+          "artists": [
+            {
+              "api_path": "/artists/1032982",
+              "header_image_url": "https://images.genius.com/0ccf9c95f971688440af5785586c7d59.383x383x1.png",
+              "id": 1032982,
+              "image_url": "https://images.genius.com/0ccf9c95f971688440af5785586c7d59.383x383x1.png",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Studio Haxo",
+              "url": "https://genius.com/artists/Studio-haxo"
+            }
+          ]
+        },
+        {
+          "label": "Mixé par",
+          "artists": [
+            {
+              "api_path": "/artists/1502832",
+              "header_image_url": "https://images.genius.com/bdac266b6e36d3f84bc57c07b0634e61.240x240x1.png",
+              "id": 1502832,
+              "image_url": "https://images.genius.com/bdac266b6e36d3f84bc57c07b0634e61.240x240x1.png",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "David Soudan",
+              "url": "https://genius.com/artists/David-soudan"
+            }
+          ]
+        },
+        {
+          "label": "Enregistré au",
+          "artists": [
+            {
+              "api_path": "/artists/1032982",
+              "header_image_url": "https://images.genius.com/0ccf9c95f971688440af5785586c7d59.383x383x1.png",
+              "id": 1032982,
+              "image_url": "https://images.genius.com/0ccf9c95f971688440af5785586c7d59.383x383x1.png",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Studio Haxo",
+              "url": "https://genius.com/artists/Studio-haxo"
+            }
+          ]
+        },
+        {
+          "label": "Enregistré par",
+          "artists": [
+            {
+              "api_path": "/artists/36718",
+              "header_image_url": "https://images.genius.com/aa302397227cdb202c6458fef94bac95.1000x667x1.jpg",
+              "id": 36718,
+              "image_url": "https://images.genius.com/aff1594ed4307af0bfb56adf0cf0ec5e.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Skread",
+              "url": "https://genius.com/artists/Skread"
+            }
+          ]
+        },
+        {
+          "label": "Réalisation",
+          "artists": [
+            {
+              "api_path": "/artists/1175017",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1645739487",
+              "id": 1175017,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1645739487",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Mathieu Foucher",
+              "url": "https://genius.com/artists/Mathieu-foucher"
+            }
+          ]
+        }
+      ],
+      "description_annotation": {
+        "_type": "referent",
+        "annotator_id": 3639,
+        "annotator_login": "Clement_RGF",
+        "api_path": "/referents/3544074",
+        "classification": "accepted",
+        "fragment": "Suicide social",
+        "id": 3544074,
+        "is_description": true,
+        "path": "/3544074/Orelsan-suicide-social/Suicide-social",
+        "range": { "content": "Suicide social" },
+        "song_id": 55645,
+        "url": "https://genius.com/3544074/Orelsan-suicide-social/Suicide-social",
+        "verified_annotator_ids": [],
+        "annotatable": {
+          "api_path": "/songs/55645",
+          "client_timestamps": {
+            "updated_by_human_at": 1638439922,
+            "lyrics_updated_at": 1638439922
+          },
+          "context": "Orelsan",
+          "id": 55645,
+          "image_url": "https://images.genius.com/6232f524a90a9619464b1ccfc3242976.600x600x1.jpg",
+          "link_title": "Suicide social by Orelsan",
+          "title": "Suicide social",
+          "type": "Song",
+          "url": "https://genius.com/Orelsan-suicide-social-lyrics"
+        },
+        "annotations": [
+          {
+            "api_path": "/annotations/3544074",
+            "body": {
+              "dom": {
+                "tag": "root",
+                "children": [
+                  {
+                    "tag": "p",
+                    "children": [
+                      "Dans ce morceau, Orelsan se met dans la peau d'un personnage en pleine dépression, au bord de la tentative de suicide.",
+                      { "tag": "br" },
+                      "C'est l'",
+                      {
+                        "tag": "strong",
+                        "children": [
+                          "occasion de livrer un regard désabusé et acerbe sur la société dans son ensemble"
+                        ]
+                      },
+                      "."
+                    ]
+                  },
+                  "",
+                  {
+                    "tag": "p",
+                    "children": [
+                      "De plus, ce morceau marque une rupture avec le morceau précédent qu'était ",
+                      {
+                        "tag": "em",
+                        "children": [
+                          "“",
+                          {
+                            "tag": "a",
+                            "attributes": {
+                              "href": "https://genius.com/Orelsan-ils-sont-cools-lyrics",
+                              "rel": "noopener"
+                            },
+                            "data": { "api_path": "/songs/56517" },
+                            "children": ["Ils sont Cools\""]
+                          }
+                        ]
+                      },
+                      "."
+                    ]
+                  },
+                  "",
+                  {
+                    "tag": "p",
+                    "children": [
+                      "Ce morceau est directement inspiré de la fameuse scène du monologue d'",
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "http://fr.wikipedia.org/wiki/Edward_Norton",
+                          "rel": "noopener nofollow"
+                        },
+                        "children": ["Edward Norton"]
+                      },
+                      " dans le film de ",
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "http://fr.wikipedia.org/wiki/Spike_Lee",
+                          "rel": "noopener nofollow"
+                        },
+                        "children": ["Spike Lee"]
+                      },
+                      " : ",
+                      {
+                        "tag": "strong",
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attributes": {
+                              "href": "http://www.allocine.fr/film/fichefilm_gen_cfilm=42731.html",
+                              "rel": "noopener nofollow"
+                            },
+                            "children": ["La 25ème heure"]
+                          }
+                        ]
+                      },
+                      " , film auquel il fait référence également référence dans ",
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://genius.com/Orelsan-si-seul-lyrics",
+                          "rel": "noopener"
+                        },
+                        "data": { "api_path": "/songs/56281" },
+                        "children": ["Si Seul"]
+                      },
+                      ",",
+                      { "tag": "br" },
+                      "",
+                      {
+                        "tag": "em",
+                        "children": [
+                          {
+                            "tag": "a",
+                            "attributes": {
+                              "href": "https://genius.com/1321988",
+                              "rel": "noopener"
+                            },
+                            "data": { "api_path": "/referents/1321988" },
+                            "children": [
+                              "Tous les soirs j’m’égare dans la 25ème heure"
+                            ]
+                          }
+                        ]
+                      },
+                      ":"
+                    ]
+                  },
+                  "",
+                  {
+                    "tag": "p",
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "https://images.rapgenius.com/f8f506211593d423e2fefc3aa2fefc8a.600x800x1.jpg",
+                          "alt": "",
+                          "width": 600,
+                          "height": 800
+                        },
+                        "data": {
+                          "animated": "false",
+                          "thumbnail": {
+                            "src": "https://images.rapgenius.com/f8f506211593d423e2fefc3aa2fefc8a.300x400x1.jpg",
+                            "height": 400,
+                            "width": 300
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "",
+                  {
+                    "tag": "p",
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "http://www.dailymotion.com/video/x75yke_la-25eme-heures-scene-j-emmerde_shortfilms",
+                          "rel": "noopener nofollow"
+                        },
+                        "children": [
+                          "http://www.dailymotion.com/video/x75yke_la-25eme-heures-scene-j-emmerde_shortfilms"
+                        ]
+                      }
+                    ]
+                  },
+                  "",
+                  { "tag": "hr" },
+                  "",
+                  {
+                    "tag": "p",
+                    "children": ["Interview d'Orelsan à propos de ce morceau:"]
+                  },
+                  "",
+                  {
+                    "tag": "p",
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "http://www.youtube.com/watch?v=RBPMAtHnqCo",
+                          "rel": "noopener nofollow"
+                        },
+                        "children": [
+                          "http://www.youtube.com/watch?v=RBPMAtHnqCo"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "comment_count": 1,
+            "community": true,
+            "custom_preview": null,
+            "has_voters": true,
+            "id": 3544074,
+            "pinned": false,
+            "share_url": "https://genius.com/3544074",
+            "source": null,
+            "state": "accepted",
+            "url": "https://genius.com/3544074/Orelsan-suicide-social/Suicide-social",
+            "verified": false,
+            "votes_total": 36,
+            "current_user_metadata": {
+              "permissions": ["create_comment"],
+              "excluded_permissions": [
+                "vote",
+                "edit",
+                "cosign",
+                "uncosign",
+                "destroy",
+                "accept",
+                "reject",
+                "see_unreviewed",
+                "clear_votes",
+                "propose_edit_to",
+                "pin_to_profile",
+                "unpin_from_profile",
+                "update_source",
+                "edit_custom_preview"
+              ],
+              "interactions": { "cosign": false, "pyong": false, "vote": null },
+              "iq_by_action": {}
+            },
+            "authors": [
+              {
+                "attribution": 0.4361702127659574,
+                "pinned_role": null,
+                "user": {
+                  "api_path": "/users/83343",
+                  "avatar": {
+                    "tiny": {
+                      "url": "https://images.genius.com/avatars/tiny/502567c847f1776a2266a9098b8169e9",
+                      "bounding_box": { "width": 16, "height": 16 }
+                    },
+                    "thumb": {
+                      "url": "https://images.genius.com/avatars/thumb/502567c847f1776a2266a9098b8169e9",
+                      "bounding_box": { "width": 32, "height": 32 }
+                    },
+                    "small": {
+                      "url": "https://images.genius.com/avatars/small/502567c847f1776a2266a9098b8169e9",
+                      "bounding_box": { "width": 100, "height": 100 }
+                    },
+                    "medium": {
+                      "url": "https://images.genius.com/avatars/medium/502567c847f1776a2266a9098b8169e9",
+                      "bounding_box": { "width": 300, "height": 400 }
+                    }
+                  },
+                  "header_image_url": "https://s3.amazonaws.com/filepicker-images-rapgenius/wNxReVqPTD2cYnNHV0H3_La_haine_-_le_monde_est_a_nous.jpg",
+                  "human_readable_role_for_display": "Editor",
+                  "id": 83343,
+                  "iq": 40741,
+                  "login": "MIKL",
+                  "name": "MIKL",
+                  "role_for_display": "editor",
+                  "url": "https://genius.com/MIKL",
+                  "current_user_metadata": {
+                    "permissions": [],
+                    "excluded_permissions": ["follow"],
+                    "interactions": { "following": false }
+                  }
+                }
+              },
+              {
+                "attribution": 0.2765957446808511,
+                "pinned_role": null,
+                "user": {
+                  "api_path": "/users/90375",
+                  "avatar": {
+                    "tiny": {
+                      "url": "https://images.rapgenius.com/avatars/tiny/9481f5bd26f2c90c212eebed25f502d0",
+                      "bounding_box": { "width": 16, "height": 16 }
+                    },
+                    "thumb": {
+                      "url": "https://images.rapgenius.com/avatars/thumb/9481f5bd26f2c90c212eebed25f502d0",
+                      "bounding_box": { "width": 32, "height": 32 }
+                    },
+                    "small": {
+                      "url": "https://images.rapgenius.com/avatars/small/9481f5bd26f2c90c212eebed25f502d0",
+                      "bounding_box": { "width": 100, "height": 100 }
+                    },
+                    "medium": {
+                      "url": "https://images.rapgenius.com/avatars/medium/9481f5bd26f2c90c212eebed25f502d0",
+                      "bounding_box": { "width": 300, "height": 400 }
+                    }
+                  },
+                  "header_image_url": "https://images.rapgenius.com/avatars/medium/9481f5bd26f2c90c212eebed25f502d0",
+                  "human_readable_role_for_display": "Editor",
+                  "id": 90375,
+                  "iq": 28562,
+                  "login": "vladamel",
+                  "name": "vladamel",
+                  "role_for_display": "editor",
+                  "url": "https://genius.com/vladamel",
+                  "current_user_metadata": {
+                    "permissions": [],
+                    "excluded_permissions": ["follow"],
+                    "interactions": { "following": false }
+                  }
+                }
+              },
+              {
+                "attribution": 0.10638297872340426,
+                "pinned_role": null,
+                "user": {
+                  "api_path": "/users/173883",
+                  "avatar": {
+                    "tiny": {
+                      "url": "https://s3.amazonaws.com/rapgenius/avatars/tiny/beyHBQDTTAvK1biMbMjA.jpg",
+                      "bounding_box": { "width": 16, "height": 16 }
+                    },
+                    "thumb": {
+                      "url": "https://s3.amazonaws.com/rapgenius/avatars/thumb/beyHBQDTTAvK1biMbMjA.jpg",
+                      "bounding_box": { "width": 32, "height": 32 }
+                    },
+                    "small": {
+                      "url": "https://s3.amazonaws.com/rapgenius/avatars/small/beyHBQDTTAvK1biMbMjA.jpg",
+                      "bounding_box": { "width": 100, "height": 100 }
+                    },
+                    "medium": {
+                      "url": "https://s3.amazonaws.com/rapgenius/avatars/medium/beyHBQDTTAvK1biMbMjA.jpg",
+                      "bounding_box": { "width": 300, "height": 400 }
+                    }
+                  },
+                  "header_image_url": "https://s3.amazonaws.com/rapgenius/avatars/medium/beyHBQDTTAvK1biMbMjA.jpg",
+                  "human_readable_role_for_display": "Editor",
+                  "id": 173883,
+                  "iq": 29173,
+                  "login": "LeShah",
+                  "name": "LeShah",
+                  "role_for_display": "editor",
+                  "url": "https://genius.com/LeShah",
+                  "current_user_metadata": {
+                    "permissions": [],
+                    "excluded_permissions": ["follow"],
+                    "interactions": { "following": false }
+                  }
+                }
+              },
+              {
+                "attribution": 0.09042553191489361,
+                "pinned_role": null,
+                "user": {
+                  "api_path": "/users/522910",
+                  "avatar": {
+                    "tiny": {
+                      "url": "https://images.rapgenius.com/avatars/tiny/ac77d19167a1669c875f7852d7f3eb77",
+                      "bounding_box": { "width": 16, "height": 16 }
+                    },
+                    "thumb": {
+                      "url": "https://images.rapgenius.com/avatars/thumb/ac77d19167a1669c875f7852d7f3eb77",
+                      "bounding_box": { "width": 32, "height": 32 }
+                    },
+                    "small": {
+                      "url": "https://images.rapgenius.com/avatars/small/ac77d19167a1669c875f7852d7f3eb77",
+                      "bounding_box": { "width": 100, "height": 100 }
+                    },
+                    "medium": {
+                      "url": "https://images.rapgenius.com/avatars/medium/ac77d19167a1669c875f7852d7f3eb77",
+                      "bounding_box": { "width": 300, "height": 400 }
+                    }
+                  },
+                  "header_image_url": "https://images.rapgenius.com/avatars/medium/ac77d19167a1669c875f7852d7f3eb77",
+                  "human_readable_role_for_display": "Contributor",
+                  "id": 522910,
+                  "iq": 3097,
+                  "login": "Ivanov1tch",
+                  "name": "Ivanov1tch",
+                  "role_for_display": "contributor",
+                  "url": "https://genius.com/Ivanov1tch",
+                  "current_user_metadata": {
+                    "permissions": [],
+                    "excluded_permissions": ["follow"],
+                    "interactions": { "following": false }
+                  }
+                }
+              },
+              {
+                "attribution": 0.07446808510638298,
+                "pinned_role": null,
+                "user": {
+                  "api_path": "/users/1588792",
+                  "avatar": {
+                    "tiny": {
+                      "url": "https://images.genius.com/avatars/tiny/dc0a52711b53fba59cce77e6ec02d7f1",
+                      "bounding_box": { "width": 16, "height": 16 }
+                    },
+                    "thumb": {
+                      "url": "https://images.genius.com/avatars/thumb/dc0a52711b53fba59cce77e6ec02d7f1",
+                      "bounding_box": { "width": 32, "height": 32 }
+                    },
+                    "small": {
+                      "url": "https://images.genius.com/avatars/small/dc0a52711b53fba59cce77e6ec02d7f1",
+                      "bounding_box": { "width": 100, "height": 100 }
+                    },
+                    "medium": {
+                      "url": "https://images.genius.com/avatars/medium/dc0a52711b53fba59cce77e6ec02d7f1",
+                      "bounding_box": { "width": 300, "height": 400 }
+                    }
+                  },
+                  "header_image_url": "https://s3.amazonaws.com/filepicker-images-rapgenius/EJsAZFssTRTLW3fWfQhF_jBXfASu.jpg",
+                  "human_readable_role_for_display": "Contributor",
+                  "id": 1588792,
+                  "iq": 350,
+                  "login": "Numidor",
+                  "name": "Numidor",
+                  "role_for_display": "contributor",
+                  "url": "https://genius.com/Numidor",
+                  "current_user_metadata": {
+                    "permissions": [],
+                    "excluded_permissions": ["follow"],
+                    "interactions": { "following": false }
+                  }
+                }
+              },
+              {
+                "attribution": 0.015957446808510637,
+                "pinned_role": null,
+                "user": {
+                  "api_path": "/users/3639",
+                  "avatar": {
+                    "tiny": {
+                      "url": "https://images.rapgenius.com/avatars/tiny/8e68667227171f85fd2333f2c00635b9",
+                      "bounding_box": { "width": 16, "height": 16 }
+                    },
+                    "thumb": {
+                      "url": "https://images.rapgenius.com/avatars/thumb/8e68667227171f85fd2333f2c00635b9",
+                      "bounding_box": { "width": 32, "height": 32 }
+                    },
+                    "small": {
+                      "url": "https://images.rapgenius.com/avatars/small/8e68667227171f85fd2333f2c00635b9",
+                      "bounding_box": { "width": 100, "height": 100 }
+                    },
+                    "medium": {
+                      "url": "https://images.rapgenius.com/avatars/medium/8e68667227171f85fd2333f2c00635b9",
+                      "bounding_box": { "width": 300, "height": 400 }
+                    }
+                  },
+                  "header_image_url": "https://images.rapgenius.com/avatars/medium/8e68667227171f85fd2333f2c00635b9",
+                  "human_readable_role_for_display": "Moderator",
+                  "id": 3639,
+                  "iq": 162621,
+                  "login": "Clement_RGF",
+                  "name": "Clément RGF",
+                  "role_for_display": "moderator",
+                  "url": "https://genius.com/Clement_RGF",
+                  "current_user_metadata": {
+                    "permissions": [],
+                    "excluded_permissions": ["follow"],
+                    "interactions": { "following": false }
+                  }
+                }
+              }
+            ],
+            "cosigned_by": [],
+            "rejection_comment": null,
+            "verified_by": null
+          }
+        ]
+      },
+      "featured_artists": [],
+      "lyrics_marked_complete_by": null,
+      "media": [
+        {
+          "native_uri": "spotify:track:5IZGqvPLERJ4BOHAmLrRoy",
+          "provider": "spotify",
+          "type": "audio",
+          "url": "https://open.spotify.com/track/5IZGqvPLERJ4BOHAmLrRoy"
+        },
+        {
+          "provider": "youtube",
+          "start": 0,
+          "type": "video",
+          "url": "http://www.youtube.com/watch?v=B2kvtRprvkk"
+        }
+      ],
+      "primary_artist": {
+        "api_path": "/artists/1286",
+        "header_image_url": "https://images.genius.com/0c3b81bcd5c8e89a557c0b84fd3ac3fe.1000x666x1.jpg",
+        "id": 1286,
+        "image_url": "https://images.genius.com/d0dfe539e553a7d7a32afd60fd7e4b2f.786x786x1.jpg",
+        "is_meme_verified": false,
+        "is_verified": false,
+        "name": "Orelsan",
+        "url": "https://genius.com/artists/Orelsan"
+      },
+      "producer_artists": [
+        {
+          "api_path": "/artists/36718",
+          "header_image_url": "https://images.genius.com/aa302397227cdb202c6458fef94bac95.1000x667x1.jpg",
+          "id": 36718,
+          "image_url": "https://images.genius.com/aff1594ed4307af0bfb56adf0cf0ec5e.1000x1000x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Skread",
+          "url": "https://genius.com/artists/Skread"
+        }
+      ],
+      "song_relationships": [
+        { "relationship_type": "samples", "type": "samples", "songs": [] },
+        {
+          "relationship_type": "sampled_in",
+          "type": "sampled_in",
+          "songs": []
+        },
+        {
+          "relationship_type": "interpolates",
+          "type": "interpolates",
+          "songs": []
+        },
+        {
+          "relationship_type": "interpolated_by",
+          "type": "interpolated_by",
+          "songs": []
+        },
+        { "relationship_type": "cover_of", "type": "cover_of", "songs": [] },
+        {
+          "relationship_type": "covered_by",
+          "type": "covered_by",
+          "songs": []
+        },
+        { "relationship_type": "remix_of", "type": "remix_of", "songs": [] },
+        {
+          "relationship_type": "remixed_by",
+          "type": "remixed_by",
+          "songs": []
+        },
+        {
+          "relationship_type": "live_version_of",
+          "type": "live_version_of",
+          "songs": []
+        },
+        {
+          "relationship_type": "performed_live_as",
+          "type": "performed_live_as",
+          "songs": []
+        }
+      ],
+      "verified_annotations_by": [],
+      "verified_contributors": [],
+      "verified_lyrics_by": [],
+      "writer_artists": [
+        {
+          "api_path": "/artists/1286",
+          "header_image_url": "https://images.genius.com/0c3b81bcd5c8e89a557c0b84fd3ac3fe.1000x666x1.jpg",
+          "id": 1286,
+          "image_url": "https://images.genius.com/d0dfe539e553a7d7a32afd60fd7e4b2f.786x786x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Orelsan",
+          "url": "https://genius.com/artists/Orelsan"
+        }
+      ]
+    }
+  }
+}

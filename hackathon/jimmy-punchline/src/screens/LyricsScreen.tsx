@@ -1,8 +1,10 @@
 import { Text } from "@ui-kitten/components";
 import React, { useEffect } from "react";
 import { ScrollView, View } from "react-native";
+import { ArtistAvatar } from "../components/ArtistAvatar";
 import { Lyrics } from "../components/Lyrics";
 import { ScreenContainer } from "../components/ScreenContainer";
+import { theme } from "../theme/theme";
 
 type LyricsScreenProps = {
   navigation: any;
@@ -24,11 +26,24 @@ export const LyricsScreen = ({ navigation, route }: LyricsScreenProps) => {
   return (
     <ScreenContainer>
       <ScrollView>
-        <View style={{ marginBottom: 32, marginTop: 96 }}>
-          <Text category="h1" appearance="hint">
+        <View
+          style={{
+            marginBottom: theme.spacing.m,
+            marginTop: theme.spacing["3xl"],
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <ArtistAvatar artist={artist} />
+          <Text
+            category="h1"
+            appearance="hint"
+            style={{ marginLeft: theme.spacing.m }}
+          >
             {artist}
           </Text>
         </View>
+
         <Lyrics params={route.params} />
       </ScrollView>
     </ScreenContainer>
