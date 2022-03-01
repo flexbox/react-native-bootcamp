@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/client";
 import { Paragraph } from "react-native-paper";
 
 import theme from "../theme/theme";
-import { HEROES_QUERY } from "../graphql/queries";
+import { HEROES_QUERY } from "../../graphql/queries";
 
 import { Box } from "./Box";
 import { HeroesListItem } from "./HeroesListItem";

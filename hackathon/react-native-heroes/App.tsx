@@ -2,9 +2,9 @@
 import { ApolloProvider } from "@apollo/client";
 import { ThemeProvider } from "@shopify/restyle";
 
-import { HeroesList } from "./components/HeroesList";
-import theme from "./theme/theme";
-import { ScreenContainer } from "./components/ScreenContainer";
+import { HeroesList } from "./src/components/HeroesList";
+import theme from "./src/theme/theme";
+import { ScreenContainer } from "./src/components/ScreenContainer";
 import { client } from "./graphql/client";
 
 export default function App() {
