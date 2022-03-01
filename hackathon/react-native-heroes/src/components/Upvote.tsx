@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { Button, Colors, Paragraph } from "react-native-paper";
-import { gql, useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import {
   Linking,
   Modal,
@@ -10,7 +10,19 @@ import {
   StyleSheet,
 } from "react-native";
 
-export const Upvote = ({ idHero, heroCounter, twitterUsername }) => {
+import { MUTATION_COUNTER } from "~/graphql/mutations";
+
+interface UpvoteProps {
+  idHero: string;
+  heroCounter: number;
+  twitterUsername: string;
+}
+
+export const Upvote = ({
+  idHero,
+  heroCounter,
+  twitterUsername,
+}: UpvoteProps) => {
   const [counter, setCounter] = useState<number>(heroCounter);
   const [hasUpvoted, setHasUpvoted] = useState<boolean>(false);
   const [addTodo] = useMutation(MUTATION_COUNTER);
@@ -30,14 +42,14 @@ export const Upvote = ({ idHero, heroCounter, twitterUsername }) => {
   const style = hasUpvoted
     ? {
         borderColor: Colors.orange900,
-        backgroundColor: "white",
+        backgroundColor: Colors.white,
         borderWidth: 2,
       }
-    : { backgroundColor: "white" };
+    : { backgroundColor: Colors.white };
 
   const styleIcon = hasUpvoted
     ? { color: Colors.orange900 }
-    : { color: "black" };
+    : { color: Colors.black };
 
   return (
     <>
@@ -79,18 +91,6 @@ export const Upvote = ({ idHero, heroCounter, twitterUsername }) => {
   );
 };
 
-const MUTATION_COUNTER = gql`
-  mutation update_counter($id: Int!) {
-    update_heroes(where: { id: { _eq: $id } }, _inc: { counter: 1 }) {
-      affected_rows
-      returning {
-        id
-        counter
-      }
-    }
-  }
-`;
-
 export const styles = StyleSheet.create({
   modalShareView: {
     margin: 20,
@@ -100,7 +100,7 @@ export const styles = StyleSheet.create({
     width: "70%",
     height: "20%",
     alignItems: "center",
-    shadowColor: "#000",
+    shadowColor: Colors.black,
     shadowOffset: {
       width: 0,
       height: 2,
