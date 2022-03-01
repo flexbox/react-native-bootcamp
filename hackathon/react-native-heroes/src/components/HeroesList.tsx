@@ -3,12 +3,11 @@ import { SafeAreaView, FlatList, ActivityIndicator } from "react-native";
 import { useQuery } from "@apollo/client";
 import { Paragraph } from "react-native-paper";
 
-import theme from "../theme/theme";
-import { HEROES_QUERY } from "../graphql/queries";
-
-import { Box } from "./Box";
-import { HeroesListItem } from "./HeroesListItem";
-import type { HeroProps } from "./HeroesListItem";
+import theme from "~/theme/theme";
+import { Box } from "~/components/Box";
+import { HeroesListItem } from "~/components/HeroesListItem";
+import type { HeroProps } from "~/components/HeroesListItem";
+import { HEROES_QUERY } from "~/graphql/queries";
 
 export const HeroesList = () => {
   const { error, data } = useQuery(HEROES_QUERY);

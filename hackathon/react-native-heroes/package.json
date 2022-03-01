@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx ."
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "cache:clear": "watchman watch-del-all && rm -rf node_modules yarn.lock && yarn install"
   },
   "dependencies": {
     "@apollo/client": "^3.5.8",

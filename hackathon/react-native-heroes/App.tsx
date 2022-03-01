@@ -1,13 +1,13 @@
-/* eslint-disable import/no-default-export */
 import { ApolloProvider } from "@apollo/client";
 import { ThemeProvider } from "@shopify/restyle";
+import React from "react";
 
-import { HeroesList } from "./components/HeroesList";
-import theme from "./theme/theme";
-import { ScreenContainer } from "./components/ScreenContainer";
-import { client } from "./graphql/client";
+import { HeroesList } from "~/components/HeroesList";
+import { client } from "~/graphql/client";
+import theme from "~/theme/theme";
+import { ScreenContainer } from "~/components/ScreenContainer";
 
-export default function App() {
+function App() {
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
@@ -18,3 +18,7 @@ export default function App() {
     </ApolloProvider>
   );
 }
+
+// App.tsx always exports a single component
+// eslint-disable-next-line import/no-default-export
+export default App;

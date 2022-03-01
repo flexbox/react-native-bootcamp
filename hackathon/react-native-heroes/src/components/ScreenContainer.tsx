@@ -3,7 +3,8 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { Colors, Headline } from "react-native-paper";
 
-import { Box } from "./Box";
+import { Box } from "~/components/Box";
+import theme from "~/theme/theme";
 
 type Props = {
   children: React.ReactNode;
@@ -25,13 +26,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.black,
-    paddingTop: 16,
+    paddingTop: theme.spacing.s,
   },
   text: {
-    color: "white",
-    fontSize: 30,
+    color: Colors.white,
+    fontSize: 32,
     fontWeight: "bold",
-    marginVertical: 20,
-    textAlign: "center",
+    marginVertical: theme.spacing.m,
   },
 });

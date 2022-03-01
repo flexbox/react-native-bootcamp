@@ -6,14 +6,13 @@ import {
   TouchableOpacity,
   Linking,
   Modal,
-  Dimensions,
 } from "react-native";
 import { Colors, Headline } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
 import React, { useState } from "react";
 
-import { Box } from "./Box";
-import { Upvote } from "./Upvote";
+import { Box } from "~/components/Box";
+import { Upvote } from "~/components/Upvote";
 
 export type HeroProps = {
   item: {
@@ -22,10 +21,10 @@ export type HeroProps = {
     full_name: string;
     github_username: string;
     twitter_username: string;
-    counter: string;
+    counter: number;
   };
 };
-const screenWidth = Dimensions.get("window").width;
+
 export const HeroesListItem = (hero: HeroProps) => {
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -125,7 +124,6 @@ export const styles = StyleSheet.create({
     paddingVertical: 2,
     paddingHorizontal: 10,
   },
-
   middle: {
     flex: 1,
     width: "60%",
