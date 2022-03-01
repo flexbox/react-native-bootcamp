@@ -1,0 +1,4 @@
+{
+  "//comment": "This allows for absolute paths, like ~/components/my-button.  This is useful for components that are not in the same directory as the screen they are used on.",
+  "name": "~"
+}
