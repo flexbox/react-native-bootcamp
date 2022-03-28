@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "icons:create": "npx @svgr/cli --native --typescript -d ./src/components/common/icons ./src/components/common/icons/source --config-file ./src/components/common/icons/svgr-config.json --template ./src/components/common/icons/svg-template.js",
+    "icons:create": "npx @svgr/cli --native --typescript -d ./src/components/icons ./src/components/icons/source --config-file ./src/components/icons/svgr-config.json --template ./src/components/icons/svg-template.js",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",

@@ -8,7 +8,7 @@
     "#000": "{props.color || `#000000`}"
   },
   "svgProps": {
-    "width": "{props.width || 16}",
-    "height": "{props.height || 16}"
+    "width": "{props.width || 512}",
+    "height": "{props.height || 512}"
   }
 }
