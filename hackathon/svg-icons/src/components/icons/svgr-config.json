@@ -7,8 +7,10 @@
     "black": "{props.color || `#000000`}",
     "#000": "{props.color || `#000000`}"
   },
+  "removeViewBox": false,
+
   "svgProps": {
-    "width": "{props.width || 512}",
-    "height": "{props.height || 512}"
+    "width": "{props.width || 256}",
+    "height": "{props.height || 256}"
   }
 }
