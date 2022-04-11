@@ -1,19 +1,31 @@
-import { StyleSheet, Text, View } from "react-native";
-import { RoboticHand, VrProgram } from "./src/components/icons";
+import React from "react";
+import { StyleSheet, ScrollView } from "react-native";
+import {
+  AlienGun,
+  ArRobot,
+  Astronaut,
+  Cloning,
+  FetalCloning,
+  FlyingCar,
+  HolographicCityModel,
+  RoboticHand,
+  SmartCar,
+  VrProgram,
+} from "./src/components/icons";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <ScrollView>
       <VrProgram color={"red"} />
       <RoboticHand color={"blue"} />
-    </View>
+      <AlienGun color={"green"} />
+      <ArRobot color={"yellow"} />
+      <Astronaut color={"purple"} />
+      <Cloning color={"orange"} />
+      <FetalCloning color={"pink"} />
+      <FlyingCar color={"brown"} />
+      <HolographicCityModel color={"black"} />
+      <SmartCar color={"red"} />
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
