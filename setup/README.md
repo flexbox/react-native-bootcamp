@@ -10,9 +10,8 @@ You will find the instructions to set up you computer for yout next React Native
 ## System Requirements
 
 - [ ] [git](https://git-scm.com/) v2.13 or greater
-- [ ] [NodeJS](https://nodejs.org/) v12 or greater
-- [ ] [npm](https://www.npmjs.com/) v6 or greater
-- [ ] [yarn](https://classic.yarnpkg.com/en/docs/install)
+- [ ] [NodeJS](https://nodejs.org/) v16 or greater
+- [ ] [yarn](https://yarnpkg.com/getting-started/install)
 
 Use the following command from your terminal to check your Node version.
 
