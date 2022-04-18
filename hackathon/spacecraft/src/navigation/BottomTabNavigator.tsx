@@ -48,13 +48,12 @@ const PilotNavigator = () => {
         name={Routes.PILOT_DETAILS_SCREEN}
         component={PilotDetailsScreen}
       />
-      {/* TODO: Need to bump react-navigation to v6.0.0
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen
           name={Routes.STARSHIP_DETAILS_SCREEN}
           component={StarshipDetailsScreen}
         />
-      </Stack.Group> */}
+      </Stack.Group>
     </Stack.Navigator>
   );
 };
