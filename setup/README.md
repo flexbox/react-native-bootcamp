@@ -68,7 +68,7 @@ Should output something like `/Applications/Xcode.app/Contents/Developer` if it'
 
 ## Smartphone Requirements
 
-- [ ] Create an account [https://expo.io/signup](https://expo.io/signup)
+- [ ] Create an account [https://expo.dev/signup](https://expo.dev/signup)
 - [ ] Download **Expo GO**
   - iPhone : [http://bit.ly/expo-ios-client](http://bit.ly/expo-ios-client)
   - Android : [http://bit.ly/expo-android-client](http://bit.ly/expo-android-client)
