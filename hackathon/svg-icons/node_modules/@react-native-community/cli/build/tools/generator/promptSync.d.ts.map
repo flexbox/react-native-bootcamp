@@ -1,1 +1,0 @@
-{"version":3,"file":"promptSync.d.ts","sourceRoot":"","sources":["../../../src/tools/generator/promptSync.ts"],"names":[],"mappings":"AAAA;;;;;;;GAOG;AAOH,aAAK,OAAO,GAAG;IACb,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,GAAG,CAAC,EAAE,MAAM,CAAC;IACb,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,YAAY,CAAC,EAAE,MAAM,EAAE,GAAG,QAAQ,CAAC;CACpC,CAAC;AAIF,iBAAS,MAAM,sIAmId;AAED,eAAe,MAAM,CAAC"}

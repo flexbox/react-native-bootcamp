@@ -1,1 +1,0 @@
-{"version":3,"file":"linkAll.d.ts","sourceRoot":"","sources":["../../../src/commands/link/linkAll.ts"],"names":[],"mappings":"AAIA,OAAO,EAAC,MAAM,EAAC,MAAM,mCAAmC,CAAC;AASzD,aAAK,OAAO,GAAG;IACb,QAAQ,CAAC,EAAE,OAAO,CAAC;IACnB,UAAU,CAAC,EAAE,OAAO,CAAC;CACtB,CAAC;AAEF,iBAAe,OAAO,CAAC,MAAM,EAAE,MAAM,EAAE,OAAO,EAAE,OAAO,iBAsCtD;AAED,eAAe,OAAO,CAAC"}
