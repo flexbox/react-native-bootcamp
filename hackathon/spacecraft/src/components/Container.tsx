@@ -1,23 +1,23 @@
 import type { ReactNode } from "react";
 import React from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Colors, Headline } from "react-native-paper";
 
 import { Offline } from "~/components/Offline";
 
-interface ScreenContainerProps {
+interface ContainerProps {
   title: string;
   children?: ReactNode;
   withFooter?: boolean;
 }
 
-export const ScreenContainer = ({
+export const Container = ({
   title,
   children,
   withFooter = false,
-}: ScreenContainerProps) => {
+}: ContainerProps) => {
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <Headline style={styles.headerText}>{title}</Headline>
 
       {children}
@@ -25,7 +25,7 @@ export const ScreenContainer = ({
       <Offline />
 
       {withFooter && <View style={styles.footer} />}
-    </ScrollView>
+    </View>
   );
 };
 
