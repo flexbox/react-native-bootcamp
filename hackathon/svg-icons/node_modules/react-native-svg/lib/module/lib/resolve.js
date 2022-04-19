@@ -1,0 +1,2 @@
+import{StyleSheet}from'react-native';export function resolve(styleProp,cleanedProps){if(styleProp){return StyleSheet?[styleProp,cleanedProps]:styleProp[typeof Symbol==="function"?Symbol.iterator:"@@iterator"]?Object.assign({},...styleProp,cleanedProps):Object.assign({},styleProp,cleanedProps);}else{return cleanedProps;}}
+//# sourceMappingURL=resolve.js.map

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card, Colors, Paragraph, TextInput, Title } from 'react-native-paper';
-import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
+import React from "react";
+import { Card, Colors, Paragraph, TextInput, Title } from "react-native-paper";
+import { SafeAreaView, ScrollView, StyleSheet, View } from "react-native";
 
 const CardInput = ({ title, children }) => {
   return (
@@ -15,7 +15,7 @@ const CardInput = ({ title, children }) => {
 
 const App = () => {
   const [inputValue, setInputValue] = React.useState(null);
-  const [password, setPassword] = React.useState('');
+  const [password, setPassword] = React.useState("");
   const [isVisble, setIsVisible] = React.useState(true);
 
   function toggleSecureIcon() {
@@ -51,7 +51,7 @@ const App = () => {
               <TextInput.Icon
                 style={{ marginTop: 8 }}
                 onPress={toggleSecureIcon}
-                name={isVisble ? 'eye-off' : 'eye'}
+                name={isVisble ? "eye-off" : "eye"}
               />
             }
           />
