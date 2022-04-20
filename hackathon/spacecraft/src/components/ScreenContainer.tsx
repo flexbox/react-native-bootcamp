@@ -9,14 +9,16 @@ interface ScreenContainerProps {
   title: string;
   children?: ReactNode;
   withFooter?: boolean;
+  withScrollView?: boolean;
 }
 
 export const ScreenContainer = ({
   title,
   children,
   withFooter = false,
+  withScrollView = false,
 }: ScreenContainerProps) => {
-  return (
+  return withScrollView ? (
     <ScrollView style={styles.container}>
       <Headline style={styles.headerText}>{title}</Headline>
 
@@ -26,6 +28,16 @@ export const ScreenContainer = ({
 
       {withFooter && <View style={styles.footer} />}
     </ScrollView>
+  ) : (
+    <View style={styles.container}>
+      <Headline style={styles.headerText}>{title}</Headline>
+
+      {children}
+
+      <Offline />
+
+      {withFooter && <View style={styles.footer} />}
+    </View>
   );
 };
 

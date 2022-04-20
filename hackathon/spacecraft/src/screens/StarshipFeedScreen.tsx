@@ -7,7 +7,6 @@ import { ScreenContainer } from "../components/ScreenContainer";
 import StarshipCard from "../components/StarshipCard";
 
 import { fetchStarships } from "~/hooks/useStarships";
-import { ViewContainer } from "~/components/ViewContainer";
 
 interface ShipProps {
   name: string;
@@ -52,7 +51,7 @@ export const StarshipFeedScreen = () => {
   }
 
   return (
-    <ViewContainer title="Starships" withFooter>
+    <ScreenContainer title="Starships" withFooter>
       {/* SOLUTION 1: with a map */}
       {/* {data.results.map((ship: ShipProps) => {
         return <StarshipCard key={ship.name} ship={ship} />;
@@ -64,6 +63,6 @@ export const StarshipFeedScreen = () => {
         renderItem={renderItem}
         keyExtractor={(ship) => ship.model}
       />
-    </ViewContainer>
+    </ScreenContainer>
   );
 };
