@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   View,
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
-} from 'react-native';
+} from "react-native";
 import {
   Button,
   Caption,
   Colors,
   Headline,
   TextInput,
-} from 'react-native-paper';
-import { Routes } from '../navigation/Routes';
-import { sleep } from '../utils/sleep';
+} from "react-native-paper";
+import { Routes } from "../navigation/Routes";
+import { sleep } from "../utils/sleep";
 
 interface LoginScreenProps {
   setIsAuthorized: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleLogin = async () => {
@@ -38,14 +38,14 @@ const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
       style={{
         backgroundColor: Colors.grey100,
         flex: 1,
-        justifyContent: 'flex-end',
+        justifyContent: "flex-end",
       }}
     >
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={{ padding: 24, marginBottom: 64 }}
       >
-        <View style={{ padding: 24, marginBottom: 32, alignItems: 'center' }}>
+        <View style={{ padding: 24, marginBottom: 32, alignItems: "center" }}>
           <Headline>nerd-fm</Headline>
           <Caption>Login in to listen beautiful music when you work</Caption>
         </View>
@@ -53,6 +53,7 @@ const LoginScreen = ({ setIsAuthorized }: LoginScreenProps) => {
           label="Email"
           value={text}
           onChangeText={(text) => setText(text)}
+          autoComplete={Platform.OS === "web" ? "none" : "off"}
         />
         <View style={{ height: 24 }} />
         <Button mode="contained" loading={isLoading} onPress={handleLogin}>

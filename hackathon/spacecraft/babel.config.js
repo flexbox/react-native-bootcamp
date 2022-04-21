@@ -15,21 +15,6 @@ module.exports = function (api) {
           rootPathSuffix: "./src/",
         },
       ],
-      [
-        "module-resolver",
-        {
-          root: ["./src"],
-          extensions: [
-            ".ts",
-            ".tsx",
-            ".js",
-            ".jsx",
-            ".ios.js",
-            ".android.js",
-            ".expo.js",
-          ],
-        },
-      ],
     ],
   };
 };
