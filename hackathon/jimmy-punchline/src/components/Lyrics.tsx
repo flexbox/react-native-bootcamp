@@ -50,15 +50,15 @@ export const Lyrics = ({ params }: Props) => {
   };
 
   const lyricsToDisover = [
+    allLyrics[0],
     allLyrics[1],
     allLyrics[2],
     allLyrics[3],
-    allLyrics[4],
-    allLyrics[5],
-    allLyrics[6],
   ];
 
-  const lyricsAnswer = [allLyrics[7], allLyrics[8], allLyrics[9]];
+  // debugger;
+
+  const lyricsAnswer = [allLyrics[4], allLyrics[5]];
 
   const color = useTheme();
 
