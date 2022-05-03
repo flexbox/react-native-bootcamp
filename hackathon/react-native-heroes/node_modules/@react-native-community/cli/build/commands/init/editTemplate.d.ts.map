@@ -1,0 +1,1 @@
+{"version":3,"file":"editTemplate.d.ts","sourceRoot":"","sources":["../../../src/commands/init/editTemplate.ts"],"names":[],"mappings":"AAKA,UAAU,iBAAiB;IACzB,WAAW,EAAE,MAAM,CAAC;IACpB,eAAe,EAAE,MAAM,CAAC;IACxB,gBAAgB,CAAC,EAAE,MAAM,CAAC;IAC1B,YAAY,CAAC,EAAE,MAAM,CAAC;CACvB;AA4ED,wBAAgB,2BAA2B,CAAC,EAC1C,WAAW,EACX,eAAe,EACf,gBAA4C,EAC5C,YAA0B,GAC3B,EAAE,iBAAiB,QA0BnB"}

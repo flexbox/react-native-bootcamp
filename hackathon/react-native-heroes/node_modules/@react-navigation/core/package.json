@@ -1,0 +1,73 @@
+{
+  "name": "@react-navigation/core",
+  "description": "Core utilities for building navigators",
+  "version": "6.1.1",
+  "keywords": [
+    "react",
+    "react-native",
+    "react-navigation"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-navigation/react-navigation.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/react-navigation/react-navigation/issues"
+  },
+  "homepage": "https://reactnavigation.org",
+  "main": "lib/commonjs/index.js",
+  "react-native": "src/index.tsx",
+  "source": "src/index.tsx",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/src/index.d.ts",
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "bob build",
+    "clean": "del lib"
+  },
+  "dependencies": {
+    "@react-navigation/routers": "^6.1.0",
+    "escape-string-regexp": "^4.0.0",
+    "nanoid": "^3.1.23",
+    "query-string": "^7.0.0",
+    "react-is": "^16.13.0"
+  },
+  "devDependencies": {
+    "@testing-library/react-native": "^7.2.0",
+    "@types/react": "^17.0.9",
+    "@types/react-is": "^17.0.0",
+    "del-cli": "^3.0.1",
+    "immer": "^9.0.2",
+    "react": "17.0.1",
+    "react-native-builder-bob": "^0.18.1",
+    "react-test-renderer": "17.0.1",
+    "typescript": "^4.3.2"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  },
+  "gitHead": "4c5805867ce946d99ba17f71b4d6086bb8751262"
+}
