@@ -1,0 +1,1 @@
+{"version":3,"sources":["FontProcessor.tsx"],"names":["processFonts","_","Error"],"mappings":"AAAA,OAAO,SAASA,YAAT,CACLC,CADK,EAEmB;AACxB,QAAM,IAAIC,KAAJ,CAAU,sBAAV,CAAN;AACD","sourcesContent":["export function processFonts(\n  _: (string | undefined)[]\n): (string | undefined)[] {\n  throw new Error('Not supported on Web');\n}\n"]}

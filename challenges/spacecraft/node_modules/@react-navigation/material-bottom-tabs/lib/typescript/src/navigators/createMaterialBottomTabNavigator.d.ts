@@ -1,0 +1,7 @@
+/// <reference types="react" />
+import { DefaultNavigatorOptions, ParamListBase, TabNavigationState, TabRouterOptions } from '@react-navigation/native';
+import type { MaterialBottomTabNavigationConfig, MaterialBottomTabNavigationEventMap, MaterialBottomTabNavigationOptions } from '../types';
+declare type Props = DefaultNavigatorOptions<ParamListBase, TabNavigationState<ParamListBase>, MaterialBottomTabNavigationOptions, MaterialBottomTabNavigationEventMap> & TabRouterOptions & MaterialBottomTabNavigationConfig;
+declare function MaterialBottomTabNavigator({ id, initialRouteName, backBehavior, children, screenListeners, screenOptions, ...rest }: Props): JSX.Element;
+declare const _default: <ParamList extends ParamListBase>() => import("@react-navigation/native").TypedNavigator<ParamList, TabNavigationState<ParamListBase>, MaterialBottomTabNavigationOptions, MaterialBottomTabNavigationEventMap, typeof MaterialBottomTabNavigator>;
+export default _default;

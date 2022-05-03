@@ -1,0 +1,79 @@
+{
+  "name": "eslint-import-resolver-babel-plugin-root-import",
+  "version": "1.1.1",
+  "main": "src/index.js",
+  "description": "fork of eslint-import-resolver-babel-root-import that works",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unconfident/eslint-import-resolver-babel-plugin-root-import.git"
+  },
+  "author": "unconfident",
+  "contributors": [
+    {
+      "name": "BingqiChen",
+      "email": "bingqichen@yeah.net"
+    },
+    {
+      "name": "Olivier Lalonde",
+      "email": "olalonde@gmail.com",
+      "url": "http://syskall.com"
+    },
+    {
+      "name": "Christian Le",
+      "url": "http://christianle.com"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-plugin-import",
+    "eslint-import-resolver",
+    "babel",
+    "babel-plugin",
+    "module",
+    "babel-root-import",
+    "babel-plugin-root-import",
+    "rewrite",
+    "resolve",
+    "rename",
+    "mapping",
+    "require",
+    "import"
+  ],
+  "dependencies": {
+    "eslint-import-resolver-node": "^0.2.1",
+    "json5": "^0.5.0"
+  },
+  "peerDependencies": {
+    "babel-plugin-root-import": "^5.1.0",
+    "eslint-plugin-import": ">=1.9.2"
+  },
+  "devDependencies": {
+    "babel-plugin-root-import": "^5.1.0",
+    "condition-circle": "^1.2.0",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": ">=1.9.2",
+    "lodash": "^4.13.1",
+    "nyc": "^6.6.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
+  "scripts": {
+    "lint": "eslint src test",
+    "pretest": "npm run -s lint",
+    "test:run": "tape test/index.js",
+    "test:cov": "nyc tape test/index.js",
+    "coverage": "npm run -s test:cov | tap-spec",
+    "test": "npm run -s test:run | tap-spec"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}

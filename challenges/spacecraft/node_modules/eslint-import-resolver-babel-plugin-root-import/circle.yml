@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 6.12.3
+test:
+  override:
+    - npm run test:cov
+  post:
+    - cp -r ./coverage "$CIRCLE_ARTIFACTS"

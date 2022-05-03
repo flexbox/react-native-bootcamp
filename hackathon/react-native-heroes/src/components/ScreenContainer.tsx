@@ -5,6 +5,7 @@ import { Colors, Headline } from "react-native-paper";
 
 import { Box } from "~/components/Box";
 import theme from "~/theme/theme";
+import { AddYourCard } from "~/components/AddYourCard";
 
 type Props = {
   children: React.ReactNode;
@@ -17,6 +18,7 @@ export const ScreenContainer = ({ children }: Props) => {
       <Box px="m">
         <Headline style={styles.text}>React Native Heroes</Headline>
       </Box>
+      <AddYourCard />
       {children}
     </SafeAreaView>
   );
@@ -33,5 +35,8 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
     marginVertical: theme.spacing.m,
+    justifyContent: "center",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 });
