@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/bin.ts"],"names":[],"mappings":"AAAA;;;AAEA;;AAEA;;AAEA","sourcesContent":["#!/usr/bin/env node\n\nimport './tools/gracefulifyFs';\n\nimport {run} from './';\n\nrun();\n"]}
