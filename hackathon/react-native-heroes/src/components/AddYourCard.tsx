@@ -32,6 +32,12 @@ export const AddYourCard = () => {
       },
     });
   };
+  const resetFormValues = () => {
+    onChangeHeroName("");
+    onChangeHeroGithub("");
+    onChangeHeroTwitter("");
+    onChangeHeroGravatar("");
+  };
 
   const toggleModal = () => {
     setModalVisible(!modalVisible);
@@ -40,6 +46,7 @@ export const AddYourCard = () => {
   const addAndCloseModal = () => {
     addToHeroList();
     toggleModal();
+    resetFormValues();
   };
 
   return (
