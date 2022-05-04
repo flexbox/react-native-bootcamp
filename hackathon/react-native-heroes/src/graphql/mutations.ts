@@ -11,3 +11,29 @@ export const MUTATION_COUNTER = gql`
     }
   }
 `;
+
+export const ADD_HERO = gql`
+  mutation AddHero(
+    $avatarUrl: String!
+    $fullName: String!
+    $githubUsername: String!
+    $twitterUsername: String!
+  ) {
+    insert_heroes_one(
+      object: {
+        avatar_url: $avatarUrl
+        counter: 0
+        full_name: $fullName
+        github_username: $githubUsername
+        twitter_username: $twitterUsername
+      }
+    ) {
+      avatar_url
+      counter
+      full_name
+      github_username
+      twitter_username
+      id
+    }
+  }
+`;

@@ -35,5 +35,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
     marginVertical: theme.spacing.m,
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 });

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
 import {
   View,
   StyleSheet,
@@ -7,9 +8,10 @@ import {
   Text,
   TextInput,
 } from "react-native";
-import { Colors, Headline } from "react-native-paper";
+import { Colors } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
 
+import { ADD_HERO } from "~/graphql/mutations";
 import { Box } from "~/components/Box";
 
 export const AddYourCard = () => {
@@ -18,9 +20,26 @@ export const AddYourCard = () => {
   const [heroGithub, onChangeHeroGithub] = React.useState("");
   const [heroTwitter, onChangeHeroTwitter] = React.useState("");
   const [heroGravatarMail, onChangeHeroGravatar] = React.useState("");
+  const [addHero] = useMutation(ADD_HERO);
+
+  const addToHeroList = () => {
+    addHero({
+      variables: {
+        avatarUrl: heroGravatarMail,
+        fullName: heroName,
+        githubUsername: heroGithub,
+        twitterUsername: heroTwitter,
+      },
+    });
+  };
 
   const toggleModal = () => {
     setModalVisible(!modalVisible);
+  };
+
+  const addAndCloseModal = () => {
+    addToHeroList();
+    toggleModal();
   };
 
   return (
@@ -36,8 +55,10 @@ export const AddYourCard = () => {
             <Text style={{ fontSize: 20, fontWeight: "bold" }}>
               That's can be you
             </Text>
+
             <View style={styles.viewInput}>
               <Text style={styles.upperText}>Your FullName</Text>
+
               <TextInput
                 style={styles.input}
                 onChangeText={onChangeHeroName}
@@ -45,13 +66,14 @@ export const AddYourCard = () => {
                 placeholder="Matthys Ducrocq"
               />
             </View>
+
             <View style={styles.viewInput}>
-              <Text style={styles.upperText}>Your Github url</Text>
+              <Text style={styles.upperText}>Your Github username</Text>
               <TextInput
                 style={styles.input}
                 onChangeText={onChangeHeroGithub}
                 value={heroGithub}
-                placeholder="https://github.com/matthysdev"
+                placeholder="matthysdev"
               />
             </View>
             <View style={styles.viewInput}>
@@ -72,7 +94,7 @@ export const AddYourCard = () => {
                 placeholder="myemail@gmail.com"
               />
             </View>
-            <TouchableOpacity onPress={toggleModal}>
+            <TouchableOpacity onPress={addAndCloseModal}>
               <Text
                 style={{
                   marginTop: 20,
@@ -88,6 +110,7 @@ export const AddYourCard = () => {
                 Submit
               </Text>
             </TouchableOpacity>
+
             <TouchableOpacity onPress={toggleModal}>
               <AntDesign name="closecircleo" size={24} color="black" />
             </TouchableOpacity>
@@ -146,12 +169,12 @@ export const styles = StyleSheet.create({
   },
 
   modalView: {
-    margin: 20,
     backgroundColor: "white",
     borderRadius: 20,
     borderWidth: 2,
     width: "90%",
     height: "65%",
+
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
