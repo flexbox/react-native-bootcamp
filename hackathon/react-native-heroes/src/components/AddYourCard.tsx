@@ -7,6 +7,7 @@ import {
   Modal,
   Text,
   TextInput,
+  Alert,
 } from "react-native";
 import { Colors } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
@@ -21,6 +22,7 @@ export const AddYourCard = () => {
   const [heroTwitter, onChangeHeroTwitter] = React.useState("");
   const [heroGravatarMail, onChangeHeroGravatar] = React.useState("");
   const [addHero] = useMutation(ADD_HERO);
+  const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   const addToHeroList = () => {
     addHero({
@@ -44,9 +46,17 @@ export const AddYourCard = () => {
   };
 
   const addAndCloseModal = () => {
-    addToHeroList();
-    toggleModal();
-    resetFormValues();
+    if (heroName && heroGithub && heroTwitter && heroGravatarMail) {
+      if (reg.test(heroGravatarMail) === true) {
+        addToHeroList();
+        toggleModal();
+        resetFormValues();
+      } else {
+        Alert.alert("Invalid Email");
+      }
+    } else {
+      Alert.alert("Alert", "Please fill all the fields");
+    }
   };
 
   return (
@@ -84,12 +94,12 @@ export const AddYourCard = () => {
               />
             </View>
             <View style={styles.viewInput}>
-              <Text style={styles.upperText}>Your Twitter url</Text>
+              <Text style={styles.upperText}>Your Twitter username</Text>
               <TextInput
                 style={styles.input}
                 onChangeText={onChangeHeroTwitter}
                 value={heroTwitter}
-                placeholder="https://twitter.com/matthysdev"
+                placeholder="matthysdev"
               />
             </View>
             <View style={styles.viewInput}>
