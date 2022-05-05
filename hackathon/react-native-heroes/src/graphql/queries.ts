@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 export const HEROES_QUERY = gql`
   query HeroesQuery {
-    heroes(order_by: { id: asc }) {
+    heroes(order_by: { counter: desc }) {
       avatar_url
       counter
       full_name

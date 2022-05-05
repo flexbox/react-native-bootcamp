@@ -13,6 +13,7 @@ import { Colors } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
 
 import { ADD_HERO } from "~/graphql/mutations";
+import { HEROES_QUERY } from "~/graphql/queries";
 import { Box } from "~/components/Box";
 
 export const AddYourCard = () => {
@@ -21,7 +22,13 @@ export const AddYourCard = () => {
   const [heroGithub, onChangeHeroGithub] = React.useState("");
   const [heroTwitter, onChangeHeroTwitter] = React.useState("");
   const [heroGravatarMail, onChangeHeroGravatar] = React.useState("");
-  const [addHero] = useMutation(ADD_HERO);
+
+  const [addHero] = useMutation(ADD_HERO, {
+    refetchQueries: [
+      HEROES_QUERY, // DocumentNode object parsed with gql
+    ],
+  });
+
   const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   const addToHeroList = () => {

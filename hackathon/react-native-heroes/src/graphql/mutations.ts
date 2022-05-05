@@ -22,7 +22,7 @@ export const ADD_HERO = gql`
     insert_heroes_one(
       object: {
         avatar_url: $avatarUrl
-        counter: 0
+        counter: 60
         full_name: $fullName
         github_username: $githubUsername
         twitter_username: $twitterUsername
