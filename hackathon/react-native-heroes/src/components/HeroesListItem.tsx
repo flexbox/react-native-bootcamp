@@ -10,6 +10,7 @@ import {
 import { Colors, Headline } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
 import React, { useState } from "react";
+import { Gravatar } from "react-native-gravatar";
 
 import { Box } from "~/components/Box";
 import { Upvote } from "~/components/Upvote";
@@ -43,8 +44,12 @@ export const HeroesListItem = (hero: HeroProps) => {
         <Box flex={1} alignItems="center" justifyContent="center">
           <View style={styles.modalView}>
             <Headline>{hero.item.full_name}</Headline>
-            <Image
-              source={{ uri: hero.item.avatar_url }}
+            <Gravatar
+              options={{
+                email: hero.item.avatar_url,
+                parameters: { size: "200", d: "mm" },
+                secure: true,
+              }}
               style={{
                 width: 200,
                 height: 200,
@@ -62,8 +67,12 @@ export const HeroesListItem = (hero: HeroProps) => {
         </Box>
       </Modal>
       <TouchableOpacity onPress={toggleModal}>
-        <Image
-          source={{ uri: hero.item.avatar_url }}
+        <Gravatar
+          options={{
+            email: hero.item.avatar_url,
+            parameters: { size: "200", d: "mm" },
+            secure: true,
+          }}
           style={{ width: 100, height: 100, borderRadius: 10, borderWidth: 1 }}
         />
       </TouchableOpacity>
