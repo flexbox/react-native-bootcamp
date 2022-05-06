@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "start": "expo start --clear",
+    "android": "expo start --android --clear",
+    "ios": "expo start --ios --clear",
+    "web": "expo start --web --clear",
     "eject": "expo eject",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
-    "cache:clear": "watchman watch-del-all && rm -rf node_modules yarn.lock && yarn install"
+    "cache:clear": "watchman watch-del-all && rm -rf node_modules yarn.lock && yarn install",
+    "deploy:expo": "expo publish --release-channel prod ",
+    "deploy:web": "expo build:web && cd web-build && vercel && cd ..",
+    "release": "yarn deploy:expo && yarn deploy:web"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@apollo/client": "^3.6.4",
     "@expo/vector-icons": "^13.0.0",
     "@react-navigation/native": "^6.0.10",
@@ -25,6 +29,25 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "^0.68.2",
+=======
+    "@apollo/client": "^3.5.8",
+    "@expo/vector-icons": "^12.0.5",
+    "@react-navigation/native": "^6.0.7",
+    "@shopify/restyle": "^1.6.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-root-import": "^6.6.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "dotenv": "^16.0.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "eslint-plugin-import": "^2.26.0",
+    "expo": "~44.0.0",
+    "expo-constants": "~13.0.1",
+    "expo-status-bar": "~1.2.0",
+    "graphql": "^16.3.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+>>>>>>> b1cf371c (fix tild)
     "react-native-gravatar": "^1.0.2",
     "react-native-paper": "^4.12.1",
     "react-native-web": "0.17.7"
