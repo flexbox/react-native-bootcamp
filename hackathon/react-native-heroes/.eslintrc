@@ -3,5 +3,13 @@
   "rules": {
     "camelcase": "off",
     "import/no-extraneous-dependencies": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "src"
+      }
+    }
   }
 }

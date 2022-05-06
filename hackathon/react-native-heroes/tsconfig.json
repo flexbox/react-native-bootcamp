@@ -1,11 +1,11 @@
 {
   "extends": "eslint-config-react-native-wcandillon/tsconfig.base",
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-native",
     "strict": true,
     "baseUrl": "./",
     "paths": {
-        "~/*": ["src/*"],
-    },
+      "~/*": ["src/*"]
+    }
   }
 }
