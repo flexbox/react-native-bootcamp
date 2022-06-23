@@ -1,7 +1,10 @@
 import { useQuery } from "react-query";
 
 const fetchLyricsByArtistTitle = async (artist :string, title: string) => {
-  const result = await fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`);
+  const endpoint = `https://api.lyrics.ovh/v1/${artist}/${title}`;
+  console.log('file: useLyrics.ts ~ line 5 ~ fetchLyricsByArtistTitle ~ endpoint', endpoint)
+
+  const result = await fetch(endpoint);
   const json = await result.json();
   return json;
 };
