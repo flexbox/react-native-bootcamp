@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "spacecraft",
+    "description": "Learning materials for the `react-native-bootcamp` repository.",
     "slug": "spacecraft",
     "owner": "weshipit",
     "version": "1.0.0",
@@ -14,19 +15,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.flexbox.spacecraft"
+      "bundleIdentifier": "today.weshipit.spacecraft"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.flexbox.spacecraft"
+      "package": "today.weshipit.spacecraft"
     },
     "web": {
       "favicon": "./assets/favicon.png"
