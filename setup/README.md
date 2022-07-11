@@ -69,15 +69,12 @@ Should output something like `/Applications/Xcode.app/Contents/Developer` if it'
 ## Smartphone Requirements
 
 - [ ] Create an account [https://expo.dev/signup](https://expo.dev/signup)
-- [ ] Download **Expo GO**
-  - iPhone : [http://bit.ly/expo-ios-client](http://bit.ly/expo-ios-client)
-  - Android : [http://bit.ly/expo-android-client](http://bit.ly/expo-android-client)
-- [ ] Sign-in with your Expo account on your phone
+- [ ] Download **Expo GO** on your smartphone
+- [ ] Sign-in with your Expo account on your smartphone
 
-You are going to follow a **Native Mobile Application Bootcampt**.
-`iOS` phones are the easiest way, Android are nice too BUT there is more issues.
+You are going to follow a **Native Mobile Application Bootcamp**.
 
-You need a decent smartphone to enjoy a fast experience.
+`iOS` phones are the easiest way, Android are nice too BUT there is more issues. You need a decent smartphone to enjoy a fast experience.
 
 ## Text Editor
 
