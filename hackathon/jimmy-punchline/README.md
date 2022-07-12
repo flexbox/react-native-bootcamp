@@ -16,7 +16,7 @@ yarn
 yarn ios
 ```
 
-![Preview app mobile Jimmy Punchline](./assets/jimmy-punchline-app.gif)
+<img src="https://github.com/flexbox/react-native-bootcamp/raw/main/hackathon/jimmy-punchline/assets/jimmy-punchline-app.gif" width="50%" height="50%" alt="Preview app mobile Jimmy Punchline">
 
 ## Demo
 
