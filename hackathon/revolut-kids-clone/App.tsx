@@ -8,7 +8,7 @@ export default function App() {
     <View className="flex-1 items-center justify-center bg-sky-400">
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
-      <Row>
+      <Row containerStyle="justify-around w-full py-4">
         <Button variant="primary">Log in</Button>
         <Button variant="secondary">Sign up</Button>
       </Row>
