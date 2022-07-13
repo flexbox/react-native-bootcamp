@@ -1,6 +1,6 @@
 # React Native Hackathon
 
-To ship your first app you should have completed all the previous exercices: **foundations**, **data management**, **ecosystem**, **navigation** and **releases**.
+To ship your first app you should have completed all the previous challenges: **foundations**, **data management**, **ecosystem**, **navigation** and **releases**.
 
 ## Ideas
 
@@ -23,7 +23,7 @@ npx react-native init awesome-app
 npx ignite-cli new awesome-app
 
 # Expo-powered
-expo init
+npx create-expo-app
 npx create-react-native-app
 npx ignite-cli new awesome-app --expo
 
