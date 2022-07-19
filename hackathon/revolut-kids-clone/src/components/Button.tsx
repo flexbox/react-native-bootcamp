@@ -8,7 +8,6 @@ type Props = {
 };
 
 export const Button = ({ variant, children, styles = "" }: Props) => {
-  console.log("file: Button.tsx ~ line 11 ~ Button ~ className", styles);
   let style = "bg-black hover:bg-indigo-700";
   let textStyle = "text-white text-base font-medium";
 
