@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
 
 type ButtonProps = {
@@ -7,6 +7,5 @@ type ButtonProps = {
 };
 
 export const Row = ({ children, containerStyle }: ButtonProps) => {
-  console.log("file: Layout.tsx ~ line 10 ~ Row ~ className", containerStyle);
   return <View className={`${containerStyle} flex-row`}>{children}</View>;
 };
