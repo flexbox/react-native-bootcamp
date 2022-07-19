@@ -3,10 +3,12 @@ import React, { ReactNode } from "react";
 
 type Props = {
   variant: "primary" | "secondary";
+  styles?: string;
   children: ReactNode;
 };
 
-export const Button = ({ variant, children }: Props) => {
+export const Button = ({ variant, children, styles = "" }: Props) => {
+  console.log("file: Button.tsx ~ line 11 ~ Button ~ className", styles);
   let style = "bg-black hover:bg-indigo-700";
   let textStyle = "text-white text-base font-medium";
 
@@ -24,7 +26,7 @@ export const Button = ({ variant, children }: Props) => {
 
   const box =
     "inline-flex items-center px-10 py-3 border border-transparent rounded-xl shadow-sm";
-  const classNames = `${box} ${style}`;
+  const classNames = `${styles} ${box} ${style}`;
 
   return (
     <Pressable className={classNames}>
