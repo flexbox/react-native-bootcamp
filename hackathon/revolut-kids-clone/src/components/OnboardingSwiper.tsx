@@ -1,6 +1,7 @@
 import { View } from "react-native";
 import React from "react";
 import Swiper from "react-native-swiper";
+
 import { Text } from "./Text";
 
 type Props = {

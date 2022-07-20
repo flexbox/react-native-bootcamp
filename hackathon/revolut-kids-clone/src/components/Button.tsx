@@ -1,5 +1,6 @@
-import { View, Text, Pressable } from "react-native";
-import React, { ReactNode } from "react";
+import { Text, Pressable } from "react-native";
+import type { ReactNode } from "react";
+import React from "react";
 
 type Props = {
   variant: "primary" | "secondary";

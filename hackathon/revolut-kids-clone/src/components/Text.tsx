@@ -4,10 +4,11 @@ import React from "react";
 type Props = {
   variant?: "h1" | "h2" | "s1" | "p1" | "p2";
   style?: string;
+  children: React.ReactNode;
 };
 
 export const Text = ({ variant, style, children }: Props) => {
-  let textStyle = "text-base font-medium";
+  const textStyle = "text-base font-medium";
   let textSize = "text-base";
 
   switch (variant) {
