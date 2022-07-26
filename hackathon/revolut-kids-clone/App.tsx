@@ -1,32 +1,7 @@
-import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
-
-import { Button } from "./src/components/Button";
-import { Row } from "./src/components/Layout";
-import { OnboardingSwiper } from "./src/components/OnboardingSwiper";
+import { OnboardingScreen } from "./src/screens/OnboardingScreen";
 
 function App() {
-  return (
-    <View className="items-center justify-center bg-sky-400">
-      <StatusBar style="auto" />
-      <Row containerStyle="justify-around w-full py-4">
-        <OnboardingSwiper>
-          <View classNames="absolute bottom-0">
-            <View className="mb-12 mx-6">
-              <Row>
-                <Button variant="primary" styles="flex-1 mr-2">
-                  Log in
-                </Button>
-                <Button variant="secondary" styles="flex-1 ml-2">
-                  Sign up
-                </Button>
-              </Row>
-            </View>
-          </View>
-        </OnboardingSwiper>
-      </Row>
-    </View>
-  );
+  return <OnboardingScreen />;
 }
 
 // eslint-disable-next-line import/no-default-export
