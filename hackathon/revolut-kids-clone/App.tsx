@@ -1,7 +1,7 @@
-import { OnboardingScreen } from "./src/screens/OnboardingScreen";
+import { Navigator } from "./src/navigation/Navigator";
 
 function App() {
-  return <OnboardingScreen />;
+  return <Navigator />;
 }
 
 // eslint-disable-next-line import/no-default-export

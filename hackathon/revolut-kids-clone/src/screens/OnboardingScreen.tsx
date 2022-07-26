@@ -11,7 +11,7 @@ export const OnboardingScreen = () => {
       <View className="items-center justify-center bg-sky-400">
         <Row containerStyle="justify-around w-full py-4">
           <OnboardingSwiper>
-            <View className="absolute bottom-0">
+            <View className="absolute bottom-0 w-full">
               <View className="mb-12 mx-6">
                 <Row>
                   <Button variant="primary" styles="flex-1 mr-2">
