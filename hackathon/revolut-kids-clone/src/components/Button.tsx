@@ -1,14 +1,15 @@
+import type { PressableProps } from "react-native";
 import { Text, Pressable } from "react-native";
 import type { ReactNode } from "react";
 import React from "react";
 
-type Props = {
-  variant: "primary" | "secondary";
+interface Props extends PressableProps {
+  variant?: "primary" | "secondary" | "ghost";
   styles?: string;
   children: ReactNode;
-};
+}
 
-export const Button = ({ variant, children, styles = "" }: Props) => {
+export const Button = ({ variant, children, styles = "", ...props }: Props) => {
   let style = "bg-black hover:bg-indigo-700";
   let textStyle = "text-white text-base font-medium";
 
@@ -29,7 +30,7 @@ export const Button = ({ variant, children, styles = "" }: Props) => {
   const classNames = `${styles} ${box} ${style}`;
 
   return (
-    <Pressable className={classNames}>
+    <Pressable className={classNames} {...props}>
       <Text className={textStyle}>{children}</Text>
     </Pressable>
   );
