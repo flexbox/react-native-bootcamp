@@ -3,7 +3,7 @@
 
 ## 📡 What you will learn
 
-- Cconfiguring development and production variants in a managed project
+- Configuring development and production variants in a managed project
 
 ## 👾 Before we start the exercise
 

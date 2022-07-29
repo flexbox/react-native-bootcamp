@@ -36,6 +36,8 @@ eas init
 ✔ Linked app.json to project with ID 012aaaa3-4ce5-4bae-9f4d-2f842489f07a
 ```
 
+After finishing this configuration. You will get a new `eas.json` file in the root directory of your current project.
+
 ### Build
 
 Create [your first build](https://docs.expo.dev/build/setup/)
