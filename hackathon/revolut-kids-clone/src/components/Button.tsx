@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import React from "react";
 
 interface Props extends PressableProps {
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "dark" | "light" | "filled" | "outline" | "ghost";
   styles?: string;
   children: ReactNode;
 }
