@@ -1,5 +1,4 @@
 import { Navigator as App } from "./src/navigation/Navigator";
-
 import StorybookUIRoot from "./storybook";
 
 // Should we show storybook instead of our app?
