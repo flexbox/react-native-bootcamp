@@ -8,6 +8,11 @@ storiesOf("Button", module)
   .addDecorator((fn) => <>{fn()}</>)
   .add("Button", () => (
     <View className="p-4">
+      <Button>No variant</Button>
+    </View>
+  ))
+  .add("Variants", () => (
+    <View className="p-4">
       <Button variant="dark" styles="mb-4">
         Dark
       </Button>
