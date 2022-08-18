@@ -1,5 +1,5 @@
 import type { PressableProps } from "react-native";
-import { Text, Pressable } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import type { ReactNode } from "react";
 import React from "react";
 
@@ -37,10 +37,8 @@ export const Button = ({
       textColorVariant = "text-blue-500";
       break;
     case "light":
-      style = "bg-white hover:bg-indigo-700";
-      textStyle = "text-black text-base font-medium";
-      break;
-    default:
+      style = "bg-white";
+      textStyle = "text-black";
       break;
   }
 
@@ -49,18 +47,38 @@ export const Button = ({
   const classNames = `${styles} ${box} ${style}`;
   const textClassNames = `${textStyle} ${textColorVariant}`;
 
-  // TODO: add variant styles when pressed
-  // const activeClassNames = "bg-red-300";
-
   return (
-    <Pressable className={classNames} {...props}>
-      {/* {({ pressed }) => (
-        <View className={pressed && activeClassNames}>
-          <Text className={textClassNames}>{children}</Text>
-        </View>
-      )} */}
+    <Pressable {...props}>
+      {({ pressed }) => {
+        let activeClassNames = "";
+        if (pressed) {
+          switch (variant) {
+            case "dark":
+              activeClassNames = "bg-neutral-700";
+              break;
+            case "light":
+              activeClassNames = "bg-neutral-100";
+              break;
+            case "filled":
+              activeClassNames = "bg-blue-600 hover:bg-blue-700";
+              break;
+            case "outline":
+              activeClassNames = "bg-blue-200 hover:bg-blue-700";
+              break;
+            case "ghost":
+              activeClassNames = "opacity-3";
+              break;
+          }
+        }
 
-      <Text className={textClassNames}>{children}</Text>
+        const pressedClassNames = `${classNames} ${activeClassNames}`;
+
+        return (
+          <View className={pressedClassNames}>
+            <Text className={textClassNames}>{children}</Text>
+          </View>
+        );
+      }}
     </Pressable>
   );
 };
