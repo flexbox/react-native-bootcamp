@@ -4,6 +4,8 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
 import { Button } from "./Button";
+import { Icon } from "./Icon";
+import { Row } from "./Layout";
 
 type Props = {
   children: React.ReactNode;
@@ -17,9 +19,11 @@ export const ScreenContainer = ({ children, withGoBack }: Props) => {
     <View>
       <StatusBar style="auto" />
       {withGoBack && (
-        <View className="mt-8 px-5">
-          <Button onPress={() => navigation.goBack()}>⬅️</Button>
-        </View>
+        <Row containerStyle="mt-8 flex-start">
+          <Button variant="ghost" onPress={() => navigation.goBack()}>
+            <Icon name="chevron-left" />
+          </Button>
+        </Row>
       )}
       {children}
     </View>

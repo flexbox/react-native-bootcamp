@@ -19,20 +19,23 @@ export const OnboardingScreen = ({ navigation }) => {
             <View className="absolute bottom-0 w-full">
               <View className="mb-12 mx-6">
                 <Row>
-                  <Button
-                    variant="primary"
-                    styles="flex-1 mr-2"
-                    onPress={() => navigateTo(Routes.LOGIN_SCREEN)}
-                  >
-                    Log in
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    styles="flex-1 ml-2"
-                    onPress={() => navigateTo(Routes.SIGN_IN_SCREEN)}
-                  >
-                    Sign up
-                  </Button>
+                  <View className="basis-1/2">
+                    <Button
+                      variant="dark"
+                      styles=""
+                      onPress={() => navigateTo(Routes.LOGIN_SCREEN)}
+                    >
+                      Log in
+                    </Button>
+                  </View>
+                  <View className="basis-1/2">
+                    <Button
+                      variant="light"
+                      onPress={() => navigateTo(Routes.SIGN_IN_SCREEN)}
+                    >
+                      Sign up
+                    </Button>
+                  </View>
                 </Row>
               </View>
             </View>

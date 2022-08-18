@@ -10,7 +10,7 @@ type Props = {
 
 const FEATURES_LIST = [
   {
-    title: "Goodbye Cash, hello Card!",
+    title: "Goodbye Cash, Hello Card!",
     description:
       "Create your own account and geet Revolut Junior card. Choose from a set of designs and make it yours!",
     icon: "🎒",

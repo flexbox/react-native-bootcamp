@@ -7,5 +7,9 @@ type ButtonProps = {
 };
 
 export const Row = ({ children, containerStyle }: ButtonProps) => {
-  return <View className={`${containerStyle} flex-row`}>{children}</View>;
+  return (
+    <View className={`${containerStyle} flex flex-row items-center space-x-2`}>
+      {children}
+    </View>
+  );
 };

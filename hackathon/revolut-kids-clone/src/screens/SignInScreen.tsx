@@ -6,7 +6,7 @@ import { ScreenContainer } from "../components/ScreenContainer";
 export const SignInScreen = () => {
   return (
     <ScreenContainer withGoBack>
-      <Text>SignInScr wefwewefeen</Text>
+      <Text>SignInScreen</Text>
     </ScreenContainer>
   );
 };
