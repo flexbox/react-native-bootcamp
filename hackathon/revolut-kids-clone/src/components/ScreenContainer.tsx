@@ -9,14 +9,15 @@ import { Row } from "./Layout";
 
 type Props = {
   children: React.ReactNode;
+  styles?: string;
   withGoBack?: boolean;
 };
 
-export const ScreenContainer = ({ children, withGoBack }: Props) => {
+export const ScreenContainer = ({ children, withGoBack, styles }: Props) => {
   const navigation = useNavigation();
 
   return (
-    <View>
+    <View className={styles}>
       <StatusBar style="auto" />
       {withGoBack && (
         <Row containerStyle="mt-8 flex-start">
