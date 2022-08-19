@@ -3,8 +3,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { OnboardingScreen } from "../screens/OnboardingScreen";
+import { SignUpScreen } from "../screens/SignUpScreen";
 import { SignInScreen } from "../screens/SignInScreen";
-import { LoginScreen } from "../screens/LoginScreen";
+import { CameraScreen } from "../screens/CameraScreen";
 
 import { Routes } from "./routes";
 
@@ -21,8 +22,9 @@ export const Navigator = () => {
           name={Routes.ONBOARDING_SCREEN}
           component={OnboardingScreen}
         />
-        <Stack.Screen name={Routes.LOGIN_SCREEN} component={LoginScreen} />
-        <Stack.Screen name={Routes.SIGN_IN_SCREEN} component={SignInScreen} />
+        <Stack.Screen name={Routes.LOGIN_SCREEN} component={SignInScreen} />
+        <Stack.Screen name={Routes.SIGN_IN_SCREEN} component={SignUpScreen} />
+        <Stack.Screen name={Routes.CAMERA_SCREEN} component={CameraScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
