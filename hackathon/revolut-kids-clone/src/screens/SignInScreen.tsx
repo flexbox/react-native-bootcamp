@@ -6,8 +6,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "../components/Button";
 import { ScreenContainer } from "../components/ScreenContainer";
 import { Text } from "../components/Text";
+import { Routes } from "../navigation/routes";
 
 export const SignInScreen = ({ navigation }) => {
+  const handlePressCamera = () => {
+    navigation.navigate(Routes.CAMERA_SCREEN);
+  };
+
   return (
     <ScreenContainer withGoBack>
       <SafeAreaView edges={["bottom", "top"]}>
@@ -30,7 +35,9 @@ export const SignInScreen = ({ navigation }) => {
             />
           </View>
           <View className="m-auto justify-bottom">
-            <Button styles="mb-4">Start camera</Button>
+            <Button styles="mb-4" onPress={handlePressCamera}>
+              Start camera
+            </Button>
             <Button variant="outline">Log in with mobile number</Button>
           </View>
         </View>
