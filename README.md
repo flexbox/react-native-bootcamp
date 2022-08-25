@@ -32,7 +32,7 @@ I have chosen two pedagogical tenets while building this curriculum: ensuring th
 
 ## Each lesson includes
 
-- pre-lecture 
+- pre-lecture
 - written lesson
 - step-by-step guides on how to build the project
 - a challenge
@@ -48,10 +48,14 @@ A list of projects done during the hackathon day:
 1. [nerd-fm](./hackathon/nerd-fm/) _with `expo-av` to play music_
 1. [and more](./hackathon/)
 
-## Meet the team
+## Community
 
-I am a freelance react-native developer, and I share a lot fo [content about the react ecosystem](https://twitter.com/intent/follow?screen_name=flexbox_).
+💬 Join us on [Slack](https://join.slack.com/t/infiniteredcommunity/shared_invite/zt-1f137np4h-zPTq_CbaRFUOR_glUFs2UA) to discuss.
+
+⭐️ Help us out by [starring on GitHub](https://github.com/flexbox/react-native-bootcamp), filing bug reports in [issues](https://github.com/flexbox/react-native-bootcamp/issues) with questions or proposals.
+
+👥 Follow `flexbox_` on [Twitter](https://twitter.com/intent/follow?screen_name=flexbox_) for more updates.
 
 ## Was this helpful?
 
-☕️ [Leaving a tip helps me a lot!](https://www.buymeacoffee.com/flexbox)
+☕️ [Leaving a tip helps me a lot!](https://github.com/sponsors/flexbox?frequency=one-time&sponsor=flexbox)
