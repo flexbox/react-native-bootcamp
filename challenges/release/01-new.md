@@ -17,6 +17,11 @@ Identify the differents areas of the Expo Ecosystem:
 
 Visit [https://expo.dev](https://expo.dev) and Sign up to start using EAS. The free plan already includes everything you need if you are an indie hacker working on your own apps.
 
+You need to have an account for
+
+- iOS on [App Store Connect](https://appstoreconnect.apple.com/) _$30 one time payment_
+- Android on [Google Play Store](https://play.google.com/console/developers) _$99 per year_
+
 ## 👨‍🚀 Exercise 1
 
 ### Setup
@@ -36,16 +41,17 @@ eas init
 ✔ Linked app.json to project with ID 012aaaa3-4ce5-4bae-9f4d-2f842489f07a
 ```
 
-After finishing this configuration. You will get a new `eas.json` file in the root directory of your current project.
-
 ### Build
 
 Create [your first build](https://docs.expo.dev/build/setup/)
 
-```
+```console
 eas build:configure
 ```
 
+![EAS Build configuration Done](https://raw.githubusercontent.com/flexbox/react-native-workshop/main/challenges/release/eas-build-configure.png)
+
+After finishing this configuration. You will get a new `eas.json` file in the root directory of your current project.
 
 ```console
 eas build
@@ -56,7 +62,7 @@ eas build
 
 ⌛ 30 min
 
-On your Expo account, you should have someting like this:
+On your [Expo account](https://expo.dev), you should have someting like this:
 
 ![Expo internal distribution build done](https://raw.githubusercontent.com/flexbox/react-native-workshop/main/challenges/release/ios-build-done.png)
 
