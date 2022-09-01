@@ -36,16 +36,17 @@ eas init
 ✔ Linked app.json to project with ID 012aaaa3-4ce5-4bae-9f4d-2f842489f07a
 ```
 
-After finishing this configuration. You will get a new `eas.json` file in the root directory of your current project.
-
 ### Build
 
 Create [your first build](https://docs.expo.dev/build/setup/)
 
-```
+```console
 eas build:configure
 ```
 
+![EAS Build configuration Done](https://raw.githubusercontent.com/flexbox/react-native-workshop/main/challenges/release/eas-build-configure.png)
+
+After finishing this configuration. You will get a new `eas.json` file in the root directory of your current project.
 
 ```console
 eas build
@@ -56,7 +57,7 @@ eas build
 
 ⌛ 30 min
 
-On your Expo account, you should have someting like this:
+On your [Expo account](https://expo.dev), you should have someting like this:
 
 ![Expo internal distribution build done](https://raw.githubusercontent.com/flexbox/react-native-workshop/main/challenges/release/ios-build-done.png)
 
