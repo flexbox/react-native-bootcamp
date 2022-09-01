@@ -17,6 +17,11 @@ Identify the differents areas of the Expo Ecosystem:
 
 Visit [https://expo.dev](https://expo.dev) and Sign up to start using EAS. The free plan already includes everything you need if you are an indie hacker working on your own apps.
 
+You need to have an account for
+
+- iOS on [App Store Connect](https://appstoreconnect.apple.com/) _$30 one time payment_
+- Android on [Google Play Store](https://play.google.com/console/developers) _$99 per year_
+
 ## 👨‍🚀 Exercise 1
 
 ### Setup
