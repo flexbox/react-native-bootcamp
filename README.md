@@ -16,11 +16,11 @@ My project-based pedagogy allows you to learn while building, a proven way for n
 
 ## Getting Started
 
-**Students**, to follow this bootcamp, you need to **[complete the onboarding form](https://davidl.fr/onboarding-bootcamp)**.
+**Students**, to follow this bootcamp, you need to **[complete the onboarding form](https://davidl.fr/bootcamp)**.
 
 Challenge after challenge, you are going to build this mobile appliction to buy Star Wars space ships using `TypeScript`, `expo`, `react-native` and `react-query`.
 
-> To support my work, I recommend downloading my [React Native Book about the ecosystem](https://davidl.fr/road-to-react-native).
+> To support my work, I recommend downloading my [React Native Book about the ecosystem](https://gum.co/road-react-native).
 
 <img src="https://github.com/flexbox/react-native-bootcamp/raw/main/hackathon/spacecraft/spacecraft-preview.gif" width="50%" height="50%">
 
@@ -32,9 +32,9 @@ I have chosen two pedagogical tenets while building this curriculum: ensuring th
 
 ## Each lesson includes
 
-- pre-lecture
+- lecture
 - written lesson
-- step-by-step guides on how to build the project
+- step-by-step guides
 - a challenge
 - bonus challenges
 
@@ -44,7 +44,7 @@ A list of projects done during the hackathon day:
 
 1. [spacecraft](./hackathon/spacecraft/) _with `react-query`_
 1. [newsfeed](./hackathon/newsfeed/) _with getstream API_
-1. [onboarding](./hackathon/onboarding/) _with magic.link SDK_
+1. [jimmy-punchline](./hackathon/jimmy-punchline/) _with genius API_
 1. [nerd-fm](./hackathon/nerd-fm/) _with `expo-av` to play music_
 1. [and more](./hackathon/)
 
