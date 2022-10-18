@@ -1,6 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NativeWindStyleSheet } from "nativewind";
 
 import { OnboardingScreen } from "../screens/OnboardingScreen";
 import { SignUpScreen } from "../screens/SignUpScreen";
@@ -10,6 +11,10 @@ import { CameraScreen } from "../screens/CameraScreen";
 import { Routes } from "./routes";
 
 const Stack = createNativeStackNavigator();
+
+NativeWindStyleSheet.setOutput({
+  default: "native",
+});
 
 export const Navigator = () => {
   return (
