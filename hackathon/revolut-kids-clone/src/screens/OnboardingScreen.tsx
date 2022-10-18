@@ -15,7 +15,7 @@ export const OnboardingScreen = ({ navigation }) => {
     <ScreenContainer>
       <View className="items-center justify-center bg-sky-400">
         <Row containerStyle="justify-around w-full py-4">
-          <OnboardingSwiper>
+          {/* <OnboardingSwiper>
             <View className="absolute bottom-0 w-full">
               <View className="mb-12 mx-6">
                 <Row>
@@ -39,7 +39,7 @@ export const OnboardingScreen = ({ navigation }) => {
                 </Row>
               </View>
             </View>
-          </OnboardingSwiper>
+          </OnboardingSwiper> */}
         </Row>
       </View>
     </ScreenContainer>
