@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useQuery } from '@tanstack/react-query';
+import { useQuery } from "@tanstack/react-query";
 
 export const usePilot = () => {
   const [page, setPage] = useState(1);

@@ -1,4 +1,4 @@
-import { useQueries } from '@tanstack/react-query';
+import { useQueries } from "@tanstack/react-query";
 
 export const fetchStarships = async () => {
   const response = await fetch("https://swapi.py4e.com/api/starships/");
@@ -13,14 +13,14 @@ const fetchStarshipById = async (url: string) => {
 };
 
 export const useStarships = (starships: string[]) => {
-  const userQueries = useQueries(
-    starships.map((starship, index) => {
+  const userQueries = useQueries({
+    queries: starships.map((starship, index) => {
       return {
         queryKey: ["starship", `starship-${index}`],
         queryFn: () => fetchStarshipById(starship),
       };
-    })
-  );
+    }),
+  });
 
   return userQueries;
 };
