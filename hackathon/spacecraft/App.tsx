@@ -1,6 +1,5 @@
-/* eslint-disable import/no-default-export */
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
-import { QueryClient, QueryClientProvider } from "react-query";
 import { NetworkProvider } from "react-native-offline";
 
 import { AuthenticationProvider } from "./src/context/Authentication";
@@ -20,4 +19,5 @@ const App = () => {
   );
 };
 
+// eslint-disable-next-line import/no-default-export
 export default App;

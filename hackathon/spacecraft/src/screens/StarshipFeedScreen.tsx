@@ -1,5 +1,5 @@
 import React from "react";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
 
@@ -27,12 +27,12 @@ const renderItem = (props: RenderItemProps) => {
 };
 
 export const StarshipFeedScreen = () => {
-  const { isLoading, isError, data, refetch } = useQuery(
-    "starships",
+  const { isInitialLoading, isError, data, refetch } = useQuery(
+    ["starships"],
     fetchStarships
   );
 
-  if (isLoading) {
+  if (isInitialLoading) {
     return <ScreenContainer title="Loading…" />;
   }
 
