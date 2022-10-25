@@ -1,5 +1,5 @@
 import React from "react";
-import { useQuery } from "react-query";
+import { useQuery } from '@tanstack/react-query';
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
 

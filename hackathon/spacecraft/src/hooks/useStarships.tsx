@@ -1,4 +1,4 @@
-import { useQueries } from "react-query";
+import { useQueries } from '@tanstack/react-query';
 
 export const fetchStarships = async () => {
   const response = await fetch("https://swapi.py4e.com/api/starships/");
