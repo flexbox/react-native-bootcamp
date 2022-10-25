@@ -14,8 +14,14 @@ export const StarshipLoadableList = ({
   const queryResult = useStarships(starships);
 
   return queryResult.map((result) => {
-    if (result.isLoading) return <Text>Loading…</Text>;
-    if (result.isError) return <Text>Error 😕</Text>;
+    if (result.isInitialLoading) {
+      return <Text>Loading…</Text>;
+    }
+
+    if (result.isError) {
+      return <Text>Error 😕</Text>;
+    }
+
     return (
       <View style={styles.container}>
         <Subheading>{result.data.name}</Subheading>
