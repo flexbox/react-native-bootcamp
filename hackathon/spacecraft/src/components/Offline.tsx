@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { ActivityIndicator, Colors } from "react-native-paper";
-import { useIsConnected } from 'react-native-offline';
+import { useIsConnected } from "react-native-offline";
 
 export const Offline = () => {
   const isConnected = useIsConnected();

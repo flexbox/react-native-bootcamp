@@ -16,7 +16,7 @@ interface StarshipDetailsScreenParams {
   navigate: any;
 }
 
-const StarshipCard = ({ ship }: StarshipCardProps) => {
+export const StarshipCard = ({ ship }: StarshipCardProps) => {
   const title = ship.name;
   const price = ship.cost_in_credits;
   const { manufacturer } = ship;
@@ -57,5 +57,3 @@ const styles = StyleSheet.create({
     marginBottom: 32,
   },
 });
-
-export default StarshipCard;

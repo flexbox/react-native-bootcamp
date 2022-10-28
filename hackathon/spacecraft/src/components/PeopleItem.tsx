@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { PeopleProps } from "api/types";
+import type { PeopleProps } from "api/types";
 import React from "react";
 import { List, Colors } from "react-native-paper";
 
