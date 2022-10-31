@@ -1,6 +1,5 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { Colors } from "react-native-paper";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -61,9 +60,9 @@ const PilotNavigator = () => {
 export const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
-      activeColor={Colors.purple500}
-      inactiveColor={Colors.grey300}
-      barStyle={{ backgroundColor: Colors.white }}
+      activeColor={"purple"}
+      inactiveColor={"gray"}
+      barStyle={{ backgroundColor: "white" }}
     >
       <Tab.Screen
         name={Routes.STARSHIP_STACK}

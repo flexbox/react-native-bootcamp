@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
-import { Colors, Headline } from "react-native-paper";
+import { Headline } from "react-native-paper";
 
 // Import <Offline /> component
 
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 24,
     paddingHorizontal: 24,
-    backgroundColor: Colors.grey200,
+    // backgroundColor: Colors.grey200,
     marginTop: 36,
   },
   headerText: {

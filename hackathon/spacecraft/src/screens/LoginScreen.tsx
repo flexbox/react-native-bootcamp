@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
-import { Button, Colors, TextInput } from "react-native-paper";
+import { Button, TextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
@@ -14,7 +14,7 @@ export const LoginScreen = () => {
   const [password, setPassword] = useState("");
   const [isVisble, setIsVisible] = useState(true);
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   const { setUser } = useAuthentication();
   function handleLogin() {
     setUser(true);
@@ -45,7 +45,7 @@ export const LoginScreen = () => {
           right={
             <TextInput.Icon
               onPress={toggleSecureIcon}
-              name={isVisble ? "eye-off" : "eye"}
+              icon={isVisble ? "eye-off" : "eye"}
             />
           }
         />
@@ -73,11 +73,10 @@ const styles = StyleSheet.create({
   submitButton: {
     marginVertical: 32,
     marginHorizontal: 16,
-    backgroundColor: Colors.purple500,
   },
   tocText: {
     textAlign: "center",
     fontSize: 14,
-    color: Colors.grey500,
+    color: "#9CA3AF",
   },
 });

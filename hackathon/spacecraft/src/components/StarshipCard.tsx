@@ -54,6 +54,7 @@ export const StarshipCard = ({ ship }: StarshipCardProps) => {
 
 const styles = StyleSheet.create({
   containerCard: {
+    marginHorizontal: 24,
     marginBottom: 32,
   },
 });

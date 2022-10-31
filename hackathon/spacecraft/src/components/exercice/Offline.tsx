@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { ActivityIndicator, Colors } from "react-native-paper";
+import { ActivityIndicator } from "react-native-paper";
 
 export const Offline = () => {
   // Add `useIsConnected()` hook
@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
     top: 55,
     width: "90%",
     borderRadius: 10,
-    backgroundColor: Colors.red100,
+    // backgroundColor: Colors.red100,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
   message: {
-    color: Colors.red800,
+    // color: Colors.red800,
   },
 });

@@ -10,7 +10,6 @@ import {
   Alert,
 } from "react-native";
 import {
-  Colors,
   Headline,
   Subheading,
   Chip,
@@ -65,7 +64,7 @@ export const StarshipDetailsScreen = ({
                 onPress={handleClose}
                 style={styles.closeButton}
               >
-                <FontAwesome5 name="times" size={22} color={Colors.black} />
+                <FontAwesome5 name="times" size={22} color={"black"} />
               </TouchableOpacity>
             </View>
             <View style={[styles.closeContainer, styles.right]}>
@@ -126,7 +125,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     paddingTop: 32,
-    backgroundColor: Colors.black,
+    backgroundColor: "black",
   },
   closeContainer: {
     position: "absolute",

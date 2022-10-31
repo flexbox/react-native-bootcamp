@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import type { PeopleProps } from "api/types";
 import React from "react";
-import { List, Colors } from "react-native-paper";
+import { List } from "react-native-paper";
 
 import { Routes } from "~/navigation/Routes";
 
@@ -12,11 +12,11 @@ interface PeopleItemProps {
 const GengerIcon = ({ gender }: { gender: string }) => {
   switch (gender) {
     case "male":
-      return <List.Icon icon="human-male" color={Colors.blue300} />;
+      return <List.Icon icon="human-male" color={"blue"} />;
     case "female":
-      return <List.Icon icon="human-female" color={Colors.pink300} />;
+      return <List.Icon icon="human-female" color={"pink"} />;
     default:
-      return <List.Icon icon="robot" color={Colors.grey500} />;
+      return <List.Icon icon="robot" color={"gray"} />;
   }
 };
 

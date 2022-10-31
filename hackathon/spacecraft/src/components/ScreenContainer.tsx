@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
-import { Colors, Headline } from "react-native-paper";
+import { Text } from "react-native-paper";
 
 import { Offline } from "~/components/Offline";
 
@@ -18,24 +18,26 @@ export const ScreenContainer = ({
   withFooter = false,
   withScrollView = false,
 }: ScreenContainerProps) => {
-  return withScrollView ? (
-    <ScrollView style={styles.container}>
-      <Headline style={styles.headerText}>{title}</Headline>
+  if (withScrollView) {
+    return (
+      <ScrollView style={styles.container}>
+        <Text variant="headlineMedium" style={styles.headerText}>
+          {title}
+        </Text>
+        {children}
+        <Offline />
+        {withFooter && <View style={styles.footer} />}
+      </ScrollView>
+    );
+  }
 
-      {children}
-
-      <Offline />
-
-      {withFooter && <View style={styles.footer} />}
-    </ScrollView>
-  ) : (
+  return (
     <View style={styles.container}>
-      <Headline style={styles.headerText}>{title}</Headline>
-
+      <Text variant="headlineMedium" style={styles.headerText}>
+        {title}
+      </Text>
       {children}
-
       <Offline />
-
       {withFooter && <View style={styles.footer} />}
     </View>
   );
@@ -44,11 +46,11 @@ export const ScreenContainer = ({
 const styles = StyleSheet.create({
   container: {
     paddingTop: 24,
-    paddingHorizontal: 24,
-    backgroundColor: Colors.grey200,
+    // backgroundColor: Colors.grey200,
     marginTop: 36,
   },
   headerText: {
+    paddingHorizontal: 24,
     fontWeight: "bold",
     marginBottom: 20,
   },

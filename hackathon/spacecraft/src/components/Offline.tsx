@@ -11,7 +11,7 @@ export const Offline = () => {
       {!isConnected && (
         <View style={styles.container}>
           <Text style={styles.message}>Offline, reconnection in progress…</Text>
-          <ActivityIndicator color={Colors.red800} />
+          {/* <ActivityIndicator color={Colors.red800} /> */}
         </View>
       )}
     </>
@@ -26,12 +26,12 @@ const styles = StyleSheet.create({
     top: 55,
     width: "90%",
     borderRadius: 10,
-    backgroundColor: Colors.red100,
+    // backgroundColor: Colors.red100,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
   message: {
-    color: Colors.red800,
+    color: "red",
   },
 });
