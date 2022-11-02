@@ -56,7 +56,7 @@ export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
       </DataTable>
       {starships.length > 0 && (
         <View style={styles.body}>
-          <Text variant="headlineMedium">Starships</Text>
+          <Text variant="headlineMedium">Able to pilot</Text>
           <StarshipLoadableList starships={starships} />
         </View>
       )}

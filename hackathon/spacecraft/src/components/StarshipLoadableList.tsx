@@ -14,7 +14,7 @@ export const StarshipLoadableList = ({
   const queryResult = useStarships(starships);
 
   return queryResult.map((result) => {
-    if (result.isInitialLoading) {
+    if (result.isInitialLoading || result.isLoading) {
       return <Text variant="bodyMedium">Loading…</Text>;
     }
 
@@ -23,7 +23,7 @@ export const StarshipLoadableList = ({
     }
 
     return (
-      <View style={styles.container}>
+      <View style={styles.container} key={result.data.id}>
         <Text variant="titleMedium">{result.data.name}</Text>
         <Text variant="bodyMedium">{result.data.model}</Text>
       </View>
