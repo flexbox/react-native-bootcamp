@@ -1,7 +1,7 @@
 import type { PeopleProps } from "api/types";
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { DataTable, Headline } from "react-native-paper";
+import { DataTable, Text } from "react-native-paper";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
 import { StarshipLoadableList } from "~/components/StarshipLoadableList";
@@ -56,7 +56,7 @@ export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
       </DataTable>
       {starships.length > 0 && (
         <View style={styles.body}>
-          <Headline>Starships</Headline>
+          <Text variant="headlineMedium">Starships</Text>
           <StarshipLoadableList starships={starships} />
         </View>
       )}

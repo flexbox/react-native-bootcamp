@@ -46,7 +46,6 @@ export const ScreenContainer = ({
 const styles = StyleSheet.create({
   container: {
     paddingTop: 24,
-    // backgroundColor: Colors.grey200,
     marginTop: 36,
   },
   headerText: {
@@ -55,6 +54,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   footer: {
-    paddingBottom: 256,
+    height: 256,
   },
 });

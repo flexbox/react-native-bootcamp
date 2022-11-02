@@ -9,14 +9,7 @@ import {
   ScrollView,
   Alert,
 } from "react-native";
-import {
-  Headline,
-  Subheading,
-  Chip,
-  DataTable,
-  List,
-  FAB,
-} from "react-native-paper";
+import { Text, Chip, DataTable, List, FAB } from "react-native-paper";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
@@ -73,8 +66,8 @@ export const StarshipDetailsScreen = ({
           </View>
 
           <View style={styles.body}>
-            <Headline>{name}</Headline>
-            <Subheading>{manufacturer}</Subheading>
+            <Text variant="headlineMedium">{name}</Text>
+            <Text variant="titleMedium">{manufacturer}</Text>
           </View>
 
           <List.Item
@@ -149,7 +142,7 @@ const styles = StyleSheet.create({
   },
   fab: {
     position: "absolute",
-    right: 24,
-    bottom: 24,
+    right: 32,
+    bottom: 32,
   },
 });

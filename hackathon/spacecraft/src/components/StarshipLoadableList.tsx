@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Subheading, Text } from "react-native-paper";
+import { Text } from "react-native-paper";
 
 import { useStarships } from "~/hooks/useStarships";
 
@@ -15,17 +15,17 @@ export const StarshipLoadableList = ({
 
   return queryResult.map((result) => {
     if (result.isInitialLoading) {
-      return <Text>Loading…</Text>;
+      return <Text variant="bodyMedium">Loading…</Text>;
     }
 
     if (result.isError) {
-      return <Text>Error 😕</Text>;
+      return <Text variant="bodyMedium">Error 😕</Text>;
     }
 
     return (
       <View style={styles.container}>
-        <Subheading>{result.data.name}</Subheading>
-        <Text>{result.data.model}</Text>
+        <Text variant="titleMedium">{result.data.name}</Text>
+        <Text variant="bodyMedium">{result.data.model}</Text>
       </View>
     );
   });
