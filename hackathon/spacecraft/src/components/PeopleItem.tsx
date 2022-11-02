@@ -12,18 +12,18 @@ interface PeopleItemProps {
 const GengerIcon = ({ gender }: { gender: string }) => {
   switch (gender) {
     case "male":
-      return <List.Icon icon="human-male" color={"blue"} />;
+      return <List.Icon icon="human-male" color="#3B82F6" />;
     case "female":
-      return <List.Icon icon="human-female" color={"pink"} />;
+      return <List.Icon icon="human-female" color="#EC4899" />;
     default:
-      return <List.Icon icon="robot" color={"gray"} />;
+      return <List.Icon icon="robot" color="#9CA3AF" />;
   }
 };
 
 export const PeopleItem = ({ people }: PeopleItemProps) => {
   const { gender, starships } = people;
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   const navigateToDetails = () => {
     navigation.navigate(Routes.PILOT_DETAILS_SCREEN, { people });
   };
