@@ -13,7 +13,7 @@ export const Header = ({ title }: HeaderProps) => {
   return (
     <View
       style={[
-        styles.header,
+        styles.container,
         { backgroundColor: theme.colors.elevation.level5 },
       ]}
     >
@@ -25,7 +25,7 @@ export const Header = ({ title }: HeaderProps) => {
 };
 
 const styles = StyleSheet.create({
-  header: {
+  container: {
     paddingTop: Constants.statusBarHeight,
     alignItems: "center",
     justifyContent: "center",

@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
     top: 55,
     width: "90%",
     borderRadius: 10,
-    // backgroundColor: Colors.red100,
+    backgroundColor: "#FEE2E2",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
   message: {
-    // color: Colors.red800,
+    color: "#991B1B",
   },
 });
