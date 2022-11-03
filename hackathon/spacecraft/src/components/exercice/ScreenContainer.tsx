@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
-import { Colors, Headline } from "react-native-paper";
+import { Text } from "react-native-paper";
 
 // Import <Offline /> component
 
@@ -19,7 +19,9 @@ export const ScreenContainer = ({
   return (
     <ScrollView style={styles.container} nestedScrollEnabled={true}>
       {/* <Offline /> */}
-      <Headline style={styles.headerText}>{title}</Headline>
+      <Text variant="headlineMedium" style={styles.headerText}>
+        {title}
+      </Text>
 
       {children}
       {withFooter && <View style={styles.footer} />}
@@ -31,7 +33,6 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 24,
     paddingHorizontal: 24,
-    backgroundColor: Colors.grey200,
     marginTop: 36,
   },
   headerText: {
