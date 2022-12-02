@@ -1,13 +1,6 @@
 import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import React from "react";
-import {
-  Button,
-  Icon,
-  Input,
-  Layout,
-  Text,
-  useTheme,
-} from "@ui-kitten/components";
+import { Button, Icon, Input, Text, useTheme } from "@ui-kitten/components";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 interface Props {}
