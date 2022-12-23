@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "class-variance-authority": "^0.4.0",
     "expo": "~47.0.6",
     "expo-status-bar": "~1.4.2",
     "nativewind": "^2.0.11",
