@@ -1,4 +1,3 @@
-import type { FunctionComponent } from "react";
 import React, { createContext, useContext, useState } from "react";
 
 interface AuthenticationContextProps {
@@ -10,7 +9,13 @@ const AuthenticationContext = createContext<AuthenticationContextProps>(
   {} as AuthenticationContextProps
 );
 
-export const AuthenticationProvider: FunctionComponent = ({ children }) => {
+interface AuthenticationProviderProps {
+  children: React.ReactNode;
+}
+
+export const AuthenticationProvider = ({
+  children,
+}: AuthenticationProviderProps) => {
   const [user, setUser] = useState<boolean>(false);
   console.log("file: Authentication.tsx ~ line 19 ~ user", user);
 

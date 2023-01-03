@@ -9,15 +9,7 @@ import {
   ScrollView,
   Alert,
 } from "react-native";
-import {
-  Colors,
-  Headline,
-  Subheading,
-  Chip,
-  DataTable,
-  List,
-  FAB,
-} from "react-native-paper";
+import { Text, Chip, DataTable, List, FAB } from "react-native-paper";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
@@ -65,7 +57,7 @@ export const StarshipDetailsScreen = ({
                 onPress={handleClose}
                 style={styles.closeButton}
               >
-                <FontAwesome5 name="times" size={22} color={Colors.black} />
+                <FontAwesome5 name="times" size={22} color={"black"} />
               </TouchableOpacity>
             </View>
             <View style={[styles.closeContainer, styles.right]}>
@@ -74,8 +66,8 @@ export const StarshipDetailsScreen = ({
           </View>
 
           <View style={styles.body}>
-            <Headline>{name}</Headline>
-            <Subheading>{manufacturer}</Subheading>
+            <Text variant="headlineMedium">{name}</Text>
+            <Text variant="titleMedium">{manufacturer}</Text>
           </View>
 
           <List.Item
@@ -126,7 +118,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     paddingTop: 32,
-    backgroundColor: Colors.black,
+    backgroundColor: "black",
   },
   closeContainer: {
     position: "absolute",
@@ -150,7 +142,7 @@ const styles = StyleSheet.create({
   },
   fab: {
     position: "absolute",
-    right: 24,
-    bottom: 24,
+    right: 32,
+    bottom: 32,
   },
 });

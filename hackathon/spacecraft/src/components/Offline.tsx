@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { ActivityIndicator, Colors } from "react-native-paper";
-import { useIsConnected } from 'react-native-offline';
+import { ActivityIndicator } from "react-native-paper";
+import { useIsConnected } from "react-native-offline";
 
 export const Offline = () => {
   const isConnected = useIsConnected();
@@ -11,7 +11,7 @@ export const Offline = () => {
       {!isConnected && (
         <View style={styles.container}>
           <Text style={styles.message}>Offline, reconnection in progress…</Text>
-          <ActivityIndicator color={Colors.red800} />
+          <ActivityIndicator color="#991B1B" />
         </View>
       )}
     </>
@@ -26,12 +26,12 @@ const styles = StyleSheet.create({
     top: 55,
     width: "90%",
     borderRadius: 10,
-    backgroundColor: Colors.red100,
+    backgroundColor: "#FEE2E2",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
   message: {
-    color: Colors.red800,
+    color: "#991B1B",
   },
 });

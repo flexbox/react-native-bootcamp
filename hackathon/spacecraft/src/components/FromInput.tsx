@@ -1,5 +1,5 @@
 import React from "react";
-import { Platform, View } from "react-native";
+import { View } from "react-native";
 import { TextInput } from "react-native-paper";
 
 interface FormInputProp {
@@ -22,7 +22,7 @@ export const FormInput = ({
       label={label}
       value={value}
       onChangeText={onChangeText}
-      autoComplete={Platform.OS === "web" ? "none" : "off"}
+      autoComplete="off"
     />
   </View>
 );

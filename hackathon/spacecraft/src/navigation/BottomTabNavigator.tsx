@@ -1,8 +1,8 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { Colors } from "react-native-paper";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { useTheme } from "react-native-paper";
 
 import { StarshipFeedScreen } from "../screens/StarshipFeedScreen";
 import { StarshipDetailsScreen } from "../screens/StarshipDetailsScreen";
@@ -59,11 +59,13 @@ const PilotNavigator = () => {
 };
 
 export const BottomTabNavigator = () => {
+  const theme = useTheme();
+
   return (
     <Tab.Navigator
-      activeColor={Colors.purple500}
-      inactiveColor={Colors.grey300}
-      barStyle={{ backgroundColor: Colors.white }}
+      activeColor={theme.colors.primary}
+      inactiveColor={theme.colors.secondary}
+      barStyle={{ backgroundColor: theme.colors.surface }}
     >
       <Tab.Screen
         name={Routes.STARSHIP_STACK}
