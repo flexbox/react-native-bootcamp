@@ -19,11 +19,9 @@ body:
   - type: input
     id: file
     attributes:
-      label: In which file the bug is located ?
+      label: In which file the bug is located?
       description: If the error is not in a file, please write "none"
       placeholder: "src/screens/ExampleScreen.tsx"
-    validations:
-      required: true
 
   - type: textarea
     attributes:
