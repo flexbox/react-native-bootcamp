@@ -11,7 +11,7 @@ export function TermsScreen({ navigation }) {
 
   return (
     <ScrollView>
-      <Appbar.Header style={{ backgroundColor: theme.colors.elevation.level5 }}>
+      <Appbar.Header style={{ backgroundColor: theme.colors.primary }}>
         <Appbar.BackAction onPress={goBack} />
         <Appbar.Content title="Terms and Conditions" />
       </Appbar.Header>

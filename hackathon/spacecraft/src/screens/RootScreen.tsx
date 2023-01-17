@@ -3,13 +3,12 @@ import React from "react";
 import { NetworkProvider } from "react-native-offline";
 import { Provider as PaperProvider } from "react-native-paper";
 
-import StorybookUIRoot from "./storybook";
-import { AuthenticationProvider } from "./src/context/Authentication";
-import { Navigator } from "./src/navigation/Navigator";
+import { AuthenticationProvider } from "../context/Authentication";
+import { Navigator } from "../navigation/Navigator";
 
 const queryClient = new QueryClient();
 
-export const App = () => {
+export const RootScreen = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <PaperProvider>
@@ -22,9 +21,3 @@ export const App = () => {
     </QueryClientProvider>
   );
 };
-
-const SHOW_STORYBOOK = false;
-
-const UI = SHOW_STORYBOOK && __DEV__ ? StorybookUIRoot : App;
-// eslint-disable-next-line import/no-default-export
-export default UI;
