@@ -11,12 +11,6 @@ export function HomeScreen() {
 
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>
-      <YStack space="$4" maw={600}>
-        <H1 ta="center">Welcome to netflax.</H1>
-
-        <Separator />
-      </YStack>
-
       <XStack>
         <Button {...linkProps}>Link to user</Button>
       </XStack>
