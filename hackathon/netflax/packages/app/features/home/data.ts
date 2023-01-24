@@ -1,4 +1,12 @@
-export const movies = [
+export interface Movie {
+  id: string;
+  name: string;
+  genre: string;
+  realease_date: string;
+  duration: number;
+}
+
+export const movies: Movie[] = [
   {
     id: 'dbfdac8c-47b6-44b4-963f-3a5032324e8b',
     name: 'Johnny Got His Gun',

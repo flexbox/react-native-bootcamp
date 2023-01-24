@@ -4,13 +4,34 @@ import { movies } from 'app/features/home/data'
 import { Card } from '@tamagui/card'
 import { H2, Paragraph, SizableText } from '@tamagui/text'
 import { Image } from '@tamagui/image'
+import kebabCase from 'lodash/kebabCase'
+import { useRouter } from 'solito/router'
 
-interface Props {}
+const EpisodeList = () => {
+  const { push } = useRouter()
+  const goToDetailScreen = (item) => {
+    const slug = kebabCase(item.name)
+    push({
+      pathname: `/episode/${slug}`,
+      query: {
+        slug,
+        ...item,
+      },
+    })
+  }
 
-const EpisodeList = (props: Props) => {
   const renderItem = ({ item }) => {
     return (
-      <Card elevate size="$4" bordered mb="$4">
+      <Card
+        elevate
+        size="$4"
+        bordered
+        mb="$4"
+        scale={0.9}
+        hoverStyle={{ scale: 0.925 }}
+        pressStyle={{ scale: 0.875 }}
+        onPress={() => goToDetailScreen(item)}
+      >
         <Card.Header padded>
           <H2>{item.name}</H2>
           <Paragraph>{item.genre}</Paragraph>
@@ -30,16 +51,12 @@ const EpisodeList = (props: Props) => {
   }
 
   return (
-    <View>
-      <Text>EpisodeList</Text>
-
-      <FlatList
-        // horizontal={true}
-        data={movies}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-      />
-    </View>
+    <FlatList
+      // horizontal={true}
+      data={movies}
+      renderItem={renderItem}
+      keyExtractor={(item) => item.id}
+    />
   )
 }
 

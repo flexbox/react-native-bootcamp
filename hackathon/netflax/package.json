@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",
-    "@tamagui/lucide-icons": "^1.0.1-beta.201"
+    "@tamagui/lucide-icons": "^1.0.1-beta.201",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@manypkg/cli": "^0.19.1",
