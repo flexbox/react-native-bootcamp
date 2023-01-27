@@ -1,9 +1,8 @@
-import { View, Text, FlatList } from 'react-native'
+import { FlatList } from 'react-native'
 import React from 'react'
 import { movies } from 'app/features/home/data'
 import { Card } from '@tamagui/card'
-import { H2, Paragraph, SizableText } from '@tamagui/text'
-import { Image } from '@tamagui/image'
+import { H2, Paragraph } from '@tamagui/text'
 import kebabCase from 'lodash/kebabCase'
 import { useRouter } from 'solito/router'
 
@@ -26,7 +25,7 @@ const EpisodeList = () => {
         elevate
         size="$4"
         bordered
-        mb="$4"
+        mb="$2"
         scale={0.9}
         hoverStyle={{ scale: 0.925 }}
         pressStyle={{ scale: 0.875 }}
