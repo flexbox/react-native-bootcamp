@@ -24,18 +24,26 @@
     "react-native-web": "0.18.6"
   },
   "dependencies": {
-    "@babel/runtime": "^7.18.9",
-    "@tamagui/lucide-icons": "^1.0.1-beta.201",
-    "lodash": "^4.17.21"
+    "@babel/runtime": "^7.20.13",
+    "@tamagui/lucide-icons": "^1.1.7",
+    "lodash": "^4.17.21",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-native": "0.69.6",
+    "react-native-gesture-handler": "~2.5.0",
+    "react-native-safe-area-context": "4.3.1",
+    "react-native-screens": "~3.15.0",
+    "react-native-svg": "12.3.0",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
-    "@manypkg/cli": "^0.19.1",
-    "@types/react": "^18.0.15",
-    "@types/react-native": "^0.69.5",
-    "eslint": "^8.21.0",
-    "prettier": "^2.7.1",
-    "turbo": "^1.4.2",
-    "typescript": "^4.7.4"
+    "@manypkg/cli": "^0.20.0",
+    "@types/react": "^18.0.27",
+    "@types/react-native": "^0.69.16",
+    "eslint": "^8.32.0",
+    "prettier": "^2.8.3",
+    "turbo": "^1.7.0",
+    "typescript": "^4.9.4"
   },
   "packageManager": "yarn@3.2.3"
 }
