@@ -11,6 +11,7 @@ export function NavigationProvider({ children }: { children: React.ReactNode }) 
           config: {
             initialRouteName: 'home',
             screens: {
+              'sign-in': 'sign-in/',
               home: '',
               episode: 'episode/:slug',
               'user-detail': 'user/:id',
