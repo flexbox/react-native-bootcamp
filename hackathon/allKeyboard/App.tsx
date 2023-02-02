@@ -10,24 +10,24 @@ const App = () => {
 
   return (
     <SafeAreaView>
+      <SegmentedButtons
+        value={activeTabValue}
+        onValueChange={setActiveTabValue}
+        style={{ paddingHorizontal: 12 }}
+        buttons={[
+          {
+            value: "keyboardType",
+            label: "keyboardType",
+          },
+          {
+            value: "returnKeyType",
+            label: "returnKeyType",
+          },
+          { value: "misc", label: "misc" },
+        ]}
+      />
       <ScrollView style={styles.container}>
-        <SegmentedButtons
-          value={activeTabValue}
-          onValueChange={setActiveTabValue}
-          style={{ marginBottom: 24 }}
-          buttons={[
-            {
-              value: "keyboardType",
-              label: "keyboardType",
-            },
-            {
-              value: "returnKeyType",
-              label: "returnKeyType",
-            },
-            { value: "misc", label: "misc" },
-          ]}
-        />
-
+        <View style={styles.separatorSmall} />
         {activeTabValue === "keyboardType" && <AllKeyboardType />}
         {activeTabValue === "returnKeyType" && <AllReturnKeyType />}
         {activeTabValue === "misc" && <Misc />}
@@ -40,6 +40,9 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 24,
+  },
+  separatorSmall: {
+    height: 24,
   },
   separator: {
     height: 256,

@@ -3,9 +3,7 @@ import React from "react";
 import { CardInput } from "./CardInput";
 import { TextInput } from "react-native-paper";
 
-interface Props {}
-
-export const AllKeyboardType = (props: Props) => {
+export const AllKeyboardType = () => {
   const [inputValue, setInputValue] = React.useState(null);
   const [password, setPassword] = React.useState("");
   const [isVisble, setIsVisible] = React.useState(true);

@@ -1,9 +1,12 @@
 import React from "react";
 import { Card, Title } from "react-native-paper";
 
-interface Props {}
+interface CardInputProps {
+  title: string;
+  children: React.ReactNode;
+}
 
-export const CardInput = ({ title, children }) => {
+export const CardInput = ({ title, children }: CardInputProps) => {
   return (
     <Card style={{ marginBottom: 32 }}>
       <Card.Content>
