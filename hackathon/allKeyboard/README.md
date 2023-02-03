@@ -1,6 +1,6 @@
 # `allKeyboard`
 
-- All keyboard types on React Native
+> All keyboard types by example available on React Native
 
 ## Result
 
