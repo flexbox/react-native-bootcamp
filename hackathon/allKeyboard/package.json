@@ -11,6 +11,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "date-fns": "^2.29.3",
     "expo": "~47.0.6",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",

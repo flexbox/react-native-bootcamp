@@ -2,6 +2,7 @@ import { View } from "react-native";
 import React from "react";
 import { CardInput } from "./CardInput";
 import { TextInput, Text } from "react-native-paper";
+import { BirthdayDatePicker } from "./BirthdayDatePicker";
 
 export const Misc = () => {
   const [inputValue, setInputValue] = React.useState(null);
@@ -23,6 +24,7 @@ export const Misc = () => {
           autoCorrect={false}
         />
       </CardInput>
+      <BirthdayDatePicker />
     </View>
   );
 };
