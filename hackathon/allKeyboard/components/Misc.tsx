@@ -25,6 +25,8 @@ export const Misc = () => {
         />
       </CardInput>
       <BirthdayDatePicker />
+      <BirthdayDatePicker inputFormat="MDY" />
+      <BirthdayDatePicker inputFormat="YMD" />
     </View>
   );
 };

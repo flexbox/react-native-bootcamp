@@ -1,16 +1,20 @@
 import React from "react";
-import { Card, Title } from "react-native-paper";
+import { View } from "react-native";
+import { Card, Title, Text } from "react-native-paper";
 
 interface CardInputProps {
   title: string;
+  description?: string;
   children: React.ReactNode;
 }
 
-export const CardInput = ({ title, children }: CardInputProps) => {
+export const CardInput = ({ title, description, children }: CardInputProps) => {
   return (
     <Card style={{ marginBottom: 32 }}>
       <Card.Content>
-        <Title style={{ marginBottom: 8 }}>{title}</Title>
+        <Title>{title}</Title>
+        {description && <Text variant="bodyMedium">{description}</Text>}
+        <View style={{ height: 12 }} />
         {children}
       </Card.Content>
     </Card>
