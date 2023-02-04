@@ -1,6 +1,6 @@
 # nerd-fm
 
-> Spotify Clone to play music
+> Spotify Clone to play music created with expo
 
 ## Tooling
 
@@ -15,4 +15,4 @@ yarn
 yarn ios|android
 ```
 
-![preview](./assets/preview.gif)
+<img src="https://github.com/flexbox/react-native-bootcamp/raw/main/hackathon/nerd-fm/assets/preview.gif" width="50%" height="50%" alt="Preview app mobile Spotify clone">
