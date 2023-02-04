@@ -1,13 +1,13 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, StatusBar, View } from "react-native";
 
-import { default as data } from "../../api/data.json";
+// import { default as data } from "../../api/data.json";
 
 export const StarshipFeedScreen = () => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
-        <Text>{JSON.stringify(data.results)}</Text>
+        {/*<Text>{JSON.stringify(data)}</Text>*/}
       </View>
     </SafeAreaView>
   );
