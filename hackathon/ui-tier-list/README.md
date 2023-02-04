@@ -12,5 +12,3 @@ cp -R template ReactNativeElements
 
 
 [![React Native UI Kit Tier List](./tier-list-react-native-ui.jpg)](https://youtu.be/edbdQ7KzqHE)
-
-
