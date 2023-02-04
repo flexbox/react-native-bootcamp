@@ -59,6 +59,7 @@ npx create-react-native-library react-native-awesome-lib
 - [KittenUI](https://akveo.github.io/react-native-ui-kitten/docs/guides/getting-started#manual-installation)
 - [React Native Elements](https://reactnativeelements.com/docs/)
 - [React Native Paper](https://callstack.github.io/react-native-paper/)
+- [lordicon](https://lordicon.com/)
 - or [many more...](https://github.com/flexbox/react-native-bootcamp/tree/main/hackathon/ui-tier-list)
 
 ### Data
