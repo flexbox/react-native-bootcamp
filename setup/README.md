@@ -1,10 +1,9 @@
 # Setup instructions
 
-You will find the instructions to set up you computer for your next React Native Bootcamp.
+You will find the instructions to set up your computer for your next React Native Bootcamp.
 
-💡 I do provide advices for Linux and macOS.
-
-💡 Being **administrator on windows is mandatory**, I am **not responsible** if you encounter issues.
+💡 I do provide advice for Linux and macOS.
+💡 Being an **administrator\*\*** on windows** is mandatory**, I am **not responsible** if you encounter issues.
 (_You can follow this [setup tutorial from InfiniteRed](https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/) to make everything work_).
 
 ## System Requirements
@@ -46,23 +45,23 @@ To accept terms and conditions
 xcode-select -p
 ```
 
-Should output something like `/Applications/Xcode.app/Contents/Developer` if it's mot the case run `sudo xcode-select --reset`
+Should output something like `/Applications/Xcode.app/Contents/Developer` if it's not the case run `sudo xcode-select --reset`
 
-- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+
+- [ ] [Android Studio](https://developer.android.com/studio) with API levels 21+
 
 </details>
 
 <details>
 <summary>Linux</summary>
 
-- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+
+- [ ] [Android Studio](https://developer.android.com/studio) with API levels 21+
 
 </details>
 
 <details>
 <summary>Windows</summary>
 
-- [ ] [Android Studio](https://developer.android.com/studio) with api levels 21+
+- [ ] [Android Studio](https://developer.android.com/studio) with API levels 21+
 
 </details>
 
@@ -70,11 +69,11 @@ Should output something like `/Applications/Xcode.app/Contents/Developer` if it'
 
 - [ ] Create an account [https://expo.dev/signup](https://expo.dev/signup)
 - [ ] Download **Expo GO** on your smartphone
-- [ ] Sign-in with your Expo account on your smartphone
+- [ ] Log in with your Expo account on your smartphone ( On the top right )
 
 You are going to follow a **Native Mobile Application Bootcamp**.
 
-`iOS` phones are the easiest way, Android are nice too BUT there is more issues. You need a decent smartphone to enjoy a fast experience.
+`iOS` phones are the easiest way, Android is nice too BUT there are more issues. You need a decent smartphone to enjoy a fast experience.
 
 ## Text Editor
 
