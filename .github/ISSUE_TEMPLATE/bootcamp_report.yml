@@ -17,6 +17,7 @@ body:
     attributes:
       label: Error
       description: What is the error, add screenshot if necessary
-      placeholder: > ERROR in ./src/components/Button/Button.styles.js 3:0-30, Module not found: Error: Can't resolve './Button'
+      placeholder: |
+        ERROR in ./src/components/Button/Button.styles.js 3:0-30, Module not found: Error: Can't resolve './Button'
     validations:
       required: false
