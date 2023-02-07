@@ -14,7 +14,14 @@ body:
     attributes:
       label: In which file is the bug located?
       description: If the error is not in a file, please write "none"
-      placeholder: "src/screens/ExampleScreen.tsx, ERROR in ./src/components/Button/Button.styles.js 3:0-30, Module not found: Error: Can't resolve './Button'"
+      placeholder: "src/screens/ExampleScreen.tsx"
+
+- type: input
+    id: error
+    attributes:
+      label: What is the error displayed 
+      description: If the error is not in a file, please write "none"
+      placeholder: "ERROR in ./src/components/Button/Button.styles.js 3:0-30, Module not found: Error: Can't resolve './Button'"
 
   - type: textarea
     attributes:
