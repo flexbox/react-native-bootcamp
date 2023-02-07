@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   },
   closeContainer: {
     position: "absolute",
-    top: 64,
+    top: 32,
   },
   left: {
     left: 24,
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   },
   fab: {
     position: "absolute",
-    right: 32,
-    bottom: 32,
+    right: 42,
+    bottom: 42,
   },
 });

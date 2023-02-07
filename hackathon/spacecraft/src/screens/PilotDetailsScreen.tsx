@@ -27,7 +27,7 @@ export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
   } = route.params.people;
 
   return (
-    <ScreenContainer title={name}>
+    <ScreenContainer title={name} withGoBack>
       <DataTable>
         <DataTable.Row>
           <DataTable.Cell>Mass</DataTable.Cell>
