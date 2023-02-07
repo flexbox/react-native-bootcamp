@@ -6,14 +6,14 @@ body:
   - type: textarea
     id: bugDescription
     attributes:
-      label: Describe the bug,
+      label: Describe the bug, the incomprehension
       description: Also include a description of how to reproduce the bug
     validations:
       required: true
   - type: input
     id: file
     attributes:
-      label: In which file is the bug located?
+      label: In which file is the bug, error, incomprehension located?
       description: If the error is not in a file, please write "none"
       placeholder: "src/screens/ExampleScreen.tsx"
     validations:
