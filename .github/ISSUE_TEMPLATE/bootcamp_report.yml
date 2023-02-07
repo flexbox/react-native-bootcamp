@@ -1,22 +1,17 @@
 name: Tracking issue for bootcamp.
 description: Use this template for tracking bootcamp bugs, incomprehensible instructions, and other issues.
 labels: Bootcamp
-body:
-  - key: problemType
+fields:
+  - name: problemType
     type: dropdown
-    attributes:
-      description: What is the type of the problem ?
-      options:
-        - Workshop incomprehension
-        - Outdated code, libs
-        - Error
-    validations:
-      required: true
-  - key: errorDescription
+    description: What is the type of the problem ?
+    options:
+      - Workshop incomprehension
+      - Outdated code, libs
+      - Error
+    required: true
+  - name: errorDescription
     type: input
-    attributes:
-      description: What is the error, add screenshot if necessary
-      placeholder: |
-        ERROR in ./src/components/Button/Button.styles.js 3:0-30, Module not found: Error: Can't resolve './Button'
-    validations:
-      required: false
+    description: What is the error, add screenshot if necessary
+    placeholder: ERROR in ./src/components/Button/Button.styles.js 3:0-30, Module not found: Error: Can't resolve './Button'
+    required: false
