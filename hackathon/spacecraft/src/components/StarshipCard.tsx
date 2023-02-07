@@ -24,7 +24,7 @@ export const StarshipCard = ({ ship }: StarshipCardProps) => {
   const source = useImage(title);
 
   const handleBuy = () => {
-    Alert.alert("Buy!");
+    Alert.alert("Give me the money!");
   };
 
   const navigation = useNavigation<StarshipDetailsScreenParams>();

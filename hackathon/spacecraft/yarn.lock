@@ -1504,10 +1504,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@callstack/react-theme-provider@^3.0.7":
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/@callstack/react-theme-provider/-/react-theme-provider-3.0.7.tgz#b7ce1a53d63ad5e83574b831ae0af6b7c6cc40e7"
-  integrity sha512-Ab6rbD2w4u9W3yf7LQQ8evx9m8fZNsoWxt+MFm3AyZnyKQNCJf4K7ip9tHHZgSs+HTdoj38lEqPehvFOVQKvAg==
+"@callstack/react-theme-provider@^3.0.8":
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@callstack/react-theme-provider/-/react-theme-provider-3.0.8.tgz#d0d7ac71e422133c5f7b78f4c4aa1bc57f156f50"
+  integrity sha512-5U231sYY2sqQOaELX0WBCn+iluV8bFaXIS7em03k4W5Xz0AhGvKlnpLIhDGFP8im/SvNW7/2XoR0BsClhn9t6Q==
   dependencies:
     deepmerge "^3.2.0"
     hoist-non-react-statics "^3.3.0"
@@ -12277,11 +12277,6 @@ react-native-gradle-plugin@^0.70.3:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.70.3.tgz#cbcf0619cbfbddaa9128701aa2d7b4145f9c4fc8"
   integrity sha512-oOanj84fJEXUg9FoEAQomA8ISG+DVIrTZ3qF7m69VQUJyOGYyDZmPqKcjvRku4KXlEH6hWO9i4ACLzNBh8gC0A==
 
-react-native-iphone-x-helper@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
-  integrity sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg==
-
 react-native-offline@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/react-native-offline/-/react-native-offline-6.0.0.tgz#d28f747117903c232f58055bb55d21decbe612a9"
@@ -12292,14 +12287,14 @@ react-native-offline@^6.0.0:
     redux "^4.0.1"
     redux-saga "^1.0.2"
 
-react-native-paper@^4.12.2:
-  version "4.12.2"
-  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-4.12.2.tgz#31ed8011afd994d54dd403ed0099295fc1616d26"
-  integrity sha512-DDqds8E6IMbOFW7PwUgB0pP6qhFcwn/s0N+SOpqB1XYtGm0r9WMrmA8q026Mn7OCkWeMTjgnrILGJxJ7b2CRHw==
+react-native-paper@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-5.2.0.tgz#112c0dd7c5ad9e9da0791c9d0b430af380b326a3"
+  integrity sha512-FfKvfh4nBvetTusiuc1QMuNxXdNai4lthoyD+dNPM03RnIapcjoKHrhCD1EvVi5c1kBSKHrlXQ3OAW/8QCQXNw==
   dependencies:
-    "@callstack/react-theme-provider" "^3.0.7"
+    "@callstack/react-theme-provider" "^3.0.8"
     color "^3.1.2"
-    react-native-iphone-x-helper "^1.3.1"
+    use-event-callback "^0.1.0"
 
 react-native-reanimated@~2.12.0:
   version "2.12.0"
@@ -14572,6 +14567,11 @@ url@^0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
+
+use-event-callback@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/use-event-callback/-/use-event-callback-0.1.0.tgz#29d7ce996802935c5387e7d3b606cf316da3457f"
+  integrity sha512-5fTzY5UEXHMK5UR0NRkUz6TPfWmmX9fO8Tx3SnHrfMPdrQ7Rna0gDBy0r56SP68TwsP9DgwSBzeysCu3A/Z2NA==
 
 use-latest-callback@^0.1.5:
   version "0.1.5"
