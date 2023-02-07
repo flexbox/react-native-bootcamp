@@ -1,6 +1,6 @@
 name: Tracking issue for bootcamp.
 description: Use this template for tracking bootcamp bugs, incomprehensible instructions, and other issues.
-labels: Bootcamp
+label: Bootcamp
 body:
   - type: dropdown
     id: problemType
