@@ -9,7 +9,7 @@ import {
   ScrollView,
   Alert,
 } from "react-native";
-import { Text, Chip, DataTable, List, FAB } from "react-native-paper";
+import { Text, DataTable, List, FAB, Chip } from "react-native-paper";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";

@@ -6,6 +6,7 @@ import { Button } from "react-native-paper";
 import { ScreenContainer } from "~/components/ScreenContainer";
 import { PeopleItem } from "~/components/PeopleItem";
 import { usePilot } from "~/hooks/usePilot";
+import { SkeletonList } from "~/components/SkeletonList";
 
 interface RenderItemProps {
   item: PeopleProps;
@@ -21,7 +22,11 @@ export const PilotScreen = () => {
   const { query, setPage } = usePilot();
 
   if (query.isLoading) {
-    return <ScreenContainer title="Loading…" />;
+    return (
+      <ScreenContainer title="Loading…">
+        <SkeletonList />
+      </ScreenContainer>
+    );
   }
   if (query.isError) {
     return <ScreenContainer title="Error 😕" />;
