@@ -9,7 +9,7 @@ import {
   ScrollView,
   Alert,
 } from "react-native";
-import { Text, DataTable, List, FAB } from "react-native-paper";
+import { Text, DataTable, List, FAB, Chip } from "react-native-paper";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
@@ -61,7 +61,7 @@ export const StarshipDetailsScreen = ({
               </TouchableOpacity>
             </View>
             <View style={[styles.closeContainer, styles.right]}>
-              {/* <Chip mode="outlined">{starship_class}</Chip> */}
+              <Chip mode="outlined">{starship_class}</Chip>
             </View>
           </View>
 
