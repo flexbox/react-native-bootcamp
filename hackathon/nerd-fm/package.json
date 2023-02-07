@@ -11,25 +11,25 @@
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.4",
-    "expo": "~41.0.0",
-    "expo-av": "~9.1.2",
-    "expo-status-bar": "~1.0.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-gesture-handler": "~1.10.2",
+    "expo": "^47.0.0",
+    "expo-av": "~13.0.2",
+    "expo-status-bar": "~1.4.2",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-native": "0.70.5",
+    "react-native-gesture-handler": "~2.8.0",
     "react-native-paper": "^4.7.2",
-    "react-native-reanimated": "~2.1.0",
-    "react-native-safe-area-context": "3.2.0",
-    "react-native-screens": "~3.0.0",
-    "react-native-web": "~0.13.12"
+    "react-native-reanimated": "~2.12.0",
+    "react-native-safe-area-context": "4.4.1",
+    "react-native-screens": "~3.18.0",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@types/react": "~16.9.35",
-    "@types/react-native": "~0.63.2",
+    "@babel/core": "^7.19.3",
+    "@types/react": "~18.0.24",
+    "@types/react-native": "~0.70.6",
     "eslint-config-react-native-wcandillon": "^3.5.0",
-    "typescript": "~4.0.0"
+    "typescript": "^4.6.3"
   },
   "private": true
 }
