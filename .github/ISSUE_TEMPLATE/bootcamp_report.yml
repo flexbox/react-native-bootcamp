@@ -1,9 +1,8 @@
----
 name: Tracking issue for bootcamp.
 description: Use this template for tracking bootcamp bugs, incomprehensible instructions, and other issues.
 labels: Bootcamp
 body:
-- type: dropdown
+  - type: dropdown
     id: problemType
     attributes:
       description: What is the type of the problem ?
@@ -21,5 +20,3 @@ body:
       placeholder: > ERROR in ./src/components/Button/Button.styles.js 3:0-30, Module not found: Error: Can't resolve './Button'
     validations:
       required: false
----
-
