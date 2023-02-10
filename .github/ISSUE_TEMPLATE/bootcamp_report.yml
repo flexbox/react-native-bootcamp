@@ -1,7 +1,7 @@
 ---
-name: Tracking issue for bootcamp.
-description: Use this template for tracking bootcamp bugs, incomprehensible instructions, and other issues.
-labels: ["Bootcamp report"]
+name: Challenge report
+description: Use this template for tracking bootcamp challenges bugs, incomprehensible instructions, and other issues.
+labels: ["challenges"]
 body:
   - type: textarea
     id: bugDescription
@@ -21,7 +21,7 @@ body:
   - type: input
     id: error
     attributes:
-      label: What is the error displayed 
+      label: What is the error displayed
       description: If there is no error, please write "none"
       placeholder: "ERROR in ./src/components/Button/Button.styles.js 3:0-30, Module not found: Error: Can't resolve './Button'"
     validations:
@@ -34,3 +34,4 @@ body:
     validations:
       required: false
 ---
+

@@ -2,10 +2,10 @@ blank_issues_enabled: false
 contact_links:
   - name: The Road to React Native
     url: https://gum.co/road-react-native
-    about: Learn offline with our Road to React Native book
+    about: Learn offline with our Road to React Native book.
   - name: Slack Community
     url: https://weblille.rocks/
-    about: Check out our French community for more real-time discussion
+    about: Check out our French community for more real-time discussion.
   - name: Twitter Community
     url: https://twitter.com/i/communities/1509407040095068166
     about: We post news, tips, requests for help, and other discussions.
