@@ -23,7 +23,7 @@ export const StarshipLoadableList = ({
     }
 
     return (
-      <View style={styles.container} key={result.data.id}>
+      <View style={styles.container}>
         <Text variant="titleMedium">{result.data.name}</Text>
         <Text variant="bodyMedium">{result.data.model}</Text>
       </View>

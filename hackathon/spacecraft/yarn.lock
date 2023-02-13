@@ -2890,6 +2890,11 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
+"@tanstack/eslint-plugin-query@^4.24.7":
+  version "4.24.7"
+  resolved "https://registry.yarnpkg.com/@tanstack/eslint-plugin-query/-/eslint-plugin-query-4.24.7.tgz#4c684b1e345a6a11d6e65e5ce452f99226a72682"
+  integrity sha512-61Z+cc/g6pJxin2sasIUYeNoF6aeb+HhG7fHPTR9ei/QMJxJN0uIfV/LMBDTMJC2wjPrRQsz2Wu/RQPkQfHlGg==
+
 "@tanstack/query-core@4.20.4":
   version "4.20.4"
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.20.4.tgz#1f7975a2db26a8bc2f382bad8a44cd422c846b17"

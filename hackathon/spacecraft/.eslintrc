@@ -1,5 +1,6 @@
 {
   "extends": "react-native-wcandillon",
+  "plugins": ["@tanstack/query"],
   "rules": {
     "camelcase": "off"
   },
