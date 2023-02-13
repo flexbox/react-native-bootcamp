@@ -1,24 +1,24 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, StatusBar, View } from "react-native";
+import { StyleSheet, StatusBar, View, Text } from "react-native";
 
 // import { default as data } from "../../api/data.json";
 
 export const StarshipFeedScreen = () => {
   return (
-    <SafeAreaView style={styles.safeContainer}>
-      <View style={styles.container}>
-        {/*<Text>{JSON.stringify(data)}</Text>*/}
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        {/* <Text>{JSON.stringify(data)}</Text> */}
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  safeContainer: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
-  },
   container: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight || 0, // only for Android to avoid status bar overlap
+  },
+  headerContainer: {
     paddingHorizontal: 20,
     marginTop: 20,
   },

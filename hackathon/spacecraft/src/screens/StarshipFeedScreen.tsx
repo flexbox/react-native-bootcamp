@@ -39,7 +39,7 @@ export const StarshipFeedScreen = () => {
   if (isError) {
     return (
       <ScreenContainer title="Error 😕">
-        <Button onPress={refetch} mode="outlined">
+        <Button onPress={() => refetch()} mode="outlined">
           Refetch
         </Button>
       </ScreenContainer>
