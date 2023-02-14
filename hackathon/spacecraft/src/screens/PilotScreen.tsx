@@ -32,7 +32,13 @@ export const PilotScreen = () => {
     return <ScreenContainer title="Error 😕" />;
   }
   if (query.data.results === undefined) {
-    return <ScreenContainer title="Not Found" />;
+    return (
+      <ScreenContainer title="Not Found">
+        <Button onPress={() => query.refetch()} mode="outlined">
+          Refetch
+        </Button>
+      </ScreenContainer>
+    );
   }
 
   const handleLoadMore = () => {
