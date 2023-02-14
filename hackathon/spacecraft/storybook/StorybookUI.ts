@@ -5,7 +5,7 @@ import {
 } from "@storybook/react-native";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import "./rn-addons";
+// import "./rn-addons";
 
 // enables knobs for all stories
 addDecorator(withKnobs);

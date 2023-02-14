@@ -57,7 +57,7 @@ export const StarshipDetailsScreen = ({
                 onPress={handleClose}
                 style={styles.closeButton}
               >
-                <FontAwesome5 name="times" size={22} color={"black"} />
+                <FontAwesome5 name="times" size={22} color="black" />
               </TouchableOpacity>
             </View>
             <View style={[styles.closeContainer, styles.right]}>
