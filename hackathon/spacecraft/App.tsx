@@ -23,7 +23,7 @@ export const App = () => {
   );
 };
 
-const SHOW_STORYBOOK = false;
+const SHOW_STORYBOOK = true;
 
 const UI = SHOW_STORYBOOK && __DEV__ ? StorybookUIRoot : App;
 // eslint-disable-next-line import/no-default-export

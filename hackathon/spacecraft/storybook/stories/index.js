@@ -1,2 +1,3 @@
-import "./Card/Card.stories";
-import "./Login/Login.stories";
+import "./Card.stories";
+import "./Login.stories";
+import "./Text.stories";
