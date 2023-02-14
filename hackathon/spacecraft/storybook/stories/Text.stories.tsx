@@ -3,7 +3,7 @@ import { View } from "react-native";
 import { Text } from "react-native-paper";
 import { storiesOf } from "@storybook/react-native";
 
-storiesOf("Text", module).add("default", () => (
+storiesOf("Text", module).add("Text", () => (
   <View style={{ flex: 1 }}>
     <Text variant="displayLarge">Display Large</Text>
     <Text variant="displayMedium">Display Medium</Text>

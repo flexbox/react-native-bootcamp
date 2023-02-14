@@ -3,7 +3,7 @@ import React from "react";
 import { NetworkProvider } from "react-native-offline";
 import { Provider as PaperProvider } from "react-native-paper";
 
-import StorybookUIRoot from "./storybook";
+import StorybookUIRoot from "./storybook/StorybookUI";
 import { AuthenticationProvider } from "./src/context/Authentication";
 import { Navigator } from "./src/navigation/Navigator";
 
