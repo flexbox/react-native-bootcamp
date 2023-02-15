@@ -6,6 +6,7 @@ import { useTheme } from "react-native-paper";
 import { Routes } from "~/navigation/Routes";
 import { PilotNavigator } from "~/navigation/PilotNavigator";
 import { StarshipNavigator } from "~/navigation/StarshipNavigator";
+import { PlusNavigator } from "~/navigation/PlusNavigator";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -35,6 +36,16 @@ export const BottomTabNavigator = () => {
           tabBarLabel: "Pilots",
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="user-astronaut" size={22} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={Routes.PLUS_STACK}
+        component={PlusNavigator}
+        options={{
+          tabBarLabel: "Plus",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome5 name="plus-square" size={22} color={color} />
           ),
         }}
       />

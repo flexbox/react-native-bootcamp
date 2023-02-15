@@ -18,7 +18,8 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "today.weshipit.spacecraft"
+      "bundleIdentifier": "today.weshipit.spacecraft",
+      "appStoreUrl": "https://apps.apple.com/fr/app/retail-shake-scanner/id1470984262"
     },
     "android": {
       "adaptiveIcon": {
