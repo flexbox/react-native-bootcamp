@@ -10,4 +10,6 @@ export enum Routes {
   PLUS_STACK = "Plus Stack",
   PLUS_SCREEN = "Plus",
   DO_YOU_LIKE_SCREEN = "Do You Like",
+  LOVE_SCREEN = "Love",
+  DISAPPOINTED_SCREEN = "Disappointed",
 }
