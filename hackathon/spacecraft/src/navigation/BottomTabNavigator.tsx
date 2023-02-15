@@ -3,8 +3,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useTheme } from "react-native-paper";
 
-import { Routes } from "./Routes";
-
+import { Routes } from "~/navigation/Routes";
 import { PilotNavigator } from "~/navigation/PilotNavigator";
 import { StarshipNavigator } from "~/navigation/StarshipNavigator";
 

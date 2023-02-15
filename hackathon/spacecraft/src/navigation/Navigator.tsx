@@ -2,10 +2,10 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 
-import { useAuthentication } from "../context/Authentication";
-
 import { BottomTabNavigator } from "./BottomTabNavigator";
 import { AuthNavigator } from "./AuthNavigator";
+
+import { useAuthentication } from "~/context/Authentication";
 
 const Stack = createNativeStackNavigator();
 

@@ -4,8 +4,9 @@ import { NetworkProvider } from "react-native-offline";
 import { Provider as PaperProvider } from "react-native-paper";
 
 import StorybookUIRoot from "./storybook/StorybookUI";
-import { AuthenticationProvider } from "./src/context/Authentication";
-import { Navigator } from "./src/navigation/Navigator";
+
+import { AuthenticationProvider } from "~/context/Authentication";
+import { Navigator } from "~/navigation/Navigator";
 
 const queryClient = new QueryClient();
 

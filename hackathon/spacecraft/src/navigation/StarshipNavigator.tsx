@@ -1,5 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import type { StarshipProps } from "api/types";
 
 import { Routes } from "~/navigation/Routes";
 import { StarshipDetailsScreen } from "~/screens/StarshipDetailsScreen";
@@ -7,7 +8,16 @@ import { StarshipFeedScreen } from "~/screens/StarshipFeedScreen";
 // For Example
 // import { StarshipFeedScreen } from "~/screens/exercice/StarshipFeedScreen";
 
-const Stack = createNativeStackNavigator();
+export type StarshipStackParamList = {
+  [Routes.STARSHIP_FEED_SCREEN]: undefined;
+  [Routes.STARSHIP_DETAILS_SCREEN]: {
+    route: {
+      params: StarshipProps;
+    };
+  };
+};
+
+const Stack = createNativeStackNavigator<StarshipStackParamList>();
 
 export const StarshipNavigator = () => {
   return (
