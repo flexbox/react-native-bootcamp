@@ -21,7 +21,24 @@ export const DisappointedScreen = ({ navigation }: Props) => {
   };
 
   return (
-    <ScreenContainer title="" withGoBack>
+    <ScreenContainer
+      title=""
+      withGoBack
+      accessoryFooter={
+        <View style={{ padding: 24, marginBottom: 12 }}>
+          <Button
+            onPress={handleOpenGitHub}
+            mode="contained"
+            style={{ marginBottom: 12 }}
+          >
+            Give my opinion
+          </Button>
+          <Button onPress={handleCancel} mode="text">
+            Not now
+          </Button>
+        </View>
+      }
+    >
       <ScrollView contentContainerStyle={{ padding: 32, alignItems: "center" }}>
         <Image
           source={{
@@ -37,19 +54,6 @@ export const DisappointedScreen = ({ navigation }: Props) => {
           by answering this survey.
         </Text>
       </ScrollView>
-
-      <View style={{ padding: 24 }}>
-        <Button
-          onPress={handleOpenGitHub}
-          mode="contained"
-          style={{ marginBottom: 12 }}
-        >
-          Give my opinion
-        </Button>
-        <Button onPress={handleCancel} mode="text">
-          Not now
-        </Button>
-      </View>
     </ScreenContainer>
   );
 };
