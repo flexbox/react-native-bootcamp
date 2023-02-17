@@ -18,14 +18,16 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "today.weshipit.spacecraft"
+      "bundleIdentifier": "today.weshipit.spacecraft",
+      "appStoreUrl": "https://apps.apple.com/fr/app/retail-shake-scanner/id1234567890"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "today.weshipit.spacecraft"
+      "package": "today.weshipit.spacecraft",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=weshipit.today.spacecraft"
     },
     "web": {
       "favicon": "./assets/favicon.png"

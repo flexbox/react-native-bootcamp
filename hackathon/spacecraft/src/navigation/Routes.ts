@@ -7,4 +7,9 @@ export enum Routes {
   PILOT_SCREEN = "Pilots",
   PILOT_STACK = "Pilots Stack",
   PILOT_DETAILS_SCREEN = "Pilot",
+  PLUS_STACK = "Plus Stack",
+  PLUS_SCREEN = "Plus",
+  DO_YOU_LIKE_SCREEN = "Do You Like",
+  LOVE_SCREEN = "Love",
+  DISAPPOINTED_SCREEN = "Disappointed",
 }

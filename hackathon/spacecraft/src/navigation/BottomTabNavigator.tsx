@@ -1,22 +1,28 @@
+/* eslint-disable react/no-unstable-nested-components */
 import React from "react";
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useTheme } from "react-native-paper";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
 import { Routes } from "~/navigation/Routes";
 import { PilotNavigator } from "~/navigation/PilotNavigator";
 import { StarshipNavigator } from "~/navigation/StarshipNavigator";
+import { PlusNavigator } from "~/navigation/PlusNavigator";
 
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
 export const BottomTabNavigator = () => {
   const theme = useTheme();
 
   return (
     <Tab.Navigator
-      activeColor={theme.colors.primary}
-      inactiveColor={theme.colors.secondary}
-      barStyle={{ backgroundColor: theme.colors.surface }}
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: theme.colors.primary,
+        tabBarInactiveTintColor: theme.colors.secondary,
+        tabBarStyle: { backgroundColor: theme.colors.surface },
+      }}
     >
       <Tab.Screen
         name={Routes.STARSHIP_STACK}
@@ -37,6 +43,27 @@ export const BottomTabNavigator = () => {
             <FontAwesome5 name="user-astronaut" size={22} color={color} />
           ),
         }}
+      />
+      <Tab.Screen
+        name={Routes.PLUS_STACK}
+        component={PlusNavigator}
+        options={({ route }) => ({
+          tabBarLabel: "Plus",
+          tabBarIcon: ({ color }) => (
+            <FontAwesome5 name="plus-square" size={22} color={color} />
+          ),
+          tabBarStyle: ((currentRoute) => {
+            const routeName = getFocusedRouteNameFromRoute(currentRoute) ?? "";
+            if (
+              routeName === Routes.DO_YOU_LIKE_SCREEN ||
+              routeName === Routes.DISAPPOINTED_SCREEN ||
+              routeName === Routes.LOVE_SCREEN
+            ) {
+              return { display: "none" };
+            }
+            return;
+          })(route),
+        })}
       />
     </Tab.Navigator>
   );

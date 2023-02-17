@@ -8,13 +8,13 @@ import { Text } from "react-native-paper";
 interface ScreenContainerProps {
   title: string;
   children?: ReactNode;
-  withFooter?: boolean;
+  withSeparatorFooter?: boolean;
 }
 
 export const ScreenContainer = ({
   title,
   children,
-  withFooter = false,
+  withSeparatorFooter = false,
 }: ScreenContainerProps) => {
   return (
     <ScrollView style={styles.container} nestedScrollEnabled={true}>
@@ -24,7 +24,7 @@ export const ScreenContainer = ({
       </Text>
 
       {children}
-      {withFooter && <View style={styles.footer} />}
+      {withSeparatorFooter && <View style={styles.footer} />}
     </ScrollView>
   );
 };

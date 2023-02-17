@@ -9,9 +9,10 @@ import { Offline } from "~/components/Offline";
 interface ScreenContainerProps {
   title: string;
   children?: ReactNode;
-  withFooter?: boolean;
+  withSeparatorFooter?: boolean;
   withScrollView?: boolean;
   withGoBack?: boolean;
+  accessoryFooter?: ReactNode;
 }
 
 const ScreenContainerTitle = ({
@@ -46,9 +47,10 @@ const ScreenContainerTitle = ({
 export const ScreenContainer = ({
   title,
   children,
-  withFooter = false,
+  withSeparatorFooter = false,
   withScrollView = false,
   withGoBack = false,
+  accessoryFooter,
 }: ScreenContainerProps) => {
   if (withScrollView) {
     return (
@@ -56,7 +58,7 @@ export const ScreenContainer = ({
         <ScreenContainerTitle title={title} withGoBack={withGoBack} />
         {children}
         <Offline />
-        {withFooter && <View style={styles.footer} />}
+        {withSeparatorFooter && <View style={styles.footer} />}
       </ScrollView>
     );
   }
@@ -66,7 +68,10 @@ export const ScreenContainer = ({
       <ScreenContainerTitle title={title} withGoBack={withGoBack} />
       {children}
       <Offline />
-      {withFooter && <View style={styles.footer} />}
+      {withSeparatorFooter && <View style={styles.footer} />}
+      {accessoryFooter && (
+        <View style={styles.accessoryFooter}>{accessoryFooter}</View>
+      )}
     </View>
   );
 };
@@ -75,6 +80,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 24,
     marginTop: 36,
+    flex: 1,
   },
   headerText: {
     fontWeight: "bold",
@@ -82,5 +88,10 @@ const styles = StyleSheet.create({
   },
   footer: {
     height: 256,
+  },
+  accessoryFooter: {
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
   },
 });
