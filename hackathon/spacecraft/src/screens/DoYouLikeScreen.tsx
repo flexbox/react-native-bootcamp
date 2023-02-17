@@ -1,41 +1,34 @@
-import * as StoreReview from "expo-store-review";
-import { View, Text, Linking, Alert } from "react-native";
+import { Image } from "react-native";
 import React from "react";
 import { List } from "react-native-paper";
-import Constants from "expo-constants";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
 import { Routes } from "~/navigation/Routes";
 
-interface Props {
+interface DoYouLikeScreenProps {
   navigation: any;
 }
 
-export const DoYouLikeScreen = ({ navigation }: Props) => {
-  const appStoreUrl = Constants.expoConfig?.ios?.appStoreUrl;
-  const itunesItemId = appStoreUrl?.split("/").pop();
-
-  const handleStoreReview = async () => {
-    if (await StoreReview.hasAction()) {
-      // you can call StoreReview.requestReview()
-      StoreReview.requestReview();
-      // Linking.openURL(
-      //   `itms-apps://itunes.apple.com/app/viewContentsUserReviews/id${itunesItemId}?action=write-review`
-      // );
-    } else {
-      Alert.alert("You can't review this app");
-    }
+export const DoYouLikeScreen = ({ navigation }: DoYouLikeScreenProps) => {
+  const navigateToLoveScreen = () => {
+    navigation.navigate(Routes.LOVE_SCREEN);
   };
-
   const navigateToDisappointedScreen = () => {
     navigation.navigate(Routes.DISAPPOINTED_SCREEN);
   };
 
   return (
     <ScreenContainer title={""} withGoBack={true}>
+      <Image
+        source={{
+          uri: "https://media.giphy.com/media/e6e1P3wC6xkYg/giphy.gif",
+        }}
+        style={{ width: "100%", height: 200 }}
+      />
+
       <List.Item
         title="I love Spacecraft"
-        onPress={handleStoreReview}
+        onPress={navigateToLoveScreen}
         left={(props) => <List.Icon {...props} icon="heart" />}
       />
       <List.Item

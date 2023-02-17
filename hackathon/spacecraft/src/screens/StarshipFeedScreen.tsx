@@ -51,7 +51,7 @@ export const StarshipFeedScreen = () => {
   }
 
   return (
-    <ScreenContainer title="Starships" withSeparatorFooter>
+    <ScreenContainer title="Starships">
       {/* SOLUTION 1: with a map */}
       {/* {data.results.map((ship: ShipProps) => {
         return <StarshipCard key={ship.name} ship={ship} />;

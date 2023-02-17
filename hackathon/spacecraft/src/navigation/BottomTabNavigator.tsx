@@ -54,11 +54,11 @@ export const BottomTabNavigator = () => {
           ),
           tabBarStyle: ((currentRoute) => {
             const routeName = getFocusedRouteNameFromRoute(currentRoute) ?? "";
-            console.log(
-              "file: BottomTabNavigator.tsx:57 ~ BottomTabNavigator ~ routeName",
-              routeName
-            );
-            if (routeName === Routes.DISAPPOINTED_SCREEN) {
+            if (
+              routeName === Routes.DO_YOU_LIKE_SCREEN ||
+              routeName === Routes.DISAPPOINTED_SCREEN ||
+              routeName === Routes.LOVE_SCREEN
+            ) {
               return { display: "none" };
             }
             return;
