@@ -13,9 +13,12 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/012accc3-4ce5-4bae-9f4d-2f842489f07a"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "today.weshipit.spacecraft",
@@ -36,6 +39,9 @@
       "eas": {
         "projectId": "012accc3-4ce5-4bae-9f4d-2f842489f07a"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
