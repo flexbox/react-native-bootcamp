@@ -6,7 +6,7 @@ I do `react-native` as a freelance since 2017 and I have 15+ years of experience
 
 My project-based pedagogy allows you to learn while building, a proven way for new skills to 'stick'.
 
-📱 Hearty thanks to the [team behind expo](https://expo.io/), the open-source platform for making universal native apps with React that run on Android, iOS, and the web.
+📱 Hearty thanks to the [team behind expo](https://expo.dev/), the open-source platform for making universal native apps with React that run on Android, iOS, and the web.
 
 🎨 Thanks as well to all the `react-native-paper` contributors for their easy to use UI library.
 
