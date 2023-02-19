@@ -22,7 +22,7 @@ Challenge after challenge, you are going to build this mobile appliction to buy 
 
 > To support my work, I recommend downloading my [React Native Book about the ecosystem](https://gum.co/road-react-native).
 
-<img src="https://github.com/flexbox/react-native-bootcamp/raw/main/hackathon/spacecraft/spacecraft-preview.gif" width="50%" height="50%">
+<img src="https://github.com/flexbox/react-native-bootcamp/raw/main/hackathon/spacecraft/spacecraft-preview.gif" width="50%" height="50%" />
 
 ## Pedagogy
 
