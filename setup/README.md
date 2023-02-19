@@ -3,13 +3,13 @@
 You will find the instructions to set up your computer for your next React Native Bootcamp.
 
 💡 I do provide advice for Linux and macOS.
-💡 Being an **administrator\*\*** on windows** is mandatory**, I am **not responsible** if you encounter issues.
+💡 Being an **administrator on windows is mandatory**, I am **not responsible** if you encounter issues.
 (_You can follow this [setup tutorial from InfiniteRed](https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/) to make everything work_).
 
 ## System Requirements
 
 - [ ] [git](https://git-scm.com/) v2.13 or greater
-- [ ] [NodeJS](https://nodejs.org/) v16 or greater
+- [ ] [Node.js](https://nodejs.org/) v16 or greater
 - [ ] [yarn](https://yarnpkg.com/getting-started/install)
 
 Use the following command from your terminal to check your Node version.
@@ -19,12 +19,6 @@ node --version
 ```
 
 If you have a recent version installed, it should do.
-
-For creating our React Native project we are going to use [Expo](https://expo.io/), which is an open-source platform for making native apps for Android and iOS using JavaScript.
-
-```console
-npm install --global expo-cli
-```
 
 ## Virtual Simulators
 
