@@ -1,28 +1,20 @@
 import React from "react";
 import { View } from "react-native";
+import type { TextInputProps } from "react-native-paper";
 import { TextInput } from "react-native-paper";
-
-interface FormInputProp {
-  label: string;
-  value: string;
-  onChangeText: (value: string) => void;
-  secureTextEntry?: boolean;
-  right?: React.ReactNode;
-}
 
 export const FormInput = ({
   label,
   value,
   onChangeText,
   ...rest
-}: FormInputProp) => (
+}: TextInputProps) => (
   <View style={{ paddingVertical: 8 }}>
     <TextInput
       {...rest}
       label={label}
       value={value}
       onChangeText={onChangeText}
-      autoComplete="off"
     />
   </View>
 );

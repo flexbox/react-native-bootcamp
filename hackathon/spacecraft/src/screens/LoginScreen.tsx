@@ -36,12 +36,16 @@ export const LoginScreen = () => {
           label="Email"
           value={email}
           onChangeText={(value) => setEmail(value)}
+          returnKeyType="next"
+          keyboardType="email-address"
+          autoComplete="email"
         />
         <FormInput
           label="Password"
           value={password}
           secureTextEntry={isVisble}
           onChangeText={(value) => setPassword(value)}
+          autoComplete="password"
           right={
             <TextInput.Icon
               onPress={toggleSecureIcon}
