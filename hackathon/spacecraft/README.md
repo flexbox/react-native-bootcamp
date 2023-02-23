@@ -2,7 +2,7 @@
 
 > Your space companion to buy spaceships
 
-<img src="https://github.com/flexbox/react-native-bootcamp/raw/main/hackathon/spacecraft/spacecraft-preview.gif" width="50%" height="50%" alt="react native with Star Wars API">
+<img src="https://github.com/flexbox/react-native-bootcamp/raw/main/hackathon/spacecraft/spacecraft-preview.gif" width="50%" height="50%" alt="react native with Star Wars API" />
 
 ## Getting Started
 
