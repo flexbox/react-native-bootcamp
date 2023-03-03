@@ -7,6 +7,8 @@ import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
 import { Routes } from "../navigation/Routes";
 
+import { Image } from "~/components/Image";
+
 export interface StarshipCardProps {
   ship: StarshipProps;
 }
@@ -34,8 +36,14 @@ export const StarshipCard = ({ ship }: StarshipCardProps) => {
 
   return (
     <Card style={styles.containerCard} onPress={handleGoToDetails}>
-      <Card.Cover source={source} />
+      <Image
+        style={{ width: "100%", height: 200, borderRadius: 12 }}
+        source={source}
+      />
+      {/* we remplace with an Image to have the benefits of `expo-image` */}
+      {/* <Card.Cover source={source} /> */}
       <Card.Title title={title} subtitle={manufacturer} />
+
       <Card.Content>
         <Text variant="titleLarge">{price} credits</Text>
       </Card.Content>

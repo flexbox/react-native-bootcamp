@@ -2,7 +2,6 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
-  Image,
   View,
   StyleSheet,
   TouchableOpacity,
@@ -13,6 +12,8 @@ import { Text, DataTable, List, FAB, Chip } from "react-native-paper";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
+
+import { Image } from "~/components/Image";
 
 interface StarshipDetailsScreenProps {
   route: {
