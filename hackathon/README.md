@@ -38,7 +38,7 @@ npx react-native init awesome-app
 npx ignite-cli new awesome-app
 
 # Expo-powered
-npx create-expo-app --template
+yarn create expo-app --template
 npx create-react-native-app
 npx ignite-cli new awesome-app --expo
 
