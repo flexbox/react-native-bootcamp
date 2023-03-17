@@ -1,11 +1,9 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import { HomeScreen } from '../../features/home/screen'
 import { SignInScreen } from '../../features/authentication/sign-in-screen'
-import { EpisodeDetailScreen } from '../../features/home/episode-detail-screen'
-import { UserDetailScreen } from '../../features/user/detail-screen'
 import { Movie } from 'app/features/home/data'
+import { BottomTabNavigator } from 'app/navigation/native/bottom-tab'
 
 const Stack = createNativeStackNavigator<{
   'sign-in': undefined
@@ -34,23 +32,9 @@ export function NativeNavigation() {
       />
       <Stack.Screen
         name="home"
-        component={HomeScreen}
+        component={BottomTabNavigator}
         options={{
-          title: 'Home',
-        }}
-      />
-      <Stack.Screen
-        name="episode"
-        component={EpisodeDetailScreen}
-        options={{
-          title: 'Detail',
-        }}
-      />
-      <Stack.Screen
-        name="user-detail"
-        component={UserDetailScreen}
-        options={{
-          title: 'User',
+          headerShown: false,
         }}
       />
     </Stack.Navigator>
