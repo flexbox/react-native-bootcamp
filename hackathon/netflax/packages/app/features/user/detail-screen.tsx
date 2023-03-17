@@ -17,7 +17,7 @@ export function UserDetailScreen() {
         Go Home
       </Button>
 
-      <Button icon={<Plus />}>Hello world</Button>
+      <Button icon={<Plus />}>Hello lmLorio</Button>
     </YStack>
   )
 }

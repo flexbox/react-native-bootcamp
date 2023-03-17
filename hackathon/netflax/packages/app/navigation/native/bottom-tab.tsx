@@ -1,8 +1,9 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { EpisodeDetailScreen } from 'app/features/home/episode-detail-screen'
 import { UserDetailScreen } from 'app/features/user/detail-screen'
 import { HomeScreen } from 'app/features/home/screen'
+import { Home, Play, DownloadCloud } from '@tamagui/lucide-icons'
+import { NewAndHotScreen } from 'app/features/new-and-hot/screen'
 
 const Tab = createBottomTabNavigator()
 
@@ -14,20 +15,23 @@ export const BottomTabNavigator = () => {
         component={HomeScreen}
         options={{
           title: 'Home',
+          tabBarIcon: () => <Home />,
         }}
       />
       <Tab.Screen
         name="episode"
-        component={EpisodeDetailScreen}
+        component={NewAndHotScreen}
         options={{
-          title: 'Detail',
+          title: 'New & Hot',
+          tabBarIcon: () => <Play />,
         }}
       />
       <Tab.Screen
         name="user-detail"
         component={UserDetailScreen}
         options={{
-          title: 'User',
+          title: 'Downloads',
+          tabBarIcon: () => <DownloadCloud />,
         }}
       />
     </Tab.Navigator>
