@@ -4,7 +4,7 @@ To ship your first app, you should have completed all the previous challenges: *
 
 ## Ideas
 
-Today's challenge is to build an application. You can use an external API, which you can find in the [resource section](#ressources), or use local data (e.g. a music player with a `.mp3`).
+Today's challenge is to build an application. You can use an external API, which you can find in the resource section, or use local data (e.g. a music player with a `.mp3`).
 
 Here is a list of ideas for inspiration:
 
@@ -28,11 +28,11 @@ Don't jump into coding right away; take 30 minutes to an hour to plan what you n
 
 ## Time to code
 
-Now that you have a plan, it's time to start coding. You should have a basic understanding of the React Native library. If you need help, feel free to refer to the [resource section](#ressources). Good luck and have fun!
+Now that you have a plan, it's time to start coding. You should have a basic understanding of the React Native library. Good luck and have fun!
 
 - [ ] Run the CLI
 
-```console
+```
 # Vanilla React Native
 npx react-native init awesome-app
 npx ignite-cli new awesome-app
@@ -80,6 +80,7 @@ Once you have a functioning application, it's time to share it with the world. Y
 
 
 The fastest way for now is to use the expo Go feature
+
 ```
 expo login
 expo publish
