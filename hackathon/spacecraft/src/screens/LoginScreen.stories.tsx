@@ -1,10 +1,13 @@
-import { storiesOf } from "@storybook/react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { LoginScreen } from "~/screens/LoginScreen";
 
-storiesOf("Screen", module).add("Login Screen", () => (
+export default {
+  title: "Screen",
+};
+
+export const _LoginScreen = () => (
   <NavigationContainer>
     <LoginScreen />
   </NavigationContainer>
-));
+);

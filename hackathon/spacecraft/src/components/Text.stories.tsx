@@ -1,9 +1,12 @@
 import React from "react";
 import { View } from "react-native";
 import { Text } from "react-native-paper";
-import { storiesOf } from "@storybook/react-native";
 
-storiesOf("Text", module).add("Text", () => (
+export default {
+  title: "Text",
+};
+
+export const _Text = () => (
   <View style={{ flex: 1 }}>
     <Text variant="displayLarge">Display Large</Text>
     <Text variant="displayMedium">Display Medium</Text>
@@ -21,4 +24,4 @@ storiesOf("Text", module).add("Text", () => (
     <Text variant="bodyMedium">Body Medium</Text>
     <Text variant="bodySmall">Body Small</Text>
   </View>
-));
+);

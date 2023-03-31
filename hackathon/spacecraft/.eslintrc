@@ -2,7 +2,8 @@
   "extends": "react-native-wcandillon",
   "plugins": ["@tanstack/query"],
   "rules": {
-    "camelcase": "off"
+    "camelcase": "off",
+    "import/no-anonymous-default-export": ["warning", { "allowArray": true }]
   },
   "settings": {
     "import/resolver": {

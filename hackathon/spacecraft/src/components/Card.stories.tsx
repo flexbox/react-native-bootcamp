@@ -1,4 +1,3 @@
-import { storiesOf } from "@storybook/react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import type { StarshipProps } from "api/types";
 
@@ -14,14 +13,23 @@ const tieFixture: StarshipProps = {
   model: "tieadvanced x1",
   cost_in_credits: "unknown",
 };
-storiesOf("Card", module)
-  .add("Buy Button", () => (
-    <NavigationContainer>
-      <StarshipCard ship={shipFixture} />
-    </NavigationContainer>
-  ))
-  .add("Not for sale", () => (
-    <NavigationContainer>
-      <StarshipCard ship={tieFixture} />
-    </NavigationContainer>
-  ));
+
+export default {
+  title: "Card",
+};
+
+export const BuyButton = () => (
+  <NavigationContainer>
+    <StarshipCard ship={shipFixture} />
+  </NavigationContainer>
+);
+
+export const NotForSale = () => (
+  <NavigationContainer>
+    <StarshipCard ship={tieFixture} />
+  </NavigationContainer>
+);
+
+NotForSale.story = {
+  name: "Not for sale",
+};
