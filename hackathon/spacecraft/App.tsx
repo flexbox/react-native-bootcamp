@@ -3,8 +3,6 @@ import React from "react";
 import { NetworkProvider } from "react-native-offline";
 import { Provider as PaperProvider } from "react-native-paper";
 
-// import StorybookUIRoot from "./.storybook/StorybookUI";
-
 import { AuthenticationProvider } from "~/context/Authentication";
 import { Navigator } from "~/navigation/Navigator";
 
@@ -24,8 +22,5 @@ export const App = () => {
   );
 };
 
-// const SHOW_STORYBOOK = false;
-
-// const UI = SHOW_STORYBOOK && __DEV__ ? StorybookUIRoot : App;
 // eslint-disable-next-line import/no-default-export
-export default UI;
+export default App;
