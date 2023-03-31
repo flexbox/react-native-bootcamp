@@ -1,14 +1,14 @@
-import { View } from 'react-native';
+import { View } from "react-native";
 
 export const decorators = [
   // Using a decorator to apply padding for every story
   (StoryFn) => (
-    <View style={{flex:1, padding:8}}>
+    <View style={{ flex: 1 }}>
       <StoryFn />
     </View>
   ),
 ];
 
 export const parameters = {
-  my_param: 'anything',
+  my_param: "anything",
 };

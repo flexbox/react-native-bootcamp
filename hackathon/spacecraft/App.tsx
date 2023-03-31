@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Constants from "expo-constants";
 import React from "react";
 import { NetworkProvider } from "react-native-offline";
 import { Provider as PaperProvider } from "react-native-paper";
@@ -8,7 +9,7 @@ import { Navigator } from "~/navigation/Navigator";
 
 const queryClient = new QueryClient();
 
-export const App = () => {
+const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <PaperProvider>
@@ -22,5 +23,11 @@ export const App = () => {
   );
 };
 
+let AppEntryPoint = App;
+
+if (Constants.expoConfig.extra.storybookEnabled === "true") {
+  AppEntryPoint = require("./.storybook").default;
+}
+
 // eslint-disable-next-line import/no-default-export
-export default App;
+export default AppEntryPoint;

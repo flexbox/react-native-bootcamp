@@ -3,7 +3,7 @@
   "plugins": ["@tanstack/query"],
   "rules": {
     "camelcase": "off",
-    "import/no-anonymous-default-export": ["warning", { "allowArray": true }]
+    "import/no-anonymous-default-export": [1, { "allowArray": true }]
   },
   "settings": {
     "import/resolver": {
