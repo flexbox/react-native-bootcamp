@@ -4,10 +4,10 @@
   "main": "tamagui.config.ts",
   "private": true,
   "dependencies": {
-    "@tamagui/animations-react-native": "1.7.8",
-    "@tamagui/font-inter": "1.7.8",
-    "@tamagui/shorthands": "1.7.8",
-    "@tamagui/theme-base": "1.7.8"
+    "@tamagui/animations-react-native": "1.14.9",
+    "@tamagui/font-inter": "1.14.9",
+    "@tamagui/shorthands": "1.14.9",
+    "@tamagui/theme-base": "1.14.9"
   },
   "sideEffects": false
 }
