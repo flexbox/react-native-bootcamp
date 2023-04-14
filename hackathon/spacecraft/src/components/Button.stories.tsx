@@ -1,8 +1,11 @@
-import { storiesOf } from "@storybook/react-native";
 import { Alert, View } from "react-native";
 import { Button } from "react-native-paper";
 
-storiesOf("Button", module).add("Button", () => (
+export default {
+  title: "Button",
+};
+
+export const _Button = () => (
   <View style={{ flex: 1, justifyContent: "space-around", padding: 16 }}>
     <Button onPress={() => Alert.alert("Pressed!")} mode="contained">
       contained
@@ -20,4 +23,4 @@ storiesOf("Button", module).add("Button", () => (
       text
     </Button>
   </View>
-));
+);
