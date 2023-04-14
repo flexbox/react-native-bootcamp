@@ -16,6 +16,7 @@
     "@tamagui/theme-base": "1.14.9",
     "date-fns": "^2.29.3",
     "expo-linking": "^3.3.0",
+    "lodash": "^4.17.21",
     "solito": "^1.1.2"
   },
   "sideEffects": false

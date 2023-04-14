@@ -18,7 +18,7 @@ Many thanks to  [@FernandoTheRojo](https://twitter.com/fernandotherojo) for the 
 
 - `tamagui` for cross-platform views, themes and animations
 - `solito` for cross-platform navigation
-- Expo SDK 46
+- Expo SDK 48
 - Next.js 12
 - React Navigation 6
 
