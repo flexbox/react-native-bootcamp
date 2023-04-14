@@ -15,6 +15,7 @@
     "@tamagui/shorthands": "1.14.9",
     "@tamagui/theme-base": "1.14.9",
     "date-fns": "^2.29.3",
+    "expo-av": "~13.2.1",
     "expo-linking": "^3.3.0",
     "lodash": "^4.17.21",
     "solito": "^1.1.2"

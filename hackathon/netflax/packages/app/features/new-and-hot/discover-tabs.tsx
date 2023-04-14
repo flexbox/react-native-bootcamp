@@ -31,8 +31,14 @@ export const DiscoverTabs = (props: Props) => {
     >
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <Tabs.List aria-label="Manage your account" backgroundColor="transparent">
-          {categories.map((category) => (
-            <Tabs.Trigger theme="Button" value={category.value} mr="$4" borderRadius={'$3'}>
+          {categories.map((category, index) => (
+            <Tabs.Trigger
+              theme="Button"
+              value={category.value}
+              mr="$4"
+              borderRadius={'$3'}
+              key={`category-${index}`}
+            >
               <SizableText fontFamily="$body">{category.label}</SizableText>
             </Tabs.Trigger>
           ))}

@@ -1,56 +1,45 @@
 /** @type {import('next').NextConfig} */
-const withPlugins = require('next-compose-plugins')
 const { withTamagui } = require('@tamagui/next-plugin')
-const withTM = require('next-transpile-modules')
 const { join } = require('path')
 
 process.env.IGNORE_TS_CONFIG_PATHS = 'true'
 process.env.TAMAGUI_TARGET = 'web'
+process.env.TAMAGUI_DISABLE_WARN_DYNAMIC_LOAD = '1'
 
-const disableExtraction = process.env.NODE_ENV === 'development'
-if (disableExtraction) {
-  console.log('Disabling static extraction in development mode for better HMR')
+const boolVals = {
+  true: true,
+  false: false,
 }
+
+const disableExtraction =
+  boolVals[process.env.DISABLE_EXTRACTION] ?? process.env.NODE_ENV === 'development'
 
 console.log(`
 
-Hello and welcome to Tamagui! You can remove this console.log from your next.config.js.
+Welcome to Tamagui!
 
-We've set up a few things for you. Note that "excludeReactNativeWebExports" removes
-the following from react-native-web for bundle size savings:
+You can update this monorepo to the latest Tamagui release just by running:
 
-- Switch
-- ProgressBar
-- Picker
-- Modal
-- VirtualizedList
-- VirtualizedSectionList
-- AnimatedFlatList
-- FlatList
-- CheckBox
-- Touchable
-- SectionList
+yarn upgrade:tamagui
 
-If you use any of these components you'll get an error "Cannot convert object to
-primitive value".
+We've set up a few things for you.
 
-If you want a simpler setup, you can try the experimental "useReactNativeWebLite"
-flag seen below instead and get big bundle size savings + concurrent mode support.
-Then you can remove excludeReactNativeWebExports.
+See the "excludeReactNativeWebExports" setting in next.config.js, which omits these
+from the bundle: Switch, ProgressBar Picker, CheckBox, Touchable. To save more,
+you can add ones you don't need like: AnimatedFlatList, FlatList, SectionList,
+VirtualizedList, VirtualizedSectionList.
 
-Cheers 🍻
+Even better, enable "useReactNativeWebLite" and you can remove the
+excludeReactNativeWebExports setting altogether and get tree-shaking and
+concurrent mode support as well.
+
+🐣
+
+Remove this log in next.config.js.
 
 `)
 
-const transform = withPlugins([
-  withTM([
-    'solito',
-    'react-native-web',
-    'expo-linking',
-    'expo-constants',
-    'expo-modules-core',
-    '@my/config',
-  ]),
+const plugins = [
   withTamagui({
     config: './tamagui.config.ts',
     components: ['tamagui', '@my/ui'],
@@ -64,34 +53,42 @@ const transform = withPlugins([
         return true
       }
     },
-    excludeReactNativeWebExports: [
-      'Switch',
-      'ProgressBar',
-      'Picker',
-      'Modal',
-      'VirtualizedList',
-      'VirtualizedSectionList',
-      'AnimatedFlatList',
-      'FlatList',
-      'CheckBox',
-      'Touchable',
-      'SectionList',
-    ],
+    excludeReactNativeWebExports: ['Switch', 'ProgressBar', 'Picker', 'CheckBox', 'Touchable'],
   }),
-])
+]
 
-module.exports = function (name, { defaultConfig }) {
-  defaultConfig.webpack5 = true
-  // defaultConfig.experimental.reactRoot = 'concurrent'
-  defaultConfig.typescript.ignoreBuildErrors = true
-  return transform(name, {
-    ...defaultConfig,
-    webpack5: true,
+module.exports = function () {
+  /** @type {import('next').NextConfig} */
+  let config = {
+    typescript: {
+      ignoreBuildErrors: true,
+    },
+    modularizeImports: {
+      '@tamagui/lucide-icons': {
+        transform: `@tamagui/lucide-icons/dist/esm/icons/{{kebabCase member}}`,
+        skipDefaultConversion: true,
+      },
+    },
+    transpilePackages: [
+      'solito',
+      'react-native-web',
+      'expo-linking',
+      'expo-constants',
+      'expo-modules-core',
+    ],
     experimental: {
-      plugins: true,
+      // optimizeCss: true,
       scrollRestoration: true,
       legacyBrowsers: false,
-      browsersListForSwc: true,
     },
-  })
+  }
+
+  for (const plugin of plugins) {
+    config = {
+      ...config,
+      ...plugin(config),
+    }
+  }
+
+  return config
 }
