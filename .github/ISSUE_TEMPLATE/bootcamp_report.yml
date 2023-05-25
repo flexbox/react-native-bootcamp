@@ -10,22 +10,6 @@ body:
       description: Also include a description of how to reproduce the bug
     validations:
       required: true
-  - type: input
-    id: file
-    attributes:
-      label: In which file is the bug, error, incomprehension located?
-      description: If the error is not in a file, please write "none"
-      placeholder: "src/screens/ExampleScreen.tsx"
-    validations:
-      required: false
-  - type: input
-    id: error
-    attributes:
-      label: What is the error displayed
-      description: If there is no error, please write "none"
-      placeholder: "ERROR in ./src/components/Button/Button.styles.js 3:0-30, Module not found: Error: Can't resolve './Button'"
-    validations:
-      required: false
   - type: textarea
     id: additionalInfo
     attributes:
