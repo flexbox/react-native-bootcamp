@@ -15,9 +15,5 @@ web-build/
 # macOS
 .DS_Store
 
-# Google PLay x EAS Submit
-pc-api-7471923474792639039-886-2853adb1fe83.json
-@weshipit__spacecraft-keystore-credentials.md
-
 # eas update
 dist/

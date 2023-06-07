@@ -18,7 +18,7 @@ module.exports = {
   assetBundlePatterns: ["**/*"],
   ios: {
     supportsTablet: true,
-    bundleIdentifier: "today.weshipit.spacecraft",
+    bundleIdentifier: "weshipit.today.spacecraft",
     appStoreUrl:
       "https://apps.apple.com/fr/app/retail-shake-scanner/id1234567890",
   },
@@ -27,7 +27,7 @@ module.exports = {
       foregroundImage: "./assets/adaptive-icon.png",
       backgroundColor: "#FFFFFF",
     },
-    package: "today.weshipit.spacecraft",
+    package: "weshipit.today.spacecraft",
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=weshipit.today.spacecraft",
   },
