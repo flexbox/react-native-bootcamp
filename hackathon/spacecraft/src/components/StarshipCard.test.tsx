@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react-native";
+import { render, screen } from "@testing-library/react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { StarshipCard } from "~/components/StarshipCard";
@@ -11,11 +11,12 @@ const shipFixture = {
 
 describe("StarshipCard", () => {
   it("renders correctly", () => {
-    const { getByText } = render(
+    render(
       <NavigationContainer>
         <StarshipCard ship={shipFixture} />
       </NavigationContainer>
     );
-    getByText("Millennium Falcon");
+    // screen.debug();
+    expect(screen.getByText("Millennium Falcon")).toBeOnTheScreen();
   });
 });
