@@ -72,7 +72,7 @@ npx create-react-native-library react-native-awesome-lib
 - [ ] Fetch data over the network with `react-query`
 - [ ] Before the end of the day, ship your app to your expo account with `expo publish` like [`@flexbox/detector`](https://expo.dev/@flexbox/detector)
 
-**Hint:** If you want to know how to add and API with an auth token, have a look at this PR to [add `.env` and Authorization token with `react-query`](https://github.com/flexbox/react-native-bootcamp/pull/76).
+**🔭 Hint:** If you want to know how to add and API with an auth token, have a look at this PR to [add `.env` and Authorization token with `react-query`](https://github.com/flexbox/react-native-bootcamp/pull/76).
 
 ## 🚀 Spread The World
 
