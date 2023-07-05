@@ -1,7 +1,7 @@
 ---
 name: Challenge report
 description: Use this template for tracking bootcamp challenges bugs, incomprehensible instructions, and other issues.
-labels: ["challenges"]
+labels: ["challenge"]
 body:
   - type: textarea
     id: bugDescription
