@@ -10,6 +10,11 @@
       "StackName": "amplify-producthuntclone-dev-153955",
       "StackId": "arn:aws:cloudformation:us-east-1:958272512243:stack/amplify-producthuntclone-dev-153955/c33d0900-1ccb-11ee-8f5c-0a1b37821d4b",
       "AmplifyAppId": "di28lzpkrf4lq"
+    },
+    "categories": {
+      "auth": {
+        "producthuntcloned86640e9": {}
+      }
     }
   }
 }
