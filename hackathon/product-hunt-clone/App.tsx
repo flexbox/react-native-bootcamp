@@ -1,37 +1,25 @@
-import { ThemeProvider } from "@aws-amplify/ui-react-native";
+import React from "react";
+import { Button } from "react-native";
 
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Amplify } from "aws-amplify";
+import { Authenticator, useAuthenticator } from "@aws-amplify/ui-react-native";
 
-const theme = {
-  tokens: {
-    colors: {
-      font: {
-        primary: "#FACC15",
-      },
-    },
-  },
-};
+import awsExports from "./src/aws-exports";
+Amplify.configure(awsExports);
 
-export default function App() {
+function SignOutButton() {
+  const { signOut } = useAuthenticator();
+  return <Button title="Sign Out" onPress={signOut} />;
+}
+
+function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <View style={styles.container}>
-        <Text>
-          Open up App.tsx to start working on your app! Welcom Amplify React
-          Native
-        </Text>
-        <StatusBar style="auto" />
-      </View>
-    </ThemeProvider>
+    <Authenticator.Provider>
+      <Authenticator>
+        <SignOutButton />
+      </Authenticator>
+    </Authenticator.Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default App;
