@@ -16,10 +16,10 @@ yarn start
   <img width="150px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_primary_lightbg.svg" />
 </a>
 
-## Slides 
+## Slides
 
-![image](https://user-images.githubusercontent.com/81434852/155844860-61014bc6-ccdb-4670-86af-c1fbc3a913f3.png)
+![image](https://raw.githubusercontent.com/flexbox/react-native-bootcamp/2a8553c78eaadef2ce3ff874fb93ae716fc7fce7/challenges/assets/qrcode-slides.png)
 
-## IOS Demo 
+## IOS Demo
 
-![image](https://user-images.githubusercontent.com/81434852/155844888-15989281-1249-489b-b76d-8df6589a16cc.png)
+![image](https://raw.githubusercontent.com/flexbox/react-native-bootcamp/2a8553c78eaadef2ce3ff874fb93ae716fc7fce7/challenges/assets/qrcode-ios-demo.png)

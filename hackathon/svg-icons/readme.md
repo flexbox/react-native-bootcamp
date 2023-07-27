@@ -6,18 +6,14 @@
 
 ## Demo
 
-<img width="320" src="https://user-images.githubusercontent.com/81434852/160851859-8a8d7aa1-224d-4974-9782-4390b733bc8a.png">
+<img width="320" src="https://raw.githubusercontent.com/flexbox/react-native-bootcamp/2a8553c78eaadef2ce3ff874fb93ae716fc7fce7/challenges/assets/vector-demo.png">
 
 ## Usage
 
 ```jsx
 import React from "react";
 import { StyleSheet, ScrollView } from "react-native";
-import {
-  AlienGun,
-  RoboticHand,
-  VrProgram,
-} from "./src/components/icons";
+import { AlienGun, RoboticHand, VrProgram } from "./src/components/icons";
 
 export default function App() {
   return (
