@@ -18,8 +18,16 @@ yarn start
 
 ## Slides
 
+<<<<<<< HEAD
 ![image](https://raw.githubusercontent.com/flexbox/react-native-bootcamp/2a8553c78eaadef2ce3ff874fb93ae716fc7fce7/challenges/assets/qrcode-slides.png)
 
 ## IOS Demo
 
 ![image](https://raw.githubusercontent.com/flexbox/react-native-bootcamp/2a8553c78eaadef2ce3ff874fb93ae716fc7fce7/challenges/assets/qrcode-ios-demo.png)
+=======
+![image](https://raw.githubusercontent.com/flexbox/react-native-workshop/main/challenges/assets/qrcode-slides.png)
+
+## IOS Demo
+
+![image](https://raw.githubusercontent.com/flexbox/react-native-workshop/main/challenges/assets/qrcode-ios-demo.png)
+>>>>>>> bc9dcea8 (fix: 🐛 change path to raw)
