@@ -34,6 +34,7 @@
     "@tanstack/react-query": "^4.29.12",
     "@testing-library/jest-native": "^5.4.2",
     "@types/jest": "^29.5.2",
+    "app-icon-badge": "^0.0.13",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^29.5.0",
     "expo": "^48.0.19",
