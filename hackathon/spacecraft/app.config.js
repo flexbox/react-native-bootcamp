@@ -40,4 +40,24 @@ module.exports = {
       projectId: "012accc3-4ce5-4bae-9f4d-2f842489f07a",
     },
   },
+  plugins: [
+    [
+      "app-icon-badge",
+      {
+        enabled: false, // enable/ disable the plugin based on the environment (usually disabled for production builds)
+        badges: [
+          {
+            text: process.env.ENVIRONMENT, // banner text
+            type: "banner", // banner or ribbon
+            color: "white", // by default it will be white and the only color supported for now is white and black
+            background: "#FF0000", // by default it will be black and we are only supporting hex format for colors
+          },
+          {
+            text: process.env.version,
+            type: "ribbon",
+          },
+        ],
+      },
+    ],
+  ],
 };
