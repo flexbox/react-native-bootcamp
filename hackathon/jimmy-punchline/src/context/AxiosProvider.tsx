@@ -1,8 +1,6 @@
 import React, { createContext, useMemo } from "react";
 import axios, { AxiosInstance } from "axios";
 
-import constants from "../constants";
-
 export const AxiosContext = createContext<AxiosInstance>(undefined);
 
 export default function AxiosProvider({
@@ -16,7 +14,7 @@ export default function AxiosProvider({
     });
 
     axiosHeader.interceptors.request.use((config) => {
-      const token = constants.GENIUS_API_KEY;
+      const token = process.env.GENIUS_API_KEY;
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;
       }
