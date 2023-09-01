@@ -2,8 +2,8 @@
 
 You will find the instructions to set up your computer for your next React Native Bootcamp.
 
-💡 I do provide advice for [Linux and macOS](https://davidl.fr/blog/react-native-setup).
-💡 Being an **administrator on windows is mandatory**, I am **not responsible** if you encounter issues.
+- 💡 I do provide advice for [Linux and macOS](https://davidl.fr/blog/react-native-setup).
+- 💡 Being an **administrator on windows is mandatory**, I am **not responsible** if you encounter issues.
 
 ## System Requirements
 
