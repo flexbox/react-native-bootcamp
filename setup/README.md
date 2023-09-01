@@ -2,15 +2,13 @@
 
 You will find the instructions to set up your computer for your next React Native Bootcamp.
 
-💡 I do provide advice for Linux and macOS.
+💡 I do provide advice for [Linux and macOS](https://davidl.fr/blog/react-native-setup).
 💡 Being an **administrator on windows is mandatory**, I am **not responsible** if you encounter issues.
-(_You can follow this [setup tutorial from InfiniteRed](https://academy.infinite.red/p/installing-react-native-tutorial-on-windows-10/) to make everything work_).
 
 ## System Requirements
 
-- [ ] [git](https://git-scm.com/) v2.13 or greater
-- [ ] [Node.js](https://nodejs.org/) v16 or greater
-- [ ] [yarn](https://yarnpkg.com/getting-started/install)
+- [ ] [git](https://git-scm.com/) v2.40 or greater
+- [ ] [Node.js](https://nodejs.org/) v18 or greater
 
 Use the following command from your terminal to check your Node version.
 
@@ -25,7 +23,7 @@ If you have a recent version installed, it should do.
 <details>
 <summary>macOS</summary>
 
-- [ ] [Xcode 12](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
+- [ ] [Xcode](https://apps.apple.com/fr/app/xcode/id497799835?mt=12) for macOS
 
 Check if everything is working.
 
@@ -61,9 +59,9 @@ Should output something like `/Applications/Xcode.app/Contents/Developer` if it'
 
 ## Smartphone Requirements
 
-- [ ] Create an account [https://expo.dev/signup](https://expo.dev/signup)
-- [ ] Download **Expo GO** on your smartphone
-- [ ] Log in with your Expo account on your smartphone ( On the top right )
+- [ ] Create an [expo account](https://expo.dev/signup).
+- [ ] Download **Expo GO** on your smartphone.
+- [ ] Log in to your Expo account on your smartphone.
 
 You are going to follow a **Native Mobile Application Bootcamp**.
 
