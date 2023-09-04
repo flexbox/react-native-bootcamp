@@ -44,7 +44,7 @@ module.exports = {
     [
       "app-icon-badge",
       {
-        enabled: false, // enable/ disable the plugin based on the environment (usually disabled for production builds)
+        enabled: process.env.ENVIRONMENT === "production" ? false : true, // enable/ disable the plugin based on the environment (usually disabled for production builds)
         badges: [
           {
             text: process.env.ENVIRONMENT, // banner text
