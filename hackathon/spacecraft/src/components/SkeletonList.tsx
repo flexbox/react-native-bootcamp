@@ -20,6 +20,7 @@ export const SkeletonList = ({ numberItems = 10 }: SkeletonListProps) => {
         Animation={Fade}
         Left={PlaceholderMedia}
         style={{ marginBottom: 12 }}
+        key={`skeleton-${i}`}
       >
         <PlaceholderLine width={90} />
         <PlaceholderLine width={80} />
