@@ -41,6 +41,8 @@ Should output something like `/Applications/Xcode.app/Contents/Developer` if it'
 
 - [ ] [Android Studio](https://developer.android.com/studio) with API levels 21+
 
+- [ ] Bonus 👽 - [Expo Orbit](https://github.com/expo/orbit) to accelerate your development workflow with one-click build launches and simulator management
+
 </details>
 
 <details>
