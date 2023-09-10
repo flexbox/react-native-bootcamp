@@ -16,6 +16,7 @@ describe("StarshipCard", () => {
         <StarshipCard ship={shipFixture} />
       </NavigationContainer>
     );
+
     // screen.debug();
     expect(screen.getByText("Millennium Falcon")).toBeOnTheScreen();
   });

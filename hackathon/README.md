@@ -12,7 +12,7 @@ Here is a list of ideas for inspiration:
 - A video game collection [companion app with igdb](https://api-docs.igdb.com/)
 - A weather application called "Umbrella or Not" with [the api open-meteo](https://open-meteo.com/)
 
-And some working examples:
+### Working Examples
 
 - [Product Hunt clone with Hasura](https://github.com/flexbox/react-native-bootcamp/tree/main/hackathon/react-native-heroes) by @MatthysDev
 - [Machine Learning mobile](https://github.com/flexbox/machine-learning-with-javascript/tree/master/vision) application by @flexbox
@@ -31,9 +31,8 @@ Focus on one feature, but make sure it's done well 😀.
 
 #### React Native UI frameworks
 
-- [KittenUI](https://akveo.github.io/react-native-ui-kitten/docs/guides/getting-started#manual-installation)
-- [React Native Elements](https://reactnativeelements.com/docs/)
 - [React Native Paper](https://callstack.github.io/react-native-paper/)
+- [KittenUI](https://akveo.github.io/react-native-ui-kitten/docs/guides/getting-started#manual-installation)
 - [lordicon](https://lordicon.com/)
 - or [many more...](https://github.com/flexbox/react-native-bootcamp/tree/main/hackathon/ui-tier-list)
 
