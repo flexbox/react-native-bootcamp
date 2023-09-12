@@ -12,7 +12,7 @@ import { Header } from "~/components/Header";
 export const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isVisble, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
 
   const navigation = useNavigation<any>();
   const { setUser } = useAuthentication();
@@ -25,7 +25,7 @@ export const LoginScreen = () => {
   }
 
   function toggleSecureIcon() {
-    setIsVisible(!isVisble);
+    setIsVisible(!isVisible);
   }
 
   return (
@@ -43,13 +43,13 @@ export const LoginScreen = () => {
         <FormInput
           label="Password"
           value={password}
-          secureTextEntry={isVisble}
+          secureTextEntry={isVisible}
           onChangeText={(value) => setPassword(value)}
           autoComplete="password"
           right={
             <TextInput.Icon
               onPress={toggleSecureIcon}
-              icon={isVisble ? "eye-off" : "eye"}
+              icon={isVisible ? "eye-off" : "eye"}
             />
           }
         />
