@@ -6,13 +6,11 @@ export default function Screen() {
     <>
       <Stack.Screen
         options={{
-          title: 'Basic',
+          title: 'Stacks',
         }}
       />
 
       <ScrollView>
-        <H2> Stacks </H2>
-
         <YStack space>
           <YStack backgroundColor="$red6">
             <Paragraph> YStack </Paragraph>
@@ -45,9 +43,6 @@ export default function Screen() {
             <Paragraph> YStack </Paragraph>
           </YStack>
         </YStack>
-
-        <H2> Headings</H2>
-        <H2> Text</H2>
       </ScrollView>
     </>
   )
