@@ -8,12 +8,16 @@ interface StarshipLoadableListProps {
   starships: string[];
 }
 
+function getRandom(max: number) {
+  return Math.floor(Math.random() * max);
+}
+
 export const StarshipLoadableList = ({
   starships,
 }: StarshipLoadableListProps) => {
   const queryResult = useStarships(starships);
 
-  return queryResult.map((result, index) => {
+  return queryResult.map((result) => {
     if (result.isInitialLoading || result.isLoading) {
       return <Text variant="bodyMedium">Loading…</Text>;
     }
@@ -23,7 +27,7 @@ export const StarshipLoadableList = ({
     }
 
     return (
-      <View style={styles.container} key={`starship-${index}`}>
+      <View style={styles.container} key={getRandom(1000)}>
         <Text variant="titleMedium">{result.data.name}</Text>
         <Text variant="bodyMedium">{result.data.model}</Text>
       </View>
