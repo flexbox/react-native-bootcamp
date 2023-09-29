@@ -10,7 +10,7 @@ export default function Screen() {
         }}
       />
 
-      <ScrollView>
+      <ScrollView space p="$4">
         <YStack space>
           <YStack backgroundColor="$red6">
             <Paragraph> YStack </Paragraph>

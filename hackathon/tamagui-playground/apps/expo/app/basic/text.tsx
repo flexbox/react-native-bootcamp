@@ -1,4 +1,18 @@
-import { H2, Paragraph, ScrollView, XStack, YStack, Box } from '@my/ui'
+import {
+  H2,
+  Paragraph,
+  ScrollView,
+  XStack,
+  YStack,
+  Text,
+  SizableText,
+  Heading,
+  H1,
+  H3,
+  H4,
+  H5,
+  H6,
+} from '@my/ui'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -10,8 +24,27 @@ export default function Screen() {
         }}
       />
 
-      <ScrollView>
-        <H2>Text</H2>
+      <ScrollView space p="$4">
+        <Text theme="yellow_alt2_TextArea">Text</Text>
+        <SizableText size="$3" theme="yellow_alt2_TextArea">
+          SizableText
+        </SizableText>
+        <SizableText size="$5">SizableText</SizableText>
+        <XStack space>
+          <SizableText theme="alt1" size="$3">
+            alt1
+          </SizableText>
+          <SizableText theme="alt2" size="$3">
+            alt2
+          </SizableText>
+        </XStack>
+        <Paragraph size="$2" fontWeight="800">
+          GitHub is a web-based platform that provides a collaborative environment for software
+          development projects. It offers version control, issue tracking, and project management
+          tools to help developers work together efficiently. GitHub has become a central hub for
+          open-source software development, with millions of users and repositories covering a wide
+          range of programming languages and technologies.
+        </Paragraph>
       </ScrollView>
     </>
   )
