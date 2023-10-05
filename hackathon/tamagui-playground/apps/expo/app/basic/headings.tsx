@@ -1,4 +1,4 @@
-import { H2, Paragraph, ScrollView, XStack, YStack, Box, H1, H3, H4, H5, H6, Heading } from '@my/ui'
+import { H2, ScrollView, XStack, YStack, Box, H1, H3, H4, H5, H6, Heading } from '@my/ui'
 import { Stack } from 'expo-router'
 
 export default function Screen() {

@@ -1,4 +1,4 @@
-import { H1, H2, Paragraph, Separator, YStack } from '@my/ui'
+import { H1, H2, Paragraph, YStack } from '@my/ui'
 
 import React from 'react'
 import { Link } from 'solito/link'
@@ -14,11 +14,13 @@ export function HomeScreen() {
           <Paragraph> Stacks Headings Text</Paragraph>
         </Link>
 
-        <H2>Forms</H2>
-        <Paragraph>
-          Button Checkbox Form Input & TextArea Label Progress RadioGroup Select Slider Switch
-          ToggleGroup
-        </Paragraph>
+        <Link href="/forms/">
+          <H2>Forms</H2>
+          <Paragraph>
+            Button Checkbox Form Input & TextArea Label Progress RadioGroup Select Slider Switch
+            ToggleGroup
+          </Paragraph>
+        </Link>
 
         <H2>Panels</H2>
         <Paragraph>AlertDialog Dialog Popover Sheet Tooltip Toast</Paragraph>
