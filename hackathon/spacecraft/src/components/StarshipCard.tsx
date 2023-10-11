@@ -56,7 +56,10 @@ export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
 
   const navigation = useNavigation<StarshipDetailsScreenParams>();
   const handleGoToDetails = () => {
-    navigation.navigate(Routes.STARSHIP_DETAILS_SCREEN, ship);
+    navigation.navigate(Routes.STARSHIP_DETAILS_SCREEN, {
+      ...ship,
+      image: source,
+    });
   };
 
   // visibleIndex -> prop
@@ -76,6 +79,7 @@ export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
       <Image
         style={{ width: "100%", height: 200, borderRadius: 12 }}
         source={source}
+        sharedTransitionTag={`image-${ship.model}`}
       />
       {/* we remplace with an Image to have the benefits of `expo-image` */}
       {/* <Card.Cover source={source} /> */}
