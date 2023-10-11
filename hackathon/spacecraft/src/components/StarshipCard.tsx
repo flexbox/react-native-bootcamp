@@ -1,13 +1,30 @@
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import * as React from "react";
 import { Alert, StyleSheet } from "react-native";
 import { Button, Card, Text } from "react-native-paper";
+import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
 import { Routes } from "../navigation/Routes";
 
 import { Image } from "~/components/Image";
+
+export function createAnimatedComponentFrowardingRef<P, S>(
+  Component: React.ComponentClass<P, S>
+) {
+  return React.forwardRef<React.Component<P, S>, P>((props, ref) => {
+    class Wrapper extends React.Component<P, S> {
+      render() {
+        return <Component {...this.props} ref={ref} />;
+      }
+    }
+    const AnimatedWrapper = Animated.createAnimatedComponent(Wrapper);
+    return <AnimatedWrapper {...props} />;
+  });
+}
+
+const AnimatedCard = createAnimatedComponentFrowardingRef(Card);
 
 export interface StarshipCardProps {
   ship: StarshipProps;
@@ -35,7 +52,14 @@ export const StarshipCard = ({ ship }: StarshipCardProps) => {
   };
 
   return (
-    <Card style={styles.containerCard} onPress={handleGoToDetails}>
+    <AnimatedCard
+      style={styles.containerCard}
+      onPress={handleGoToDetails}
+      // mounting
+      entering={FadeIn.duration(500)}
+      // unmounting
+      existing={FadeOut.duration(500)}
+    >
       <Image
         style={{ width: "100%", height: 200, borderRadius: 12 }}
         source={source}
@@ -56,7 +80,7 @@ export const StarshipCard = ({ ship }: StarshipCardProps) => {
           </Button>
         )}
       </Card.Actions>
-    </Card>
+    </AnimatedCard>
   );
 };
 
