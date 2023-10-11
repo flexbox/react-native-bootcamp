@@ -17,13 +17,14 @@ interface ShipProps {
 
 interface RenderItemProps {
   item: ShipProps;
+  index: number;
 }
 
 // SOLUTION 2: with a FlatList - more performant
 const renderItem = (props: RenderItemProps) => {
   const ship = props.item;
 
-  return <StarshipCard ship={ship} />;
+  return <StarshipCard ship={ship} index={props.index} />;
 };
 
 export const StarshipFeedScreen = () => {
