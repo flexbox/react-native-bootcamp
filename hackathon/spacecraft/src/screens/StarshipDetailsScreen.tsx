@@ -11,7 +11,6 @@ import {
 import { Text, DataTable, List, FAB, Chip } from "react-native-paper";
 
 import type { StarshipProps } from "../../api/types";
-import { useImage } from "../hooks/useImage";
 
 import { Image } from "~/components/Image";
 
@@ -34,9 +33,12 @@ export const StarshipDetailsScreen = ({
     cargo_capacity,
     hyperdrive_rating,
     max_atmosphering_speed,
+    model,
+    // @ts-ignore
+    image,
   } = route.params;
 
-  const source = useImage(name);
+  // const source = useImage(name);
   const navigation = useNavigation();
 
   const handleClose = () => {
@@ -52,7 +54,11 @@ export const StarshipDetailsScreen = ({
       <ScrollView>
         <View style={styles.scrollContainer}>
           <View style={styles.imageContainer}>
-            <Image style={{ width: "100%", height: 350 }} source={source} />
+            <Image
+              style={{ width: "100%", height: 350 }}
+              source={image}
+              sharedTransitionTag={`image-${model}`}
+            />
             <View style={[styles.closeContainer, styles.left]}>
               <TouchableOpacity
                 onPress={handleClose}
