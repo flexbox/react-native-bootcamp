@@ -2,6 +2,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
+  Pressable,
   View,
   StyleSheet,
   TouchableOpacity,
@@ -9,6 +10,10 @@ import {
   Alert,
 } from "react-native";
 import { Text, DataTable, List, FAB, Chip } from "react-native-paper";
+import { withAnimated } from "~/utils/withAnimated";
+
+const AnimatedFAB = withAnimated(FAB);
+import { useSharedValue, withSpring } from "react-native-reanimated";
 
 import type { StarshipProps } from "../../api/types";
 
@@ -46,8 +51,10 @@ export const StarshipDetailsScreen = ({
   };
 
   const handleBuy = () => {
-    Alert.alert("Give me the money!");
+    // Alert.alert("Give me the money!");
   };
+
+  const scale = useSharedValue(1);
 
   return (
     <View>
@@ -109,12 +116,30 @@ export const StarshipDetailsScreen = ({
         </View>
       </ScrollView>
 
-      <FAB
-        style={styles.fab}
-        label="Buy this ship"
-        icon="cart"
+      <Pressable
+        onPressIn={() => {
+          scale.value = withSpring(0.9);
+        }}
+        onPressOut={() => {
+          scale.value = withSpring(1);
+        }}
         onPress={handleBuy}
-      />
+      >
+        <AnimatedFAB
+          style={[
+            styles.fab,
+            {
+              transform: [
+                {
+                  scale,
+                },
+              ],
+            },
+          ]}
+          label="Buy this ship"
+          icon="cart"
+        />
+      </Pressable>
     </View>
   );
 };
