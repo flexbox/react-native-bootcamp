@@ -12,24 +12,9 @@ import Animated, {
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
 import { Routes } from "../navigation/Routes";
+import { withAnimated } from "../utils/withAnimated";
 
 import { Image } from "~/components/Image";
-
-export function withAnimated<T extends object>(
-  WrappedComponent: React.ComponentType<T>
-): React.ComponentClass<AnimateProps<T>, any> {
-  const displayName =
-    WrappedComponent.displayName || WrappedComponent.name || "Component";
-
-  class WithAnimated extends React.Component<T, any> {
-    static displayName = `WithAnimated(${displayName})`;
-
-    render(): React.ReactNode {
-      return <WrappedComponent {...this.props} />;
-    }
-  }
-  return Animated.createAnimatedComponent(WithAnimated);
-}
 
 const AnimatedCard = withAnimated(Card);
 
