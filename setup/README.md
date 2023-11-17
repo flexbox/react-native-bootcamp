@@ -61,7 +61,7 @@ Should output something like `/Applications/Xcode.app/Contents/Developer` if it'
 
 - [ ] Create an [expo account](https://expo.dev/signup).
 - [ ] Download **Expo GO** on your smartphone.
-- [ ] Log in to your Expo account on your smartphone.
+- [ ] Log in with your Expo account on Expo Go.
 
 You are going to follow a **Native Mobile Application Bootcamp**.
 
@@ -69,7 +69,7 @@ You are going to follow a **Native Mobile Application Bootcamp**.
 
 ## Text Editor
 
-- [ ] Download and install [Visual Studio Code](https://code.visualstudio.com/)
+- [ ] Download and install [Visual Studio Code](https://code.visualstudio.com/).
 
 <details>
 <summary>macOS</summary>
