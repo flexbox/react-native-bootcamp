@@ -4,13 +4,13 @@ import axios, { AxiosInstance } from "axios";
 export const AxiosContext = createContext<AxiosInstance>(undefined);
 
 export default function AxiosProvider({
-  children,
+  children
 }: React.PropsWithChildren<unknown>) {
   const axiosHeader = useMemo(() => {
     const axiosHeader = axios.create({
       headers: {
-        "Content-Type": "application/json",
-      },
+        "Content-Type": "application/json"
+      }
     });
 
     axiosHeader.interceptors.request.use((config) => {

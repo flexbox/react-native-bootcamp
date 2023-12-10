@@ -1,6 +1,7 @@
-import { Button, Input, Text } from "@ui-kitten/components";
 import React, { useState } from "react";
 import { View } from "react-native";
+import { Button, Input, Text } from "@ui-kitten/components";
+
 import { ScreenContainer } from "../components/ScreenContainer";
 import { ROUTES } from "../navigation/Routes";
 import { theme } from "../theme/theme";
@@ -20,7 +21,7 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
   const handlePressChoice = (choosenArtist: string, choosenSong: string) => {
     navigation.navigate(ROUTES.LYRICS_SCREEN, {
       artist: choosenArtist,
-      song: choosenSong,
+      song: choosenSong
     });
   };
 
@@ -29,7 +30,7 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
       <View
         style={{
           flex: 1,
-          justifyContent: "center",
+          justifyContent: "center"
         }}
       >
         <Text category="h1">DON’T FORGET THE LYRICS</Text>
@@ -37,7 +38,7 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
       <View
         style={{
           marginTop: theme.spacing.xl,
-          marginBottom: theme.spacing.l,
+          marginBottom: theme.spacing.l
         }}
       >
         <Input
@@ -52,14 +53,14 @@ export const HomeScreen = ({ navigation }: HomeScreenProps) => {
           onChangeText={setSong}
           size="large"
           style={{
-            marginTop: theme.spacing.m,
+            marginTop: theme.spacing.m
           }}
         />
         <Button
           onPress={navigateToLyrics}
           size="giant"
           style={{
-            marginTop: theme.spacing.xl,
+            marginTop: theme.spacing.xl
           }}
         >
           Go

@@ -1,11 +1,10 @@
-import { View, ActivityIndicator } from "react-native";
 import React, { useState } from "react";
-import { useLyrics } from "../hooks/useLyrics";
-
+import { ActivityIndicator, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Button, Text, useTheme } from "@ui-kitten/components";
 import split from "lodash/split";
 
-import { Button, Text, useTheme } from "@ui-kitten/components";
-import { useNavigation } from "@react-navigation/native";
+import { useLyrics } from "../hooks/useLyrics";
 import { theme } from "../theme/theme";
 
 interface Props {
@@ -53,7 +52,7 @@ export const Lyrics = ({ params }: Props) => {
     allLyrics[0],
     allLyrics[1],
     allLyrics[2],
-    allLyrics[3],
+    allLyrics[3]
   ];
 
   // debugger;
@@ -85,7 +84,7 @@ export const Lyrics = ({ params }: Props) => {
               marginBottom: theme.spacing.m,
               backgroundColor: obfuscated
                 ? color["background-alternative-color-1"]
-                : "transparent",
+                : "transparent"
             }}
           >
             {item}
@@ -93,12 +92,18 @@ export const Lyrics = ({ params }: Props) => {
         );
       })}
 
-      <Button status="basic" onPress={handleDisplaySolution}>
+      <Button
+        status="basic"
+        onPress={handleDisplaySolution}
+      >
         {obfuscated ? "Show " : "Hide "}
         the lyrics
       </Button>
 
-      <Button status="control" onPress={navigation.goBack}>
+      <Button
+        status="control"
+        onPress={navigation.goBack}
+      >
         Another one
       </Button>
     </View>
