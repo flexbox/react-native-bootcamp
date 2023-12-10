@@ -1,6 +1,7 @@
-import { Text } from "@ui-kitten/components";
 import React, { useEffect } from "react";
 import { ScrollView, View } from "react-native";
+import { Text } from "@ui-kitten/components";
+
 import { ArtistAvatar } from "../components/ArtistAvatar";
 import { Lyrics } from "../components/Lyrics";
 import { ScreenContainer } from "../components/ScreenContainer";
@@ -31,7 +32,7 @@ export const LyricsScreen = ({ navigation, route }: LyricsScreenProps) => {
             marginBottom: theme.spacing.m,
             marginTop: theme.spacing["3xl"],
             flexDirection: "row",
-            alignItems: "center",
+            alignItems: "center"
           }}
         >
           <ArtistAvatar artist={artist} />

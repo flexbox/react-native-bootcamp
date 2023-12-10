@@ -10,7 +10,7 @@ export const ScreenContainer = ({ children }: ScreenContainerProps) => {
     <Layout
       style={{
         flex: 1,
-        padding: 32,
+        padding: 32
       }}
     >
       {children}
