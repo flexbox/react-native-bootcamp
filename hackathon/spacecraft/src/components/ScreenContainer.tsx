@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import type { ReactNode } from "react";
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
-import { IconButton, Text } from "react-native-paper";
+import { IconButton, Text, useTheme } from "react-native-paper";
 
 import { Offline } from "~/components/Offline";
 
@@ -52,9 +52,13 @@ export const ScreenContainer = ({
   withGoBack = false,
   accessoryFooter,
 }: ScreenContainerProps) => {
+  const theme = useTheme();
+
   if (withScrollView) {
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView
+        style={[styles.container, { backgroundColor: theme.colors.background }]}
+      >
         <ScreenContainerTitle title={title} withGoBack={withGoBack} />
         {children}
         <Offline />
@@ -64,7 +68,9 @@ export const ScreenContainer = ({
   }
 
   return (
-    <View style={styles.container}>
+    <View
+      style={[styles.container, { backgroundColor: theme.colors.background }]}
+    >
       <ScreenContainerTitle title={title} withGoBack={withGoBack} />
       {children}
       <Offline />
