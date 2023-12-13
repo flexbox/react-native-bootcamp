@@ -12,7 +12,10 @@ export const Header = ({ title }: HeaderProps) => {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.colors.primary }]}>
-      <Text variant="headlineMedium" style={styles.headerText}>
+      <Text
+        variant="headlineMedium"
+        style={[styles.headerText, { color: theme.colors.background }]}
+      >
         {title}
       </Text>
     </View>
@@ -29,6 +32,5 @@ const styles = StyleSheet.create({
   headerText: {
     fontWeight: "800",
     textTransform: "uppercase",
-    color: "white",
   },
 });

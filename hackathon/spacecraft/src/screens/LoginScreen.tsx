@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
-import { Button, TextInput } from "react-native-paper";
+import { Button, TextInput, useTheme } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
@@ -28,8 +28,10 @@ export const LoginScreen = () => {
     setIsVisible(!isVisible);
   }
 
+  const theme = useTheme();
+
   return (
-    <View>
+    <View style={{ backgroundColor: theme.colors.background, flex: 1 }}>
       <Header title="SpaceCraft" />
       <View style={styles.content}>
         <FormInput
