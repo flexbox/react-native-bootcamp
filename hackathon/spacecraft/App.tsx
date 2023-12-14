@@ -5,14 +5,17 @@ import { NetworkProvider } from "react-native-offline";
 import { Provider as PaperProvider } from "react-native-paper";
 
 import { AuthenticationProvider } from "~/context/Authentication";
+import { useAppearanceTheme } from "~/hooks/useAppearanceTheme";
 import { Navigator } from "~/navigation/Navigator";
 
 const queryClient = new QueryClient();
 
 const App = () => {
+  const appearanceTheme = useAppearanceTheme();
+
   return (
     <QueryClientProvider client={queryClient}>
-      <PaperProvider>
+      <PaperProvider theme={appearanceTheme}>
         <NetworkProvider>
           <AuthenticationProvider>
             <Navigator />
