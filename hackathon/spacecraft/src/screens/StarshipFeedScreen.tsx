@@ -27,12 +27,12 @@ const renderItem = (props: RenderItemProps) => {
 };
 
 export const StarshipFeedScreen = () => {
-  const { isInitialLoading, isError, data, refetch } = useQuery(
-    ["starships"],
-    fetchStarships
-  );
+  const { isLoading, isError, data, refetch } = useQuery({
+    queryKey: ["starships"],
+    queryFn: fetchStarships,
+  });
 
-  if (isInitialLoading) {
+  if (isLoading) {
     return <ScreenContainer title="Loading…" />;
   }
 

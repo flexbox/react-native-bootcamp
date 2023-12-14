@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 
 export const usePilot = () => {
   const [page, setPage] = useState(1);
@@ -9,8 +9,10 @@ export const usePilot = () => {
       (result) => result.json()
     );
 
-  const query = useQuery(["pilots", page], () => fetchData(page), {
-    keepPreviousData: true,
+  const query = useQuery({
+    queryKey: ["pilots", page],
+    queryFn: () => fetchData(page),
+    placeholderData: keepPreviousData,
   });
 
   return { query, setPage, page };
