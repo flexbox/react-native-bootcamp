@@ -1,4 +1,4 @@
-import { HomeScreen } from 'app/features/home/screen'
+import { ImageLabelingScreen } from 'app/features/image-labeling/screen'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -6,10 +6,10 @@ export default function Screen() {
     <>
       <Stack.Screen
         options={{
-          title: 'Home',
+          title: 'Labeling',
         }}
       />
-      <HomeScreen />
+      <ImageLabelingScreen />
     </>
   )
 }
