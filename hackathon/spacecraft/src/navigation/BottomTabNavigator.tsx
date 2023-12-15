@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { useTheme } from "react-native-paper";
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
+import { ExploreNavigator } from "~/navigation/ExploreNavigator";
 import { Routes } from "~/navigation/Routes";
 import { PilotNavigator } from "~/navigation/PilotNavigator";
 import { StarshipNavigator } from "~/navigation/StarshipNavigator";
@@ -41,6 +42,16 @@ export const BottomTabNavigator = () => {
           tabBarLabel: "Pilots",
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="user-astronaut" size={22} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={Routes.EXPLORE_SCREEN}
+        component={ExploreNavigator}
+        options={{
+          tabBarLabel: "Explore",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="planet" size={22} color={color} />
           ),
         }}
       />
