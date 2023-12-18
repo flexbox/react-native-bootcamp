@@ -27,6 +27,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e2e045cd-0a89-487e-beb3-4e00e06c97a9"
+      }
+    },
+    "owner": "flexbox"
   }
 }
