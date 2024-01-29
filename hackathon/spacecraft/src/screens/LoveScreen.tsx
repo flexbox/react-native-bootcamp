@@ -4,7 +4,7 @@ import React from "react";
 import { Button, Text } from "react-native-paper";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
-import { ButtonOpinion } from "~/components/ButtonOpinion";
+import { ButtonSupport } from "~/components/ButtonSupport";
 
 export const LoveScreen = () => {
   const handleStoreReview = async () => {
@@ -30,7 +30,7 @@ export const LoveScreen = () => {
           >
             Give 5 stars to Spacecraft
           </Button>
-          <ButtonOpinion mode="text" />
+          <ButtonSupport mode="text" />
         </View>
       }
     >

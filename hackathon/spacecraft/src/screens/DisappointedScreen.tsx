@@ -4,7 +4,7 @@ import React from "react";
 import { Button, Text } from "react-native-paper";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
-import { ButtonOpinion } from "~/components/ButtonOpinion";
+import { ButtonSupport } from "~/components/ButtonSupport";
 
 interface Props {
   navigation: any;
@@ -21,7 +21,7 @@ export const DisappointedScreen = ({ navigation }: Props) => {
       withGoBack
       accessoryFooter={
         <View style={{ padding: 24, marginBottom: 12 }}>
-          <ButtonOpinion />
+          <ButtonSupport />
           <Button onPress={handleCancel} mode="text">
             Not now
           </Button>

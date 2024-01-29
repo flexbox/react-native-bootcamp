@@ -6,7 +6,7 @@ interface Props {
   mode?: "contained" | "text";
 }
 
-export const ButtonOpinion = ({ mode = "contained" }: Props) => {
+export const ButtonSupport = ({ mode = "contained" }: Props) => {
   const handleOpenGitHub = async () => {
     await WebBrowser.openBrowserAsync(
       "https://github.com/flexbox/react-native-bootcamp/issues"
