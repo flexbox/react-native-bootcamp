@@ -57,11 +57,11 @@ Now that you have a plan, it's time to start coding. You should have a basic und
 ```console
 # Vanilla React Native
 npx react-native init awesome-app
-npx ignite-cli new awesome-app
+npx create-react-native-app
 
 # Expo-powered
 npx create-expo-app --template
-npx create-react-native-app
+npx create-expo-app --example 
 npx ignite-cli new awesome-app --expo
 
 # Scaffold React Native libraries
