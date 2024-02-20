@@ -37,12 +37,6 @@ export interface PlanetDetailsScreenProps {
 }
 
 export function PlanetDetailsScreen(props: PlanetDetailsScreenProps) {
-  console.log(
-    "🚀 ~ file: PlanetDetailsScreen.tsx:6 ~ PlanetDetailsScreen ~ props:",
-    props.route
-  );
-
-
   return (
     <ScreenContainer title={props.route.params.planet.name} withGoBack>
       <Text>PlanetDetailsScreen</Text>
