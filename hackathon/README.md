@@ -32,7 +32,7 @@ Focus on one feature, but make sure it's done well 😀.
 #### React Native UI frameworks
 
 - [React Native Paper](https://callstack.github.io/react-native-paper/)
-- [KittenUI](https://akveo.github.io/react-native-ui-kitten/docs/guides/getting-started#manual-installation)
+- [NativeWind](https://www.nativewind.dev/)
 - [lordicon](https://lordicon.com/)
 - or [many more...](https://github.com/flexbox/react-native-bootcamp/tree/main/hackathon/ui-tier-list)
 
