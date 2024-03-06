@@ -1,14 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { state$ } from './src/legend-state';
+import { observer } from "@legendapp/state/react";
 
-export default function App() {
+const App = observer(() => {
+
+  const addExpense = () => {
+    const newExpense = {
+      id: Math.random().toString(),
+      title: `Expense ${expenses.length + 1}`,
+      amount: Math.floor(Math.random()),
+    };
+    state$.expenses.set((currentExpenses) => [...currentExpenses, newExpense]);
+  };
+  const expenses = state$.expenses.get();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <FlatList
+        data={expenses}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View>
+            <Text>
+              {item.title}: ${item.amount}
+            </Text>
+          </View>
+        )}
+      />
+      <Button title="Add Expense" onPress={addExpense} />
+    </SafeAreaView>
   );
-}
+});
 
 const styles = StyleSheet.create({
   container: {
@@ -18,3 +40,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
