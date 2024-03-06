@@ -30,6 +30,4 @@ export const NotForSale = () => (
   </NavigationContainer>
 );
 
-NotForSale.story = {
-  name: "Not for sale",
-};
+NotForSale.storyName = "Not for sale";
