@@ -1,8 +1,18 @@
-// Learn more https://docs.expo.io/guides/customizing-metro
-const { getDefaultConfig } = require("expo/metro-config");
+// metro.config.js
+const path = require('path');
+const { getDefaultConfig } = require('expo/metro-config');
 
-const defaultConfig = getDefaultConfig(__dirname);
+const { generate } = require('@storybook/react-native/scripts/generate');
 
-defaultConfig.resolver.resolverMainFields.unshift("sbmodern");
+generate({
+  configPath: path.resolve(__dirname, './.storybook'),
+});
 
-module.exports = defaultConfig;
+/** @type {import('expo/metro-config').MetroConfig} */
+const config = getDefaultConfig(__dirname);
+
+config.transformer.unstable_allowRequireContext = true;
+
+config.resolver.sourceExts.push('mjs');
+
+module.exports = config;
