@@ -2,6 +2,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
+  Pressable,
   View,
   StyleSheet,
   TouchableOpacity,
@@ -9,9 +10,12 @@ import {
   Alert,
 } from "react-native";
 import { Text, DataTable, List, FAB, Chip } from "react-native-paper";
+import { withAnimated } from "~/utils/withAnimated";
+
+const AnimatedFAB = withAnimated(FAB);
+import { useSharedValue, withSpring } from "react-native-reanimated";
 
 import type { StarshipProps } from "../../api/types";
-import { useImage } from "../hooks/useImage";
 
 import { Image } from "~/components/Image";
 
@@ -34,9 +38,12 @@ export const StarshipDetailsScreen = ({
     cargo_capacity,
     hyperdrive_rating,
     max_atmosphering_speed,
+    model,
+    // @ts-ignore
+    image,
   } = route.params;
 
-  const source = useImage(name);
+  // const source = useImage(name);
   const navigation = useNavigation();
 
   const handleClose = () => {
@@ -44,15 +51,21 @@ export const StarshipDetailsScreen = ({
   };
 
   const handleBuy = () => {
-    Alert.alert("Give me the money!");
+    // Alert.alert("Give me the money!");
   };
+
+  const scale = useSharedValue(1);
 
   return (
     <View>
       <ScrollView>
         <View style={styles.scrollContainer}>
           <View style={styles.imageContainer}>
-            <Image style={{ width: "100%", height: 350 }} source={source} />
+            <Image
+              style={{ width: "100%", height: 350 }}
+              source={image}
+              sharedTransitionTag={`image-${model}`}
+            />
             <View style={[styles.closeContainer, styles.left]}>
               <TouchableOpacity
                 onPress={handleClose}
@@ -103,12 +116,30 @@ export const StarshipDetailsScreen = ({
         </View>
       </ScrollView>
 
-      <FAB
-        style={styles.fab}
-        label="Buy this ship"
-        icon="cart"
+      <Pressable
+        onPressIn={() => {
+          scale.value = withSpring(0.9);
+        }}
+        onPressOut={() => {
+          scale.value = withSpring(1);
+        }}
         onPress={handleBuy}
-      />
+      >
+        <AnimatedFAB
+          style={[
+            styles.fab,
+            {
+              transform: [
+                {
+                  scale,
+                },
+              ],
+            },
+          ]}
+          label="Buy this ship"
+          icon="cart"
+        />
+      </Pressable>
     </View>
   );
 };
