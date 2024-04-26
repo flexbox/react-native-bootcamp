@@ -12,7 +12,7 @@ import { Header } from "~/components/Header";
 export const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(false);
 
   const navigation = useNavigation<any>();
   const { setUser } = useAuthentication();
