@@ -6,9 +6,11 @@ import { usePlanets } from "~/hooks/usePlanets";
 import { Routes } from "~/navigation/Routes";
 import { getTerrainColor } from "~/utils/getTerrainColor";
 
-interface ExploreScreenProps {}
+interface PlanetsScreenProps {
+  navigation: any;
+}
 
-export function ExploreScreen({ navigation }: ExploreScreenProps) {
+export function PlanetsScreen({ navigation }: PlanetsScreenProps) {
   const { data, isLoading, isError, error } = usePlanets();
 
   if (isLoading) {
@@ -35,8 +37,10 @@ export function ExploreScreen({ navigation }: ExploreScreenProps) {
     const backgroundColor = getTerrainColor(item.terrain);
     const size = item.diameter / 100;
 
+    const randomMarginTop = Math.floor(Math.random() * 100);
+
     return (
-      <View style={{ padding: 64 }}>
+      <View style={{ padding: 64, paddingTop: randomMarginTop }}>
         <TouchableOpacity
           onPress={() =>
             navigation.navigate(Routes.PLANET_DETAILS_SCREEN, { planet: item })
@@ -51,7 +55,7 @@ export function ExploreScreen({ navigation }: ExploreScreenProps) {
             width: size,
             height: size,
             backgroundColor: backgroundColor,
-            borderRadius: "100%",
+            borderRadius: 1000,
             margin: 8,
           }}
         />
@@ -64,7 +68,7 @@ export function ExploreScreen({ navigation }: ExploreScreenProps) {
       <FlatList
         data={data.results}
         renderItem={renderItem}
-        keyExtractor={(ship) => ship.model}
+        keyExtractor={(planet) => planet.name}
         horizontal={true}
       />
     </ScreenContainer>

@@ -5,7 +5,7 @@ import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { useTheme } from "react-native-paper";
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
-import { ExploreNavigator } from "~/navigation/ExploreNavigator";
+import { PlanetNavigator } from "~/navigation/PlanetNavigator";
 import { Routes } from "~/navigation/Routes";
 import { PilotNavigator } from "~/navigation/PilotNavigator";
 import { StarshipNavigator } from "~/navigation/StarshipNavigator";
@@ -46,8 +46,8 @@ export const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name={Routes.EXPLORE_SCREEN}
-        component={ExploreNavigator}
+        name={Routes.PLANETS}
+        component={PlanetNavigator}
         options={{
           tabBarLabel: "Explore",
           tabBarIcon: ({ color }) => (

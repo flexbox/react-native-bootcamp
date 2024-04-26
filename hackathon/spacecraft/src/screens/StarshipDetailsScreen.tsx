@@ -7,17 +7,16 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
-  Alert,
 } from "react-native";
 import { Text, DataTable, List, FAB, Chip } from "react-native-paper";
-import { withAnimated } from "~/utils/withAnimated";
-
-const AnimatedFAB = withAnimated(FAB);
 import { useSharedValue, withSpring } from "react-native-reanimated";
 
 import type { StarshipProps } from "../../api/types";
 
+import { withAnimated } from "~/utils/withAnimated";
 import { Image } from "~/components/Image";
+
+const AnimatedFAB = withAnimated(FAB);
 
 interface StarshipDetailsScreenProps {
   route: {

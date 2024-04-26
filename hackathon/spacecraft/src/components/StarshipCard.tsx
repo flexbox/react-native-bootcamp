@@ -1,13 +1,9 @@
+import CurrencyFormat from "react-currency-format";
 import { useNavigation } from "@react-navigation/native";
 import * as React from "react";
 import { Alert, StyleSheet } from "react-native";
 import { Button, Card, Text } from "react-native-paper";
-import Animated, {
-  AnimateProps,
-  FadeIn,
-  FadeOut,
-  FadeInDown,
-} from "react-native-reanimated";
+import { FadeOut, FadeInDown } from "react-native-reanimated";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
@@ -64,15 +60,24 @@ export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
       <Image
         style={{ width: "100%", height: 200, borderRadius: 12 }}
         source={source}
-        sharedTransitionTag={`image-${ship.model}`}
+        // sharedTransitionTag={`image-${ship.model}`}
       />
       {/* we remplace with an Image to have the benefits of `expo-image` */}
       {/* <Card.Cover source={source} /> */}
       <Card.Title title={title} subtitle={manufacturer} />
 
-      <Card.Content>
-        <Text variant="titleLarge">{price} credits</Text>
-      </Card.Content>
+      {price !== "unknown" && (
+        <Card.Content>
+          <CurrencyFormat
+            value={price}
+            displayType="text"
+            thousandSeparator={true}
+            renderText={(value: string) => (
+              <Text variant="titleLarge">{value} credits</Text>
+            )}
+          />
+        </Card.Content>
+      )}
       <Card.Actions>
         {price === "unknown" ? (
           <Button disabled>Not for sale</Button>

@@ -34,8 +34,7 @@ export const StarshipNavigator = () => {
         name={Routes.STARSHIP_DETAILS_SCREEN}
         component={StarshipDetailsScreen}
         options={{
-          presentation: "transparentModal",
-          animation: "fade",
+          presentation: "modal",
           contentStyle: {
             backgroundColor: "#fff",
           },
