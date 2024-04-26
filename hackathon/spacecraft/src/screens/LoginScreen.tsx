@@ -1,14 +1,6 @@
 import React, { useState } from "react";
-import { StyleSheet, TouchableOpacity, View, Pressable } from "react-native";
-import {
-  Button,
-  Checkbox,
-  Text,
-  List,
-  MD3Colors,
-  TextInput,
-  useTheme,
-} from "react-native-paper";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { Button, Checkbox, Text, useTheme } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
