@@ -7,7 +7,7 @@ export const Routes = {
   PILOT_SCREEN: "Pilots",
   PILOT_STACK: "Pilots Stack",
   PILOT_DETAILS_SCREEN: "Pilot",
-  EXPLORE_SCREEN: "Explore",
+  PLANETS: "Planets",
   PLANET_DETAILS_SCREEN: "Planet",
   PLUS_STACK: "Plus Stack",
   PLUS_SCREEN: "Plus",

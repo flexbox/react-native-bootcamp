@@ -1,16 +1,22 @@
+import CurrencyFormat from "react-currency-format";
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import * as React from "react";
 import { Alert, StyleSheet } from "react-native";
 import { Button, Card, Text } from "react-native-paper";
+import { FadeOut, FadeInDown } from "react-native-reanimated";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
 import { Routes } from "../navigation/Routes";
+import { withAnimated } from "../utils/withAnimated";
 
 import { Image } from "~/components/Image";
 
+const AnimatedCard = withAnimated(Card);
+
 export interface StarshipCardProps {
   ship: StarshipProps;
+  index: number;
 }
 
 interface StarshipDetailsScreenParams {
@@ -18,7 +24,7 @@ interface StarshipDetailsScreenParams {
   navigate: any;
 }
 
-export const StarshipCard = ({ ship }: StarshipCardProps) => {
+export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
   const title = ship.name;
   const price = ship.cost_in_credits;
   const { manufacturer } = ship;
@@ -31,22 +37,47 @@ export const StarshipCard = ({ ship }: StarshipCardProps) => {
 
   const navigation = useNavigation<StarshipDetailsScreenParams>();
   const handleGoToDetails = () => {
-    navigation.navigate(Routes.STARSHIP_DETAILS_SCREEN, ship);
+    navigation.navigate(Routes.STARSHIP_DETAILS_SCREEN, {
+      ...ship,
+      image: source,
+    });
   };
 
+  // visibleIndex -> prop
+  // Range = if index belongs to this range [visibleIndex - 2, visibleIndex+ 2] -> animate
+  // otherwise don't animate
   return (
-    <Card style={styles.containerCard} onPress={handleGoToDetails}>
+    <AnimatedCard
+      style={styles.containerCard}
+      onPress={handleGoToDetails}
+      // mounting
+      entering={FadeInDown.duration(index > 3 ? 0 : 250).delay(
+        index > 3 ? 0 : 100 * index
+      )}
+      // unmounting
+      exiting={FadeOut.duration(250)}
+    >
       <Image
         style={{ width: "100%", height: 200, borderRadius: 12 }}
         source={source}
+        // sharedTransitionTag={`image-${ship.model}`}
       />
       {/* we remplace with an Image to have the benefits of `expo-image` */}
       {/* <Card.Cover source={source} /> */}
       <Card.Title title={title} subtitle={manufacturer} />
 
-      <Card.Content>
-        <Text variant="titleLarge">{price} credits</Text>
-      </Card.Content>
+      {price !== "unknown" && (
+        <Card.Content>
+          <CurrencyFormat
+            value={price}
+            displayType="text"
+            thousandSeparator={true}
+            renderText={(value: string) => (
+              <Text variant="titleLarge">{value} credits</Text>
+            )}
+          />
+        </Card.Content>
+      )}
       <Card.Actions>
         {price === "unknown" ? (
           <Button disabled>Not for sale</Button>
@@ -56,7 +87,7 @@ export const StarshipCard = ({ ship }: StarshipCardProps) => {
           </Button>
         )}
       </Card.Actions>
-    </Card>
+    </AnimatedCard>
   );
 };
 

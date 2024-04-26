@@ -24,7 +24,6 @@ export const StarshipNavigator = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        presentation: "modal",
       }}
     >
       <Stack.Screen
@@ -34,6 +33,12 @@ export const StarshipNavigator = () => {
       <Stack.Screen
         name={Routes.STARSHIP_DETAILS_SCREEN}
         component={StarshipDetailsScreen}
+        options={{
+          presentation: "modal",
+          contentStyle: {
+            backgroundColor: "#fff",
+          },
+        }}
       />
     </Stack.Navigator>
   );

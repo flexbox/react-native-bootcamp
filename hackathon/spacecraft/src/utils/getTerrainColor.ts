@@ -18,7 +18,6 @@ const terrainColorMap = {
 };
 
 export function getTerrainColor(terrain: string) {
-  console.log("🚀 ~ terrain:", terrain);
   for (const [key, color] of Object.entries(terrainColorMap)) {
     if (terrain.includes(key)) {
       return color;

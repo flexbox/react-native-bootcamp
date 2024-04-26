@@ -1,6 +1,14 @@
 import React, { useState } from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
-import { Button, TextInput, useTheme } from "react-native-paper";
+import { StyleSheet, TouchableOpacity, View, Pressable } from "react-native";
+import {
+  Button,
+  Checkbox,
+  Text,
+  List,
+  MD3Colors,
+  TextInput,
+  useTheme,
+} from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
@@ -12,7 +20,7 @@ import { Header } from "~/components/Header";
 export const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isVisible, setIsVisible] = useState(true);
+  const [checked, setChecked] = React.useState(false);
 
   const navigation = useNavigation<any>();
   const { setUser } = useAuthentication();
@@ -25,7 +33,7 @@ export const LoginScreen = () => {
   }
 
   function toggleSecureIcon() {
-    setIsVisible(!isVisible);
+    setChecked(!checked);
   }
 
   const theme = useTheme();
@@ -41,19 +49,27 @@ export const LoginScreen = () => {
           returnKeyType="next"
           keyboardType="email-address"
           autoComplete="email"
+          textContentType="emailAddress"
+          autoCapitalize="none"
         />
         <FormInput
           label="Password"
           value={password}
-          secureTextEntry={isVisible}
+          secureTextEntry={!checked}
           onChangeText={(value) => setPassword(value)}
           autoComplete="password"
-          right={
-            <TextInput.Icon
-              onPress={toggleSecureIcon}
-              icon={isVisible ? "eye-off" : "eye"}
-            />
-          }
+        />
+        <Checkbox.Item
+          label="Show Password"
+          onPress={toggleSecureIcon}
+          status={checked ? "checked" : "unchecked"}
+          labelStyle={{ textAlign: "left" }}
+          style={{
+            paddingVertical: 0,
+            paddingHorizontal: 0,
+          }}
+          position="leading"
+          mode="android"
         />
         <Button
           onPress={handleLogin}

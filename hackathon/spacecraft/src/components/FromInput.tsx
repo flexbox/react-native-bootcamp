@@ -12,6 +12,7 @@ export const FormInput = ({
   <View style={{ paddingVertical: 8 }}>
     <TextInput
       {...rest}
+      mode="outlined"
       label={label}
       value={value}
       onChangeText={onChangeText}
