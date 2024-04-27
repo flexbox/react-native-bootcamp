@@ -1,17 +1,23 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { ActivityIndicator } from "react-native-paper";
-import { useIsConnected } from "react-native-offline";
+import { ActivityIndicator, useTheme } from "react-native-paper";
+
+import { useNetwork } from "~/context/Network";
 
 export const Offline = () => {
-  const isConnected = useIsConnected();
+  const { isConnected } = useNetwork();
+  const { colors } = useTheme();
 
   return (
     <>
       {!isConnected && (
-        <View style={styles.container}>
-          <Text style={styles.message}>Offline, reconnection in progress…</Text>
-          <ActivityIndicator color="#991B1B" />
+        <View
+          style={[styles.container, { backgroundColor: colors.errorContainer }]}
+        >
+          <Text style={{ color: colors.error }}>
+            Offline, reconnection in progress…
+          </Text>
+          <ActivityIndicator color={colors.error} />
         </View>
       )}
     </>
@@ -26,12 +32,8 @@ const styles = StyleSheet.create({
     top: 55,
     width: "90%",
     borderRadius: 10,
-    backgroundColor: "#FEE2E2",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-  },
-  message: {
-    color: "#991B1B",
   },
 });
