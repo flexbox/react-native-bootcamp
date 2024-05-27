@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
-import type { StarshipProps } from "api/types";
 
+import type { StarshipProps } from "api/types";
 import { StarshipCard } from "~/components/StarshipCard";
 
 const shipFixture = {

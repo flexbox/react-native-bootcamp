@@ -1,8 +1,8 @@
 import { useNavigation } from "@react-navigation/native";
-import type { PeopleProps } from "api/types";
 import React from "react";
 import { List } from "react-native-paper";
 
+import type { PeopleProps } from "api/types";
 import { Routes } from "~/navigation/Routes";
 
 interface PeopleItemProps {

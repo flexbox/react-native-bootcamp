@@ -1,8 +1,8 @@
-import type { PeopleProps } from "api/types";
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { DataTable, Text } from "react-native-paper";
 
+import type { PeopleProps } from "api/types";
 import { ScreenContainer } from "~/components/ScreenContainer";
 import { StarshipLoadableList } from "~/components/StarshipLoadableList";
 

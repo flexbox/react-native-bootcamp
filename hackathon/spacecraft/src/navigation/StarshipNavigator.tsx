@@ -1,7 +1,7 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import type { StarshipProps } from "api/types";
 
+import type { StarshipProps } from "api/types";
 import { Routes } from "~/navigation/Routes";
 import { StarshipDetailsScreen } from "~/screens/StarshipDetailsScreen";
 import { StarshipFeedScreen } from "~/screens/StarshipFeedScreen";
