@@ -46,7 +46,5 @@ module.exports = {
         ],
       },
     ],
-    quotes: ["error", "double"], // enforce double quotes
-    "react/no-unescaped-entities": "off", // Disable the rule
   },
 };
