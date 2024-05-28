@@ -46,7 +46,10 @@ export function PlanetsScreen({ navigation }: PlanetsScreenProps) {
             navigation.navigate(Routes.PLANET_DETAILS_SCREEN, { planet: item })
           }
         >
-          <Text variant="headlineMedium" style={{ textAlign: "center" }}>
+          <Text
+            variant="headlineMedium"
+            style={{ textAlign: "center" }}
+          >
             {item.name}
           </Text>
         </TouchableOpacity>

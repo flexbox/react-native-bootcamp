@@ -1,10 +1,10 @@
-import { View } from "react-native";
 import React from "react";
+import { View } from "react-native";
 import {
-  Placeholder,
-  PlaceholderMedia,
-  PlaceholderLine,
   Fade,
+  Placeholder,
+  PlaceholderLine,
+  PlaceholderMedia,
 } from "rn-placeholder";
 
 interface SkeletonListProps {
@@ -24,7 +24,7 @@ export const SkeletonList = ({ numberItems = 10 }: SkeletonListProps) => {
       >
         <PlaceholderLine width={90} />
         <PlaceholderLine width={80} />
-      </Placeholder>
+      </Placeholder>,
     );
   }
 

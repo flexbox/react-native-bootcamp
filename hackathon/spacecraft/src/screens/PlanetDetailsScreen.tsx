@@ -38,7 +38,10 @@ export interface PlanetDetailsScreenProps {
 
 export function PlanetDetailsScreen(props: PlanetDetailsScreenProps) {
   return (
-    <ScreenContainer title={props.route.params.planet.name} withGoBack>
+    <ScreenContainer
+      title={props.route.params.planet.name}
+      withGoBack
+    >
       <Text>PlanetDetailsScreen</Text>
 
       <Text>{JSON.stringify(props.route.params.planet.name)}</Text>

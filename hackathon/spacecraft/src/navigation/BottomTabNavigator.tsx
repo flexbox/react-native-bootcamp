@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { useTheme } from "react-native-paper";
+import { FontAwesome5, Ionicons } from "@expo/vector-icons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
-import { PlanetNavigator } from "~/navigation/PlanetNavigator";
-import { Routes } from "~/navigation/Routes";
 import { PilotNavigator } from "~/navigation/PilotNavigator";
-import { StarshipNavigator } from "~/navigation/StarshipNavigator";
+import { PlanetNavigator } from "~/navigation/PlanetNavigator";
 import { PlusNavigator } from "~/navigation/PlusNavigator";
+import { Routes } from "~/navigation/Routes";
+import { StarshipNavigator } from "~/navigation/StarshipNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -31,7 +31,11 @@ export const BottomTabNavigator = () => {
         options={{
           tabBarLabel: "Starships",
           tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="space-shuttle" size={22} color={color} />
+            <FontAwesome5
+              name="space-shuttle"
+              size={22}
+              color={color}
+            />
           ),
         }}
       />
@@ -41,7 +45,11 @@ export const BottomTabNavigator = () => {
         options={{
           tabBarLabel: "Pilots",
           tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="user-astronaut" size={22} color={color} />
+            <FontAwesome5
+              name="user-astronaut"
+              size={22}
+              color={color}
+            />
           ),
         }}
       />
@@ -51,7 +59,11 @@ export const BottomTabNavigator = () => {
         options={{
           tabBarLabel: "Explore",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="planet" size={22} color={color} />
+            <Ionicons
+              name="planet"
+              size={22}
+              color={color}
+            />
           ),
         }}
       />
@@ -61,7 +73,11 @@ export const BottomTabNavigator = () => {
         options={({ route }) => ({
           tabBarLabel: "Plus",
           tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="plus-square" size={22} color={color} />
+            <FontAwesome5
+              name="plus-square"
+              size={22}
+              color={color}
+            />
           ),
           tabBarStyle: ((currentRoute) => {
             const routeName = getFocusedRouteNameFromRoute(currentRoute) ?? "";

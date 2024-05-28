@@ -1,5 +1,5 @@
-import { Image } from "react-native";
 import React from "react";
+import { Image } from "react-native";
 import { List } from "react-native-paper";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
@@ -18,7 +18,10 @@ export const DoYouLikeScreen = ({ navigation }: DoYouLikeScreenProps) => {
   };
 
   return (
-    <ScreenContainer title={""} withGoBack={true}>
+    <ScreenContainer
+      title={""}
+      withGoBack={true}
+    >
       <Image
         source={{
           uri: "https://media.giphy.com/media/e6e1P3wC6xkYg/giphy.gif",
@@ -29,12 +32,22 @@ export const DoYouLikeScreen = ({ navigation }: DoYouLikeScreenProps) => {
       <List.Item
         title="I love Spacecraft"
         onPress={navigateToLoveScreen}
-        left={(props) => <List.Icon {...props} icon="heart" />}
+        left={(props) => (
+          <List.Icon
+            {...props}
+            icon="heart"
+          />
+        )}
       />
       <List.Item
         title="I am disappointed"
         onPress={navigateToDisappointedScreen}
-        left={(props) => <List.Icon {...props} icon="emoticon-sad-outline" />}
+        left={(props) => (
+          <List.Icon
+            {...props}
+            icon="emoticon-sad-outline"
+          />
+        )}
       />
     </ScreenContainer>
   );

@@ -8,7 +8,7 @@ export const useAppearanceTheme = () => {
   const [theme, setTheme] = useState(
     Appearance.getColorScheme() === "dark"
       ? CombinedDarkTheme
-      : CombinedDefaultTheme
+      : CombinedDefaultTheme,
   );
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export const useAppearanceTheme = () => {
       if (nextAppState === "active") {
         const colorScheme = Appearance.getColorScheme();
         setTheme(
-          colorScheme === "dark" ? CombinedDarkTheme : CombinedDefaultTheme
+          colorScheme === "dark" ? CombinedDarkTheme : CombinedDefaultTheme,
         );
       }
     };

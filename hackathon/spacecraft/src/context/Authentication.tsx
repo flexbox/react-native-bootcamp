@@ -7,7 +7,7 @@ interface AuthenticationContextProps {
 }
 
 const AuthenticationContext = createContext<AuthenticationContextProps>(
-  {} as AuthenticationContextProps
+  {} as AuthenticationContextProps,
 );
 
 export const AuthenticationProvider = ({ children }: PropsWithChildren) => {

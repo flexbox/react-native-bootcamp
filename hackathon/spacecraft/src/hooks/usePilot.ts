@@ -6,7 +6,7 @@ export const usePilot = () => {
 
   const fetchData = (currentPage = 0) =>
     fetch("https://swapi.py4e.com/api/people/?page=" + currentPage).then(
-      (result) => result.json()
+      (result) => result.json(),
     );
 
   const query = useQuery({
