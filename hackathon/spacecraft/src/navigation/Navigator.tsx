@@ -1,5 +1,9 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import { useReactNavigationDevTools } from "@dev-plugins/react-navigation";
+import {
+  NavigationContainer,
+  useNavigationContainerRef,
+} from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { AuthNavigator } from "./AuthNavigator";
@@ -14,8 +18,15 @@ export const Navigator = () => {
   const { user } = useAuthentication();
   const appearanceTheme = useAppearanceTheme();
 
+  const navigationRef = useNavigationContainerRef();
+
+  useReactNavigationDevTools(navigationRef);
+
   return (
-    <NavigationContainer theme={appearanceTheme}>
+    <NavigationContainer
+      ref={navigationRef}
+      theme={appearanceTheme}
+    >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {user ? (
           <Stack.Screen
