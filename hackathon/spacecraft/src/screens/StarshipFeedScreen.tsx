@@ -1,7 +1,7 @@
 import React from "react";
-import { useQuery } from "@tanstack/react-query";
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
+import { useQuery } from "@tanstack/react-query";
 
 import { ScreenContainer } from "../components/ScreenContainer";
 import { StarshipCard } from "../components/StarshipCard";
@@ -24,7 +24,12 @@ interface RenderItemProps {
 const renderItem = (props: RenderItemProps) => {
   const ship = props.item;
 
-  return <StarshipCard ship={ship} index={props.index} />;
+  return (
+    <StarshipCard
+      ship={ship}
+      index={props.index}
+    />
+  );
 };
 
 export const StarshipFeedScreen = () => {
@@ -40,7 +45,10 @@ export const StarshipFeedScreen = () => {
   if (isError) {
     return (
       <ScreenContainer title="Error 😕">
-        <Button onPress={() => refetch()} mode="outlined">
+        <Button
+          onPress={() => refetch()}
+          mode="outlined"
+        >
           Refetch
         </Button>
       </ScreenContainer>

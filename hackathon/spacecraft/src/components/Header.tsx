@@ -1,5 +1,5 @@
-import { View, StyleSheet } from "react-native";
 import React from "react";
+import { StyleSheet, View } from "react-native";
 import { Text, useTheme } from "react-native-paper";
 import Constants from "expo-constants";
 
@@ -24,10 +24,10 @@ export const Header = ({ title }: HeaderProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: Constants.statusBarHeight,
     alignItems: "center",
-    justifyContent: "center",
     height: 256,
+    justifyContent: "center",
+    paddingTop: Constants.statusBarHeight,
   },
   headerText: {
     fontWeight: "800",

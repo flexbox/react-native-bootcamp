@@ -1,8 +1,8 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Constants from "expo-constants";
 import React from "react";
 import { NetworkProvider } from "react-native-offline";
 import { Provider as PaperProvider } from "react-native-paper";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Constants from "expo-constants";
 
 import { AuthenticationProvider } from "~/context/Authentication";
 import { useAppearanceTheme } from "~/hooks/useAppearanceTheme";

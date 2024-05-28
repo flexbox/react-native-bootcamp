@@ -9,12 +9,16 @@ interface Props {
 export const ButtonSupport = ({ mode = "contained" }: Props) => {
   const handleOpenGitHub = async () => {
     await WebBrowser.openBrowserAsync(
-      "https://github.com/flexbox/react-native-bootcamp/issues"
+      "https://github.com/flexbox/react-native-bootcamp/issues",
     );
   };
 
   return (
-    <Button onPress={handleOpenGitHub} mode={mode} style={{ marginBottom: 12 }}>
+    <Button
+      onPress={handleOpenGitHub}
+      mode={mode}
+      style={{ marginBottom: 12 }}
+    >
       Give my opinion
     </Button>
   );

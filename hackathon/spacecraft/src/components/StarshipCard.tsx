@@ -1,9 +1,9 @@
-import CurrencyFormat from "react-currency-format";
-import { useNavigation } from "@react-navigation/native";
 import * as React from "react";
+import CurrencyFormat from "react-currency-format";
 import { Alert, StyleSheet } from "react-native";
 import { Button, Card, Text } from "react-native-paper";
-import { FadeOut, FadeInDown } from "react-native-reanimated";
+import { FadeInDown, FadeOut } from "react-native-reanimated";
+import { useNavigation } from "@react-navigation/native";
 
 import type { StarshipProps } from "../../api/types";
 import { useImage } from "../hooks/useImage";
@@ -52,7 +52,7 @@ export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
       onPress={handleGoToDetails}
       // mounting
       entering={FadeInDown.duration(index > 3 ? 0 : 250).delay(
-        index > 3 ? 0 : 100 * index
+        index > 3 ? 0 : 100 * index,
       )}
       // unmounting
       exiting={FadeOut.duration(250)}
@@ -64,7 +64,10 @@ export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
       />
       {/* we remplace with an Image to have the benefits of `expo-image` */}
       {/* <Card.Cover source={source} /> */}
-      <Card.Title title={title} subtitle={manufacturer} />
+      <Card.Title
+        title={title}
+        subtitle={manufacturer}
+      />
 
       {price !== "unknown" && (
         <Card.Content>
@@ -82,7 +85,10 @@ export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
         {price === "unknown" ? (
           <Button disabled>Not for sale</Button>
         ) : (
-          <Button mode="contained-tonal" onPress={handleBuy}>
+          <Button
+            mode="contained-tonal"
+            onPress={handleBuy}
+          >
             Buy this ship
           </Button>
         )}
@@ -93,7 +99,7 @@ export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
 
 const styles = StyleSheet.create({
   containerCard: {
-    marginHorizontal: 24,
     marginBottom: 32,
+    marginHorizontal: 24,
   },
 });

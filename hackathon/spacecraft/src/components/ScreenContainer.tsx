@@ -1,8 +1,8 @@
-import { useNavigation } from "@react-navigation/native";
 import type { ReactNode } from "react";
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { IconButton, Text, useTheme } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 
 import { Offline } from "~/components/Offline";
 
@@ -32,7 +32,10 @@ const ScreenContainerTitle = ({
       }}
     >
       {withGoBack && (
-        <IconButton icon="arrow-left" onPress={() => navigation.goBack()} />
+        <IconButton
+          icon="arrow-left"
+          onPress={() => navigation.goBack()}
+        />
       )}
       <Text
         variant="headlineMedium"
@@ -59,7 +62,10 @@ export const ScreenContainer = ({
       <ScrollView
         style={[styles.container, { backgroundColor: theme.colors.background }]}
       >
-        <ScreenContainerTitle title={title} withGoBack={withGoBack} />
+        <ScreenContainerTitle
+          title={title}
+          withGoBack={withGoBack}
+        />
         {children}
         <Offline />
         {withSeparatorFooter && <View style={styles.footer} />}
@@ -71,7 +77,10 @@ export const ScreenContainer = ({
     <View
       style={[styles.container, { backgroundColor: theme.colors.background }]}
     >
-      <ScreenContainerTitle title={title} withGoBack={withGoBack} />
+      <ScreenContainerTitle
+        title={title}
+        withGoBack={withGoBack}
+      />
       {children}
       <Offline />
       {withSeparatorFooter && <View style={styles.footer} />}
@@ -83,21 +92,21 @@ export const ScreenContainer = ({
 };
 
 const styles = StyleSheet.create({
-  container: {
-    paddingTop: 24,
-    marginTop: 36,
-    flex: 1,
+  accessoryFooter: {
+    bottom: 0,
+    position: "absolute",
+    width: "100%",
   },
-  headerText: {
-    fontWeight: "bold",
-    paddingVertical: 6,
+  container: {
+    flex: 1,
+    marginTop: 36,
+    paddingTop: 24,
   },
   footer: {
     height: 256,
   },
-  accessoryFooter: {
-    position: "absolute",
-    bottom: 0,
-    width: "100%",
+  headerText: {
+    fontWeight: "bold",
+    paddingVertical: 6,
   },
 });

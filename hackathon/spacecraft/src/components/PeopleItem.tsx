@@ -1,7 +1,7 @@
-import { useNavigation } from "@react-navigation/native";
-import type { PeopleProps } from "api/types";
 import React from "react";
 import { List } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
+import type { PeopleProps } from "api/types";
 
 import { Routes } from "~/navigation/Routes";
 
@@ -12,11 +12,29 @@ interface PeopleItemProps {
 const GengerIcon = ({ gender, ...rest }: { gender: string }) => {
   switch (gender) {
     case "male":
-      return <List.Icon {...rest} icon="human-male" color="#3B82F6" />;
+      return (
+        <List.Icon
+          {...rest}
+          icon="human-male"
+          color="#3B82F6"
+        />
+      );
     case "female":
-      return <List.Icon {...rest} icon="human-female" color="#EC4899" />;
+      return (
+        <List.Icon
+          {...rest}
+          icon="human-female"
+          color="#EC4899"
+        />
+      );
     default:
-      return <List.Icon {...rest} icon="robot" color="#9CA3AF" />;
+      return (
+        <List.Icon
+          {...rest}
+          icon="robot"
+          color="#9CA3AF"
+        />
+      );
   }
 };
 
@@ -32,8 +50,18 @@ export const PeopleItem = ({ people }: PeopleItemProps) => {
     <List.Item
       title={people.name}
       description={`${starships.length} starships`}
-      left={(props) => <GengerIcon {...props} gender={gender} />}
-      right={(props) => <List.Icon {...props} icon="dots-horizontal" />}
+      left={(props) => (
+        <GengerIcon
+          {...props}
+          gender={gender}
+        />
+      )}
+      right={(props) => (
+        <List.Icon
+          {...props}
+          icon="dots-horizontal"
+        />
+      )}
       onPress={navigateToDetails}
     />
   );

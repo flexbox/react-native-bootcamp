@@ -15,7 +15,10 @@ export const PilotNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name={Routes.PILOT_SCREEN} component={PilotScreen} />
+      <Stack.Screen
+        name={Routes.PILOT_SCREEN}
+        component={PilotScreen}
+      />
       <Stack.Screen
         name={Routes.PILOT_DETAILS_SCREEN}
         component={PilotDetailsScreen}

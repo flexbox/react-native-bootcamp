@@ -17,9 +17,15 @@ export const ScreenContainer = ({
   withSeparatorFooter = false,
 }: ScreenContainerProps) => {
   return (
-    <ScrollView style={styles.container} nestedScrollEnabled={true}>
+    <ScrollView
+      style={styles.container}
+      nestedScrollEnabled={true}
+    >
       {/* <Offline /> */}
-      <Text variant="headlineMedium" style={styles.headerText}>
+      <Text
+        variant="headlineMedium"
+        style={styles.headerText}
+      >
         {title}
       </Text>
 
@@ -31,15 +37,15 @@ export const ScreenContainer = ({
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 24,
-    paddingHorizontal: 24,
     marginTop: 36,
+    paddingHorizontal: 24,
+    paddingTop: 24,
+  },
+  footer: {
+    paddingBottom: 256,
   },
   headerText: {
     fontWeight: "bold",
     marginBottom: 20,
-  },
-  footer: {
-    paddingBottom: 256,
   },
 });

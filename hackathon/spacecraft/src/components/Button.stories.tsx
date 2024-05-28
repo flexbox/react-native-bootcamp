@@ -7,22 +7,41 @@ export default {
 
 export const _Button = () => (
   <View style={{ flex: 1, justifyContent: "space-around", padding: 16 }}>
-    <Button onPress={() => Alert.alert("Pressed!")} mode="contained">
+    <Button
+      onPress={() => Alert.alert("Pressed!")}
+      mode="contained"
+    >
       contained
     </Button>
-    <Button onPress={() => Alert.alert("Pressed!")} mode="contained-tonal">
+    <Button
+      onPress={() => Alert.alert("Pressed!")}
+      mode="contained-tonal"
+    >
       contained-tonal
     </Button>
-    <Button onPress={() => Alert.alert("Pressed!")} mode="elevated">
+    <Button
+      onPress={() => Alert.alert("Pressed!")}
+      mode="elevated"
+    >
       elevated
     </Button>
-    <Button onPress={() => Alert.alert("Pressed!")} mode="outlined">
+    <Button
+      onPress={() => Alert.alert("Pressed!")}
+      mode="outlined"
+    >
       outlined
     </Button>
-    <Button onPress={() => Alert.alert("Pressed!")} mode="text">
+    <Button
+      onPress={() => Alert.alert("Pressed!")}
+      mode="text"
+    >
       text
     </Button>
-    <Button onPress={() => Alert.alert("Pressed!")} mode="text" icon="camera">
+    <Button
+      onPress={() => Alert.alert("Pressed!")}
+      mode="text"
+      icon="camera"
+    >
       <ActivityIndicator />
       text
     </Button>
@@ -53,7 +72,10 @@ export const _Button = () => (
 export const _ButtonSizes = () => (
   <View style={{ flex: 1, justifyContent: "space-around", padding: 16 }}>
     <Button onPress={() => Alert.alert("Pressed!")}>small</Button>
-    <Button onPress={() => Alert.alert("Pressed!")} compact={true}>
+    <Button
+      onPress={() => Alert.alert("Pressed!")}
+      compact={true}
+    >
       medium
     </Button>
   </View>

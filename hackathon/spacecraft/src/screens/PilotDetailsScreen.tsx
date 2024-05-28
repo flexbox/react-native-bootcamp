@@ -1,7 +1,7 @@
-import type { PeopleProps } from "api/types";
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { DataTable, Text } from "react-native-paper";
+import type { PeopleProps } from "api/types";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
 import { StarshipLoadableList } from "~/components/StarshipLoadableList";
@@ -27,7 +27,10 @@ export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
   } = route.params.people;
 
   return (
-    <ScreenContainer title={name} withGoBack>
+    <ScreenContainer
+      title={name}
+      withGoBack
+    >
       <DataTable>
         <DataTable.Row>
           <DataTable.Cell>Mass</DataTable.Cell>
@@ -66,7 +69,7 @@ export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
 
 const styles = StyleSheet.create({
   body: {
-    paddingVertical: 24,
     paddingHorizontal: 16,
+    paddingVertical: 24,
   },
 });

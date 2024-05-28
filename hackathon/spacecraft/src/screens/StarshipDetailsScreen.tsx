@@ -1,20 +1,20 @@
-import { FontAwesome5 } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   Pressable,
-  View,
+  ScrollView,
   StyleSheet,
   TouchableOpacity,
-  ScrollView,
+  View,
 } from "react-native";
-import { Text, DataTable, List, FAB, Chip } from "react-native-paper";
+import { Chip, DataTable, FAB, List, Text } from "react-native-paper";
 import { useSharedValue, withSpring } from "react-native-reanimated";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 import type { StarshipProps } from "../../api/types";
 
-import { withAnimated } from "~/utils/withAnimated";
 import { Image } from "~/components/Image";
+import { withAnimated } from "~/utils/withAnimated";
 
 const AnimatedFAB = withAnimated(FAB);
 
@@ -70,7 +70,11 @@ export const StarshipDetailsScreen = ({
                 onPress={handleClose}
                 style={styles.closeButton}
               >
-                <FontAwesome5 name="times" size={22} color="black" />
+                <FontAwesome5
+                  name="times"
+                  size={22}
+                  color="black"
+                />
               </TouchableOpacity>
             </View>
             <View style={[styles.closeContainer, styles.right]}>
@@ -86,12 +90,22 @@ export const StarshipDetailsScreen = ({
           <List.Item
             title={hyperdrive_rating}
             description="Hyperdrive rating"
-            left={(props) => <List.Icon {...props} icon="hubspot" />}
+            left={(props) => (
+              <List.Icon
+                {...props}
+                icon="hubspot"
+              />
+            )}
           />
           <List.Item
             title={max_atmosphering_speed}
             description="Max atmospheric speed"
-            left={(props) => <List.Icon {...props} icon="speedometer" />}
+            left={(props) => (
+              <List.Icon
+                {...props}
+                icon="speedometer"
+              />
+            )}
           />
 
           <DataTable>
@@ -144,16 +158,28 @@ export const StarshipDetailsScreen = ({
 };
 
 const styles = StyleSheet.create({
-  scrollContainer: {
-    paddingBottom: 256,
+  body: {
+    paddingHorizontal: 16,
+    paddingVertical: 24,
   },
-  imageContainer: {
-    paddingTop: 32,
-    backgroundColor: "black",
+  closeButton: {
+    backgroundColor: "white",
+    borderRadius: 50,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
   },
   closeContainer: {
     position: "absolute",
     top: 32,
+  },
+  fab: {
+    bottom: 42,
+    position: "absolute",
+    right: 42,
+  },
+  imageContainer: {
+    backgroundColor: "black",
+    paddingTop: 32,
   },
   left: {
     left: 24,
@@ -161,19 +187,7 @@ const styles = StyleSheet.create({
   right: {
     right: 24,
   },
-  closeButton: {
-    backgroundColor: "white",
-    borderRadius: 50,
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-  },
-  body: {
-    paddingVertical: 24,
-    paddingHorizontal: 16,
-  },
-  fab: {
-    position: "absolute",
-    right: 42,
-    bottom: 42,
+  scrollContainer: {
+    paddingBottom: 256,
   },
 });
