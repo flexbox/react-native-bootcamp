@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
 
 import { useStarships } from "~/hooks/useStarships";
@@ -27,7 +27,10 @@ export const StarshipLoadableList = ({
     }
 
     return (
-      <View style={styles.container} key={getRandom(1000)}>
+      <View
+        style={styles.container}
+        key={getRandom(1000)}
+      >
         <Text variant="titleMedium">{result.data.name}</Text>
         <Text variant="bodyMedium">{result.data.model}</Text>
       </View>

@@ -4,8 +4,8 @@ import { Button, Checkbox, Text, useTheme } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 import { FormInput } from "../components/FromInput";
-import { Routes } from "../navigation/Routes";
 import { useAuthentication } from "../context/Authentication";
+import { Routes } from "../navigation/Routes";
 
 import { Header } from "~/components/Header";
 
@@ -85,12 +85,12 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   submitButton: {
-    marginVertical: 32,
     marginHorizontal: 16,
+    marginVertical: 32,
   },
   tocText: {
-    textAlign: "center",
-    fontSize: 14,
     color: "#9CA3AF",
+    fontSize: 14,
+    textAlign: "center",
   },
 });

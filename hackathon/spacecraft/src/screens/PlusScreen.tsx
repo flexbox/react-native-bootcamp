@@ -1,7 +1,7 @@
 import React from "react";
+import { View } from "react-native";
 import { List, Text } from "react-native-paper";
 import * as Application from "expo-application";
-import { View } from "react-native";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
 import { Routes } from "~/navigation/Routes";
@@ -19,7 +19,12 @@ export const PlusScreen = ({ navigation }: Props) => {
         <List.Item
           title="Do you like Spacecraft?"
           onPress={navigateToDoYouLikeScreen}
-          left={(props) => <List.Icon {...props} icon="star" />}
+          left={(props) => (
+            <List.Icon
+              {...props}
+              icon="star"
+            />
+          )}
         />
       </View>
       <View

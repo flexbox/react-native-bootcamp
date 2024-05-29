@@ -1,10 +1,10 @@
-import * as StoreReview from "expo-store-review";
-import { View, ScrollView, Image, Platform, Alert } from "react-native";
 import React from "react";
+import { Alert, Image, Platform, ScrollView, View } from "react-native";
 import { Button, Text } from "react-native-paper";
+import * as StoreReview from "expo-store-review";
 
-import { ScreenContainer } from "~/components/ScreenContainer";
 import { ButtonSupport } from "~/components/ButtonSupport";
+import { ScreenContainer } from "~/components/ScreenContainer";
 
 export const LoveScreen = () => {
   const handleStoreReview = async () => {
@@ -42,10 +42,16 @@ export const LoveScreen = () => {
           style={{ width: "100%", height: 160 }}
         />
         <View style={{ padding: 16 }}>
-          <Text variant="headlineLarge" style={{ marginVertical: 24 }}>
+          <Text
+            variant="headlineLarge"
+            style={{ marginVertical: 24 }}
+          >
             Would you like to spread the world by rating Spacecraft?
           </Text>
-          <Text variant="bodyLarge" style={{ marginBottom: 12 }}>
+          <Text
+            variant="bodyLarge"
+            style={{ marginBottom: 12 }}
+          >
             Amazing! We are so proud to have you as a user.
           </Text>
           <Text variant="bodyLarge">

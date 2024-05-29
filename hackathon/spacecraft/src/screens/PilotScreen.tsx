@@ -1,12 +1,12 @@
-import type { PeopleProps } from "api/types";
 import React from "react";
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
+import type { PeopleProps } from "api/types";
 
-import { ScreenContainer } from "~/components/ScreenContainer";
 import { PeopleItem } from "~/components/PeopleItem";
-import { usePilot } from "~/hooks/usePilot";
+import { ScreenContainer } from "~/components/ScreenContainer";
 import { SkeletonList } from "~/components/SkeletonList";
+import { usePilot } from "~/hooks/usePilot";
 
 interface RenderItemProps {
   item: PeopleProps;
@@ -34,7 +34,10 @@ export const PilotScreen = () => {
   if (query.data.results === undefined) {
     return (
       <ScreenContainer title="Not Found">
-        <Button onPress={() => query.refetch()} mode="outlined">
+        <Button
+          onPress={() => query.refetch()}
+          mode="outlined"
+        >
           Refetch
         </Button>
       </ScreenContainer>

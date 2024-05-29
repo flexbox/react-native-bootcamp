@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
-import { View, Image, ScrollView } from "react-native";
 import React from "react";
+import { Image, ScrollView, View } from "react-native";
 import { Button, Text } from "react-native-paper";
 
-import { ScreenContainer } from "~/components/ScreenContainer";
 import { ButtonSupport } from "~/components/ButtonSupport";
+import { ScreenContainer } from "~/components/ScreenContainer";
 
 interface Props {
   navigation: any;
@@ -22,7 +22,10 @@ export const DisappointedScreen = ({ navigation }: Props) => {
       accessoryFooter={
         <View style={{ padding: 24, marginBottom: 12 }}>
           <ButtonSupport />
-          <Button onPress={handleCancel} mode="text">
+          <Button
+            onPress={handleCancel}
+            mode="text"
+          >
             Not now
           </Button>
         </View>
@@ -36,7 +39,10 @@ export const DisappointedScreen = ({ navigation }: Props) => {
           style={{ width: "100%", height: 160 }}
         />
         <View style={{ padding: 16 }}>
-          <Text variant="headlineLarge" style={{ marginVertical: 24 }}>
+          <Text
+            variant="headlineLarge"
+            style={{ marginVertical: 24 }}
+          >
             We are so sorry…
           </Text>
           <Text variant="bodyLarge">

@@ -2,7 +2,7 @@
 // Run yarn icons:create to update
 // Do not edit
 import * as React from "react";
-import Svg, { SvgProps, Path } from "react-native-svg";
+import Svg, { Path, SvgProps } from "react-native-svg";
 
 const SvgCloning = (props: SvgProps) => (
   <Svg

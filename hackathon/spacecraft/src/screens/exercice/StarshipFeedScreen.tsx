@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, StatusBar, View, Text } from "react-native";
+import { StatusBar, StyleSheet, Text, View } from "react-native";
 
 // import { default as data } from "../../api/data.json";
 
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     marginTop: StatusBar.currentHeight || 0, // only for Android to avoid status bar overlap
   },
   headerContainer: {
-    paddingHorizontal: 20,
     marginTop: 20,
+    paddingHorizontal: 20,
   },
 });
