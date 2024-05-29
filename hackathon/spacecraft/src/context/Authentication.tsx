@@ -12,7 +12,7 @@ const AuthenticationContext = createContext<AuthenticationContextProps>(
 
 export const AuthenticationProvider = ({ children }: PropsWithChildren) => {
   const [user, setUser] = useState<boolean>(false);
-  console.log("file: Authentication.tsx ~ line 19 ~ user", user);
+  // console.log("file: Authentication.tsx ~ line 19 ~ user", user);
 
   return (
     <AuthenticationContext.Provider value={{ user, setUser }}>

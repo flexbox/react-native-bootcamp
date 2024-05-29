@@ -12,18 +12,18 @@ const NetworkContext = createContext<NetworkContextProps>(
 
 export const NetworkProvider = ({ children }: PropsWithChildren) => {
   const [isConnected, setIsConnected] = useState<boolean | null>(false);
-  console.log("file: Network.tsx ~ line 19 ~ isConnected", isConnected);
+  // console.log("file: Network.tsx ~ line 19 ~ isConnected", isConnected);
 
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener((state) => {
-      console.log("Connection type", state.type);
-      console.log("Is connected?", state.isConnected);
+      // console.log("Connection type", state.type);
+      // console.log("Is connected?", state.isConnected);
       setIsConnected(state.isConnected);
     });
 
     NetInfo.fetch().then((state) => {
-      console.log("Connection type", state.type);
-      console.log("Is connected?", state.isConnected);
+      // console.log("Connection type", state.type);
+      // console.log("Is connected?", state.isConnected);
       setIsConnected(state.isConnected);
     });
 
