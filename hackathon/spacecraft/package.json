@@ -8,6 +8,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "maestro": "maestro test tests/process.yaml",
     "test": "jest",
     "test:watch": "jest --watch",
     "build-storybook": "build-storybook",

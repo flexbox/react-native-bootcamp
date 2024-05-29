@@ -1,0 +1,10 @@
+appId: host.exp.Exponent
+---
+
+- tapOn: "Email"
+- inputText: "test@gmail.com"
+- tapOn: "Password"
+- inputText: "123456"
+- tapOn: "Login"
+- tapOn: "Buy this ship"
+- tapOn: "Ok"
