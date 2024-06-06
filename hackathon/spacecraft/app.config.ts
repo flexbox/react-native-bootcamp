@@ -1,9 +1,14 @@
-module.exports = {
+import type { ConfigContext, ExpoConfig } from "expo/config";
+
+import { version } from "./package.json";
+
+export default ({ config }: ConfigContext): ExpoConfig => ({
+  ...config,
   name: "spacecraft",
   description: "Learning materials for the `react-native-bootcamp` repository.",
   slug: "spacecraft",
   owner: "weshipit",
-  version: "1.0.2",
+  version,
   orientation: "portrait",
   icon: "./assets/icon.png",
   splash: {
@@ -60,5 +65,11 @@ module.exports = {
         ],
       },
     ],
+    [
+      "expo-asset", // Error Error: [android.dangerous]: withAndroidDangerousBaseMod: Could not find MIME for Buffer <null>
+      {
+        assets: ["./assets/starships/"],
+      },
+    ],
   ],
-};
+});

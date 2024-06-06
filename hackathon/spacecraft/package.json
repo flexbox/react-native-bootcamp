@@ -1,6 +1,7 @@
 {
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
+  "version": "1.0.2",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -41,7 +42,9 @@
     "deepmerge": "^4.3.1",
     "expo": "^51.0.0",
     "expo-application": "~5.9.1",
+    "expo-asset": "^10.0.7",
     "expo-constants": "~16.0.1",
+    "expo-dev-client": "^4.0.15",
     "expo-image": "~1.12.9",
     "expo-linking": "~6.3.1",
     "expo-status-bar": "~1.12.1",
