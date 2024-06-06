@@ -68,7 +68,18 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       "expo-asset", // Error Error: [android.dangerous]: withAndroidDangerousBaseMod: Could not find MIME for Buffer <null>
       {
-        assets: ["./assets/starships/"],
+        assets: [
+          "./assets/starships/CR90corvette.jpg",
+          "./assets/starships/deathstar.jpg",
+          "./assets/starships/executor.jpg",
+          "./assets/starships/millenniumfalcon.jpg",
+          "./assets/starships/rebeltransport.jpg",
+          "./assets/starships/sentinel_classlandingcraft.jpg",
+          "./assets/starships/stardestroyer.jpg",
+          "./assets/starships/tieadvancedx1.jpg",
+          "./assets/starships/x_wing.jpg",
+          "./assets/starships/y_wing.jpg",
+        ],
       },
     ],
   ],
