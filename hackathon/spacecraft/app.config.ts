@@ -1,9 +1,14 @@
-module.exports = {
+import type { ConfigContext, ExpoConfig } from "expo/config";
+
+import { version } from "./package.json";
+
+export default ({ config }: ConfigContext): ExpoConfig => ({
+  ...config,
   name: "spacecraft",
   description: "Learning materials for the `react-native-bootcamp` repository.",
   slug: "spacecraft",
   owner: "weshipit",
-  version: "1.0.2",
+  version,
   orientation: "portrait",
   icon: "./assets/icon.png",
   splash: {
@@ -60,5 +65,22 @@ module.exports = {
         ],
       },
     ],
+    [
+      "expo-asset", // Error Error: [android.dangerous]: withAndroidDangerousBaseMod: Could not find MIME for Buffer <null>
+      {
+        assets: [
+          "./assets/starships/CR90corvette.jpg",
+          "./assets/starships/deathstar.jpg",
+          "./assets/starships/executor.jpg",
+          "./assets/starships/millenniumfalcon.jpg",
+          "./assets/starships/rebeltransport.jpg",
+          "./assets/starships/sentinel_classlandingcraft.jpg",
+          "./assets/starships/stardestroyer.jpg",
+          "./assets/starships/tieadvancedx1.jpg",
+          "./assets/starships/x_wing.jpg",
+          "./assets/starships/y_wing.jpg",
+        ],
+      },
+    ],
   ],
-};
+});
