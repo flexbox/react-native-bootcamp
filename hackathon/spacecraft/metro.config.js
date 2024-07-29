@@ -13,6 +13,4 @@ const config = getDefaultConfig(__dirname);
 
 config.transformer.unstable_allowRequireContext = true;
 
-config.resolver.sourceExts.push("mjs");
-
 module.exports = config;
