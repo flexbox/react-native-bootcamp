@@ -4,34 +4,34 @@ export const useImage = (title: string) => {
   let source;
   switch (imageName) {
     case "cr90corvette":
-      source = require("../../assets/starships/CR90corvette.jpg");
+      source = "CR90corvette";
       break;
     case "stardestroyer":
-      source = require("../../assets/starships/stardestroyer.jpg");
+      source = "stardestroyer";
       break;
     case "sentinel-classlanding craft":
-      source = require("../../assets/starships/sentinel-classlandingcraft.jpg");
+      source = "sentinel_classlandingcraft";
       break;
     case "deathstar":
-      source = require("../../assets/starships/deathstar.jpg");
+      source = "deathstar";
       break;
     case "millenniumfalcon":
-      source = require("../../assets/starships/millenniumfalcon.jpg");
+      source = "millenniumfalcon";
       break;
     case "y-wing":
-      source = require("../../assets/starships/y-wing.jpg");
+      source = "y_wing";
       break;
     case "x-wing":
-      source = require("../../assets/starships/x-wing.jpg");
+      source = "x_wing";
       break;
     case "tieadvanced x1":
-      source = require("../../assets/starships/tieadvancedx1.jpg");
+      source = "tieadvancedx1";
       break;
     case "executor":
-      source = require("../../assets/starships/executor.jpg");
+      source = "executor";
       break;
     case "rebeltransport":
-      source = require("../../assets/starships/rebeltransport.jpg");
+      source = "rebeltransport";
       break;
   }
   return source;
