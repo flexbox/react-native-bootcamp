@@ -6,20 +6,20 @@ import { ScreenContainer } from "~/components/ScreenContainer";
  * @deprecated move this to typ please
  */
 interface Planet {
+  url: string;
   name: string;
-  rotation_period: string;
-  orbital_period: string;
-  diameter: string;
+  edited: string;
   climate: string;
   gravity: string;
   terrain: string;
-  surface_water: string;
-  population: string;
-  residents: string[];
   films: string[];
   created: string;
-  edited: string;
-  url: string;
+  diameter: string;
+  population: string;
+  residents: string[];
+  surface_water: string;
+  orbital_period: string;
+  rotation_period: string;
 }
 
 interface Params {

@@ -1,9 +1,9 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { Routes } from "./Routes";
-
-import { PlanetDetailsScreen } from "~/screens/PlanetDetailsScreen";
 import { PlanetsScreen } from "~/screens/PlanetsScreen";
+import { PlanetDetailsScreen } from "~/screens/PlanetDetailsScreen";
+
+import { Routes } from "./Routes";
 
 const Stack = createNativeStackNavigator();
 

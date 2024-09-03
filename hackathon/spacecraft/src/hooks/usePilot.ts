@@ -10,10 +10,10 @@ export const usePilot = () => {
     );
 
   const query = useQuery({
-    queryKey: ["pilots", page],
-    queryFn: () => fetchData(page),
     placeholderData: keepPreviousData,
+    queryFn: () => fetchData(page),
+    queryKey: ["pilots", page],
   });
 
-  return { query, setPage, page };
+  return { page, query, setPage };
 };

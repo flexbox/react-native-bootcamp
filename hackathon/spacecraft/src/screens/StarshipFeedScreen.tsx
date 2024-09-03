@@ -3,10 +3,10 @@ import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
 import { useQuery } from "@tanstack/react-query";
 
-import { ScreenContainer } from "../components/ScreenContainer";
-import { StarshipCard } from "../components/StarshipCard";
-
 import { fetchStarships } from "~/hooks/useStarships";
+
+import { StarshipCard } from "../components/StarshipCard";
+import { ScreenContainer } from "../components/ScreenContainer";
 
 interface ShipProps {
   name: string;
@@ -16,8 +16,8 @@ interface ShipProps {
 }
 
 interface RenderItemProps {
-  item: ShipProps;
   index: number;
+  item: ShipProps;
 }
 
 // SOLUTION 2: with a FlatList - more performant
@@ -33,9 +33,9 @@ const renderItem = (props: RenderItemProps) => {
 };
 
 export const StarshipFeedScreen = () => {
-  const { isPending, isError, data, refetch } = useQuery({
-    queryKey: ["starships"],
+  const { data, isError, isPending, refetch } = useQuery({
     queryFn: fetchStarships,
+    queryKey: ["starships"],
   });
 
   if (isPending) {

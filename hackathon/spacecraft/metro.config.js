@@ -1,6 +1,5 @@
 // metro.config.js
 const path = require("path");
-
 const { getDefaultConfig } = require("expo/metro-config");
 const { generate } = require("@storybook/react-native/scripts/generate");
 

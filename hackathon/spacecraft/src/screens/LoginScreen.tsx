@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Button, Checkbox, Text, useTheme } from "react-native-paper";
-import { useNavigation } from "@react-navigation/native";
-
-import { FormInput } from "../components/FromInput";
-import { useAuthentication } from "../context/Authentication";
-import { Routes } from "../navigation/Routes";
 
 import { Header } from "~/components/Header";
+
+import { Routes } from "../navigation/Routes";
+import { FormInput } from "../components/FromInput";
+import { useAuthentication } from "../context/Authentication";
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -57,8 +57,8 @@ export const LoginScreen = () => {
           status={checked ? "checked" : "unchecked"}
           labelStyle={{ textAlign: "left" }}
           style={{
-            paddingVertical: 0,
             paddingHorizontal: 0,
+            paddingVertical: 0,
           }}
           position="leading"
           mode="android"

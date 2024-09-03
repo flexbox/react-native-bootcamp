@@ -1,10 +1,11 @@
-import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import type { StarshipProps } from "api/types";
 
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { Routes } from "~/navigation/Routes";
-import { StarshipDetailsScreen } from "~/screens/StarshipDetailsScreen";
 import { StarshipFeedScreen } from "~/screens/StarshipFeedScreen";
+import { StarshipDetailsScreen } from "~/screens/StarshipDetailsScreen";
 // For Example
 // import { StarshipFeedScreen } from "~/screens/exercice/StarshipFeedScreen";
 
@@ -34,10 +35,10 @@ export const StarshipNavigator = () => {
         name={Routes.STARSHIP_DETAILS_SCREEN}
         component={StarshipDetailsScreen}
         options={{
-          presentation: "modal",
           contentStyle: {
             backgroundColor: "#fff",
           },
+          presentation: "modal",
         }}
       />
     </Stack.Navigator>

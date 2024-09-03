@@ -2,8 +2,8 @@ import React from "react";
 import { Image } from "react-native";
 import { List } from "react-native-paper";
 
-import { ScreenContainer } from "~/components/ScreenContainer";
 import { Routes } from "~/navigation/Routes";
+import { ScreenContainer } from "~/components/ScreenContainer";
 
 interface DoYouLikeScreenProps {
   navigation: any;
@@ -26,7 +26,7 @@ export const DoYouLikeScreen = ({ navigation }: DoYouLikeScreenProps) => {
         source={{
           uri: "https://media.giphy.com/media/e6e1P3wC6xkYg/giphy.gif",
         }}
-        style={{ width: "100%", height: 200 }}
+        style={{ height: 200, width: "100%" }}
       />
 
       <List.Item

@@ -2,10 +2,10 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { Routes } from "~/navigation/Routes";
-import { DisappointedScreen } from "~/screens/DisappointedScreen";
-import { DoYouLikeScreen } from "~/screens/DoYouLikeScreen";
 import { LoveScreen } from "~/screens/LoveScreen";
 import { PlusScreen } from "~/screens/PlusScreen";
+import { DoYouLikeScreen } from "~/screens/DoYouLikeScreen";
+import { DisappointedScreen } from "~/screens/DisappointedScreen";
 
 const Stack = createNativeStackNavigator();
 

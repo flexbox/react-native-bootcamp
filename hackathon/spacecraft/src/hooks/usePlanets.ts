@@ -8,7 +8,7 @@ export const fetchPlanets = async () => {
 
 export const usePlanets = () => {
   return useQuery({
-    queryKey: ["planets"],
     queryFn: fetchPlanets,
+    queryKey: ["planets"],
   });
 };

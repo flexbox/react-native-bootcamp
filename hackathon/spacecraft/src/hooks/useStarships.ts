@@ -16,8 +16,8 @@ export const useStarships = (starships: string[]) => {
   const userQueries = useQueries({
     queries: starships.map((starship, index) => {
       return {
-        queryKey: ["starship", `starship-${index}`],
         queryFn: () => fetchStarshipById(starship),
+        queryKey: ["starship", `starship-${index}`],
       };
     }),
   });

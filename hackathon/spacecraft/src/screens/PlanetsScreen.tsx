@@ -1,17 +1,17 @@
-import { FlatList, TouchableOpacity, View } from "react-native";
 import { Text } from "react-native-paper";
+import { FlatList, TouchableOpacity, View } from "react-native";
 
-import { ScreenContainer } from "~/components/ScreenContainer";
-import { usePlanets } from "~/hooks/usePlanets";
 import { Routes } from "~/navigation/Routes";
+import { usePlanets } from "~/hooks/usePlanets";
 import { getTerrainColor } from "~/utils/getTerrainColor";
+import { ScreenContainer } from "~/components/ScreenContainer";
 
 interface PlanetsScreenProps {
   navigation: any;
 }
 
 export function PlanetsScreen({ navigation }: PlanetsScreenProps) {
-  const { data, isLoading, isError, error } = usePlanets();
+  const { data, error, isError, isLoading } = usePlanets();
 
   if (isLoading) {
     return (
@@ -55,11 +55,11 @@ export function PlanetsScreen({ navigation }: PlanetsScreenProps) {
         </TouchableOpacity>
         <View
           style={{
-            width: size,
-            height: size,
             backgroundColor: backgroundColor,
             borderRadius: 1000,
+            height: size,
             margin: 8,
+            width: size,
           }}
         />
       </View>

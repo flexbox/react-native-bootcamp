@@ -1,18 +1,19 @@
 import type { ReactNode } from "react";
+
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { IconButton, Text, useTheme } from "react-native-paper";
-import { useNavigation } from "@react-navigation/native";
 
 import { Offline } from "~/components/Offline";
 
 interface ScreenContainerProps {
   title: string;
   children?: ReactNode;
-  withSeparatorFooter?: boolean;
-  withScrollView?: boolean;
   withGoBack?: boolean;
+  withScrollView?: boolean;
   accessoryFooter?: ReactNode;
+  withSeparatorFooter?: boolean;
 }
 
 const ScreenContainerTitle = ({
@@ -27,8 +28,8 @@ const ScreenContainerTitle = ({
   return (
     <View
       style={{
-        flexDirection: "row",
         alignItems: "center",
+        flexDirection: "row",
       }}
     >
       {withGoBack && (
@@ -48,12 +49,12 @@ const ScreenContainerTitle = ({
 };
 
 export const ScreenContainer = ({
-  title,
-  children,
-  withSeparatorFooter = false,
-  withScrollView = false,
-  withGoBack = false,
   accessoryFooter,
+  children,
+  title,
+  withGoBack = false,
+  withScrollView = false,
+  withSeparatorFooter = false,
 }: ScreenContainerProps) => {
   const theme = useTheme();
 

@@ -1,21 +1,22 @@
-import CurrencyFormat from "react-currency-format";
 import { Alert, StyleSheet } from "react-native";
+import CurrencyFormat from "react-currency-format";
 import { Button, Card, Text } from "react-native-paper";
-import { FadeInDown, FadeOut } from "react-native-reanimated";
 import { useNavigation } from "@react-navigation/native";
+import { FadeInDown, FadeOut } from "react-native-reanimated";
+
+import { Image } from "~/components/Image";
 
 import type { StarshipProps } from "../../api/types";
+
 import { useImage } from "../hooks/useImage";
 import { Routes } from "../navigation/Routes";
 import { withAnimated } from "../utils/withAnimated";
 
-import { Image } from "~/components/Image";
-
 const AnimatedCard = withAnimated(Card);
 
 export interface StarshipCardProps {
-  ship: StarshipProps;
   index: number;
+  ship: StarshipProps;
 }
 
 interface StarshipDetailsScreenParams {
@@ -55,7 +56,7 @@ export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
       exiting={FadeOut.duration(250)}
     >
       <Image
-        style={{ width: "100%", height: 200, borderRadius: 12 }}
+        style={{ borderRadius: 12, height: 200, width: "100%" }}
         source={source}
         // sharedTransitionTag={`image-${ship.model}`}
       />

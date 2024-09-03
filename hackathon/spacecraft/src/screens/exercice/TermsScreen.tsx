@@ -110,7 +110,7 @@ export const TermsScreen = () => {
           parties or for the failure or delay in removing any such Content.
         </Text>
         <Image
-          style={{ width: 250, height: 250, marginVertical: 32 }}
+          style={{ height: 250, marginVertical: 32, width: 250 }}
           source={{
             uri: "https://media.giphy.com/media/krkrHAEodHgzP72rTI/giphy.gif",
           }}

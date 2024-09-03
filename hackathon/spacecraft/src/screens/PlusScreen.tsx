@@ -3,8 +3,8 @@ import { View } from "react-native";
 import { List, Text } from "react-native-paper";
 import * as Application from "expo-application";
 
-import { ScreenContainer } from "~/components/ScreenContainer";
 import { Routes } from "~/navigation/Routes";
+import { ScreenContainer } from "~/components/ScreenContainer";
 
 interface Props {}
 

@@ -1,3 +1,8 @@
+import React from "react";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { useSharedValue, withSpring } from "react-native-reanimated";
+import { Chip, DataTable, FAB, List, Text, useTheme } from "react-native-paper";
 import {
   Alert,
   Pressable,
@@ -6,15 +11,11 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { Chip, DataTable, FAB, List, Text, useTheme } from "react-native-paper";
-import { useSharedValue, withSpring } from "react-native-reanimated";
-import { FontAwesome5 } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
-
-import type { StarshipProps } from "../../api/types";
 
 import { Image } from "~/components/Image";
 import { withAnimated } from "~/utils/withAnimated";
+
+import type { StarshipProps } from "../../api/types";
 
 const AnimatedFAB = withAnimated(FAB);
 
@@ -28,14 +29,11 @@ export const StarshipDetailsScreen = ({
   route,
 }: StarshipDetailsScreenProps) => {
   const {
-    name,
-    manufacturer,
-    starship_class,
-    crew,
-    passengers,
-    consumables,
     cargo_capacity,
+    consumables,
+    crew,
     hyperdrive_rating,
+    manufacturer,
     max_atmosphering_speed,
     model,
     //@ts-expect-error the api does not have `image` field
@@ -63,7 +61,7 @@ export const StarshipDetailsScreen = ({
           {/* eslint-disable-next-line react-native/no-color-literals -- keep it always black */}
           <View style={[styles.imageContainer, { backgroundColor: "black" }]}>
             <Image
-              style={{ width: "100%", height: 350 }}
+              style={{ height: 350, width: "100%" }}
               source={image}
               sharedTransitionTag={`image-${model}`}
             />

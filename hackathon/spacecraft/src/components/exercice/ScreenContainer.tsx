@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
+
 import React from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
+import { ScrollView, StyleSheet, View } from "react-native";
 
 // Import <Offline /> component
 
@@ -12,8 +13,8 @@ interface ScreenContainerProps {
 }
 
 export const ScreenContainer = ({
-  title,
   children,
+  title,
   withSeparatorFooter = false,
 }: ScreenContainerProps) => {
   return (

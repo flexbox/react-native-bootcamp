@@ -14,17 +14,16 @@ module.exports = {
   plugins: [
     "react",
     "react-native",
-    "simple-import-sort",
-    "perfectionist", // Existing plugins plus 'perfectionist'
+    "perfectionist", // Keep only 'perfectionist'
   ],
   root: true, // Make sure eslint picks up the config at the root of the directory
   rules: {
     "@typescript-eslint/no-explicit-any": "warn", // Detect usage of `any` type
     "@typescript-eslint/no-unused-vars": "warn", // Detect unused variables
     camelcase: "off", // Disable camelcase rule
-    "perfectionist/sort-imports": "error", // Previous perfectionist rule
-    "perfectionist/sort-interfaces": ["error"], // New perfectionist rule
-    "perfectionist/sort-objects": ["error", { type: "alphabetical" }], // New perfectionist rule
+    "perfectionist/sort-imports": "error", // Perfectionist import sorting
+    "perfectionist/sort-interfaces": ["error"], // Perfectionist interfaces sorting
+    "perfectionist/sort-objects": ["error", { type: "alphabetical" }], // Perfectionist objects sorting
     "prettier/prettier": [
       "warn",
       {
@@ -35,19 +34,7 @@ module.exports = {
     "react-native/no-raw-text": 0, // Detect raw text outside of Text component
     "react-native/no-unused-styles": 2, // Detect unused StyleSheet rules
     "react-native/sort-styles": 2, // Enforce style definitions are sorted
-    "simple-import-sort/exports": "warn", // Enforce sorting exports within module
-    "simple-import-sort/imports": [
-      "warn",
-      {
-        groups: [
-          ["^\\u0000"],
-          ["^react", "^@?\\w"],
-          ["^(@env)(/.*|$)"],
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-        ],
-      },
-    ],
+    "react/no-unescaped-entities": "off",
   },
   settings: {
     perfectionist: {

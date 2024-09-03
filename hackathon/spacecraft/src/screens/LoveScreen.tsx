@@ -1,7 +1,7 @@
 import React from "react";
-import { Alert, Image, Platform, ScrollView, View } from "react-native";
-import { Button, Text } from "react-native-paper";
 import * as StoreReview from "expo-store-review";
+import { Button, Text } from "react-native-paper";
+import { Alert, Image, Platform, ScrollView, View } from "react-native";
 
 import { ButtonSupport } from "~/components/ButtonSupport";
 import { ScreenContainer } from "~/components/ScreenContainer";
@@ -22,7 +22,7 @@ export const LoveScreen = () => {
       title={""}
       withGoBack={true}
       accessoryFooter={
-        <View style={{ padding: 24, marginBottom: 12 }}>
+        <View style={{ marginBottom: 12, padding: 24 }}>
           <Button
             onPress={handleStoreReview}
             mode="contained"
@@ -39,7 +39,7 @@ export const LoveScreen = () => {
           source={{
             uri: "https://media.giphy.com/media/3o7abB06u9bNzA8lu8/giphy.gif",
           }}
-          style={{ width: "100%", height: 160 }}
+          style={{ height: 160, width: "100%" }}
         />
         <View style={{ padding: 16 }}>
           <Text
