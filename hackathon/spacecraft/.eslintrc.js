@@ -10,6 +10,13 @@ module.exports = {
     "plugin:react/jsx-runtime", // Support for React 17 JSX
     "plugin:prettier/recommended", // Prettier recommended rules
   ],
+  overrides: [
+    {
+      // Test files only
+      extends: ["plugin:testing-library/react"],
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+    },
+  ],
   parser: "@typescript-eslint/parser", // Specifies the ESLint parser
   plugins: [
     "react",
