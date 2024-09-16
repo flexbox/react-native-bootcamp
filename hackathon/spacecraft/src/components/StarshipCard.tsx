@@ -1,4 +1,3 @@
-import * as React from "react";
 import CurrencyFormat from "react-currency-format";
 import { Alert, StyleSheet } from "react-native";
 import { Button, Card, Text } from "react-native-paper";
@@ -25,9 +24,7 @@ interface StarshipDetailsScreenParams {
 }
 
 export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
-  const title = ship.name;
-  const price = ship.cost_in_credits;
-  const { manufacturer } = ship;
+  const { name: title, cost_in_credits: price, manufacturer } = ship;
 
   const source = useImage(title);
 
