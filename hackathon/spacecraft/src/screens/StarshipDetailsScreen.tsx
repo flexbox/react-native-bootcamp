@@ -1,12 +1,12 @@
-import React from "react";
 import {
+  Alert,
   Pressable,
   ScrollView,
   StyleSheet,
   TouchableOpacity,
   View,
 } from "react-native";
-import { Chip, DataTable, FAB, List, Text } from "react-native-paper";
+import { Chip, DataTable, FAB, List, Text, useTheme } from "react-native-paper";
 import { useSharedValue, withSpring } from "react-native-reanimated";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -38,11 +38,10 @@ export const StarshipDetailsScreen = ({
     hyperdrive_rating,
     max_atmosphering_speed,
     model,
-    // @ts-ignore
+    //@ts-expect-error the api does not have `image` field
     image,
   } = route.params;
 
-  // const source = useImage(name);
   const navigation = useNavigation();
 
   const handleClose = () => {
@@ -50,16 +49,19 @@ export const StarshipDetailsScreen = ({
   };
 
   const handleBuy = () => {
-    // Alert.alert("Give me the money!");
+    Alert.alert("Give me the money!");
   };
 
   const scale = useSharedValue(1);
 
+  const theme = useTheme();
+
   return (
-    <View>
+    <View style={{ backgroundColor: theme.colors.background }}>
       <ScrollView>
         <View style={styles.scrollContainer}>
-          <View style={styles.imageContainer}>
+          {/* eslint-disable-next-line react-native/no-color-literals -- keep it always black */}
+          <View style={[styles.imageContainer, { backgroundColor: "black" }]}>
             <Image
               style={{ width: "100%", height: 350 }}
               source={image}
@@ -68,7 +70,8 @@ export const StarshipDetailsScreen = ({
             <View style={[styles.closeContainer, styles.left]}>
               <TouchableOpacity
                 onPress={handleClose}
-                style={styles.closeButton}
+                // eslint-disable-next-line react-native/no-color-literals -- keep it always white
+                style={[styles.closeButton, { backgroundColor: "white" }]}
               >
                 <FontAwesome5
                   name="times"
@@ -163,7 +166,6 @@ const styles = StyleSheet.create({
     paddingVertical: 24,
   },
   closeButton: {
-    backgroundColor: "white",
     borderRadius: 50,
     paddingHorizontal: 12,
     paddingVertical: 8,
@@ -178,7 +180,6 @@ const styles = StyleSheet.create({
     right: 42,
   },
   imageContainer: {
-    backgroundColor: "black",
     paddingTop: 32,
   },
   left: {
