@@ -1,0 +1,14 @@
+appId: weshipit.today.spacecraft
+---
+
+- tapOn: "Email Email"
+- inputText: "yoda@mozmail.com"
+- tapOn: "Password Password  "
+- inputText: "123456"
+- tapOn: "Login"
+- tapOn: "Not Now"
+- tapOn: "CR90 corvette"
+- swipe:
+    start: "67%,87%"
+    end: "69%,51%"
+    duration: 661

@@ -55,7 +55,6 @@ export const StarshipDetailsScreen = ({
   const scale = useSharedValue(1);
 
   const theme = useTheme();
-  console.log("🚀 ~ theme:", theme);
 
   return (
     <View style={{ backgroundColor: theme.colors.background }}>

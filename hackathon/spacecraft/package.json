@@ -8,7 +8,6 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
-    "maestro": "maestro test tests/process.yaml",
     "test": "jest",
     "test:watch": "jest --watch",
     "build-storybook": "build-storybook",
@@ -16,7 +15,8 @@
     "storybook-watch": "sb-rn-watcher",
     "storybook": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo start",
     "storybook:ios": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo start --ios",
-    "storybook:android": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo start --android"
+    "storybook:android": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo start --android",
+    "e2e": "maestro test e2e/process.yaml"
   },
   "jest": {
     "preset": "jest-expo",
