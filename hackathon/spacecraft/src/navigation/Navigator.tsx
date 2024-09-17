@@ -1,10 +1,9 @@
-import React from "react";
 import { useReactNavigationDevTools } from "@dev-plugins/react-navigation";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   NavigationContainer,
   useNavigationContainerRef,
 } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { useAuthentication } from "~/context/Authentication";
 import { useAppearanceTheme } from "~/hooks/useAppearanceTheme";
@@ -30,13 +29,13 @@ export const Navigator = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {user ? (
           <Stack.Screen
-            name={"BOTTOM_TABS"}
             component={BottomTabNavigator}
+            name={"BOTTOM_TABS"}
           />
         ) : (
           <Stack.Screen
-            name={"AUTH_STACK"}
             component={AuthNavigator}
+            name={"AUTH_STACK"}
           />
         )}
       </Stack.Navigator>

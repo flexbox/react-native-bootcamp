@@ -1,8 +1,5 @@
-import React from "react";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { useSharedValue, withSpring } from "react-native-reanimated";
-import { Chip, DataTable, FAB, List, Text, useTheme } from "react-native-paper";
 import {
   Alert,
   Pressable,
@@ -11,6 +8,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { Chip, DataTable, FAB, List, Text, useTheme } from "react-native-paper";
+import { useSharedValue, withSpring } from "react-native-reanimated";
 
 import { Image } from "~/components/Image";
 import { withAnimated } from "~/utils/withAnimated";
@@ -65,9 +64,9 @@ export const StarshipDetailsScreen = ({
           {/* eslint-disable-next-line react-native/no-color-literals -- keep it always black */}
           <View style={[styles.imageContainer, { backgroundColor: "black" }]}>
             <Image
-              style={{ height: 350, width: "100%" }}
-              source={image}
               sharedTransitionTag={`image-${model}`}
+              source={image}
+              style={{ height: 350, width: "100%" }}
             />
             <View style={[styles.closeContainer, styles.left]}>
               <TouchableOpacity
@@ -76,9 +75,9 @@ export const StarshipDetailsScreen = ({
                 style={[styles.closeButton, { backgroundColor: "white" }]}
               >
                 <FontAwesome5
+                  color="black"
                   name="times"
                   size={22}
-                  color="black"
                 />
               </TouchableOpacity>
             </View>
@@ -93,7 +92,6 @@ export const StarshipDetailsScreen = ({
           </View>
 
           <List.Item
-            title={hyperdrive_rating}
             description="Hyperdrive rating"
             left={(props) => (
               <List.Icon
@@ -101,9 +99,9 @@ export const StarshipDetailsScreen = ({
                 icon="hubspot"
               />
             )}
+            title={hyperdrive_rating}
           />
           <List.Item
-            title={max_atmosphering_speed}
             description="Max atmospheric speed"
             left={(props) => (
               <List.Icon
@@ -111,6 +109,7 @@ export const StarshipDetailsScreen = ({
                 icon="speedometer"
               />
             )}
+            title={max_atmosphering_speed}
           />
 
           <DataTable>
@@ -135,15 +134,17 @@ export const StarshipDetailsScreen = ({
       </ScrollView>
 
       <Pressable
+        onPress={handleBuy}
         onPressIn={() => {
           scale.value = withSpring(0.9);
         }}
         onPressOut={() => {
           scale.value = withSpring(1);
         }}
-        onPress={handleBuy}
       >
         <AnimatedFAB
+          icon="cart"
+          label="Buy this ship"
           style={[
             styles.fab,
             {
@@ -154,8 +155,6 @@ export const StarshipDetailsScreen = ({
               ],
             },
           ]}
-          label="Buy this ship"
-          icon="cart"
         />
       </Pressable>
     </View>

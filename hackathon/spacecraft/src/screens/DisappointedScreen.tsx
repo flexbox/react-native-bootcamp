@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
-import React from "react";
-import { Button, Text } from "react-native-paper";
 import { Image, ScrollView, View } from "react-native";
+import { Button, Text } from "react-native-paper";
 
 import { ButtonSupport } from "~/components/ButtonSupport";
 import { ScreenContainer } from "~/components/ScreenContainer";
@@ -17,19 +16,19 @@ export const DisappointedScreen = ({ navigation }: Props) => {
 
   return (
     <ScreenContainer
-      title=""
-      withGoBack
       accessoryFooter={
         <View style={{ marginBottom: 12, padding: 24 }}>
           <ButtonSupport />
           <Button
-            onPress={handleCancel}
             mode="text"
+            onPress={handleCancel}
           >
             Not now
           </Button>
         </View>
       }
+      title=""
+      withGoBack
     >
       <ScrollView contentContainerStyle={{ alignItems: "center" }}>
         <Image
@@ -40,8 +39,8 @@ export const DisappointedScreen = ({ navigation }: Props) => {
         />
         <View style={{ padding: 16 }}>
           <Text
-            variant="headlineLarge"
             style={{ marginVertical: 24 }}
+            variant="headlineLarge"
           >
             We are so sorry…
           </Text>

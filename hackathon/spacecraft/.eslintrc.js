@@ -9,6 +9,7 @@ module.exports = {
     "plugin:react/recommended", // React rules
     "plugin:react/jsx-runtime", // Support for React 17 JSX
     "plugin:prettier/recommended", // Prettier recommended rules
+    "plugin:perfectionist/recommended-natural-legacy",
   ],
   overrides: [
     {
@@ -30,18 +31,18 @@ module.exports = {
     camelcase: "off", // Disable camelcase rule
     "perfectionist/sort-imports": "error", // Perfectionist import sorting
     "perfectionist/sort-interfaces": ["error"], // Perfectionist interfaces sorting
-    "perfectionist/sort-objects": ["error", { type: "alphabetical" }], // Perfectionist objects sorting
+    "perfectionist/sort-objects": ["error", { type: "natural" }], // Perfectionist objects sorting
     "prettier/prettier": [
       "warn",
       {
         usePrettierrc: true,
       },
     ],
+    "react/no-unescaped-entities": "off",
     "react-native/no-color-literals": 2, // Enforce color literals are not used
     "react-native/no-raw-text": 0, // Detect raw text outside of Text component
     "react-native/no-unused-styles": 2, // Detect unused StyleSheet rules
     "react-native/sort-styles": 2, // Enforce style definitions are sorted
-    "react/no-unescaped-entities": "off",
   },
   settings: {
     perfectionist: {

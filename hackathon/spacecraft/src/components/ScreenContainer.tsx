@@ -1,18 +1,18 @@
 import type { ReactNode } from "react";
 
-import React from "react";
 import { useNavigation } from "@react-navigation/native";
+
 import { ScrollView, StyleSheet, View } from "react-native";
 import { IconButton, Text, useTheme } from "react-native-paper";
 
 import { Offline } from "~/components/Offline";
 
 interface ScreenContainerProps {
-  title: string;
+  accessoryFooter?: ReactNode;
   children?: ReactNode;
+  title: string;
   withGoBack?: boolean;
   withScrollView?: boolean;
-  accessoryFooter?: ReactNode;
   withSeparatorFooter?: boolean;
 }
 
@@ -39,8 +39,8 @@ const ScreenContainerTitle = ({
         />
       )}
       <Text
-        variant="headlineMedium"
         style={[styles.headerText, { paddingHorizontal: withGoBack ? 0 : 24 }]}
+        variant="headlineMedium"
       >
         {title}
       </Text>

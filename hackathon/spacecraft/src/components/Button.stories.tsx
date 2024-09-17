@@ -8,61 +8,61 @@ export default {
 export const _Button = () => (
   <View style={{ flex: 1, justifyContent: "space-around", padding: 16 }}>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
       mode="contained"
+      onPress={() => Alert.alert("Pressed!")}
     >
       contained
     </Button>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
       mode="contained-tonal"
+      onPress={() => Alert.alert("Pressed!")}
     >
       contained-tonal
     </Button>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
       mode="elevated"
+      onPress={() => Alert.alert("Pressed!")}
     >
       elevated
     </Button>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
       mode="outlined"
+      onPress={() => Alert.alert("Pressed!")}
     >
       outlined
     </Button>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
       mode="text"
+      onPress={() => Alert.alert("Pressed!")}
     >
       text
     </Button>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
-      mode="text"
       icon="camera"
+      mode="text"
+      onPress={() => Alert.alert("Pressed!")}
     >
       <ActivityIndicator />
       text
     </Button>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
-      mode="text"
       icon="arrow-u-up-left"
+      mode="text"
+      onPress={() => Alert.alert("Pressed!")}
     >
       text
     </Button>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
-      mode="text"
       icon="backup-restore"
+      mode="text"
+      onPress={() => Alert.alert("Pressed!")}
     >
       text
     </Button>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
-      mode="text"
       icon="battery-charging-medium"
+      mode="text"
+      onPress={() => Alert.alert("Pressed!")}
     >
       text
     </Button>
@@ -73,8 +73,8 @@ export const _ButtonSizes = () => (
   <View style={{ flex: 1, justifyContent: "space-around", padding: 16 }}>
     <Button onPress={() => Alert.alert("Pressed!")}>small</Button>
     <Button
-      onPress={() => Alert.alert("Pressed!")}
       compact={true}
+      onPress={() => Alert.alert("Pressed!")}
     >
       medium
     </Button>

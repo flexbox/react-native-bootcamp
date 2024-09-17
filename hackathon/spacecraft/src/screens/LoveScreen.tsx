@@ -1,7 +1,7 @@
-import React from "react";
 import * as StoreReview from "expo-store-review";
-import { Button, Text } from "react-native-paper";
+
 import { Alert, Image, Platform, ScrollView, View } from "react-native";
+import { Button, Text } from "react-native-paper";
 
 import { ButtonSupport } from "~/components/ButtonSupport";
 import { ScreenContainer } from "~/components/ScreenContainer";
@@ -19,13 +19,11 @@ export const LoveScreen = () => {
 
   return (
     <ScreenContainer
-      title={""}
-      withGoBack={true}
       accessoryFooter={
         <View style={{ marginBottom: 12, padding: 24 }}>
           <Button
-            onPress={handleStoreReview}
             mode="contained"
+            onPress={handleStoreReview}
             style={{ marginBottom: 12 }}
           >
             Give 5 stars to Spacecraft
@@ -33,6 +31,8 @@ export const LoveScreen = () => {
           <ButtonSupport mode="text" />
         </View>
       }
+      title={""}
+      withGoBack={true}
     >
       <ScrollView contentContainerStyle={{ alignItems: "center" }}>
         <Image
@@ -43,14 +43,14 @@ export const LoveScreen = () => {
         />
         <View style={{ padding: 16 }}>
           <Text
-            variant="headlineLarge"
             style={{ marginVertical: 24 }}
+            variant="headlineLarge"
           >
             Would you like to spread the world by rating Spacecraft?
           </Text>
           <Text
-            variant="bodyLarge"
             style={{ marginBottom: 12 }}
+            variant="bodyLarge"
           >
             Amazing! We are so proud to have you as a user.
           </Text>

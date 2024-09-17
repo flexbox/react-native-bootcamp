@@ -1,10 +1,10 @@
-import { Text } from "react-native-paper";
 import { FlatList, TouchableOpacity, View } from "react-native";
+import { Text } from "react-native-paper";
 
-import { Routes } from "~/navigation/Routes";
-import { usePlanets } from "~/hooks/usePlanets";
-import { getTerrainColor } from "~/utils/getTerrainColor";
 import { ScreenContainer } from "~/components/ScreenContainer";
+import { usePlanets } from "~/hooks/usePlanets";
+import { Routes } from "~/navigation/Routes";
+import { getTerrainColor } from "~/utils/getTerrainColor";
 
 interface PlanetsScreenProps {
   navigation: any;
@@ -47,8 +47,8 @@ export function PlanetsScreen({ navigation }: PlanetsScreenProps) {
           }
         >
           <Text
-            variant="headlineMedium"
             style={{ textAlign: "center" }}
+            variant="headlineMedium"
           >
             {item.name}
           </Text>
@@ -70,9 +70,9 @@ export function PlanetsScreen({ navigation }: PlanetsScreenProps) {
     <ScreenContainer title={"Explore"}>
       <FlatList
         data={data.results}
-        renderItem={renderItem}
-        keyExtractor={(planet) => planet.name}
         horizontal={true}
+        keyExtractor={(planet) => planet.name}
+        renderItem={renderItem}
       />
     </ScreenContainer>
   );

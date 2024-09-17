@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unstable-nested-components */
-import React from "react";
-import { useTheme } from "react-native-paper";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
-import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
-import { Routes } from "~/navigation/Routes";
-import { PlusNavigator } from "~/navigation/PlusNavigator";
+import { useTheme } from "react-native-paper";
+
 import { PilotNavigator } from "~/navigation/PilotNavigator";
 import { PlanetNavigator } from "~/navigation/PlanetNavigator";
+import { PlusNavigator } from "~/navigation/PlusNavigator";
+import { Routes } from "~/navigation/Routes";
 import { StarshipNavigator } from "~/navigation/StarshipNavigator";
 
 const Tab = createBottomTabNavigator();
@@ -26,56 +26,56 @@ export const BottomTabNavigator = () => {
       }}
     >
       <Tab.Screen
-        name={Routes.STARSHIP_STACK}
         component={StarshipNavigator}
+        name={Routes.STARSHIP_STACK}
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome5
+              color={color}
               name="space-shuttle"
               size={22}
-              color={color}
             />
           ),
           tabBarLabel: "Starships",
         }}
       />
       <Tab.Screen
-        name={Routes.PILOT_STACK}
         component={PilotNavigator}
+        name={Routes.PILOT_STACK}
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome5
+              color={color}
               name="user-astronaut"
               size={22}
-              color={color}
             />
           ),
           tabBarLabel: "Pilots",
         }}
       />
       <Tab.Screen
-        name={Routes.PLANETS}
         component={PlanetNavigator}
+        name={Routes.PLANETS}
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons
+              color={color}
               name="planet"
               size={22}
-              color={color}
             />
           ),
           tabBarLabel: "Explore",
         }}
       />
       <Tab.Screen
-        name={Routes.PLUS_STACK}
         component={PlusNavigator}
+        name={Routes.PLUS_STACK}
         options={({ route }) => ({
           tabBarIcon: ({ color }) => (
             <FontAwesome5
+              color={color}
               name="plus-square"
               size={22}
-              color={color}
             />
           ),
           tabBarLabel: "Plus",

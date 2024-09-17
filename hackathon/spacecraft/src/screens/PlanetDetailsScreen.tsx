@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Text } from "react-native-paper";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
 
@@ -6,20 +6,20 @@ import { ScreenContainer } from "~/components/ScreenContainer";
  * @deprecated move this to typ please
  */
 interface Planet {
-  url: string;
-  name: string;
-  edited: string;
   climate: string;
-  gravity: string;
-  terrain: string;
-  films: string[];
   created: string;
   diameter: string;
+  edited: string;
+  films: string[];
+  gravity: string;
+  name: string;
+  orbital_period: string;
   population: string;
   residents: string[];
-  surface_water: string;
-  orbital_period: string;
   rotation_period: string;
+  surface_water: string;
+  terrain: string;
+  url: string;
 }
 
 interface Params {

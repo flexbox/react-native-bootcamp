@@ -15,12 +15,12 @@ export const AuthNavigator = () => {
       }}
     >
       <Stack.Screen
-        name={Routes.LOGIN_SCREEN}
         component={LoginScreen}
+        name={Routes.LOGIN_SCREEN}
       />
       <Stack.Screen
-        name={Routes.TERMS_SCREEN}
         component={TermsScreen}
+        name={Routes.TERMS_SCREEN}
       />
     </Stack.Navigator>
   );

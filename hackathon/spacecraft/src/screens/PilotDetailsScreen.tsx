@@ -1,6 +1,5 @@
 import type { PeopleProps } from "api/types";
 
-import React from "react";
 import { StyleSheet, View } from "react-native";
 import { DataTable, Text } from "react-native-paper";
 

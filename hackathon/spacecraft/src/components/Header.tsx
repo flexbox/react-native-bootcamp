@@ -1,5 +1,5 @@
-import React from "react";
 import Constants from "expo-constants";
+
 import { StyleSheet, View } from "react-native";
 import { Text, useTheme } from "react-native-paper";
 
@@ -13,8 +13,8 @@ export const Header = ({ title }: HeaderProps) => {
   return (
     <View style={[styles.container, { backgroundColor: theme.colors.primary }]}>
       <Text
-        variant="headlineMedium"
         style={[styles.headerText, { color: theme.colors.background }]}
+        variant="headlineMedium"
       >
         {title}
       </Text>

@@ -3,8 +3,8 @@ import type { PropsWithChildren } from "react";
 import React, { createContext, useContext, useState } from "react";
 
 interface AuthenticationContextProps {
-  user: boolean;
   setUser: (user: boolean) => void;
+  user: boolean;
 }
 
 const AuthenticationContext = createContext<AuthenticationContextProps>(

@@ -1,10 +1,9 @@
-import React from "react";
+import * as Application from "expo-application";
 import { View } from "react-native";
 import { List, Text } from "react-native-paper";
-import * as Application from "expo-application";
 
-import { Routes } from "~/navigation/Routes";
 import { ScreenContainer } from "~/components/ScreenContainer";
+import { Routes } from "~/navigation/Routes";
 
 interface Props {}
 
@@ -17,14 +16,14 @@ export const PlusScreen = ({ navigation }: Props) => {
     <ScreenContainer title={"Plus"}>
       <View style={{ flex: 1 }}>
         <List.Item
-          title="Do you like Spacecraft?"
-          onPress={navigateToDoYouLikeScreen}
           left={(props) => (
             <List.Icon
               {...props}
               icon="star"
             />
           )}
+          onPress={navigateToDoYouLikeScreen}
+          title="Do you like Spacecraft?"
         />
       </View>
       <View

@@ -1,39 +1,39 @@
 export interface StarshipProps {
-  films?: [];
-  pilots?: [];
-  name: string;
-  url?: string;
-  MGLT?: string;
-  crew?: string;
-  model: string;
-  edited?: string;
-  length?: string;
-  created?: string;
-  passengers?: string;
-  consumables?: string;
-  manufacturer?: string;
   cargo_capacity?: string;
-  starship_class?: string;
+  consumables?: string;
   cost_in_credits?: string;
+  created?: string;
+  crew?: string;
+  edited?: string;
+  films?: [];
   hyperdrive_rating?: string;
+  length?: string;
+  manufacturer?: string;
   max_atmosphering_speed?: string;
+  MGLT?: string;
+  model: string;
+  name: string;
+  passengers?: string;
+  pilots?: [];
+  starship_class?: string;
+  url?: string;
 }
 
 interface PeopleProps {
-  url: string;
-  name: string;
-  mass: string;
-  height: string;
-  gender: string;
-  edited: string;
-  films: string[];
-  created: string;
-  eye_color: string;
-  homeworld: string;
-  species: string[];
-  hair_color: string;
-  skin_color: string;
   birth_year: string;
-  vehicles: string[];
+  created: string;
+  edited: string;
+  eye_color: string;
+  films: string[];
+  gender: string;
+  hair_color: string;
+  height: string;
+  homeworld: string;
+  mass: string;
+  name: string;
+  skin_color: string;
+  species: string[];
   starships: string[];
+  url: string;
+  vehicles: string[];
 }

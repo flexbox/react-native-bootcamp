@@ -1,9 +1,8 @@
-import React from "react";
 import { Image } from "react-native";
 import { List } from "react-native-paper";
 
-import { Routes } from "~/navigation/Routes";
 import { ScreenContainer } from "~/components/ScreenContainer";
+import { Routes } from "~/navigation/Routes";
 
 interface DoYouLikeScreenProps {
   navigation: any;
@@ -30,24 +29,24 @@ export const DoYouLikeScreen = ({ navigation }: DoYouLikeScreenProps) => {
       />
 
       <List.Item
-        title="I love Spacecraft"
-        onPress={navigateToLoveScreen}
         left={(props) => (
           <List.Icon
             {...props}
             icon="heart"
           />
         )}
+        onPress={navigateToLoveScreen}
+        title="I love Spacecraft"
       />
       <List.Item
-        title="I am disappointed"
-        onPress={navigateToDisappointedScreen}
         left={(props) => (
           <List.Icon
             {...props}
             icon="emoticon-sad-outline"
           />
         )}
+        onPress={navigateToDisappointedScreen}
+        title="I am disappointed"
       />
     </ScreenContainer>
   );

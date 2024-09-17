@@ -2,10 +2,10 @@
 import type { ImageProps } from "react-native";
 import type { AnimatedProps } from "react-native-reanimated";
 
-import React from "react";
-import Animated from "react-native-reanimated";
-import { Image as RNImage } from "react-native";
 import { Image as ExpoImage } from "expo-image";
+
+import { Image as RNImage } from "react-native";
+import Animated from "react-native-reanimated";
 
 const AnimatedImage = Animated.createAnimatedComponent(RNImage);
 
