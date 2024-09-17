@@ -3,13 +3,17 @@ import { View } from "react-native";
 import { List, Text } from "react-native-paper";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
+import { useAuthentication } from "~/context/Authentication";
 import { Routes } from "~/navigation/Routes";
 
-interface Props {}
-
-export const PlusScreen = ({ navigation }: Props) => {
+export const PlusScreen = ({ navigation }: any) => {
   const navigateToDoYouLikeScreen = () => {
     navigation.navigate(Routes.DO_YOU_LIKE_SCREEN);
+  };
+
+  const { setUser } = useAuthentication();
+  const handleLogout = () => {
+    setUser(false);
   };
 
   return (
@@ -24,6 +28,16 @@ export const PlusScreen = ({ navigation }: Props) => {
           )}
           onPress={navigateToDoYouLikeScreen}
           title="Do you like Spacecraft?"
+        />
+        <List.Item
+          left={(props) => (
+            <List.Icon
+              {...props}
+              icon="logout"
+            />
+          )}
+          onPress={handleLogout}
+          title="Logout"
         />
       </View>
       <View
