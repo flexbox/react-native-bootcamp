@@ -1,4 +1,3 @@
-import React from "react";
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
 import { useQuery } from "@tanstack/react-query";
