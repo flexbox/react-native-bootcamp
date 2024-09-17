@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 
 import { useNavigation } from "@react-navigation/native";
-
 import { ScrollView, StyleSheet, View } from "react-native";
 import { IconButton, Text, useTheme } from "react-native-paper";
 

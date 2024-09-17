@@ -2,8 +2,8 @@
 import type { ImageProps } from "react-native";
 import type { AnimatedProps } from "react-native-reanimated";
 
-import { Image as ExpoImage } from "expo-image";
-
+// for some reason, the expo-image is not working
+// import { Image as ExpoImage } from "expo-image";
 import { Image as RNImage } from "react-native";
 import Animated from "react-native-reanimated";
 

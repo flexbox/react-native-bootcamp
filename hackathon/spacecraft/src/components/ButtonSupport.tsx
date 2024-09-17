@@ -1,5 +1,4 @@
 import * as WebBrowser from "expo-web-browser";
-
 import { Button } from "react-native-paper";
 
 interface Props {

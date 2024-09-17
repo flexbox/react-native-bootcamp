@@ -1,6 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Constants from "expo-constants";
-
 import { Provider as PaperProvider } from "react-native-paper";
 
 import { AuthenticationProvider } from "~/context/Authentication";

@@ -1,5 +1,4 @@
 import Constants from "expo-constants";
-
 import { StyleSheet, View } from "react-native";
 import { Text, useTheme } from "react-native-paper";
 

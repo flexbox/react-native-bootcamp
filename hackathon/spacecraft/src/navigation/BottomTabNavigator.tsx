@@ -2,7 +2,6 @@
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
-
 import { useTheme } from "react-native-paper";
 
 import { PilotNavigator } from "~/navigation/PilotNavigator";

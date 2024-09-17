@@ -1,5 +1,4 @@
 import * as StoreReview from "expo-store-review";
-
 import { Alert, Image, Platform, ScrollView, View } from "react-native";
 import { Button, Text } from "react-native-paper";
 
