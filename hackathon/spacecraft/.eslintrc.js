@@ -29,7 +29,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "warn", // Detect usage of `any` type
     "@typescript-eslint/no-unused-vars": "warn", // Detect unused variables
     camelcase: "off", // Disable camelcase rule
-    "perfectionist/sort-imports": "error", // Perfectionist import sorting
+    "perfectionist/sort-imports": "error", //  Perfectionist import sorting https://perfectionist.dev/guide/introduction
     "perfectionist/sort-interfaces": ["error"], // Perfectionist interfaces sorting
     "perfectionist/sort-objects": [
       "error",
