@@ -1,4 +1,3 @@
-import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { Routes } from "~/navigation/Routes";
@@ -17,20 +16,20 @@ export const PlusNavigator = () => {
       }}
     >
       <Stack.Screen
-        name={Routes.PLUS_SCREEN}
         component={PlusScreen}
+        name={Routes.PLUS_SCREEN}
       />
       <Stack.Screen
-        name={Routes.DO_YOU_LIKE_SCREEN}
         component={DoYouLikeScreen}
+        name={Routes.DO_YOU_LIKE_SCREEN}
       />
       <Stack.Screen
-        name={Routes.LOVE_SCREEN}
         component={LoveScreen}
+        name={Routes.LOVE_SCREEN}
       />
       <Stack.Screen
-        name={Routes.DISAPPOINTED_SCREEN}
         component={DisappointedScreen}
+        name={Routes.DISAPPOINTED_SCREEN}
       />
     </Stack.Navigator>
   );

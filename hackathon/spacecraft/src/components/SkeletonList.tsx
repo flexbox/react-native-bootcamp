@@ -1,4 +1,3 @@
-import React from "react";
 import { View } from "react-native";
 import {
   Fade,
@@ -18,9 +17,9 @@ export const SkeletonList = ({ numberItems = 10 }: SkeletonListProps) => {
     items.push(
       <Placeholder
         Animation={Fade}
+        key={`skeleton-${i}`}
         Left={PlaceholderMedia}
         style={{ marginBottom: 12 }}
-        key={`skeleton-${i}`}
       >
         <PlaceholderLine width={90} />
         <PlaceholderLine width={80} />

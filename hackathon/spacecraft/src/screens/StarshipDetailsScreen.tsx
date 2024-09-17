@@ -1,3 +1,5 @@
+import { FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 import {
   Alert,
   Pressable,
@@ -8,13 +10,11 @@ import {
 } from "react-native";
 import { Chip, DataTable, FAB, List, Text, useTheme } from "react-native-paper";
 import { useSharedValue, withSpring } from "react-native-reanimated";
-import { FontAwesome5 } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
-
-import type { StarshipProps } from "../../api/types";
 
 import { Image } from "~/components/Image";
 import { withAnimated } from "~/utils/withAnimated";
+
+import type { StarshipProps } from "../../api/types";
 
 const AnimatedFAB = withAnimated(FAB);
 
@@ -28,16 +28,16 @@ export const StarshipDetailsScreen = ({
   route,
 }: StarshipDetailsScreenProps) => {
   const {
-    name,
-    manufacturer,
-    starship_class,
-    crew,
-    passengers,
-    consumables,
     cargo_capacity,
+    consumables,
+    crew,
     hyperdrive_rating,
+    manufacturer,
     max_atmosphering_speed,
     model,
+    name,
+    passengers,
+    starship_class,
     //@ts-expect-error the api does not have `image` field
     image,
   } = route.params;
@@ -55,6 +55,7 @@ export const StarshipDetailsScreen = ({
   const scale = useSharedValue(1);
 
   const theme = useTheme();
+  console.log("🚀 ~ theme:", theme);
 
   return (
     <View style={{ backgroundColor: theme.colors.background }}>
@@ -63,9 +64,9 @@ export const StarshipDetailsScreen = ({
           {/* eslint-disable-next-line react-native/no-color-literals -- keep it always black */}
           <View style={[styles.imageContainer, { backgroundColor: "black" }]}>
             <Image
-              style={{ width: "100%", height: 350 }}
-              source={image}
               sharedTransitionTag={`image-${model}`}
+              source={image}
+              style={{ height: 350, width: "100%" }}
             />
             <View style={[styles.closeContainer, styles.left]}>
               <TouchableOpacity
@@ -74,9 +75,9 @@ export const StarshipDetailsScreen = ({
                 style={[styles.closeButton, { backgroundColor: "white" }]}
               >
                 <FontAwesome5
+                  color="black"
                   name="times"
                   size={22}
-                  color="black"
                 />
               </TouchableOpacity>
             </View>
@@ -91,7 +92,6 @@ export const StarshipDetailsScreen = ({
           </View>
 
           <List.Item
-            title={hyperdrive_rating}
             description="Hyperdrive rating"
             left={(props) => (
               <List.Icon
@@ -99,9 +99,9 @@ export const StarshipDetailsScreen = ({
                 icon="hubspot"
               />
             )}
+            title={hyperdrive_rating}
           />
           <List.Item
-            title={max_atmosphering_speed}
             description="Max atmospheric speed"
             left={(props) => (
               <List.Icon
@@ -109,6 +109,7 @@ export const StarshipDetailsScreen = ({
                 icon="speedometer"
               />
             )}
+            title={max_atmosphering_speed}
           />
 
           <DataTable>
@@ -133,15 +134,17 @@ export const StarshipDetailsScreen = ({
       </ScrollView>
 
       <Pressable
+        onPress={handleBuy}
         onPressIn={() => {
           scale.value = withSpring(0.9);
         }}
         onPressOut={() => {
           scale.value = withSpring(1);
         }}
-        onPress={handleBuy}
       >
         <AnimatedFAB
+          icon="cart"
+          label="Buy this ship"
           style={[
             styles.fab,
             {
@@ -152,8 +155,6 @@ export const StarshipDetailsScreen = ({
               ],
             },
           ]}
-          label="Buy this ship"
-          icon="cart"
         />
       </Pressable>
     </View>

@@ -1,21 +1,21 @@
-import React from "react";
-import { View } from "react-native";
 import type { TextInputProps } from "react-native-paper";
+
+import { View } from "react-native";
 import { TextInput } from "react-native-paper";
 
 export const FormInput = ({
   label,
-  value,
   onChangeText,
+  value,
   ...rest
 }: TextInputProps) => (
   <View style={{ paddingVertical: 8 }}>
     <TextInput
       {...rest}
-      mode="outlined"
       label={label}
-      value={value}
+      mode="outlined"
       onChangeText={onChangeText}
+      value={value}
     />
   </View>
 );

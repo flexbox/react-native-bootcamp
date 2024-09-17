@@ -1,5 +1,6 @@
-import * as React from "react";
 import type { AnimatedProps } from "react-native-reanimated";
+
+import * as React from "react";
 import Animated from "react-native-reanimated";
 
 export function withAnimated<T extends object>(

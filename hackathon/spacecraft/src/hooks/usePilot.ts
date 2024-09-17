@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 
 export const usePilot = () => {
   const [page, setPage] = useState(1);
@@ -15,5 +15,5 @@ export const usePilot = () => {
     placeholderData: keepPreviousData,
   });
 
-  return { query, setPage, page };
+  return { page, query, setPage };
 };

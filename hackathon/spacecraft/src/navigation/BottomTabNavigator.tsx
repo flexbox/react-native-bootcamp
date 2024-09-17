@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unstable-nested-components */
-import React from "react";
-import { useTheme } from "react-native-paper";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
+import { useTheme } from "react-native-paper";
 
 import { PilotNavigator } from "~/navigation/PilotNavigator";
 import { PlanetNavigator } from "~/navigation/PlanetNavigator";
@@ -26,59 +25,59 @@ export const BottomTabNavigator = () => {
       }}
     >
       <Tab.Screen
-        name={Routes.STARSHIP_STACK}
         component={StarshipNavigator}
+        name={Routes.STARSHIP_STACK}
         options={{
-          tabBarLabel: "Starships",
           tabBarIcon: ({ color }) => (
             <FontAwesome5
+              color={color}
               name="space-shuttle"
               size={22}
-              color={color}
             />
           ),
+          tabBarLabel: "Starships",
         }}
       />
       <Tab.Screen
-        name={Routes.PILOT_STACK}
         component={PilotNavigator}
+        name={Routes.PILOT_STACK}
         options={{
-          tabBarLabel: "Pilots",
           tabBarIcon: ({ color }) => (
             <FontAwesome5
+              color={color}
               name="user-astronaut"
               size={22}
-              color={color}
             />
           ),
+          tabBarLabel: "Pilots",
         }}
       />
       <Tab.Screen
-        name={Routes.PLANETS}
         component={PlanetNavigator}
+        name={Routes.PLANETS}
         options={{
-          tabBarLabel: "Explore",
           tabBarIcon: ({ color }) => (
             <Ionicons
+              color={color}
               name="planet"
               size={22}
-              color={color}
             />
           ),
+          tabBarLabel: "Explore",
         }}
       />
       <Tab.Screen
-        name={Routes.PLUS_STACK}
         component={PlusNavigator}
+        name={Routes.PLUS_STACK}
         options={({ route }) => ({
-          tabBarLabel: "Plus",
           tabBarIcon: ({ color }) => (
             <FontAwesome5
+              color={color}
               name="plus-square"
               size={22}
-              color={color}
             />
           ),
+          tabBarLabel: "Plus",
           tabBarStyle: ((currentRoute) => {
             const routeName = getFocusedRouteNameFromRoute(currentRoute) ?? "";
             if (

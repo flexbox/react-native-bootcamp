@@ -1,6 +1,6 @@
-import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import type { StarshipProps } from "api/types";
+
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { Routes } from "~/navigation/Routes";
 import { StarshipDetailsScreen } from "~/screens/StarshipDetailsScreen";
@@ -9,12 +9,12 @@ import { StarshipFeedScreen } from "~/screens/StarshipFeedScreen";
 // import { StarshipFeedScreen } from "~/screens/exercice/StarshipFeedScreen";
 
 export type StarshipStackParamList = {
-  [Routes.STARSHIP_FEED_SCREEN]: undefined;
   [Routes.STARSHIP_DETAILS_SCREEN]: {
     route: {
       params: StarshipProps;
     };
   };
+  [Routes.STARSHIP_FEED_SCREEN]: undefined;
 };
 
 const Stack = createNativeStackNavigator<StarshipStackParamList>();
@@ -27,17 +27,17 @@ export const StarshipNavigator = () => {
       }}
     >
       <Stack.Screen
-        name={Routes.STARSHIP_FEED_SCREEN}
         component={StarshipFeedScreen}
+        name={Routes.STARSHIP_FEED_SCREEN}
       />
       <Stack.Screen
-        name={Routes.STARSHIP_DETAILS_SCREEN}
         component={StarshipDetailsScreen}
+        name={Routes.STARSHIP_DETAILS_SCREEN}
         options={{
-          presentation: "modal",
           contentStyle: {
             backgroundColor: "#fff",
           },
+          presentation: "modal",
         }}
       />
     </Stack.Navigator>

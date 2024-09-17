@@ -1,0 +1,6 @@
+{
+  "MD013": false, // https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+  "MD033": {
+    "allowed_elements": ["img", "table"]
+  }
+}

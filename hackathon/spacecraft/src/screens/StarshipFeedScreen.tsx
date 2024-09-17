@@ -1,23 +1,22 @@
-import React from "react";
+import { useQuery } from "@tanstack/react-query";
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
-import { useQuery } from "@tanstack/react-query";
+
+import { fetchStarships } from "~/hooks/useStarships";
 
 import { ScreenContainer } from "../components/ScreenContainer";
 import { StarshipCard } from "../components/StarshipCard";
 
-import { fetchStarships } from "~/hooks/useStarships";
-
 interface ShipProps {
-  name: string;
-  model: string;
-  manufacturer: string;
   cost_in_credits: string;
+  manufacturer: string;
+  model: string;
+  name: string;
 }
 
 interface RenderItemProps {
-  item: ShipProps;
   index: number;
+  item: ShipProps;
 }
 
 // SOLUTION 2: with a FlatList - more performant
@@ -26,16 +25,16 @@ const renderItem = (props: RenderItemProps) => {
 
   return (
     <StarshipCard
-      ship={ship}
       index={props.index}
+      ship={ship}
     />
   );
 };
 
 export const StarshipFeedScreen = () => {
-  const { isPending, isError, data, refetch } = useQuery({
-    queryKey: ["starships"],
+  const { data, isError, isPending, refetch } = useQuery({
     queryFn: fetchStarships,
+    queryKey: ["starships"],
   });
 
   if (isPending) {
@@ -46,8 +45,8 @@ export const StarshipFeedScreen = () => {
     return (
       <ScreenContainer title="Error 😕">
         <Button
-          onPress={() => refetch()}
           mode="outlined"
+          onPress={() => refetch()}
         >
           Refetch
         </Button>
@@ -69,8 +68,8 @@ export const StarshipFeedScreen = () => {
       {/* SOLUTION 2: with a FlatList - more performant */}
       <FlatList
         data={data.results}
-        renderItem={renderItem}
         keyExtractor={(ship) => ship.model}
+        renderItem={renderItem}
       />
     </ScreenContainer>
   );

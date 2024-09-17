@@ -1,4 +1,3 @@
-import React from "react";
 import { Alert, Image, View } from "react-native";
 import { Appbar, Text } from "react-native-paper";
 
@@ -17,8 +16,8 @@ export const TermsScreen = () => {
       </Appbar.Header>
       <View style={{ padding: 32 }}>
         <Text
-          variant="bodyMedium"
           style={{ marginBottom: 24 }}
+          variant="bodyMedium"
         >
           This Terms of Service, including all supplemental terms as amended
           from time to time, governs your use of the online game, service, or
@@ -34,8 +33,8 @@ export const TermsScreen = () => {
         </Text>
         <Text variant="titleMedium">1. Account</Text>
         <Text
-          variant="bodyMedium"
           style={{ marginBottom: 24 }}
+          variant="bodyMedium"
         >
           A TOR Account ("Account") may be required to access and use TOR
           Services. If you have questions about Account registration, please
@@ -62,8 +61,8 @@ export const TermsScreen = () => {
         </Text>
         <Text variant="titleMedium">2. Service</Text>
         <Text
-          variant="bodyMedium"
           style={{ marginBottom: 24 }}
+          variant="bodyMedium"
         >
           Some TOR Services require payment of a fee. You must have an Account
           and pay the subscription or other fees to participate in these
@@ -73,8 +72,8 @@ export const TermsScreen = () => {
         </Text>
         <Text variant="titleMedium">3. Privacy</Text>
         <Text
-          variant="bodyMedium"
           style={{ marginBottom: 24 }}
+          variant="bodyMedium"
         >
           Your privacy is important to us. Please read the TOR Privacy Policy
           carefully for information relating to TOR collection and use of
@@ -91,8 +90,8 @@ export const TermsScreen = () => {
         </Text>
         <Text variant="titleMedium">4. Content</Text>
         <Text
-          variant="bodyMedium"
           style={{ marginBottom: 24 }}
+          variant="bodyMedium"
         >
           "Content" on TOR Services may include software, technology, text,
           artwork, music, sound, and other audio visual material, and the design
@@ -110,10 +109,10 @@ export const TermsScreen = () => {
           parties or for the failure or delay in removing any such Content.
         </Text>
         <Image
-          style={{ width: 250, height: 250, marginVertical: 32 }}
           source={{
             uri: "https://media.giphy.com/media/krkrHAEodHgzP72rTI/giphy.gif",
           }}
+          style={{ height: 250, marginVertical: 32, width: 250 }}
         />
 
         <Text style={{ marginBottom: 128 }}>May the force be with you</Text>

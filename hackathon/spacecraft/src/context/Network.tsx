@@ -1,5 +1,6 @@
-import NetInfo from "@react-native-community/netinfo";
 import type { PropsWithChildren } from "react";
+
+import NetInfo from "@react-native-community/netinfo";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 interface NetworkContextProps {
@@ -7,7 +8,7 @@ interface NetworkContextProps {
 }
 
 const NetworkContext = createContext<NetworkContextProps>(
-  {} as NetworkContextProps
+  {} as NetworkContextProps,
 );
 
 export const NetworkProvider = ({ children }: PropsWithChildren) => {

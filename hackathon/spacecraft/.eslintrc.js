@@ -2,49 +2,58 @@ module.exports = {
   env: {
     node: true,
   },
-  parser: "@typescript-eslint/parser", // Specifies the ESLint parser
-  root: true, // make sure eslint picks up the config at the root of the directory
   extends: [
     "expo",
     "eslint:recommended", // ESLint rules
     "plugin:@typescript-eslint/recommended", // TypeScript rules
     "plugin:react/recommended", // React rules
-    "plugin:react/jsx-runtime", // support for React 17 JSX
+    "plugin:react/jsx-runtime", // Support for React 17 JSX
     "plugin:prettier/recommended", // Prettier recommended rules
+    "plugin:perfectionist/recommended-natural-legacy",
   ],
-  plugins: ["react", "react-native", "simple-import-sort"], // add React and React Native plugins
+  overrides: [
+    {
+      // Test files only
+      extends: ["plugin:testing-library/react"],
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+    },
+  ],
+  parser: "@typescript-eslint/parser", // Specifies the ESLint parser
+  plugins: [
+    "react",
+    "react-native",
+    "perfectionist", // Keep only 'perfectionist'
+  ],
+  root: true, // Make sure eslint picks up the config at the root of the directory
   rules: {
-    camelcase: "off", // disable camelcase rule
-    "@typescript-eslint/no-explicit-any": "warn", // detect usage of `any` type
+    "@typescript-eslint/no-explicit-any": "warn", // Detect usage of `any` type
+    "@typescript-eslint/no-unused-vars": "warn", // Detect unused variables
+    camelcase: "off", // Disable camelcase rule
+    "perfectionist/sort-imports": "error", //  Perfectionist import sorting https://perfectionist.dev/guide/introduction
+    "perfectionist/sort-interfaces": ["error"], // Perfectionist interfaces sorting
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        ignorePattern: ["useQuery*", "queries*", "useMutation*", "mutations*"],
+        type: "natural",
+      },
+    ],
     "prettier/prettier": [
-      // Prettier rules
       "warn",
       {
         usePrettierrc: true,
       },
     ],
-    "react-native/no-color-literals": 2, // enforce color literals are not used
-    "react-native/no-unused-styles": 2, // detect unused StyleSheet rules
-    "react-native/no-raw-text": 0, // detect raw text outside of Text component
-    "react-native/sort-styles": 2, // enforce style definitions are sorted
-    "@typescript-eslint/no-unused-vars": "warn", // detect unused variables
-    "simple-import-sort/exports": "warn", // enforce sorting exports within module
-    "simple-import-sort/imports": [
-      "warn",
-      {
-        groups: [
-          // Side effect imports.
-          ["^\\u0000"],
-          // Packages `react` related packages come first.
-          ["^react", "^@?\\w"],
-          // Environment variables
-          ["^(@env)(/.*|$)"],
-          // Parent imports. Put `..` last.
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          // Other relative imports. Put same-folder imports and `.` last.
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-        ],
-      },
-    ],
+    "react/no-unescaped-entities": "off",
+    "react-native/no-color-literals": 2, // Enforce color literals are not used
+    "react-native/no-raw-text": 0, // Detect raw text outside of Text component
+    "react-native/no-unused-styles": 2, // Detect unused StyleSheet rules
+    "react-native/sort-styles": 2, // Enforce style definitions are sorted
+  },
+  settings: {
+    perfectionist: {
+      partitionByComment: true,
+      type: "line-length",
+    },
   },
 };

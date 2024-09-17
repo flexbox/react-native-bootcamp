@@ -1,30 +1,30 @@
 import type { ReactNode } from "react";
-import React from "react";
+
 import { ScrollView, StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
 
 // Import <Offline /> component
 
 interface ScreenContainerProps {
-  title: string;
   children?: ReactNode;
+  title: string;
   withSeparatorFooter?: boolean;
 }
 
 export const ScreenContainer = ({
-  title,
   children,
+  title,
   withSeparatorFooter = false,
 }: ScreenContainerProps) => {
   return (
     <ScrollView
-      style={styles.container}
       nestedScrollEnabled={true}
+      style={styles.container}
     >
       {/* <Offline /> */}
       <Text
-        variant="headlineMedium"
         style={styles.headerText}
+        variant="headlineMedium"
       >
         {title}
       </Text>

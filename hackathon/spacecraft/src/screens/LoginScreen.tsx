@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { useState } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Button, Checkbox, Text, useTheme } from "react-native-paper";
-import { useNavigation } from "@react-navigation/native";
+
+import { Header } from "~/components/Header";
 
 import { FormInput } from "../components/FromInput";
 import { useAuthentication } from "../context/Authentication";
 import { Routes } from "../navigation/Routes";
-
-import { Header } from "~/components/Header";
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -35,38 +35,38 @@ export const LoginScreen = () => {
       <Header title="SpaceCraft" />
       <View style={styles.content}>
         <FormInput
+          autoCapitalize="none"
+          autoComplete="email"
+          keyboardType="email-address"
           label="Email"
-          value={email}
           onChangeText={(value) => setEmail(value)}
           returnKeyType="next"
-          keyboardType="email-address"
-          autoComplete="email"
           textContentType="emailAddress"
-          autoCapitalize="none"
+          value={email}
         />
         <FormInput
-          label="Password"
-          value={password}
-          secureTextEntry={!checked}
-          onChangeText={(value) => setPassword(value)}
           autoComplete="password"
+          label="Password"
+          onChangeText={(value) => setPassword(value)}
+          secureTextEntry={!checked}
+          value={password}
         />
         <Checkbox.Item
           label="Show Password"
-          onPress={toggleSecureIcon}
-          status={checked ? "checked" : "unchecked"}
           labelStyle={{ textAlign: "left" }}
-          style={{
-            paddingVertical: 0,
-            paddingHorizontal: 0,
-          }}
-          position="leading"
           mode="android"
+          onPress={toggleSecureIcon}
+          position="leading"
+          status={checked ? "checked" : "unchecked"}
+          style={{
+            paddingHorizontal: 0,
+            paddingVertical: 0,
+          }}
         />
         <Button
+          mode="contained"
           onPress={handleLogin}
           style={styles.submitButton}
-          mode="contained"
         >
           Login
         </Button>

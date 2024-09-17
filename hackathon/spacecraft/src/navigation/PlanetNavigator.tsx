@@ -1,9 +1,9 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { Routes } from "./Routes";
-
 import { PlanetDetailsScreen } from "~/screens/PlanetDetailsScreen";
 import { PlanetsScreen } from "~/screens/PlanetsScreen";
+
+import { Routes } from "./Routes";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,12 +15,12 @@ export const PlanetNavigator = () => {
       }}
     >
       <Stack.Screen
-        name={Routes.PLANETS}
         component={PlanetsScreen}
+        name={Routes.PLANETS}
       />
       <Stack.Screen
-        name={Routes.PLANET_DETAILS_SCREEN}
         component={PlanetDetailsScreen}
+        name={Routes.PLANET_DETAILS_SCREEN}
       />
     </Stack.Navigator>
   );

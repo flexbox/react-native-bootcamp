@@ -1,17 +1,18 @@
-import { NavigationContainer } from "@react-navigation/native";
 import type { StarshipProps } from "api/types";
+
+import { NavigationContainer } from "@react-navigation/native";
 
 import { StarshipCard } from "~/components/StarshipCard";
 
 const shipFixture = {
-  name: "Millennium Falcon",
   model: "YT-1300 light freighter",
+  name: "Millennium Falcon",
 };
 
 const tieFixture: StarshipProps = {
-  name: "tieadvanced x1",
-  model: "tieadvanced x1",
   cost_in_credits: "unknown",
+  model: "tieadvanced x1",
+  name: "tieadvanced x1",
 };
 
 export default {

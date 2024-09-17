@@ -1,4 +1,3 @@
-import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react-native";
 
 import { FormInput } from "~/components/FromInput";
@@ -9,8 +8,8 @@ describe("FormInput", () => {
     render(
       <FormInput
         label="your-car"
-        value="tesla"
         onChangeText={mock}
+        value="tesla"
       />,
     );
     screen.getAllByText("your-car");

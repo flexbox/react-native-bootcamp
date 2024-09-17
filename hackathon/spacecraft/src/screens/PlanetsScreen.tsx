@@ -11,7 +11,7 @@ interface PlanetsScreenProps {
 }
 
 export function PlanetsScreen({ navigation }: PlanetsScreenProps) {
-  const { data, isLoading, isError, error } = usePlanets();
+  const { data, error, isError, isLoading } = usePlanets();
 
   if (isLoading) {
     return (
@@ -47,19 +47,19 @@ export function PlanetsScreen({ navigation }: PlanetsScreenProps) {
           }
         >
           <Text
-            variant="headlineMedium"
             style={{ textAlign: "center" }}
+            variant="headlineMedium"
           >
             {item.name}
           </Text>
         </TouchableOpacity>
         <View
           style={{
-            width: size,
-            height: size,
             backgroundColor: backgroundColor,
             borderRadius: 1000,
+            height: size,
             margin: 8,
+            width: size,
           }}
         />
       </View>
@@ -70,9 +70,9 @@ export function PlanetsScreen({ navigation }: PlanetsScreenProps) {
     <ScreenContainer title={"Explore"}>
       <FlatList
         data={data.results}
-        renderItem={renderItem}
-        keyExtractor={(planet) => planet.name}
         horizontal={true}
+        keyExtractor={(planet) => planet.name}
+        renderItem={renderItem}
       />
     </ScreenContainer>
   );

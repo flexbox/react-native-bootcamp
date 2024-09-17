@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
 import type { AppStateStatus } from "react-native";
+
+import { useEffect, useState } from "react";
 import { Appearance, AppState } from "react-native";
 
 import { CombinedDarkTheme, CombinedDefaultTheme } from "~/theme/theme";

@@ -1,5 +1,4 @@
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { ActivityIndicator, useTheme } from "react-native-paper";
 
 import { useNetwork } from "~/context/Network";
@@ -26,14 +25,14 @@ export const Offline = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
-    marginHorizontal: 20,
-    position: "absolute",
-    top: 55,
-    width: "90%",
+    alignItems: "center",
     borderRadius: 10,
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
+    marginHorizontal: 20,
+    padding: 20,
+    position: "absolute",
+    top: 55,
+    width: "90%",
   },
 });

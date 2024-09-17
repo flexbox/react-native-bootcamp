@@ -1,21 +1,22 @@
+import { useNavigation } from "@react-navigation/native";
 import CurrencyFormat from "react-currency-format";
 import { Alert, StyleSheet } from "react-native";
 import { Button, Card, Text } from "react-native-paper";
 import { FadeInDown, FadeOut } from "react-native-reanimated";
-import { useNavigation } from "@react-navigation/native";
+
+import { Image } from "~/components/Image";
 
 import type { StarshipProps } from "../../api/types";
+
 import { useImage } from "../hooks/useImage";
 import { Routes } from "../navigation/Routes";
 import { withAnimated } from "../utils/withAnimated";
 
-import { Image } from "~/components/Image";
-
 const AnimatedCard = withAnimated(Card);
 
 export interface StarshipCardProps {
-  ship: StarshipProps;
   index: number;
+  ship: StarshipProps;
 }
 
 interface StarshipDetailsScreenParams {
@@ -23,8 +24,8 @@ interface StarshipDetailsScreenParams {
   navigate: any;
 }
 
-export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
-  const { name: title, cost_in_credits: price, manufacturer } = ship;
+export const StarshipCard = ({ index, ship }: StarshipCardProps) => {
+  const { cost_in_credits: price, manufacturer, name: title } = ship;
 
   const source = useImage(title);
 
@@ -45,36 +46,36 @@ export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
   // otherwise don't animate
   return (
     <AnimatedCard
-      style={styles.containerCard}
-      onPress={handleGoToDetails}
       // mounting
       entering={FadeInDown.duration(index > 3 ? 0 : 250).delay(
         index > 3 ? 0 : 100 * index,
       )}
       // unmounting
       exiting={FadeOut.duration(250)}
+      onPress={handleGoToDetails}
+      style={styles.containerCard}
     >
       <Image
-        style={{ width: "100%", height: 200, borderRadius: 12 }}
         source={source}
+        style={{ borderRadius: 12, height: 200, width: "100%" }}
         // sharedTransitionTag={`image-${ship.model}`}
       />
       {/* we remplace with an Image to have the benefits of `expo-image` */}
       {/* <Card.Cover source={source} /> */}
       <Card.Title
-        title={title}
         subtitle={manufacturer}
+        title={title}
       />
 
       {price !== "unknown" && (
         <Card.Content>
           <CurrencyFormat
-            value={price}
             displayType="text"
-            thousandSeparator={true}
             renderText={(value: string) => (
               <Text variant="titleLarge">{value} credits</Text>
             )}
+            thousandSeparator={true}
+            value={price}
           />
         </Card.Content>
       )}

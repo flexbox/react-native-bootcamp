@@ -1,7 +1,7 @@
-import React from "react";
+import type { PeopleProps } from "api/types";
+
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
-import type { PeopleProps } from "api/types";
 
 import { PeopleItem } from "~/components/PeopleItem";
 import { ScreenContainer } from "~/components/ScreenContainer";
@@ -35,8 +35,8 @@ export const PilotScreen = () => {
     return (
       <ScreenContainer title="Not Found">
         <Button
-          onPress={() => query.refetch()}
           mode="outlined"
+          onPress={() => query.refetch()}
         >
           Refetch
         </Button>
@@ -53,10 +53,10 @@ export const PilotScreen = () => {
       <Button onPress={handleLoadMore}>Load More</Button>
       <FlatList
         data={query.data.results}
-        renderItem={renderItem}
         keyExtractor={(people) => people.name}
-        onEndReachedThreshold={0.01}
         onEndReached={handleLoadMore}
+        onEndReachedThreshold={0.01}
+        renderItem={renderItem}
       />
     </ScreenContainer>
   );

@@ -1,7 +1,7 @@
-import React from "react";
+import type { PeopleProps } from "api/types";
+
 import { StyleSheet, View } from "react-native";
 import { DataTable, Text } from "react-native-paper";
-import type { PeopleProps } from "api/types";
 
 import { ScreenContainer } from "~/components/ScreenContainer";
 import { StarshipLoadableList } from "~/components/StarshipLoadableList";
@@ -16,13 +16,13 @@ interface PilotDetailsScreenProps {
 
 export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
   const {
-    name,
-    mass,
-    height,
-    hair_color,
-    skin_color,
-    eye_color,
     birth_year,
+    eye_color,
+    hair_color,
+    height,
+    mass,
+    name,
+    skin_color,
     starships,
   } = route.params.people;
 
