@@ -24,8 +24,8 @@ interface StarshipDetailsScreenParams {
   navigate: any;
 }
 
-export const StarshipCard = ({ ship, index }: StarshipCardProps) => {
-  const { name: title, cost_in_credits: price, manufacturer } = ship;
+export const StarshipCard = ({ index, ship }: StarshipCardProps) => {
+  const { cost_in_credits: price, manufacturer, name: title } = ship;
 
   const source = useImage(title);
 

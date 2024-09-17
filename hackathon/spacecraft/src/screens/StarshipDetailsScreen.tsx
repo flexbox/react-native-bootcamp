@@ -36,6 +36,9 @@ export const StarshipDetailsScreen = ({
     manufacturer,
     max_atmosphering_speed,
     model,
+    name,
+    passengers,
+    starship_class,
     //@ts-expect-error the api does not have `image` field
     image,
   } = route.params;
@@ -53,6 +56,7 @@ export const StarshipDetailsScreen = ({
   const scale = useSharedValue(1);
 
   const theme = useTheme();
+  console.log("🚀 ~ theme:", theme);
 
   return (
     <View style={{ backgroundColor: theme.colors.background }}>
