@@ -1,0 +1,8 @@
+{
+  // line-length 
+  "MD013": false, 
+  // inline html
+  "MD033": {
+    "allowed_elements": ["img", "table"]
+  },
+}
