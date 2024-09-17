@@ -31,7 +31,13 @@ module.exports = {
     camelcase: "off", // Disable camelcase rule
     "perfectionist/sort-imports": "error", // Perfectionist import sorting
     "perfectionist/sort-interfaces": ["error"], // Perfectionist interfaces sorting
-    "perfectionist/sort-objects": ["error", { type: "natural" }], // Perfectionist objects sorting
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        ignorePattern: ["useQuery*", "queries*", "useMutation*", "mutations*"],
+        type: "natural",
+      },
+    ],
     "prettier/prettier": [
       "warn",
       {
