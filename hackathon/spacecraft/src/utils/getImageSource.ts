@@ -1,14 +1,15 @@
 /**
- * A custom hook that returns the image source for a given starship title.
+ * Returns the image source for a given starship title.
  *
  * @param {string} title - The title of the starship.
- * @returns {any} The image source corresponding to the starship title.
  *
  * @example
- * const imageSource = useImage("Millennium Falcon");
- * // imageSource will be the path to the Millennium Falcon image.
+ * ```
+ * const imageSource = getImageSource("Millennium Falcon");
+ * ```
+ * imageSource will be the path to the Millennium Falcon image.
  */
-export const useImage = (title: string) => {
+export const getImageSource = (title: string) => {
   const imageName = `${title.toLowerCase().replace(" ", "")}`;
 
   let source;

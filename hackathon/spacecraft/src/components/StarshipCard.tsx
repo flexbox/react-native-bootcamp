@@ -8,8 +8,8 @@ import { Image } from "~/components/Image";
 
 import type { StarshipProps } from "../../api/types";
 
-import { useImage } from "../hooks/useImage";
 import { Routes } from "../navigation/Routes";
+import { getImageSource } from "../utils/getImageSource";
 import { withAnimated } from "../utils/withAnimated";
 
 const AnimatedCard = withAnimated(Card);
@@ -27,7 +27,7 @@ interface StarshipDetailsScreenParams {
 export const StarshipCard = ({ index, ship }: StarshipCardProps) => {
   const { cost_in_credits: price, manufacturer, name: title } = ship;
 
-  const source = useImage(title);
+  const source = getImageSource(title);
 
   const handleBuy = () => {
     Alert.alert("Give me the money!");
