@@ -24,6 +24,7 @@ module.exports = {
     supportsTablet: true,
   },
   name: "spacecraft",
+  newArchEnabled: true,
   orientation: "portrait",
   owner: "weshipit",
   plugins: [
