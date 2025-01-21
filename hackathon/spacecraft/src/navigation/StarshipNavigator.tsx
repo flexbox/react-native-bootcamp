@@ -4,6 +4,7 @@ import { Routes } from "@/navigation/Routes";
 import { StarshipDetailsScreen } from "@/screens/StarshipDetailsScreen";
 import { StarshipFeedScreen } from "@/screens/StarshipFeedScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { useTheme } from "react-native-paper";
 // For Example
 // import { StarshipFeedScreen } from "@/screens/exercice/StarshipFeedScreen";
 
@@ -19,6 +20,8 @@ export type StarshipStackParamList = {
 const Stack = createNativeStackNavigator<StarshipStackParamList>();
 
 export const StarshipNavigator = () => {
+  const theme = useTheme();
+
   return (
     <Stack.Navigator
       screenOptions={{
@@ -34,7 +37,7 @@ export const StarshipNavigator = () => {
         name={Routes.STARSHIP_DETAILS_SCREEN}
         options={{
           contentStyle: {
-            backgroundColor: "#ffffff",
+            backgroundColor: theme.colors.background,
           },
           presentation: "modal",
         }}
