@@ -1,7 +1,7 @@
 module.exports = {
   android: {
     adaptiveIcon: {
-      backgroundColor: "#FFFFFF",
+      backgroundColor: "#ffffff",
       foregroundImage: "./assets/adaptive-icon.png",
     },
     package: "weshipit.today.spacecraft",

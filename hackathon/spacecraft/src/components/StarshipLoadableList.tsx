@@ -1,7 +1,7 @@
+import { useStarships } from "@/hooks/useStarships";
+import { useId } from "react";
 import { StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
-
-import { useStarships } from "~/hooks/useStarships";
 
 interface StarshipLoadableListProps {
   starships: string[];
@@ -15,14 +15,29 @@ export const StarshipLoadableList = ({
   starships,
 }: StarshipLoadableListProps) => {
   const queryResult = useStarships(starships);
+  const id = useId();
 
   return queryResult.map((result) => {
-    if (result.isInitialLoading || result.isLoading) {
-      return <Text variant="bodyMedium">Loading…</Text>;
+    if (result.isLoading) {
+      return (
+        <Text
+          key={id}
+          variant="bodyMedium"
+        >
+          Loading…
+        </Text>
+      );
     }
 
     if (result.isError) {
-      return <Text variant="bodyMedium">Error 😕</Text>;
+      return (
+        <Text
+          key={id}
+          variant="bodyMedium"
+        >
+          Error 😕
+        </Text>
+      );
     }
 
     return (

@@ -1,10 +1,9 @@
+import { Image } from "@/components/Image";
 import { useNavigation } from "@react-navigation/native";
 import CurrencyFormat from "react-currency-format";
 import { Alert, StyleSheet } from "react-native";
 import { Button, Card, Text } from "react-native-paper";
 import { FadeInDown, FadeOut } from "react-native-reanimated";
-
-import { Image } from "~/components/Image";
 
 import type { StarshipProps } from "../../api/types";
 

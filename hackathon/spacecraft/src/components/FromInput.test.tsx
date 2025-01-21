@@ -1,6 +1,5 @@
+import { FormInput } from "@/components/FromInput";
 import { fireEvent, render, screen } from "@testing-library/react-native";
-
-import { FormInput } from "~/components/FromInput";
 
 describe("FormInput", () => {
   const mock = jest.fn();

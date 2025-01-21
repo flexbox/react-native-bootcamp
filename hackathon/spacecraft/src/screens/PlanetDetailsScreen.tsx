@@ -1,6 +1,5 @@
+import { ScreenContainer } from "@/components/ScreenContainer";
 import { Text } from "react-native-paper";
-
-import { ScreenContainer } from "~/components/ScreenContainer";
 
 /**
  * @deprecated move this to typ please

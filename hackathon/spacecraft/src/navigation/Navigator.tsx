@@ -1,12 +1,11 @@
+import { useAuthentication } from "@/context/Authentication";
+import { useAppearanceTheme } from "@/hooks/useAppearanceTheme";
 import { useReactNavigationDevTools } from "@dev-plugins/react-navigation";
 import {
   NavigationContainer,
   useNavigationContainerRef,
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-import { useAuthentication } from "~/context/Authentication";
-import { useAppearanceTheme } from "~/hooks/useAppearanceTheme";
 
 import { AuthNavigator } from "./AuthNavigator";
 import { BottomTabNavigator } from "./BottomTabNavigator";
