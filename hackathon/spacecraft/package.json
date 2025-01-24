@@ -1,6 +1,6 @@
 {
   "name": "spacecraft",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
