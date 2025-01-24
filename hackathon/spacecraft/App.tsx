@@ -1,11 +1,10 @@
+import { AuthenticationProvider } from "@/context/Authentication";
+import { NetworkProvider } from "@/context/Network";
+import { useAppearanceTheme } from "@/hooks/useAppearanceTheme";
+import { Navigator } from "@/navigation/Navigator";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Constants from "expo-constants";
 import { Provider as PaperProvider } from "react-native-paper";
-
-import { AuthenticationProvider } from "~/context/Authentication";
-import { NetworkProvider } from "~/context/Network";
-import { useAppearanceTheme } from "~/hooks/useAppearanceTheme";
-import { Navigator } from "~/navigation/Navigator";
 
 const queryClient = new QueryClient();
 

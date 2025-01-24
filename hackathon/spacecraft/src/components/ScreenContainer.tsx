@@ -1,10 +1,9 @@
 import type { ReactNode } from "react";
 
+import { Offline } from "@/components/Offline";
 import { useNavigation } from "@react-navigation/native";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { IconButton, Text, useTheme } from "react-native-paper";
-
-import { Offline } from "~/components/Offline";
 
 interface ScreenContainerProps {
   accessoryFooter?: ReactNode;

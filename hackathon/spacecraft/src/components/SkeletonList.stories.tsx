@@ -1,4 +1,4 @@
-import { SkeletonList } from "~/components/SkeletonList";
+import { SkeletonList } from "@/components/SkeletonList";
 
 export default {
   title: "SkeletonList",

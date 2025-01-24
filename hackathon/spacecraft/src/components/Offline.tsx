@@ -1,7 +1,7 @@
+import { useNetwork } from "@/context/Network";
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { ActivityIndicator, useTheme } from "react-native-paper";
-
-import { useNetwork } from "~/context/Network";
 
 export const Offline = () => {
   const { isConnected } = useNetwork();

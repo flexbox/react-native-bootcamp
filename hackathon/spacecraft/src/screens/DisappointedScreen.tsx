@@ -1,9 +1,8 @@
+import { ButtonSupport } from "@/components/ButtonSupport";
+import { ScreenContainer } from "@/components/ScreenContainer";
 /* eslint-disable max-len */
 import { Image, ScrollView, View } from "react-native";
 import { Button, Text } from "react-native-paper";
-
-import { ButtonSupport } from "~/components/ButtonSupport";
-import { ScreenContainer } from "~/components/ScreenContainer";
 
 interface Props {
   navigation: any;

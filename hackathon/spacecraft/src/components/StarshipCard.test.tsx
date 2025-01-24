@@ -1,7 +1,6 @@
+import { StarshipCard } from "@/components/StarshipCard";
 import { NavigationContainer } from "@react-navigation/native";
 import { render, screen } from "@testing-library/react-native";
-
-import { StarshipCard } from "~/components/StarshipCard";
 
 const shipFixture = {
   model: "YT-1300 light freighter",

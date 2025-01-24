@@ -1,7 +1,7 @@
 module.exports = {
   android: {
     adaptiveIcon: {
-      backgroundColor: "#FFFFFF",
+      backgroundColor: "#ffffff",
       foregroundImage: "./assets/adaptive-icon.png",
     },
     package: "weshipit.today.spacecraft",
@@ -24,6 +24,7 @@ module.exports = {
     supportsTablet: true,
   },
   name: "spacecraft",
+  newArchEnabled: true,
   orientation: "portrait",
   owner: "weshipit",
   plugins: [
