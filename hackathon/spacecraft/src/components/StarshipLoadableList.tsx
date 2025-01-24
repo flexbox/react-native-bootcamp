@@ -1,5 +1,5 @@
 import { useStarships } from "@/hooks/useStarships";
-import { useId } from "react";
+import { UseQueryResult } from "@tanstack/react-query";
 import { StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
 
@@ -7,47 +7,43 @@ interface StarshipLoadableListProps {
   starships: string[];
 }
 
-function getRandom(max: number) {
-  return Math.floor(Math.random() * max);
+function randomId() {
+  return Math.random().toString(36).substring(7);
+}
+
+function StarshipLoadableListItem({
+  result,
+}: {
+  result: UseQueryResult<any, Error>;
+}) {
+  if (result.isLoading) {
+    return <Text variant="bodyMedium">Loading…</Text>;
+  }
+
+  if (result.isError) {
+    return <Text variant="bodyMedium">Error 😕</Text>;
+  }
+
+  return (
+    <View style={styles.container}>
+      <Text variant="titleMedium">{result.data.name}</Text>
+      <Text variant="bodyMedium">{result.data.model}</Text>
+    </View>
+  );
 }
 
 export const StarshipLoadableList = ({
   starships,
 }: StarshipLoadableListProps) => {
   const queryResult = useStarships(starships);
-  const id = useId();
 
   return queryResult.map((result) => {
-    if (result.isLoading) {
-      return (
-        <Text
-          key={id}
-          variant="bodyMedium"
-        >
-          Loading…
-        </Text>
-      );
-    }
-
-    if (result.isError) {
-      return (
-        <Text
-          key={id}
-          variant="bodyMedium"
-        >
-          Error 😕
-        </Text>
-      );
-    }
-
+    const id = randomId();
     return (
-      <View
-        key={getRandom(1000)}
-        style={styles.container}
-      >
-        <Text variant="titleMedium">{result.data.name}</Text>
-        <Text variant="bodyMedium">{result.data.model}</Text>
-      </View>
+      <StarshipLoadableListItem
+        key={id}
+        result={result}
+      />
     );
   });
 };
