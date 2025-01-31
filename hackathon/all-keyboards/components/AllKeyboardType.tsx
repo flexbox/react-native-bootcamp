@@ -1,12 +1,12 @@
-import { View, Text } from "react-native";
-import React from "react";
-import { CardInput } from "./CardInput";
+import { View } from "react-native";
+import React, { useState } from "react";
+import { CardInput } from "@/components/CardInput";
 import { TextInput } from "react-native-paper";
 
-export const AllKeyboardType = () => {
-  const [inputValue, setInputValue] = React.useState(null);
-  const [password, setPassword] = React.useState("");
-  const [isVisble, setIsVisible] = React.useState(true);
+export function AllKeyboardType() {
+  const [inputValue, setInputValue] = useState("");
+  const [password, setPassword] = useState("");
+  const [isVisble, setIsVisible] = useState(true);
 
   function toggleSecureIcon() {
     setIsVisible(!isVisble);

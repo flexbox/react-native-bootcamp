@@ -1,12 +1,10 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
-import { CardInput } from "./CardInput";
 import { TextInput } from "react-native-paper";
+import { CardInput } from "@/components/CardInput";
 
-interface Props {}
-
-const AllReturnKeyType = (props: Props) => {
-  const [inputValue, setInputValue] = React.useState(null);
+export function AllReturnKeyType() {
+  const [inputValue, setInputValue] = React.useState("");
 
   return (
     <View>
@@ -101,5 +99,3 @@ const AllReturnKeyType = (props: Props) => {
     </View>
   );
 };
-
-export default AllReturnKeyType;

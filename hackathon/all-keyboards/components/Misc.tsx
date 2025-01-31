@@ -1,11 +1,11 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { CardInput } from "./CardInput";
 import { TextInput, Text } from "react-native-paper";
 import { BirthdayDatePicker } from "./BirthdayDatePicker";
 
 export const Misc = () => {
-  const [inputValue, setInputValue] = React.useState(null);
+  const [inputValue, setInputValue] = useState("");
 
   return (
     <View>
@@ -25,8 +25,8 @@ export const Misc = () => {
         />
       </CardInput>
       <BirthdayDatePicker />
-      <BirthdayDatePicker inputFormat="MDY" />
-      <BirthdayDatePicker inputFormat="YMD" />
+      <BirthdayDatePicker inputFormat="MM-DD-YYYY" />
+      <BirthdayDatePicker inputFormat="YYYY-MM-DD" />
     </View>
   );
 };
