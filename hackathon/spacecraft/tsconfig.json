@@ -1,7 +1,6 @@
 {
-  "extends": "eslint-config-react-native-wcandillon/tsconfig.base",
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "jsx": "react-native",
     "strict": true,
     "baseUrl": "./",
     "paths": {
