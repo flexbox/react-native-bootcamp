@@ -16,7 +16,7 @@ Use the following command from your terminal to check your Node version.
 node --version
 ```
 
-If you have a recent version installed, it should do.
+If you have Node.js v18 or greater installed, you are ready for the next step.
 
 ## Virtual Simulators
 

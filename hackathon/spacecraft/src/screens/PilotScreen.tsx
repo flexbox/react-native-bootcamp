@@ -2,7 +2,7 @@ import type { PeopleProps } from "api/types";
 
 import { PeopleItem } from "@/components/PeopleItem";
 import { ScreenContainer } from "@/components/ScreenContainer";
-import { SkeletonList } from "@/components/SkeletonList";
+import { SkeletonList } from "@/components/SkeletonListReanimated";
 import { usePilot } from "@/hooks/usePilot";
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
