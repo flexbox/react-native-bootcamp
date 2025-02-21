@@ -5,7 +5,7 @@ export default {
 };
 
 export const _SkeletonList = () => {
-  return <SkeletonList />;
+  return <SkeletonList numberItems={10} />;
 };
 
 export const _SkeletonListSingle = () => {
