@@ -6,11 +6,6 @@ import {
   getProjectAnnotations,
 } from "@storybook/react-native";
 
-import "@storybook/addon-ondevice-notes/register";
-import "@storybook/addon-ondevice-controls/register";
-import "@storybook/addon-ondevice-backgrounds/register";
-import "@storybook/addon-ondevice-actions/register";
-
 const normalizedStories = [
   {
     titlePrefix: "",
@@ -48,7 +43,6 @@ declare global {
 const annotations = [
   require("./preview"),
   require("@storybook/react-native/dist/preview"),
-  require("@storybook/addon-actions/preview"),
 ];
 
 global.STORIES = normalizedStories;
