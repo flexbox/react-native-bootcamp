@@ -28,7 +28,7 @@
     ]
   },
   "dependencies": {
-    "@dev-plugins/react-navigation": "^0.0.6",
+    "@dev-plugins/react-navigation": "^0.1.0",
     "@expo/metro-runtime": "~4.0.1",
     "@expo/vector-icons": "^14.0.0",
     "@react-native-async-storage/async-storage": "1.23.1",
