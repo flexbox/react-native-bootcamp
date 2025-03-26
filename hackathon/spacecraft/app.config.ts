@@ -41,8 +41,7 @@ export default ({ config }: { config: ExpoConfig }): ExpoConfig => {
     },
     icon: icon,
     ios: {
-      appStoreUrl:
-        "https://apps.apple.com/fr/app/retail-shake-scanner/id1234567890",
+      appStoreUrl: "https://apps.apple.com/fr/app/<compagny_name>/idxxxxxxxxx",
       bundleIdentifier: bundleIdentifier,
       supportsTablet: true,
     },
@@ -50,26 +49,7 @@ export default ({ config }: { config: ExpoConfig }): ExpoConfig => {
     newArchEnabled: true,
     orientation: "portrait",
     owner: OWNER,
-    plugins: [
-      [
-        "app-icon-badge",
-        {
-          badges: [
-            {
-              background: "#FF0000",
-              color: "white",
-              text: environment,
-              type: "banner",
-            },
-            {
-              text: version,
-              type: "ribbon",
-            },
-          ],
-          enabled: environment !== "production",
-        },
-      ],
-    ],
+    plugins: [],
     runtimeVersion: {
       policy: "appVersion",
     },
