@@ -92,3 +92,11 @@ Sharing your app is an essential step for any developer, so don't forget to take
 If you want guidance and feedback on your app, I would be more than happy to provide it live on my [Twitch channel](https://www.twitch.tv/flexboxlive/videos?filter=all&sort=time). I stream every week. To schedule a session, contact me on [Twitter](https://twitter.com/flexbox_) or send me an email.
 
 Feel free to open a pull request! [Edit this file with your app example](https://github.com/flexbox/react-native-workshop/tree/main/hackathon) on the Ideas section.
+
+## 👽 Bonus
+
+- [ ] Create a landing page for your app using [mobile-landing](https://github.com/flexbox/mobile-landing)
+
+After building your app, it's important to have a simple landing page to showcase it. This will help you market your app and reach more users. Use the mobile-landing template to quickly create a professional-looking landing page for your app.
+
+The result should be [like this](https://mobile-landing.expo.app/) 
