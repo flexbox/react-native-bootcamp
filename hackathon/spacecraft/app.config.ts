@@ -49,7 +49,7 @@ export default ({ config }: { config: ExpoConfig }): ExpoConfig => {
     newArchEnabled: true,
     orientation: "portrait",
     owner: OWNER,
-    plugins: [],
+    plugins: ["expo-web-browser", "expo-font"],
     runtimeVersion: {
       policy: "appVersion",
     },
@@ -69,7 +69,7 @@ export default ({ config }: { config: ExpoConfig }): ExpoConfig => {
     web: {
       bundler: "metro",
       favicon: "./assets/favicon.png",
-      output: "static",
+      output: "single",
     },
   };
 };
@@ -101,9 +101,9 @@ export const getDynamicAppConfig = (
   }
 
   return {
-    adaptiveIcon: "./assets/adaptive-icon-dev.png",
+    adaptiveIcon: "./assets/adaptive-icon-development.png",
     bundleIdentifier: `${BUNDLE_IDENTIFIER}.dev`,
-    icon: "./assets/icon-dev.png",
+    icon: "./assets/icon-development.png",
     name: `${APP_NAME} Development`,
     packageName: `${PACKAGE_NAME}.dev`,
     scheme: `${SCHEME}-dev`,
