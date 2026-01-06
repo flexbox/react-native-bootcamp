@@ -2,7 +2,7 @@ yarn-error.log
 package-lock.json
 node_modules/**/*
 .yarn
-.expo/*
+.expo/
 npm-debug.*
 *.jks
 *.p8
