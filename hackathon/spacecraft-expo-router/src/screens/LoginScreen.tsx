@@ -28,7 +28,7 @@ export const LoginScreen = () => {
 
   return (
     <View style={{ backgroundColor: theme.colors.background, flex: 1 }}>
-      <Header title="SpaceCraft" />
+      <Header title="SpaceCraft - Expo Router" />
       <View style={styles.content}>
         <FormInput
           autoCapitalize="none"

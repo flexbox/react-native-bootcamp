@@ -27,7 +27,7 @@ export default function LoginScreen() {
 
   return (
     <View style={{ backgroundColor: theme.colors.background, flex: 1 }}>
-      <Header title="SpaceCraft" />
+      <Header title="SpaceCraft v2" />
       <View style={styles.content}>
         <FormInput
           autoCapitalize="none"
