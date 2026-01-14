@@ -15,7 +15,7 @@
     "build-storybook": "build-storybook",
     "storybook-generate": "sb-rn-get-stories",
     "storybook-watch": "sb-rn-watcher",
-    "storybook": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo start",
+    "storybook:start": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo start",
     "storybook:ios": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo start --ios",
     "storybook:android": "sb-rn-get-stories && STORYBOOK_ENABLED='true' expo start --android",
     "e2e": "maestro test e2e/process.yaml",
