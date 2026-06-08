@@ -46,7 +46,6 @@ export default ({ config }: { config: ExpoConfig }): ExpoConfig => {
       supportsTablet: true,
     },
     name: name,
-    newArchEnabled: true,
     orientation: "portrait",
     owner: OWNER,
     plugins: ["expo-web-browser", "expo-font"],
