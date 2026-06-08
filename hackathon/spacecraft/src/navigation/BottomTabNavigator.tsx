@@ -3,8 +3,8 @@ import { PlanetNavigator } from "@/navigation/PlanetNavigator";
 import { PlusNavigator } from "@/navigation/PlusNavigator";
 import { Routes } from "@/navigation/Routes";
 import { StarshipNavigator } from "@/navigation/StarshipNavigator";
-/* eslint-disable react/no-unstable-nested-components */
-import { FontAwesome5, Ionicons } from "@expo/vector-icons";
+import FontAwesome5 from "@react-native-vector-icons/fontawesome5";
+import Ionicons from "@react-native-vector-icons/ionicons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 import { useTheme } from "react-native-paper";
@@ -30,6 +30,7 @@ export const BottomTabNavigator = () => {
           tabBarIcon: ({ color }) => (
             <FontAwesome5
               color={color}
+              iconStyle="solid"
               name="space-shuttle"
               size={22}
             />
@@ -44,6 +45,7 @@ export const BottomTabNavigator = () => {
           tabBarIcon: ({ color }) => (
             <FontAwesome5
               color={color}
+              iconStyle="solid"
               name="user-astronaut"
               size={22}
             />
@@ -72,6 +74,7 @@ export const BottomTabNavigator = () => {
           tabBarIcon: ({ color }) => (
             <FontAwesome5
               color={color}
+              iconStyle="solid"
               name="plus-square"
               size={22}
             />

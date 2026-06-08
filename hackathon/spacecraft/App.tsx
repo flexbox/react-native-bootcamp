@@ -1,3 +1,5 @@
+import "@/polyfills/fetch";
+
 import { AuthenticationProvider } from "@/context/Authentication";
 import { NetworkProvider } from "@/context/Network";
 import { useAppearanceTheme } from "@/hooks/useAppearanceTheme";

@@ -1,6 +1,6 @@
 import { Image } from "@/components/Image";
 import { withAnimated } from "@/utils/withAnimated";
-import { FontAwesome5 } from "@expo/vector-icons";
+import FontAwesome5 from "@react-native-vector-icons/fontawesome5";
 import { useNavigation } from "@react-navigation/native";
 import {
   Alert,
@@ -69,11 +69,11 @@ export const StarshipDetailsScreen = ({
             <View style={[styles.closeContainer, styles.left]}>
               <TouchableOpacity
                 onPress={handleClose}
-                // eslint-disable-next-line react-native/no-color-literals -- keep it always white
                 style={[styles.closeButton, { backgroundColor: "white" }]}
               >
                 <FontAwesome5
                   color="black"
+                  iconStyle="solid"
                   name="times"
                   size={22}
                 />

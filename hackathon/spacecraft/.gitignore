@@ -17,3 +17,10 @@ web-build/
 
 # eas update
 dist/
+
+# local env overrides
+.env*.local
+
+# CNG-generated native projects
+ios/
+android/
