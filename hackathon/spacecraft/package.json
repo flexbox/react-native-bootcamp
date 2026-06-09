@@ -1,6 +1,6 @@
 {
   "name": "spacecraft",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -31,7 +31,6 @@
     "@dev-plugins/react-navigation": "^0.1.0",
     "@expo/metro-runtime": "~56.0.14",
     "@react-native-async-storage/async-storage": "2.2.0",
-    "@react-native-community/masked-view": "0.1.11",
     "@react-native-community/netinfo": "12.0.1",
     "@react-native-vector-icons/fontawesome5": "^13.1.2",
     "@react-native-vector-icons/ionicons": "^13.1.2",
