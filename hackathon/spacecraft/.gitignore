@@ -3,6 +3,10 @@ package-lock.json
 node_modules/**/*
 .yarn
 .expo/
+
+# Keep yarn.lock tracked for reproducible EAS builds
+# (overrides the monorepo-root .gitignore rule that ignores all yarn.lock)
+!yarn.lock
 npm-debug.*
 *.jks
 *.p8

@@ -4,7 +4,7 @@ prompt() {
   read -p "Would you like to release? [Y/n]: " PROMPT_RESULT
 }
 
-yarn version --minor
+yarn version minor
 # Read 'version' key from package.json
 version=$(jq -r '.version' ./package.json)
 echo "Releasing $version"
