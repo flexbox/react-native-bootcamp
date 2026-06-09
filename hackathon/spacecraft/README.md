@@ -7,8 +7,8 @@
 ## Getting Started
 
 ```console
-yarn
-yarn ios|android
+bun install
+bun start
 ```
 
 ## Special thanks
