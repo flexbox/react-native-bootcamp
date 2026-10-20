@@ -1,5 +1,7 @@
 # React Native Bootcamp — A Curriculum for Beginners
 
+<a href="https://useffect.sh/seal/flexbox/react-native-bootcamp"><img align="right" width="120" src="https://useffect.sh/seal/flexbox/react-native-bootcamp.svg" alt="Maintained by useffect.sh"></a>
+
 > A series of **React Native coding challenges** with a variety of difficulties for busy developers.
 
 I do `react-native` as a freelance since 2017 and I have 15+ years of experience shipping products with `JavaScript`. This bootcamp encapsulates all the problems I encounter in my daily job and all the things I wish I knew **before** starting my career as a React Native Developer.
