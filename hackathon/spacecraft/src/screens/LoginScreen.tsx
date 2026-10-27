@@ -1,8 +1,9 @@
-import { Header } from "@/components/Header";
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Button, Checkbox, Text, useTheme } from "react-native-paper";
+
+import { Header } from "@/components/Header";
 
 import { FormInput } from "../components/FromInput";
 import { useAuthentication } from "../context/Authentication";

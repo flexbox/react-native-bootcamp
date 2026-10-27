@@ -1,10 +1,11 @@
 import type { StarshipProps } from "api/types";
 
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { useTheme } from "react-native-paper";
+
 import { Routes } from "@/navigation/Routes";
 import { StarshipDetailsScreen } from "@/screens/StarshipDetailsScreen";
 import { StarshipFeedScreen } from "@/screens/StarshipFeedScreen";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useTheme } from "react-native-paper";
 // For Example
 // import { StarshipFeedScreen } from "@/screens/exercice/StarshipFeedScreen";
 

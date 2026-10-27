@@ -1,7 +1,8 @@
-import { ScreenContainer } from "@/components/ScreenContainer";
-import { Routes } from "@/navigation/Routes";
 import { Image } from "react-native";
 import { List } from "react-native-paper";
+
+import { ScreenContainer } from "@/components/ScreenContainer";
+import { Routes } from "@/navigation/Routes";
 
 interface DoYouLikeScreenProps {
   navigation: any;

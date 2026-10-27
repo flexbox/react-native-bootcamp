@@ -1,7 +1,8 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { Routes } from "@/navigation/Routes";
 import { LoginScreen } from "@/screens/LoginScreen";
 import { TermsScreen } from "@/screens/TermsScreen";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 

@@ -1,7 +1,8 @@
-import { useStarships } from "@/hooks/useStarships";
 import { UseQueryResult } from "@tanstack/react-query";
 import { StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
+
+import { useStarships } from "@/hooks/useStarships";
 
 interface StarshipLoadableListProps {
   starships: string[];

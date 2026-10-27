@@ -1,5 +1,6 @@
-import { LoginScreen } from "@/screens/LoginScreen";
 import { NavigationContainer } from "@react-navigation/native";
+
+import { LoginScreen } from "@/screens/LoginScreen";
 
 export default {
   title: "Screen",

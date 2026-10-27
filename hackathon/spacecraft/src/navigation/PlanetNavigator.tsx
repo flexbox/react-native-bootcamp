@@ -1,6 +1,7 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { PlanetDetailsScreen } from "@/screens/PlanetDetailsScreen";
 import { PlanetsScreen } from "@/screens/PlanetsScreen";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { Routes } from "./Routes";
 

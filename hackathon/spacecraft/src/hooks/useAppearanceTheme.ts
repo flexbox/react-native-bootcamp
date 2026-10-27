@@ -1,8 +1,9 @@
 import type { AppStateStatus } from "react-native";
 
-import { CombinedDarkTheme, CombinedDefaultTheme } from "@/theme/theme";
 import { useEffect, useState } from "react";
 import { Appearance, AppState } from "react-native";
+
+import { CombinedDarkTheme, CombinedDefaultTheme } from "@/theme/theme";
 
 export const useAppearanceTheme = () => {
   const [theme, setTheme] = useState(

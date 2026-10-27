@@ -48,17 +48,26 @@ export default ({ config }: { config: ExpoConfig }): ExpoConfig => {
     name: name,
     orientation: "portrait",
     owner: OWNER,
-    plugins: ["expo-web-browser", "expo-font"],
+    plugins: [
+      "expo-web-browser",
+      "expo-font",
+      "expo-image",
+      "expo-status-bar",
+      "@react-native-community/datetimepicker",
+      [
+        "expo-splash-screen",
+        {
+          backgroundColor: "#ffffff",
+          image: "./assets/splash.png",
+          resizeMode: "contain",
+        },
+      ],
+    ],
     runtimeVersion: {
       policy: "appVersion",
     },
     scheme: scheme,
     slug: PROJECT_SLUG,
-    splash: {
-      backgroundColor: "#ffffff",
-      image: "./assets/splash.png",
-      resizeMode: "contain",
-    },
     updates: {
       fallbackToCacheTimeout: 0,
       url: `https://u.expo.dev/${EAS_PROJECT_ID}`,

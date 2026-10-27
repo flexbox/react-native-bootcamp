@@ -1,9 +1,10 @@
-import { ScreenContainer } from "@/components/ScreenContainer";
-import { useAuthentication } from "@/context/Authentication";
-import { Routes } from "@/navigation/Routes";
 import * as Application from "expo-application";
 import { View } from "react-native";
 import { List, Text } from "react-native-paper";
+
+import { ScreenContainer } from "@/components/ScreenContainer";
+import { useAuthentication } from "@/context/Authentication";
+import { Routes } from "@/navigation/Routes";
 
 export const PlusScreen = ({ navigation }: any) => {
   const navigateToDoYouLikeScreen = () => {
