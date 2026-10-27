@@ -48,7 +48,13 @@ export default ({ config }: { config: ExpoConfig }): ExpoConfig => {
     name: name,
     orientation: "portrait",
     owner: OWNER,
-    plugins: ["expo-web-browser", "expo-font"],
+    plugins: [
+      "expo-web-browser",
+      "expo-font",
+      "expo-image",
+      "expo-status-bar",
+      "@react-native-community/datetimepicker",
+    ],
     runtimeVersion: {
       policy: "appVersion",
     },
