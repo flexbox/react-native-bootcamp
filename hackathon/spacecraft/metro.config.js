@@ -1,15 +1,15 @@
 // metro.config.js
-const { generate } = require("@storybook/react-native/scripts/generate");
+const {
+  withStorybook,
+} = require("@storybook/react-native/metro/withStorybook");
 const { getDefaultConfig } = require("expo/metro-config");
 const path = require("path");
-
-generate({
-  configPath: path.resolve(__dirname, "./.storybook"),
-});
 
 /** @type {import('expo/metro-config').MetroConfig} */
 const config = getDefaultConfig(__dirname);
 
-config.transformer.unstable_allowRequireContext = true;
-
-module.exports = config;
+module.exports = withStorybook(config, {
+  configPath: path.resolve(__dirname, "./.storybook"),
+  // Strip Storybook from the bundle unless `STORYBOOK_ENABLED=true`
+  enabled: process.env.STORYBOOK_ENABLED === "true",
+});

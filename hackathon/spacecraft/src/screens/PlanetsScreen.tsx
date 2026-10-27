@@ -1,9 +1,10 @@
+import { FlatList, TouchableOpacity, View } from "react-native";
+import { Text } from "react-native-paper";
+
 import { ScreenContainer } from "@/components/ScreenContainer";
 import { usePlanets } from "@/hooks/usePlanets";
 import { Routes } from "@/navigation/Routes";
 import { getTerrainColor } from "@/utils/getTerrainColor";
-import { FlatList, TouchableOpacity, View } from "react-native";
-import { Text } from "react-native-paper";
 
 interface PlanetsScreenProps {
   navigation: any;

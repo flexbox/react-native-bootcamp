@@ -1,8 +1,9 @@
-import { ButtonSupport } from "@/components/ButtonSupport";
-import { ScreenContainer } from "@/components/ScreenContainer";
 import * as StoreReview from "expo-store-review";
 import { Alert, Image, Platform, ScrollView, View } from "react-native";
 import { Button, Text } from "react-native-paper";
+
+import { ButtonSupport } from "@/components/ButtonSupport";
+import { ScreenContainer } from "@/components/ScreenContainer";
 
 export const LoveScreen = () => {
   const handleStoreReview = async () => {

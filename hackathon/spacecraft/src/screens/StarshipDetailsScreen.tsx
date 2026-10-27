@@ -1,5 +1,3 @@
-import { Image } from "@/components/Image";
-import { withAnimated } from "@/utils/withAnimated";
 import FontAwesome5 from "@react-native-vector-icons/fontawesome5";
 import { useNavigation } from "@react-navigation/native";
 import {
@@ -12,6 +10,9 @@ import {
 } from "react-native";
 import { Chip, DataTable, FAB, List, Text, useTheme } from "react-native-paper";
 import { useSharedValue, withSpring } from "react-native-reanimated";
+
+import { Image } from "@/components/Image";
+import { withAnimated } from "@/utils/withAnimated";
 
 import type { StarshipProps } from "../../api/types";
 

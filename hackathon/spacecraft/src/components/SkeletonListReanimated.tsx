@@ -10,7 +10,9 @@ interface SkeletonListProps {
   numberItems?: number;
 }
 
-export const SkeletonListReanimated = ({ numberItems = 10 }: SkeletonListProps) => {
+export const SkeletonListReanimated = ({
+  numberItems = 10,
+}: SkeletonListProps) => {
   const items = [];
 
   const animatedStyle = useAnimatedStyle(() => {

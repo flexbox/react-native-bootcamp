@@ -1,7 +1,8 @@
-import { fetchStarships } from "@/hooks/useStarships";
 import { useQuery } from "@tanstack/react-query";
 import { FlatList } from "react-native";
 import { Button } from "react-native-paper";
+
+import { fetchStarships } from "@/hooks/useStarships";
 
 import { ScreenContainer } from "../components/ScreenContainer";
 import { StarshipCard } from "../components/StarshipCard";

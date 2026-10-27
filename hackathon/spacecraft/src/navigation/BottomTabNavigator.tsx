@@ -1,13 +1,14 @@
-import { PilotNavigator } from "@/navigation/PilotNavigator";
-import { PlanetNavigator } from "@/navigation/PlanetNavigator";
-import { PlusNavigator } from "@/navigation/PlusNavigator";
-import { Routes } from "@/navigation/Routes";
-import { StarshipNavigator } from "@/navigation/StarshipNavigator";
 import FontAwesome5 from "@react-native-vector-icons/fontawesome5";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 import { useTheme } from "react-native-paper";
+
+import { PilotNavigator } from "@/navigation/PilotNavigator";
+import { PlanetNavigator } from "@/navigation/PlanetNavigator";
+import { PlusNavigator } from "@/navigation/PlusNavigator";
+import { Routes } from "@/navigation/Routes";
+import { StarshipNavigator } from "@/navigation/StarshipNavigator";
 
 const Tab = createBottomTabNavigator();
 

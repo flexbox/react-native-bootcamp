@@ -23,9 +23,7 @@ export const NetworkProvider = ({ children }: PropsWithChildren) => {
     };
   }, [isConnected]);
 
-  return {
-    /* Add `NetworkContext.Provider` with the connection status value */
-  };
+  return {/* Add `NetworkContext.Provider` with the connection status value */};
 };
 
 export const useNetwork = () => useContext(NetworkContext);

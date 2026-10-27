@@ -1,11 +1,12 @@
 import type { PeopleProps } from "api/types";
 
+import { FlatList } from "react-native";
+import { Button } from "react-native-paper";
+
 import { PeopleItem } from "@/components/PeopleItem";
 import { ScreenContainer } from "@/components/ScreenContainer";
 import { SkeletonListReanimated as SkeletonList } from "@/components/SkeletonListReanimated";
 import { usePilot } from "@/hooks/usePilot";
-import { FlatList } from "react-native";
-import { Button } from "react-native-paper";
 
 interface RenderItemProps {
   item: PeopleProps;

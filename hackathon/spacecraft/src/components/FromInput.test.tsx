@@ -1,10 +1,11 @@
-import { FormInput } from "@/components/FromInput";
 import { fireEvent, render, screen } from "@testing-library/react-native";
+
+import { FormInput } from "@/components/FromInput";
 
 describe("FormInput", () => {
   const mock = jest.fn();
-  it("renders correctly", () => {
-    render(
+  it("renders correctly", async () => {
+    await render(
       <FormInput
         label="your-car"
         onChangeText={mock}
@@ -12,7 +13,7 @@ describe("FormInput", () => {
       />,
     );
     screen.getAllByText("your-car");
-    fireEvent.changeText(screen.getAllByText("your-car")[0], "tesla");
+    await fireEvent.changeText(screen.getAllByText("your-car")[0], "tesla");
     expect(mock).toHaveBeenCalled();
   });
 });

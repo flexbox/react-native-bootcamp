@@ -54,17 +54,20 @@ export default ({ config }: { config: ExpoConfig }): ExpoConfig => {
       "expo-image",
       "expo-status-bar",
       "@react-native-community/datetimepicker",
+      [
+        "expo-splash-screen",
+        {
+          backgroundColor: "#ffffff",
+          image: "./assets/splash.png",
+          resizeMode: "contain",
+        },
+      ],
     ],
     runtimeVersion: {
       policy: "appVersion",
     },
     scheme: scheme,
     slug: PROJECT_SLUG,
-    splash: {
-      backgroundColor: "#ffffff",
-      image: "./assets/splash.png",
-      resizeMode: "contain",
-    },
     updates: {
       fallbackToCacheTimeout: 0,
       url: `https://u.expo.dev/${EAS_PROJECT_ID}`,
