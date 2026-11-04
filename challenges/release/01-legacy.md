@@ -2,7 +2,7 @@
 
 ## 📡 What you will learn
 
-- Add an automated Over The Air Updates workflow
+- Add an automated Over The Air Updates workflow with [EAS Update](https://docs.expo.dev/eas-update/introduction/) and GitHub Actions.
 
 ![OTA](https://raw.githubusercontent.com/flexbox/react-native-workshop/main/challenges/release/ota.jpg)
 
@@ -14,13 +14,43 @@ Today we'll walk you through the options for distributing your `react-native` ap
 
 - You need to have an Expo and a GitHub account
 - You should have a basic knowledge of CI/CD with [GitHub Actions](https://github.com/features/actions)
-- Read this artice: [Simple automated release for React Native with Expo](https://davidl.fr/blog/github-action-expo)
 
 ## 👨‍🚀 Exercise 1
 
-- [ ] add `EXPO_CLI_USERNAME` and `EXPO_CLI_PASSWORD` variables to **repository** > **settings** > **secrets**
-- [ ] Create 2 files `staging.yml` and `production.yml`
-- [ ] Create a new pull request on your repo to test the CI
+- [ ] Configure EAS Update in your project:
+
+```console
+npx expo install expo-updates
+eas update:configure
+```
+
+- [ ] Create a [personal access token](https://expo.dev/settings/access-tokens) and add it as `EXPO_TOKEN` to **repository** > **settings** > **secrets and variables** > **actions**
+- [ ] Create a `.github/workflows/update.yml` file that publishes an update on every push to `main`:
+
+```yml
+name: update
+on:
+  push:
+    branches: [main]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - uses: expo/expo-github-action@v9
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - run: npm ci
+      - run: eas update --auto --non-interactive
+```
+
+- [ ] Push a commit on `main` and check the update on your [Expo dashboard](https://expo.dev).
 
 ## 👽 Bonus
 
@@ -28,20 +58,33 @@ We can generate a QR code to scan for every new pull request.
 
 ![GitHub action with Expo QR code](https://raw.githubusercontent.com/flexbox/react-native-workshop/main/challenges/release/github-actions-qr-preview.png)
 
-1. Generate an image with [QR code API](https://goqr.me/api/)
-2. Add [a comment to your pull request](https://github.com/mshick/add-pr-comment) with GitHub actions
-3. Comment with a link to your project on `exp.host` with a custom `release-channel`
+- [ ] Create a `.github/workflows/preview.yml` file with the [`preview` action](https://github.com/expo/expo-github-action/tree/main/preview): it publishes an update on a branch named after your PR and comments the QR code for you.
 
 ```yml
-steps:
-  - name: Add comment to PR with QR code
-    uses: mshick/add-pr-comment@v1
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      EXPO_PROJECT: '@flexbox/maas' # Put in your own Expo project name here
-    with:
-      message: |
-        ## Application
-        ![Expo QR](https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=exp://exp.host/${{ env.EXPO_PROJECT }}?release-channel=pr${{ github.event.number }})
-        Published to https://exp.host/${{ env.EXPO_PROJECT }}?release-channel=pr${{ github.event.number }}
+name: preview
+on: [pull_request]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - uses: expo/expo-github-action@v9
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - run: npm ci
+      - uses: expo/expo-github-action/preview@v9
+        with:
+          command: eas update --auto --branch ${{ github.event.pull_request.head.ref }}
 ```
+
+- [ ] Create a new pull request on your repo to test the CI and scan the QR code with your development build.

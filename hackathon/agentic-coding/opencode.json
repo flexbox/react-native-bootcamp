@@ -1,0 +1,15 @@
+{
+  "mcp": {
+    "argent": {
+      "type": "local",
+      "command": [
+        "argent",
+        "mcp"
+      ],
+      "enabled": true
+    }
+  },
+  "tools": {
+    "argent*": true
+  }
+}
