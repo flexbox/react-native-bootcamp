@@ -8,7 +8,7 @@ You will find the instructions to set up your computer for your next React Nativ
 ## System Requirements
 
 - [ ] [git](https://git-scm.com/) v2.40 or greater
-- [ ] [Node.js](https://nodejs.org/) v18 or greater
+- [ ] [Node.js](https://nodejs.org/) v22.13 (LTS) or greater (required by Expo SDK 58)
 
 Use the following command from your terminal to check your Node version.
 
@@ -16,7 +16,7 @@ Use the following command from your terminal to check your Node version.
 node --version
 ```
 
-If you have Node.js v18 or greater installed, you are ready for the next step.
+If you have Node.js v22.13 or greater installed, you are ready for the next step.
 
 ## Virtual Simulators
 
