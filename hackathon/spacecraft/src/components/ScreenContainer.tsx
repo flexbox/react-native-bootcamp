@@ -5,6 +5,7 @@ import { ScrollView, StyleSheet, View } from "react-native";
 import { IconButton, Text, useTheme } from "react-native-paper";
 
 import { Offline } from "@/components/Offline";
+import { TITLE_MAX_FONT_SIZE } from "@/theme/typography";
 
 interface ScreenContainerProps {
   accessoryFooter?: ReactNode;
@@ -23,6 +24,7 @@ const ScreenContainerTitle = ({
   withGoBack: boolean;
 }) => {
   const navigation = useNavigation();
+  const theme = useTheme();
 
   return (
     <View
@@ -38,6 +40,10 @@ const ScreenContainerTitle = ({
         />
       )}
       <Text
+        accessibilityRole="header"
+        maxFontSizeMultiplier={
+          TITLE_MAX_FONT_SIZE / theme.fonts.headlineMedium.fontSize
+        }
         style={[styles.headerText, { paddingHorizontal: withGoBack ? 0 : 24 }]}
         variant="headlineMedium"
       >

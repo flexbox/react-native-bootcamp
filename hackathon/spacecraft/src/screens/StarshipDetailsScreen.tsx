@@ -11,6 +11,7 @@ import {
 import { Chip, DataTable, FAB, List, Text, useTheme } from "react-native-paper";
 import { useSharedValue, withSpring } from "react-native-reanimated";
 
+import { DataTableKeyValueRow } from "@/components/DataTableKeyValueRow";
 import { Image } from "@/components/Image";
 import { withAnimated } from "@/utils/withAnimated";
 
@@ -112,22 +113,22 @@ export const StarshipDetailsScreen = ({
           />
 
           <DataTable>
-            <DataTable.Row>
-              <DataTable.Cell>Crew</DataTable.Cell>
-              <DataTable.Cell numeric>{crew}</DataTable.Cell>
-            </DataTable.Row>
-            <DataTable.Row>
-              <DataTable.Cell>Passengers</DataTable.Cell>
-              <DataTable.Cell numeric>{passengers}</DataTable.Cell>
-            </DataTable.Row>
-            <DataTable.Row>
-              <DataTable.Cell>Consumables</DataTable.Cell>
-              <DataTable.Cell numeric>{consumables}</DataTable.Cell>
-            </DataTable.Row>
-            <DataTable.Row>
-              <DataTable.Cell>Cargo capacity</DataTable.Cell>
-              <DataTable.Cell numeric>{cargo_capacity}</DataTable.Cell>
-            </DataTable.Row>
+            <DataTableKeyValueRow
+              label="Crew"
+              value={crew}
+            />
+            <DataTableKeyValueRow
+              label="Passengers"
+              value={passengers}
+            />
+            <DataTableKeyValueRow
+              label="Consumables"
+              value={consumables}
+            />
+            <DataTableKeyValueRow
+              label="Cargo capacity"
+              value={cargo_capacity}
+            />
           </DataTable>
         </View>
       </ScrollView>

@@ -1,0 +1,936 @@
+openapi: 3.1.0
+info:
+  title: Star Citizen Wiki API – Vehicles
+  version: "2.0.0"
+  description: |
+    Vehicles (ships and ground vehicles) from the Star Citizen Wiki API v2.
+    Reverse-documented from live responses of `GET /api/v2/vehicles`.
+servers:
+  - url: https://api.star-citizen.wiki/api/v2
+tags:
+  - name: Vehicles
+
+paths:
+  /vehicles:
+    get:
+      tags: [Vehicles]
+      operationId: listVehicles
+      summary: List vehicles (paginated)
+      parameters:
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/PageSize"
+        - $ref: "#/components/parameters/PageNumber"
+        - $ref: "#/components/parameters/Locale"
+        - $ref: "#/components/parameters/FilterName"
+        - $ref: "#/components/parameters/Include"
+      responses:
+        "200":
+          description: Paginated list of vehicles
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VehicleCollection"
+        "422":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+components:
+  parameters:
+    Limit:
+      name: limit
+      in: query
+      description: Items per page (alias of `page[size]`). Capped server-side at 50.
+      schema: { type: integer, minimum: 1, maximum: 50, default: 15 }
+      example: 20
+    Page:
+      name: page
+      in: query
+      description: Page number (alias of `page[number]`).
+      schema: { type: integer, minimum: 1, default: 1 }
+    PageSize:
+      name: page[size]
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 50 }
+    PageNumber:
+      name: page[number]
+      in: query
+      schema: { type: integer, minimum: 1 }
+    Locale:
+      name: locale
+      in: query
+      description: |
+        When set, localized fields (`description`, `type`, `size`, `production_status`, …)
+        are returned as plain strings instead of a locale map.
+      schema:
+        $ref: "#/components/schemas/LocaleCode"
+    FilterName:
+      name: filter[name]
+      in: query
+      description: Partial match on vehicle name.
+      schema: { type: string }
+      example: Gladius
+    Include:
+      name: include
+      in: query
+      description: Comma-separated relations. See `meta.valid_relations`.
+      style: form
+      explode: false
+      schema:
+        type: array
+        items:
+          type: string
+          enum: [shipMatrixVehicle, components, shipmatrixvehicle.components, hardpoints, ports]
+
+  schemas:
+    # ---------- Envelope ----------
+    VehicleCollection:
+      type: object
+      required: [data, links, meta]
+      properties:
+        data:
+          type: array
+          items: { $ref: "#/components/schemas/Vehicle" }
+        links: { $ref: "#/components/schemas/PaginationLinks" }
+        meta: { $ref: "#/components/schemas/PaginationMeta" }
+
+    PaginationLinks:
+      type: object
+      properties:
+        first: { type: string, format: uri }
+        last: { type: string, format: uri }
+        prev: { type: [string, "null"], format: uri }
+        next: { type: [string, "null"], format: uri }
+
+    PaginationMeta:
+      type: object
+      properties:
+        current_page: { type: integer }
+        from: { type: [integer, "null"] }
+        last_page: { type: integer }
+        links:
+          type: array
+          items:
+            type: object
+            properties:
+              url: { type: [string, "null"], format: uri }
+              label: { type: string }
+              page: { type: [integer, "null"] }
+              active: { type: boolean }
+        path: { type: string, format: uri }
+        per_page: { type: integer }
+        to: { type: [integer, "null"] }
+        total: { type: integer }
+        valid_relations:
+          type: array
+          items: { type: string }
+
+    Error:
+      type: object
+      properties:
+        message: { type: string }
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items: { type: string }
+
+    # ---------- Shared ----------
+    LocaleCode:
+      type: string
+      enum: [en_EN, de_DE, zh_CN, fr_FR]
+
+    LocaleMap:
+      type: object
+      properties:
+        en_EN: { type: string }
+        de_DE: { type: string }
+        zh_CN: { type: string }
+        fr_FR: { type: string }
+      additionalProperties: { type: string }
+
+    Localized:
+      description: Locale map by default, plain string when `locale` is passed, `null` when missing.
+      oneOf:
+        - $ref: "#/components/schemas/LocaleMap"
+        - type: string
+        - type: "null"
+
+    MinMax:
+      type: object
+      properties:
+        minimum: { type: [number, "null"] }
+        maximum: { type: [number, "null"] }
+
+    DamageTypes:
+      type: object
+      properties:
+        physical: { type: [number, "null"] }
+        energy: { type: [number, "null"] }
+        distortion: { type: [number, "null"] }
+        thermal: { type: [number, "null"] }
+        biochemical: { type: [number, "null"] }
+        stun: { type: [number, "null"] }
+
+    DamageTypesWithChange:
+      allOf:
+        - $ref: "#/components/schemas/DamageTypes"
+        - type: object
+          properties:
+            physical_change: { type: [number, "null"] }
+            energy_change: { type: [number, "null"] }
+            distortion_change: { type: [number, "null"] }
+            thermal_change: { type: [number, "null"] }
+            biochemical_change: { type: [number, "null"] }
+            stun_change: { type: [number, "null"] }
+
+    Vector3:
+      type: object
+      properties:
+        x: { type: [number, "null"] }
+        y: { type: [number, "null"] }
+        z: { type: [number, "null"] }
+
+    EmptyArray:
+      description: Laravel/PHP serializes empty maps as `[]`.
+      type: array
+      maxItems: 0
+
+    NumberMap:
+      description: Map of component group (e.g. `Radar`, `Cooler`, `PowerPlant`) to a number. `[]` when empty.
+      oneOf:
+        - type: object
+          additionalProperties: { type: [number, "null"] }
+        - $ref: "#/components/schemas/EmptyArray"
+
+    Container:
+      type: object
+      properties:
+        uuid: { type: [string, "null"], format: uuid }
+        width: { type: [number, "null"] }
+        height: { type: [number, "null"] }
+        length: { type: [number, "null"] }
+        volume: { type: [number, "null"] }
+        scu: { type: [number, "null"] }
+        scu_converted: { type: [number, "null"] }
+        unit: { type: [string, "null"] }
+        open: { type: [boolean, "null"] }
+        external: { type: [boolean, "null"] }
+        closed: { type: [boolean, "null"] }
+
+    CargoGrid:
+      allOf:
+        - $ref: "#/components/schemas/Container"
+        - type: object
+          properties:
+            min_size: { $ref: "#/components/schemas/Vector3" }
+            max_size: { $ref: "#/components/schemas/Vector3" }
+            max_scu_box: { type: [number, "null"] }
+
+    Manufacturer:
+      type: object
+      properties:
+        name: { type: [string, "null"] }
+        code: { type: [string, "null"] }
+        uuid: { type: [string, "null"], format: uuid }
+        link: { type: [string, "null"], format: uri }
+
+    # ---------- Vehicle ----------
+    Vehicle:
+      type: object
+      required: [uuid, name, slug, class_name]
+      properties:
+        uuid: { type: string, format: uuid }
+        id: { type: [integer, "null"], description: Ship Matrix id (only when matched) }
+        chassis_id: { type: [integer, "null"] }
+        name: { type: string, example: Avenger Stalker }
+        game_name: { type: [string, "null"], example: Aegis Avenger Stalker }
+        shipmatrix_name: { type: [string, "null"] }
+        slug: { type: string }
+        class_name: { type: string }
+        port_tags:
+          type: [array, "null"]
+          items: { type: [string, "null"] }
+        sizes:
+          type: object
+          properties:
+            length: { type: [number, "null"] }
+            beam: { type: [number, "null"] }
+            height: { type: [number, "null"] }
+        dimension:
+          type: object
+          properties:
+            length: { type: [number, "null"] }
+            width: { type: [number, "null"] }
+            height: { type: [number, "null"] }
+        emission:
+          type: object
+          properties:
+            ir: { type: [number, "null"] }
+            em_idle: { type: [number, "null"] }
+            em_max: { type: [number, "null"] }
+        mass: { type: [number, "null"] }
+        mass_hull: { type: [number, "null"] }
+        mass_loadout: { type: [number, "null"] }
+        mass_total: { type: [number, "null"] }
+        cargo_capacity: { type: [number, "null"] }
+        ore_capacity: { type: [number, "null"] }
+        cargo_grids:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/CargoGrid" }
+        cargo_limits:
+          type: object
+          properties:
+            min_size: { $ref: "#/components/schemas/Vector3" }
+            min_scu_box: { type: [number, "null"] }
+            max_size: { $ref: "#/components/schemas/Vector3" }
+            max_scu_box: { type: [number, "null"] }
+        vehicle_inventory: { type: [number, "null"] }
+        inventory_containers:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/Container" }
+        weapon_storage: { $ref: "#/components/schemas/WeaponStorage" }
+        crew:
+          type: object
+          properties:
+            min: { type: [integer, "null"] }
+            max: { type: [integer, "null"] }
+            weapon: { type: [integer, "null"] }
+            operation: { type: [integer, "null"] }
+        max_medical_tier: { type: [string, "null"] }
+        seating:
+          type: object
+          properties:
+            crew_stations: { type: [integer, "null"] }
+            ejection_seats: { type: [integer, "null"] }
+            escape_pods: { type: [integer, "null"] }
+            jump_seats: { type: [integer, "null"] }
+            beds: { type: [integer, "null"] }
+            medical_beds:
+              type: [object, "null"]
+              description: "Count per medical tier, e.g. `{ \"T2\": 1, \"T3\": 4 }`"
+              additionalProperties: { type: [integer, "null"] }
+        health: { type: [number, "null"] }
+        shield_hp: { type: [number, "null"] }
+        shield_face_type: { type: [string, "null"], example: Bubble }
+        shield: { $ref: "#/components/schemas/Shield" }
+        speed:
+          type: object
+          properties:
+            scm: { type: [number, "null"] }
+            max: { type: [number, "null"] }
+            boost_forward: { type: [number, "null"] }
+            boost_backward: { type: [number, "null"] }
+            zero_to_scm: { type: [number, "null"] }
+            zero_to_max: { type: [number, "null"] }
+            scm_to_zero: { type: [number, "null"] }
+            max_to_zero: { type: [number, "null"] }
+        afterburner:
+          type: object
+          properties:
+            pitch_boost_multiplier: { type: [number, "null"] }
+            roll_boost_multiplier: { type: [number, "null"] }
+            yaw_boost_multiplier: { type: [number, "null"] }
+            capacitor: { type: [number, "null"] }
+            idle_cost: { type: [number, "null"] }
+            linear_cost: { type: [number, "null"] }
+            angular_cost: { type: [number, "null"] }
+            regen_per_second: { type: [number, "null"] }
+            regen_delay_after_use: { type: [number, "null"] }
+            pre_delay_time: { type: [number, "null"] }
+            ramp_up_time: { type: [number, "null"] }
+            ramp_down_time: { type: [number, "null"] }
+            regen_time: { type: [number, "null"] }
+            regen_delay: { type: [number, "null"] }
+        fuel:
+          type: object
+          properties:
+            capacity: { type: [number, "null"] }
+            intake_rate: { type: [number, "null"] }
+            usage:
+              type: object
+              properties:
+                main: { type: [number, "null"] }
+                retro: { type: [number, "null"] }
+                vtol: { type: [number, "null"] }
+                maneuvering: { type: [number, "null"] }
+        propulsion:
+          type: object
+          properties:
+            thrusters:
+              type: [array, "null"]
+              items:
+                type: object
+                properties:
+                  type: { type: [string, "null"], example: Main }
+                  count: { type: [integer, "null"] }
+                  capacity: { type: [number, "null"] }
+                  g: { type: [number, "null"] }
+            thrust_capacity:
+              type: object
+              properties:
+                main: { type: [number, "null"] }
+                retro: { type: [number, "null"] }
+                vtol: { type: [number, "null"] }
+                maneuvering: { type: [number, "null"] }
+        quantum:
+          type: object
+          properties:
+            quantum_speed: { type: [number, "null"] }
+            quantum_spool_time: { type: [number, "null"] }
+            quantum_fuel_capacity: { type: [number, "null"] }
+            quantum_range: { type: [number, "null"] }
+            port_olisar_to_arccorp_time: { type: [number, "null"] }
+            port_olisar_to_arccorp_fuel: { type: [number, "null"] }
+        no_fuel_params:
+          type: object
+          properties:
+            linear_acceleration_modifier: { type: [number, "null"] }
+            angular_acceleration_modifier: { type: [number, "null"] }
+            angular_velocity_modifier: { type: [number, "null"] }
+            legacy_max_speed: { type: [number, "null"] }
+        agility:
+          type: object
+          properties:
+            pitch: { type: [number, "null"] }
+            yaw: { type: [number, "null"] }
+            roll: { type: [number, "null"] }
+            pitch_boosted: { type: [number, "null"] }
+            yaw_boosted: { type: [number, "null"] }
+            roll_boosted: { type: [number, "null"] }
+            acceleration: { $ref: "#/components/schemas/NumberMap" }
+        armor:
+          description: Armor stats; an empty array `[]` when the vehicle has no armor item.
+          oneOf:
+            - $ref: "#/components/schemas/Armor"
+            - $ref: "#/components/schemas/EmptyArray"
+        weaponry: { $ref: "#/components/schemas/Weaponry" }
+        manufacturer: { $ref: "#/components/schemas/Manufacturer" }
+        size_class: { type: [integer, "null"] }
+        cross_section:
+          type: object
+          properties:
+            length: { type: [number, "null"] }
+            width: { type: [number, "null"] }
+            height: { type: [number, "null"] }
+        cross_section_max: { type: [number, "null"] }
+        is_vehicle: { type: [boolean, "null"] }
+        is_gravlev: { type: [boolean, "null"] }
+        is_spaceship: { type: [boolean, "null"] }
+        is_power_suit: { type: [boolean, "null"] }
+        signature:
+          type: object
+          properties:
+            ir_quantum: { type: [number, "null"] }
+            ir_shields: { type: [number, "null"] }
+            em_quantum: { type: [number, "null"] }
+            em_shields: { type: [number, "null"] }
+            em_groups_quantum: { $ref: "#/components/schemas/NumberMap" }
+            em_groups_shields: { $ref: "#/components/schemas/NumberMap" }
+            em_segment_groups_quantum: { $ref: "#/components/schemas/NumberMap" }
+            em_segment_groups_shields: { $ref: "#/components/schemas/NumberMap" }
+            em_per_segment: { type: [number, "null"] }
+        cooling:
+          type: object
+          properties:
+            generation_segments: { type: [number, "null"] }
+            usage_shields_pct: { type: [number, "null"] }
+            usage_quantum_pct: { type: [number, "null"] }
+            used_segments_shields: { type: [number, "null"] }
+            used_segments_quantum: { type: [number, "null"] }
+            used_segments_shields_grouped: { $ref: "#/components/schemas/NumberMap" }
+            used_segments_quantum_grouped: { $ref: "#/components/schemas/NumberMap" }
+        power:
+          type: object
+          properties:
+            generation_segments: { type: [number, "null"] }
+            used_segments_shields: { type: [number, "null"] }
+            used_segments_quantum: { type: [number, "null"] }
+            used_segments_grouped: { $ref: "#/components/schemas/NumberMap" }
+        power_pools:
+          type: object
+          description: Keyed by item type (e.g. `Shield`, `WeaponGun`).
+          additionalProperties:
+            type: object
+            properties:
+              type: { type: [string, "null"] }
+              item_type: { type: [string, "null"] }
+              size: { type: [integer, "null"], description: "-1 when unlimited / not applicable" }
+        penetration_multiplier:
+          type: object
+          properties:
+            fuse: { type: [number, "null"] }
+            components:
+              oneOf:
+                - type: [number, "null"]
+                - $ref: "#/components/schemas/EmptyArray"
+        relay_network: { $ref: "#/components/schemas/RelayNetwork" }
+        insurance:
+          type: object
+          properties:
+            claim_time: { type: [number, "null"], description: Minutes }
+            expedite_time: { type: [number, "null"], description: Minutes }
+            expedite_cost: { type: [number, "null"], description: aUEC }
+        damage_limits:
+          type: object
+          properties:
+            before_destruction:
+              type: [array, "null"]
+              items:
+                type: object
+                properties:
+                  HP: { type: [number, "null"] }
+                  Name: { type: [string, "null"] }
+                  DestructionDamage: { type: [number, "null"] }
+            before_detach:
+              type: [array, "null"]
+              items:
+                type: object
+                properties:
+                  HP: { type: [number, "null"] }
+                  Name: { type: [string, "null"] }
+                  DetachDamage: { type: [number, "null"] }
+        ports:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/Port" }
+        parts:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/Part" }
+        turrets:
+          type: object
+          properties:
+            manned:
+              type: [array, "null"]
+              items: { $ref: "#/components/schemas/Turret" }
+            remote:
+              type: [array, "null"]
+              items: { $ref: "#/components/schemas/Turret" }
+            pdc:
+              type: [array, "null"]
+              items: { $ref: "#/components/schemas/Turret" }
+        career: { type: [string, "null"], example: Combat }
+        role: { type: [string, "null"], example: Interceptor }
+        game_description: { $ref: "#/components/schemas/Localized" }
+        web_url: { type: [string, "null"], format: uri }
+        link: { type: [string, "null"], format: uri }
+        loaner:
+          type: [array, "null"]
+          items:
+            type: object
+            properties:
+              uuid: { type: [string, "null"], format: uuid }
+              name: { type: [string, "null"] }
+              slug: { type: [string, "null"] }
+              link: { type: [string, "null"], format: uri }
+              version: { type: [string, "null"] }
+        skus:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/Sku" }
+        msrp: { type: [number, "null"], description: USD }
+        warbond_price: { type: [number, "null"] }
+        pledge_url: { type: [string, "null"], format: uri }
+        curated_data:
+          oneOf:
+            - $ref: "#/components/schemas/CuratedData"
+            - type: "null"
+        uex_prices:
+          type: object
+          properties:
+            purchase:
+              type: [array, "null"]
+              items: { $ref: "#/components/schemas/UexPrice" }
+            rental:
+              type: [array, "null"]
+              items: { $ref: "#/components/schemas/UexPrice" }
+        images:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/Image" }
+        updated_at: { type: [string, "null"], format: date-time }
+        version: { type: [string, "null"], example: 4.10.3-LIVE.13165946 }
+        foci:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/Localized" }
+        production_status: { $ref: "#/components/schemas/Localized" }
+        production_note: { $ref: "#/components/schemas/Localized" }
+        type: { $ref: "#/components/schemas/Localized" }
+        description: { $ref: "#/components/schemas/Localized" }
+        size: { $ref: "#/components/schemas/Localized" }
+
+    WeaponStorage:
+      type: object
+      properties:
+        lockers: { type: [integer, "null"] }
+        slots_total: { type: [integer, "null"] }
+        slots_rifle: { type: [integer, "null"] }
+        slots_pistol: { type: [integer, "null"] }
+        by_locker:
+          type: [array, "null"]
+          items:
+            type: object
+            properties:
+              name: { type: [string, "null"] }
+              class_name: { type: [string, "null"] }
+              port: { type: [string, "null"] }
+              slots_total: { type: [integer, "null"] }
+              slots_rifle: { type: [integer, "null"] }
+              slots_pistol: { type: [integer, "null"] }
+              count: { type: [integer, "null"] }
+
+    Shield:
+      type: object
+      properties:
+        hp: { type: [number, "null"] }
+        regeneration: { type: [number, "null"] }
+        regeneration_time: { type: [number, "null"] }
+        face_type: { type: [string, "null"] }
+        max_reallocation: { type: [number, "null"] }
+        reconfiguration_cooldown: { type: [number, "null"] }
+        max_electrical_charge_damage_rate: { type: [number, "null"] }
+        resistance: { $ref: "#/components/schemas/MinMaxByDamageType" }
+        absorption: { $ref: "#/components/schemas/MinMaxByDamageType" }
+
+    MinMaxByDamageType:
+      type: object
+      properties:
+        physical: { $ref: "#/components/schemas/MinMax" }
+        energy: { $ref: "#/components/schemas/MinMax" }
+        distortion: { $ref: "#/components/schemas/MinMax" }
+        thermal: { $ref: "#/components/schemas/MinMax" }
+        biochemical: { $ref: "#/components/schemas/MinMax" }
+        stun: { $ref: "#/components/schemas/MinMax" }
+
+    Armor:
+      type: object
+      properties:
+        uuid: { type: [string, "null"], format: uuid }
+        health: { type: [number, "null"] }
+        signal_infrared: { type: [number, "null"] }
+        signal_electromagnetic: { type: [number, "null"] }
+        signal_cross_section: { type: [number, "null"] }
+        damage_physical: { type: [number, "null"] }
+        damage_energy: { type: [number, "null"] }
+        damage_distortion: { type: [number, "null"] }
+        damage_thermal: { type: [number, "null"] }
+        damage_biochemical: { type: [number, "null"] }
+        damage_stun: { type: [number, "null"] }
+        signal_multiplier:
+          type: object
+          properties:
+            cross_section: { type: [number, "null"] }
+            cross_section_change: { type: [number, "null"] }
+            infrared: { type: [number, "null"] }
+            infrared_change: { type: [number, "null"] }
+            electromagnetic: { type: [number, "null"] }
+            electromagnetic_change: { type: [number, "null"] }
+        damage_multiplier: { $ref: "#/components/schemas/DamageTypesWithChange" }
+        resistance_multiplier: { $ref: "#/components/schemas/DamageTypesWithChange" }
+        penetration_resistance:
+          allOf:
+            - $ref: "#/components/schemas/DamageTypes"
+            - type: object
+              properties:
+                base: { type: [number, "null"] }
+        deflection: { $ref: "#/components/schemas/DamageTypes" }
+        signal_multipliers:
+          type: object
+          properties:
+            cross_section: { type: [number, "null"] }
+            infrared: { type: [number, "null"] }
+            electromagnetic: { type: [number, "null"] }
+        damage_multipliers: { $ref: "#/components/schemas/DamageTypes" }
+        resistance_multipliers: { $ref: "#/components/schemas/DamageTypes" }
+
+    Weaponry:
+      type: object
+      properties:
+        pilot_dps: { type: [number, "null"] }
+        pilot_alpha: { type: [number, "null"] }
+        pilot_sustained_dps: { type: [number, "null"] }
+        turret_dps: { type: [number, "null"] }
+        turret_alpha: { type: [number, "null"] }
+        turret_sustained_dps: { type: [number, "null"] }
+        fixed_weapons:
+          type: object
+          properties:
+            dps_total: { type: [number, "null"] }
+            sustained_dps_total: { type: [number, "null"] }
+            alpha_total: { type: [number, "null"] }
+            weapons:
+              type: [array, "null"]
+              items:
+                type: object
+                properties:
+                  name: { type: [string, "null"] }
+                  dps: { type: [number, "null"] }
+                  sustained_dps: { type: [number, "null"] }
+                  alpha: { type: [number, "null"] }
+        missiles:
+          type: object
+          properties:
+            count: { type: [integer, "null"] }
+            damage:
+              allOf:
+                - $ref: "#/components/schemas/DamageTypes"
+                - type: object
+                  properties:
+                    total: { type: [number, "null"] }
+        total_missile_damage: { type: [number, "null"] }
+
+    RelayNetwork:
+      type: object
+      properties:
+        total_fuses: { type: [integer, "null"] }
+        relays:
+          type: [array, "null"]
+          items:
+            type: object
+            properties:
+              hardpoint: { type: [string, "null"] }
+              class_name: { type: [string, "null"] }
+              fuse_slots: { type: [integer, "null"] }
+              room: { type: [string, "null"] }
+              connection_count: { type: [integer, "null"] }
+              connected_hardpoints:
+                type: [array, "null"]
+                items:
+                  type: object
+                  properties:
+                    category: { type: [string, "null"] }
+                    count: { type: [integer, "null"] }
+                    items:
+                      type: [array, "null"]
+                      items:
+                        type: object
+                        properties:
+                          hardpoint: { type: [string, "null"] }
+                          item_name: { type: [string, "null"] }
+                          class_name: { type: [string, "null"] }
+                          type: { type: [string, "null"] }
+                          uuid: { type: [string, "null"], format: uuid }
+        links:
+          type: [array, "null"]
+          items:
+            type: object
+            properties:
+              from: { type: [string, "null"] }
+              to: { type: [string, "null"] }
+
+    Port:
+      type: object
+      properties:
+        name: { type: [string, "null"] }
+        position: { type: [string, "null"] }
+        class_name: { type: [string, "null"] }
+        editable: { type: [boolean, "null"] }
+        editable_children: { type: [boolean, "null"] }
+        equipped_item_uuid: { type: [string, "null"], format: uuid }
+        type: { type: [string, "null"] }
+        sub_type: { type: [string, "null"] }
+        subtype: { type: [string, "null"], deprecated: true }
+        sizes:
+          type: object
+          properties:
+            min: { type: [integer, "null"] }
+            max: { type: [integer, "null"] }
+        compatible_types:
+          type: [array, "null"]
+          items:
+            type: object
+            properties:
+              type: { type: [string, "null"] }
+              sub_types:
+                type: [array, "null"]
+                items: { type: [string, "null"] }
+        health: { type: [number, "null"] }
+        equipped_item:
+          oneOf:
+            - $ref: "#/components/schemas/EquippedItem"
+            - type: "null"
+        attached_vehicle: { type: [object, "null"] }
+        ports:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/Port" }
+        category_label: { type: [string, "null"] }
+        required_tags:
+          type: [array, "null"]
+          items: { type: [string, "null"] }
+        port_tags:
+          type: [array, "null"]
+          items: { type: [string, "null"] }
+        version: { type: [string, "null"] }
+
+    EquippedItem:
+      type: object
+      properties:
+        uuid: { type: [string, "null"], format: uuid }
+        name: { type: [string, "null"] }
+        class_name: { type: [string, "null"] }
+        type: { type: [string, "null"] }
+        sub_type: { type: [string, "null"] }
+        size: { type: [integer, "null"] }
+        grade: { type: [integer, "null"] }
+        manufacturer:
+          type: [object, "null"]
+          properties:
+            name: { type: [string, "null"] }
+        link: { type: [string, "null"], format: uri }
+        web_url: { type: [string, "null"], format: uri }
+
+    Part:
+      type: object
+      properties:
+        name: { type: [string, "null"] }
+        display_name: { type: [string, "null"] }
+        damage_max: { type: [number, "null"] }
+        destruction_damage: { type: [number, "null"] }
+        detach_damage: { type: [number, "null"] }
+        children:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/Part" }
+        version: { type: [string, "null"] }
+
+    TurretMount:
+      type: object
+      properties:
+        display_name: { type: [string, "null"] }
+        hardpoint_name: { type: [string, "null"] }
+        mount_type: { type: [string, "null"] }
+        class_name: { type: [string, "null"] }
+        size: { type: [integer, "null"] }
+        weapon_sizes:
+          type: [array, "null"]
+          items: { type: [integer, "null"] }
+        payload_sizes:
+          type: [array, "null"]
+          items: { type: [integer, "null"] }
+        payload_types:
+          type: [array, "null"]
+          items: { type: [string, "null"] }
+        payload_class_names:
+          type: [array, "null"]
+          items: { type: [string, "null"] }
+
+    Turret:
+      type: object
+      properties:
+        category: { type: [string, "null"], enum: [manned, remote, pdc] }
+        display_name: { type: [string, "null"] }
+        hardpoint_name: { type: [string, "null"] }
+        part_name: { type: [string, "null"] }
+        turret_type: { type: [string, "null"], example: TurretBase.MannedTurret }
+        class_name: { type: [string, "null"] }
+        size: { type: [integer, "null"] }
+        turret: { type: [boolean, "null"] }
+        gimballed: { type: [boolean, "null"] }
+        fixed: { type: [boolean, "null"] }
+        mount_count: { type: [integer, "null"] }
+        weapon_sizes:
+          type: [array, "null"]
+          items: { type: [integer, "null"] }
+        payload_sizes:
+          type: [array, "null"]
+          items: { type: [integer, "null"] }
+        payload_types:
+          type: [array, "null"]
+          items: { type: [string, "null"] }
+        payload_class_names:
+          type: [array, "null"]
+          items: { type: [string, "null"] }
+        mounts:
+          type: [array, "null"]
+          items: { $ref: "#/components/schemas/TurretMount" }
+        dps_total: { type: [number, "null"] }
+        sustained_dps_total: { type: [number, "null"] }
+        alpha_total: { type: [number, "null"] }
+        is_pilot_slaveable: { type: [boolean, "null"] }
+        weapons:
+          type: [array, "null"]
+          items:
+            type: object
+            properties:
+              uuid: { type: [string, "null"], format: uuid }
+              class_name: { type: [string, "null"] }
+              name: { type: [string, "null"] }
+              link: { type: [string, "null"], format: uri }
+              web_url: { type: [string, "null"], format: uri }
+              dps: { type: [number, "null"] }
+              sustained_dps: { type: [number, "null"] }
+              alpha: { type: [number, "null"] }
+              is_pilot_slaveable: { type: [boolean, "null"] }
+        version: { type: [string, "null"] }
+
+    Sku:
+      type: object
+      properties:
+        source: { type: [string, "null"], example: pledge_store }
+        cig_id: { type: [integer, "null"] }
+        title: { type: [string, "null"] }
+        url: { type: [string, "null"], format: uri }
+        price: { type: [number, "null"], description: USD }
+        discounted_price: { type: [number, "null"] }
+        is_warbond: { type: [boolean, "null"] }
+        is_package: { type: [boolean, "null"] }
+        available: { type: [boolean, "null"] }
+        imported_at: { type: [string, "null"], format: date-time }
+
+    CuratedData:
+      type: object
+      properties:
+        source: { type: [string, "null"], example: starcitizen.tools }
+        page_url: { type: [string, "null"], format: uri }
+        synced_at: { type: [string, "null"], format: date-time }
+        trailer_url: { type: [string, "null"], format: uri }
+        original_pledge_price: { type: [number, "null"] }
+        original_warbond_price: { type: [number, "null"] }
+        added_in_version: { type: [string, "null"] }
+        concept_date: { type: [string, "null"], format: date }
+        sale_date: { type: [string, "null"], format: date }
+        retire_date: { type: [string, "null"], format: date }
+        pledge_availability: { type: [string, "null"] }
+        brochure_url: { type: [string, "null"], format: uri }
+        presentation_urls:
+          type: [array, "null"]
+          items: { type: [string, "null"], format: uri }
+        whitleys_guide_url: { type: [string, "null"], format: uri }
+        galactapedia_url: { type: [string, "null"], format: uri }
+        qa_urls:
+          type: [array, "null"]
+          items: { type: [string, "null"], format: uri }
+
+    UexPrice:
+      type: object
+      properties:
+        price_buy: { type: [number, "null"] }
+        price_sell: { type: [number, "null"] }
+        price_rent: { type: [number, "null"] }
+        terminal_id: { type: [integer, "null"] }
+        terminal_code: { type: [string, "null"] }
+        terminal_name: { type: [string, "null"] }
+        starmap_location:
+          type: object
+          properties:
+            uuid: { type: [string, "null"], format: uuid }
+            name: { type: [string, "null"] }
+            slug: { type: [string, "null"] }
+            type_name: { type: [string, "null"] }
+            parent_name: { type: [string, "null"] }
+            star_system_name: { type: [string, "null"] }
+            link: { type: [string, "null"], format: uri }
+            web_url: { type: [string, "null"], format: uri }
+        date_updated: { type: [string, "null"], format: date-time }
+        game_version: { type: [string, "null"] }
+        uex_link: { type: [string, "null"], format: uri }
+
+    Image:
+      type: object
+      properties:
+        source: { type: [string, "null"] }
+        original_url: { type: [string, "null"], format: uri }
+        thumbnail_url: { type: [string, "null"], format: uri }
+        original_width: { type: [integer, "null"] }
+        original_height: { type: [integer, "null"] }
+        thumbnail_width: { type: [integer, "null"] }
+        thumbnail_height: { type: [integer, "null"] }

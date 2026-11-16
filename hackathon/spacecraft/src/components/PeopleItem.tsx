@@ -48,7 +48,7 @@ export const PeopleItem = ({ people }: PeopleItemProps) => {
 
   return (
     <List.Item
-      description={`${starships.length} starships`}
+      description={`${starships.length} ${starships.length === 1 ? "starship" : "starships"}`}
       left={(props) => (
         <GengerIcon
           {...props}
@@ -63,6 +63,7 @@ export const PeopleItem = ({ people }: PeopleItemProps) => {
         />
       )}
       title={people.name}
+      titleNumberOfLines={2}
     />
   );
 };

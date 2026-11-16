@@ -1,10 +1,12 @@
 import type { PeopleProps } from "api/types";
 
 import { StyleSheet, View } from "react-native";
-import { DataTable, Text } from "react-native-paper";
+import { DataTable, Text, useTheme } from "react-native-paper";
 
+import { DataTableKeyValueRow } from "@/components/DataTableKeyValueRow";
 import { ScreenContainer } from "@/components/ScreenContainer";
 import { StarshipLoadableList } from "@/components/StarshipLoadableList";
+import { TITLE_MAX_FONT_SIZE } from "@/theme/typography";
 
 interface PilotDetailsScreenProps {
   route: {
@@ -25,41 +27,51 @@ export const PilotDetailsScreen = ({ route }: PilotDetailsScreenProps) => {
     skin_color,
     starships,
   } = route.params.people;
+  const theme = useTheme();
 
   return (
     <ScreenContainer
       title={name}
       withGoBack
+      withScrollView
     >
       <DataTable>
-        <DataTable.Row>
-          <DataTable.Cell>Mass</DataTable.Cell>
-          <DataTable.Cell numeric>{mass} kg</DataTable.Cell>
-        </DataTable.Row>
-        <DataTable.Row>
-          <DataTable.Cell>Height</DataTable.Cell>
-          <DataTable.Cell numeric>{height} cm</DataTable.Cell>
-        </DataTable.Row>
-        <DataTable.Row>
-          <DataTable.Cell>Hairs color</DataTable.Cell>
-          <DataTable.Cell numeric>{hair_color}</DataTable.Cell>
-        </DataTable.Row>
-        <DataTable.Row>
-          <DataTable.Cell>Eyes color</DataTable.Cell>
-          <DataTable.Cell numeric>{eye_color}</DataTable.Cell>
-        </DataTable.Row>
-        <DataTable.Row>
-          <DataTable.Cell>Skin color</DataTable.Cell>
-          <DataTable.Cell numeric>{skin_color}</DataTable.Cell>
-        </DataTable.Row>
-        <DataTable.Row>
-          <DataTable.Cell>Birth year</DataTable.Cell>
-          <DataTable.Cell numeric>{birth_year}</DataTable.Cell>
-        </DataTable.Row>
+        <DataTableKeyValueRow
+          label="Mass"
+          value={`${mass} kg`}
+        />
+        <DataTableKeyValueRow
+          label="Height"
+          value={`${height} cm`}
+        />
+        <DataTableKeyValueRow
+          label="Hair color"
+          value={hair_color}
+        />
+        <DataTableKeyValueRow
+          label="Eye color"
+          value={eye_color}
+        />
+        <DataTableKeyValueRow
+          label="Skin color"
+          value={skin_color}
+        />
+        <DataTableKeyValueRow
+          label="Birth year"
+          value={birth_year}
+        />
       </DataTable>
       {starships.length > 0 && (
         <View style={styles.body}>
-          <Text variant="headlineMedium">Able to pilot</Text>
+          <Text
+            accessibilityRole="header"
+            maxFontSizeMultiplier={
+              TITLE_MAX_FONT_SIZE / theme.fonts.headlineMedium.fontSize
+            }
+            variant="headlineMedium"
+          >
+            Able to pilot
+          </Text>
           <StarshipLoadableList starships={starships} />
         </View>
       )}
