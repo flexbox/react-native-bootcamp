@@ -1,16 +1,16 @@
 import { ActivityIndicator, FlatList, StyleSheet } from "react-native";
 import { Button, Text } from "react-native-paper";
 
-import type { Vehicle } from "@/api/starcitizen.schemas";
+import type { GameVehicle } from "@/api/starcitizen.schemas";
 
 import { useListVehiclesInfinite } from "@/api/starcitizen";
 import { ScreenContainer } from "@/components/ScreenContainer";
 import { VehicleCard } from "@/components/VehicleCard";
 
-// The API caps a page at 50 vehicles
+// Enough to fill a few screens per request (the API allows up to 200)
 const PAGE_SIZE = 50;
 
-const renderItem = ({ item }: { item: Vehicle }) => (
+const renderItem = ({ item }: { item: GameVehicle }) => (
   <VehicleCard vehicle={item} />
 );
 
@@ -25,7 +25,7 @@ export const VehiclesScreen = () => {
     isRefetching,
     refetch,
   } = useListVehiclesInfinite(
-    { limit: PAGE_SIZE, locale: "en_EN" },
+    { "page[size]": PAGE_SIZE },
     {
       query: {
         // Orval's fetch client resolves every HTTP status, so we only keep 200 pages
@@ -33,7 +33,7 @@ export const VehiclesScreen = () => {
           if (lastPage.status !== 200) {
             return undefined;
           }
-          const { current_page, last_page } = lastPage.data.meta;
+          const { current_page, last_page } = lastPage.data.meta ?? {};
           if (current_page === undefined || last_page === undefined) {
             return undefined;
           }
@@ -65,9 +65,9 @@ export const VehiclesScreen = () => {
   }
 
   const vehicles = data.pages.flatMap((page) =>
-    page.status === 200 ? page.data.data : [],
+    page.status === 200 ? (page.data.data ?? []) : [],
   );
-  const total = firstPage.data.meta.total ?? vehicles.length;
+  const total = firstPage.data.meta?.total ?? vehicles.length;
 
   return (
     <ScreenContainer title="Vehicles">
@@ -79,7 +79,7 @@ export const VehiclesScreen = () => {
       </Text>
       <FlatList
         data={vehicles}
-        keyExtractor={(vehicle) => vehicle.uuid}
+        keyExtractor={(vehicle, index) => vehicle.uuid ?? String(index)}
         ListFooterComponent={
           isFetchingNextPage ? (
             <ActivityIndicator style={styles.footer} />

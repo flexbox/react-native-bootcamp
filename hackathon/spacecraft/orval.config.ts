@@ -12,7 +12,7 @@ export default defineConfig({
       override: {
         query: {
           useInfinite: true,
-          useInfiniteQueryParam: "page",
+          useInfiniteQueryParam: "page[number]",
         },
       },
       target: "./src/api/starcitizen.ts",

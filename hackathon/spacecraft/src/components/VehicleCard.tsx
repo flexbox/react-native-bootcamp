@@ -1,26 +1,31 @@
 import { Image, StyleSheet, View } from "react-native";
 import { Card, Chip, Text } from "react-native-paper";
 
-import type { Localized, Vehicle } from "@/api/starcitizen.schemas";
+import type { GameVehicle, Translation } from "@/api/starcitizen.schemas";
 
 interface VehicleCardProps {
-  vehicle: Vehicle;
+  vehicle: GameVehicle;
 }
 
-// We query with a `locale`, so localized fields come back as plain strings
-const toText = (value?: Localized) =>
-  typeof value === "string" ? value : undefined;
+// The spec types translations with `en`, but the live API sends `en_EN`
+const toText = (value?: null | Translation) =>
+  value?.en ?? (value as null | Record<string, string> | undefined)?.en_EN;
 
 const formatNumber = (value?: null | number, unit = "") =>
   value == null ? "–" : `${value.toLocaleString("en-US")}${unit}`;
 
 export const VehicleCard = ({ vehicle }: VehicleCardProps) => {
   const thumbnail = vehicle.images?.[0]?.thumbnail_url;
+  // Role and type are often the same word (e.g. "Destroyer"), so we dedupe them
   const tags = [
-    vehicle.role,
-    toText(vehicle.size),
-    toText(vehicle.production_status),
-  ].filter((tag): tag is string => Boolean(tag));
+    ...new Set(
+      [
+        vehicle.role,
+        toText(vehicle.type),
+        toText(vehicle.production_status),
+      ].filter((tag): tag is string => Boolean(tag)),
+    ),
+  ];
 
   const stats = [
     { label: "Crew", value: formatNumber(vehicle.crew?.max) },
