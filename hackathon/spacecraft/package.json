@@ -17,8 +17,7 @@
     "storybook:ios": "STORYBOOK_ENABLED='true' expo start --ios",
     "storybook:android": "STORYBOOK_ENABLED='true' expo start --android",
     "e2e": "maestro test e2e/process.yaml",
-    "release": "./bin/release.sh",
-    "api:generate": "orval"
+    "release": "./bin/release.sh"
   },
   "jest": {
     "preset": "jest-expo",
@@ -81,7 +80,6 @@
     "@types/react-dom": "~19.3.0",
     "@typescript-eslint/eslint-plugin": "^8.72.1",
     "@typescript-eslint/parser": "^8.72.1",
-    "ajv": "^8",
     "babel-loader": "^10.1.1",
     "babel-plugin-module-resolver": "^5.0.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
@@ -97,7 +95,6 @@
     "globals": "^17.13.0",
     "jest": "~30.5.2",
     "jest-expo": "~58.0.12",
-    "orval": "^8.48.0",
     "prettier": "^3.9.10",
     "storybook": "^10.6.4",
     "typescript": "^6"

@@ -9,7 +9,6 @@ import { PlanetNavigator } from "@/navigation/PlanetNavigator";
 import { PlusNavigator } from "@/navigation/PlusNavigator";
 import { Routes } from "@/navigation/Routes";
 import { StarshipNavigator } from "@/navigation/StarshipNavigator";
-import { VehicleNavigator } from "@/navigation/VehicleNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -67,21 +66,6 @@ export const BottomTabNavigator = () => {
             />
           ),
           tabBarLabel: "Explore",
-        }}
-      />
-      <Tab.Screen
-        component={VehicleNavigator}
-        name={Routes.VEHICLES_STACK}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <FontAwesome5
-              color={color}
-              iconStyle="solid"
-              name="rocket"
-              size={22}
-            />
-          ),
-          tabBarLabel: "Vehicles",
         }}
       />
       <Tab.Screen

@@ -14,8 +14,6 @@ export const Routes = {
   STARSHIP_FEED_SCREEN: "Starships",
   STARSHIP_STACK: "Starships Stack",
   TERMS_SCREEN: "Terms",
-  VEHICLES_SCREEN: "Vehicles",
-  VEHICLES_STACK: "Vehicles Stack",
 } as const;
 
 type ObjectValues<T extends object> = T[keyof T];

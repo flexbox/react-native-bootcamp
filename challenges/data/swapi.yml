@@ -1,0 +1,131 @@
+openapi: 3.1.0
+info:
+  title: Star Wars API – Starships
+  version: "1.0.0"
+  description: |
+    Starships from the Star Wars API (https://swapi.py4e.com).
+    SWAPI does not publish an OpenAPI spec: this one was written from its
+    live responses for the React Native bootcamp.
+servers:
+  - url: https://swapi.py4e.com/api
+tags:
+  - name: Starships
+
+paths:
+  /starships/:
+    get:
+      tags: [Starships]
+      operationId: listStarships
+      summary: List starships (10 per page)
+      parameters:
+        - name: page
+          in: query
+          description: Page number, starting at 1.
+          schema: { type: integer, minimum: 1, default: 1 }
+        - name: search
+          in: query
+          description: Case-insensitive partial match on `name` or `model`.
+          schema: { type: string }
+      responses:
+        "200":
+          description: A page of starships
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StarshipList"
+
+  /starships/{id}/:
+    get:
+      tags: [Starships]
+      operationId: getStarship
+      summary: Get one starship
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The number at the end of the starship `url`.
+          schema: { type: integer }
+      responses:
+        "200":
+          description: The starship
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Starship"
+        "404":
+          description: No starship with this id
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotFound"
+
+components:
+  schemas:
+    StarshipList:
+      type: object
+      required: [count, next, previous, results]
+      properties:
+        count: { type: integer, description: Total number of starships. }
+        next:
+          type: [string, "null"]
+          format: uri
+          description: URL of the next page, `null` on the last page.
+        previous:
+          type: [string, "null"]
+          format: uri
+          description: URL of the previous page, `null` on the first page.
+        results:
+          type: array
+          items: { $ref: "#/components/schemas/Starship" }
+
+    # SWAPI returns every value as a string, numbers included ("3500000",
+    # "unknown", "30-165"), so they are typed as strings here too.
+    Starship:
+      type: object
+      required:
+        - name
+        - model
+        - manufacturer
+        - cost_in_credits
+        - length
+        - max_atmosphering_speed
+        - crew
+        - passengers
+        - cargo_capacity
+        - consumables
+        - hyperdrive_rating
+        - MGLT
+        - starship_class
+        - pilots
+        - films
+        - created
+        - edited
+        - url
+      properties:
+        name: { type: string, example: CR90 corvette }
+        model: { type: string, example: CR90 corvette }
+        manufacturer: { type: string, example: Corellian Engineering Corporation }
+        cost_in_credits: { type: string, example: "3500000" }
+        length: { type: string, example: "150" }
+        max_atmosphering_speed: { type: string, example: "950" }
+        crew: { type: string, example: 30-165 }
+        passengers: { type: string, example: "600" }
+        cargo_capacity: { type: string, example: "3000000" }
+        consumables: { type: string, example: 1 year }
+        hyperdrive_rating: { type: string, example: "2.0" }
+        MGLT: { type: string, example: "60" }
+        starship_class: { type: string, example: corvette }
+        pilots:
+          type: array
+          items: { type: string, format: uri }
+        films:
+          type: array
+          items: { type: string, format: uri }
+        created: { type: string, format: date-time }
+        edited: { type: string, format: date-time }
+        url: { type: string, format: uri, example: "https://swapi.py4e.com/api/starships/2/" }
+
+    NotFound:
+      type: object
+      properties:
+        detail: { type: string, example: Not found }
