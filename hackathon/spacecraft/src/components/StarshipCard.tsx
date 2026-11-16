@@ -64,7 +64,9 @@ export const StarshipCard = ({ index, ship }: StarshipCardProps) => {
       {/* <Card.Cover source={source} /> */}
       <Card.Title
         subtitle={manufacturer}
+        subtitleNumberOfLines={2}
         title={title}
+        titleNumberOfLines={2}
       />
 
       {price !== "unknown" && (
@@ -72,7 +74,15 @@ export const StarshipCard = ({ index, ship }: StarshipCardProps) => {
           <CurrencyFormat
             displayType="text"
             renderText={(value: string) => (
-              <Text variant="titleLarge">{value} credits</Text>
+              // A price must never break mid-number, so it shrinks to fit one line
+              <Text
+                adjustsFontSizeToFit
+                numberOfLines={1}
+                style={styles.price}
+                variant="titleLarge"
+              >
+                {value} credits
+              </Text>
             )}
             thousandSeparator={true}
             value={price}
@@ -99,5 +109,8 @@ const styles = StyleSheet.create({
   containerCard: {
     marginBottom: 32,
     marginHorizontal: 24,
+  },
+  price: {
+    fontVariant: ["tabular-nums"],
   },
 });

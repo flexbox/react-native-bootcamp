@@ -1,7 +1,7 @@
 import type { PeopleProps } from "api/types";
 
-import { FlatList } from "react-native";
-import { Button } from "react-native-paper";
+import { FlatList, StyleSheet } from "react-native";
+import { ActivityIndicator, Button } from "react-native-paper";
 
 import { PeopleItem } from "@/components/PeopleItem";
 import { ScreenContainer } from "@/components/ScreenContainer";
@@ -19,24 +19,35 @@ const renderItem = (props: RenderItemProps) => {
 };
 
 export const PilotScreen = () => {
-  const { query, setPage } = usePilot();
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isError,
+    isFetchingNextPage,
+    isPending,
+    refetch,
+  } = usePilot();
 
-  if (query.isLoading) {
+  if (isPending) {
     return (
       <ScreenContainer title="Loading…">
         <SkeletonList />
       </ScreenContainer>
     );
   }
-  if (query.isError) {
+  if (isError) {
     return <ScreenContainer title="Error 😕" />;
   }
-  if (query.data.results === undefined) {
+
+  const pilots = data.pages.flatMap((page) => page.results ?? []);
+
+  if (pilots.length === 0) {
     return (
       <ScreenContainer title="Not Found">
         <Button
           mode="outlined"
-          onPress={() => query.refetch()}
+          onPress={() => refetch()}
         >
           Refetch
         </Button>
@@ -45,19 +56,31 @@ export const PilotScreen = () => {
   }
 
   const handleLoadMore = () => {
-    setPage((old) => old + 1);
+    if (hasNextPage && !isFetchingNextPage) {
+      fetchNextPage();
+    }
   };
 
   return (
     <ScreenContainer title="Pilots">
-      <Button onPress={handleLoadMore}>Load More</Button>
       <FlatList
-        data={query.data.results}
-        keyExtractor={(people) => people.name}
+        data={pilots}
+        keyExtractor={(people) => people.url}
+        ListFooterComponent={
+          isFetchingNextPage ? (
+            <ActivityIndicator style={styles.footer} />
+          ) : undefined
+        }
         onEndReached={handleLoadMore}
-        onEndReachedThreshold={0.01}
+        onEndReachedThreshold={0.5}
         renderItem={renderItem}
       />
     </ScreenContainer>
   );
 };
+
+const styles = StyleSheet.create({
+  footer: {
+    paddingVertical: 24,
+  },
+});
