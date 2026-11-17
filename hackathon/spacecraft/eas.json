@@ -14,6 +14,14 @@
     "production": {
       "autoIncrement": true,
       "corepack": true
+    },
+    "explore": {
+      "env": {
+        "APP_ENV": "development"
+      },
+      "ios": {
+        "simulator": true
+      }
     }
   },
   "submit": {
