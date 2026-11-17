@@ -42,10 +42,6 @@ two captures show the same data.
   reach the Disappointed screen (a "Not now" button), capture it, then tap
   "Not now" to go back.
 
-The Starship details screen registered inside the Pilots tab has no control
-that opens it; do not spend actions looking for it. The Starship details
-screen of the Starships tab is the one to capture.
-
 ## Readiness
 
 All list data comes from the live swapi.py4e.com API. Never capture a

@@ -15,6 +15,9 @@ device:
   name: iPhone 17
 exploration:
   scope: changes
+  exclude:
+    # Registered in the Pilots stack, but no control navigates to it.
+    - src/navigation/Navigator.tsx#Stack/BOTTOM_TABS/Pilots%20Stack/Starship
 capture:
   maxMinutes: 30
   maxActions: 500
