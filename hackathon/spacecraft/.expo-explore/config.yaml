@@ -1,0 +1,27 @@
+mode: agent
+agent:
+  provider: anthropic
+  model: claude-sonnet-5-5
+  instructions: .expo-explore/instructions.md
+app:
+  name: Spacecraft Development
+  platform: ios
+  bundleId: weshipit.today.spacecraft.dev
+  easProfile: explore
+  scheme: spacecraft-dev
+navigation:
+  provider: react-navigation
+device:
+  name: iPhone 17
+exploration:
+  scope: changes
+  exclude:
+    # Registered in the Pilots stack, but no control navigates to it.
+    - src/navigation/Navigator.tsx#Stack/BOTTOM_TABS/Pilots%20Stack/Starship
+capture:
+  maxMinutes: 30
+  maxActions: 500
+  appearance: auto
+  launch: screenshot
+  reset: root-link
+  unattributed: publish
